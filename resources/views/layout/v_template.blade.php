@@ -100,7 +100,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="{{url('/')}}" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -125,7 +125,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Home</a></li>
+                            <li><a href="{{url('/dashboard')}}">Home</a></li>
                             <li><a href='#'>Kategori Kejadian</a></li>
                             <li><a href='#'>Respon Kejadian</a></li>
                             <li><a href='#'>Status Triase</a></li>
@@ -149,7 +149,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Input Kejadian Baru</a></li>
+                            <li><a href="{{url('/input_kejadian')}}">Input Kejadian Baru</a></li>
                             <li><a href='#'>Request Bantuan</a></li>
                             <li><a href='#'>Edit Laporan Kejadian</a></li>
                         </ul>
@@ -258,6 +258,7 @@
                         <div class="small-box bg-aqua">
                             <div class="inner">
                                 <p style="font-size: 28px;">170</p>
+                                <!-- <h3>170</h3> -->
 
                                 <p>Total Laporan Kejadian Tahun ini</p>
                             </div>
@@ -273,6 +274,7 @@
                         <div class="small-box bg-purple">
                             <div class="inner">
                                 <p style="font-size: 28px;">36</p>
+                                <!-- <h3>36</h3> -->
 
                                 <p>Total Laporan Kejadian Bulan ini</p>
                             </div>
@@ -288,6 +290,7 @@
                         <div class="small-box bg-green">
                             <div class="inner">
                                 <p style="font-size: 28px;">3</p>
+                                <!-- <h3>3</h3> -->
 
                                 <p>Total Laporan Kejadian Hari ini</p>
                             </div>
@@ -303,6 +306,7 @@
                         <div class="small-box bg-red">
                             <div class="inner">
                                 <p style="font-size: 28px;">Bantuan / 2 Kejadian</p>
+                                <!-- <h3>Bantuan / 2 Kejadian</h3> -->
 
                                 <p>Kirim Bantuan Hari ini</p>
                             </div>

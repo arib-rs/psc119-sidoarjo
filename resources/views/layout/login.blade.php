@@ -44,8 +44,8 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <div style="margin-bottom: 4%;">
-                <img src="{{asset('template')}}/dist/img/logo.png" alt="PSC-119 Logo" width="90" height="90">
+            <div>
+                <img src="{{asset('template')}}/dist/img/logo.png" alt="PSC-119 Logo" width="80" height="80">
             </div>
             <div>
                 <p style="margin: 0; padding: 0;"><b>PSC-119</b></p>
@@ -59,7 +59,7 @@
         <div class="login-box-body">
             <p class="login-box-msg">Selamat datang, silahkan login untuk masuk</p>
 
-            <form action="#" method="post">
+            <form action="" method="post">
                 <div class="form-group has-feedback">
                     <input type="text" class="form-control" placeholder="Username">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -73,7 +73,8 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+                        <!-- <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button> -->
+                        <a href="{{url('/dashboard')}}" class="btn btn-primary btn-block btn-flat">Login</a>
                     </div>
                     <!-- /.col -->
                 </div>

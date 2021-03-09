@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('layout.v_template');
+    return view('layout.login');
 });
 
-Route::get('/login', function () {
-    return view('layout.login');
+Route::get('/dashboard', function () {
+    return view('layout.v_template');
 });
 
 Route::get('/input_kejadian', function () {

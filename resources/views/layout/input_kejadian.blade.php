@@ -127,7 +127,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="{{url('/')}}" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -152,7 +152,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Home</a></li>
+                            <li><a href="{{url('/dashboard')}}">Home</a></li>
                             <li><a href='#'>Kategori Kejadian</a></li>
                             <li><a href='#'>Respon Kejadian</a></li>
                             <li><a href='#'>Status Triase</a></li>
@@ -176,7 +176,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Input Kejadian Baru</a></li>
+                            <li><a href="{{url('/input_kejadian')}}">Input Kejadian Baru</a></li>
                             <li><a href='#'>Request Bantuan</a></li>
                             <li><a href='#'>Edit Laporan Kejadian</a></li>
                         </ul>
