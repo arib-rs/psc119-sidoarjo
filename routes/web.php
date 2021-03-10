@@ -22,21 +22,21 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('layout.v_template');
+    return view('dashboard.dashboard');
 });
 
 Route::get('/input_kejadian', function () {
-    return view('layout.input_kejadian');
+    return view('kejadian_bantuan.input_kejadian');
 });
 
 Route::get('/req_bantuan', function () {
-    return view('layout.req_bantuan');
+    return view('kejadian_bantuan.req_bantuan');
 });
 
 Route::get('/edit_laporan', function () {
-    return view('layout.edit_laporan');
+    return view('kejadian_bantuan.edit_laporan');
 });
 
 Route::get('/edit_kejadian', function () {
-    return view('layout.edit_kejadian');
+    return view('kejadian_bantuan.edit_kejadian');
 });

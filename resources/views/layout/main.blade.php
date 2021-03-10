@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="{{asset('template')}}/dist/img/logo.ico" />
-    <title>PSC-119 Kabupaten Sidoarjo - Dashboard</title>
+    <title>PSC-119 Kabupaten Sidoarjo - @yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('template')}}/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -29,16 +31,19 @@
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{asset('template')}}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <!-- <link rel="stylesheet" href="{{asset('template')}}/plugins/style.css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    @yield('css')
 </head>
 
 <body class="hold-transition skin-red-light sidebar-mini sidebar-collapse">
@@ -235,117 +240,7 @@
             <!-- /.sidebar -->
         </aside>
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>
-                    Dashboard
-                    <small>reports & statics</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
-            </section>
-
-            <!-- Main content -->
-            <section class="content">
-                <!-- Small boxes (Stat box) -->
-                <div class="row">
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-aqua">
-                            <div class="inner">
-                                <p style="font-size: 28px;">170</p>
-                                <!-- <h3>170</h3> -->
-
-                                <p>Total Laporan Kejadian Tahun ini</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-purple">
-                            <div class="inner">
-                                <p style="font-size: 28px;">36</p>
-                                <!-- <h3>36</h3> -->
-
-                                <p>Total Laporan Kejadian Bulan ini</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-green">
-                            <div class="inner">
-                                <p style="font-size: 28px;">3</p>
-                                <!-- <h3>3</h3> -->
-
-                                <p>Total Laporan Kejadian Hari ini</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-red">
-                            <div class="inner">
-                                <p style="font-size: 28px;">2 Bantuan / 2 Kejadian</p>
-                                <!-- <h3>Bantuan / 2 Kejadian</h3> -->
-
-                                <p>Kirim Bantuan Hari ini</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                </div>
-                <!-- /.row -->
-
-                <!-- Main row -->
-                <div class="row">
-                    <!-- Left col -->
-                    <section class="col-lg-12 connectedSortable">
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="nav-tabs-custom">
-                            <!-- Tabs within a box -->
-                            <ul class="nav nav-tabs pull-right">
-                                <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                                <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                                <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                            </ul>
-                            <div class="tab-content no-padding">
-                                <!-- Morris chart - Sales -->
-                                <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                                <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                            </div>
-                        </div>
-                        <!-- /.nav-tabs-custom -->
-                    </section>
-                    <!-- /.Left col -->
-                </div>
-            </section>
-            <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
+        @yield('container')
 
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
@@ -358,6 +253,8 @@
         <div class="control-sidebar-bg"></div>
     </div>
     <!-- ./wrapper -->
+
+    @yield('modal')
 
     <!-- jQuery 3 -->
     <script src="{{asset('template')}}/bower_components/jquery/dist/jquery.min.js"></script>
@@ -384,6 +281,9 @@
     <script src="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- datepicker -->
     <script src="{{asset('template')}}/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- DataTables -->
+    <script src="{{asset('template')}}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('template')}}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- Bootstrap WYSIHTML5 -->
     <script src="{{asset('template')}}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
     <!-- Slimscroll -->
@@ -397,6 +297,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{asset('template')}}/dist/js/demo.js"></script>
 </body>
+
 <script>
     function showTime() {
         arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
@@ -418,5 +319,7 @@
     }
     showTime();
 </script>
+
+@yield('scripts')
 
 </html>
