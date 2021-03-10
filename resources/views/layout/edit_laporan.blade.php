@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('template')}}/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -29,6 +31,7 @@
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{asset('template')}}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <!-- <link rel="stylesheet" href="{{asset('template')}}/plugins/style.css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,6 +42,32 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <style>
+        .nav-tabs-custom>.nav-tabs>li.active {
+            border-top-color: #dd4b39;
+        }
+
+        .forminputlaporan {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .hoverdispatch:hover {
+            background-color: #f3565d !important;
+            color: white !important;
+        }
+
+        .hoversolvedbyphone:hover {
+            background-color: #66CC00 !important;
+            color: white !important;
+        }
+
+        .hoverprankcall:hover {
+            background-color: #b1b1b1 !important;
+            color: white !important;
+        }
+    </style>
 </head>
 
 <body class="hold-transition skin-red-light sidebar-mini sidebar-collapse">
@@ -240,107 +269,76 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Dashboard
-                    <small>reports & statics</small>
+                    Edit Laporan Kejadian
+                    <small>Laporan Kejadian</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
+                    <li><a href="#"><i class="fa fa-sliders"></i> Kejadian & Bantuan</a></li>
+                    <li class="active"> Edit Laporan Kejadian</li>
                 </ol>
             </section>
 
             <!-- Main content -->
             <section class="content">
-                <!-- Small boxes (Stat box) -->
-                <div class="row">
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-aqua">
-                            <div class="inner">
-                                <p style="font-size: 28px;">170</p>
-                                <!-- <h3>170</h3> -->
-
-                                <p>Total Laporan Kejadian Tahun ini</p>
+                <div class="box">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">CCN</th>
+                                                    <th class="text-center">PELAPOR</th>
+                                                    <th class="text-center">WAKTU</th>
+                                                    <th class="text-center" style="width: 490px;">LOKASI</th>
+                                                    <th class="text-center" style="width: 370px;">KETERANGAN</th>
+                                                    <th class="text-center" style="width: 60px;">AKSI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">CCN1455-1615267395</td>
+                                                    <td class="text-center">ellena</td>
+                                                    <td class="text-center">2021-03-09 12:23:17</td>
+                                                    <td class="text-center">deltasari waru sidaorjo</td>
+                                                    <td class="text-center">Menanyakan informasi tentang vaksin covid19 untuk lansia</td>
+                                                    <td class="text-center">
+                                                        <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                        <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">CCN1459-1615270053</td>
+                                                    <td class="text-center">lutfi</td>
+                                                    <td class="text-center">2021-03-09 12:23:17</td>
+                                                    <td class="text-center">krembung sidoarjo</td>
+                                                    <td class="text-center">menyakan untuk mengetahui hasil pcr</td>
+                                                    <td class="text-center">
+                                                        <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                        <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">CCN1448-1615074283</td>
+                                                    <td class="text-center">it kemenkes</td>
+                                                    <td class="text-center">2021-03-07 06:44:45</td>
+                                                    <td class="text-center">jakarta</td>
+                                                    <td class="text-center"></td>
+                                                    <td class="text-center">
+                                                        <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                        <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
+                            <!-- /.col -->
                         </div>
                     </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-purple">
-                            <div class="inner">
-                                <p style="font-size: 28px;">36</p>
-                                <!-- <h3>36</h3> -->
-
-                                <p>Total Laporan Kejadian Bulan ini</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-green">
-                            <div class="inner">
-                                <p style="font-size: 28px;">3</p>
-                                <!-- <h3>3</h3> -->
-
-                                <p>Total Laporan Kejadian Hari ini</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-red">
-                            <div class="inner">
-                                <p style="font-size: 28px;">2 Bantuan / 2 Kejadian</p>
-                                <!-- <h3>Bantuan / 2 Kejadian</h3> -->
-
-                                <p>Kirim Bantuan Hari ini</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-document-text"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                </div>
-                <!-- /.row -->
-
-                <!-- Main row -->
-                <div class="row">
-                    <!-- Left col -->
-                    <section class="col-lg-12 connectedSortable">
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="nav-tabs-custom">
-                            <!-- Tabs within a box -->
-                            <ul class="nav nav-tabs pull-right">
-                                <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                                <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                                <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                            </ul>
-                            <div class="tab-content no-padding">
-                                <!-- Morris chart - Sales -->
-                                <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                                <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                            </div>
-                        </div>
-                        <!-- /.nav-tabs-custom -->
-                    </section>
-                    <!-- /.Left col -->
                 </div>
             </section>
             <!-- /.content -->
@@ -384,6 +382,9 @@
     <script src="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- datepicker -->
     <script src="{{asset('template')}}/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- DataTables -->
+    <script src="{{asset('template')}}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('template')}}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- Bootstrap WYSIHTML5 -->
     <script src="{{asset('template')}}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
     <!-- Slimscroll -->
@@ -417,6 +418,22 @@
         setTimeout(showTime, 1000);
     }
     showTime();
+
+    $('#datepicker').datepicker({
+        autoclose: true
+    })
+
+    $(function() {
+        $('#example1').DataTable()
+        $('#example2').DataTable({
+            'paging': true,
+            'lengthChange': true,
+            'searching': true,
+            'ordering': true,
+            'info': true,
+            'autoWidth': false
+        })
+    })
 </script>
 
 </html>

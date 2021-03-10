@@ -267,29 +267,22 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Input Kejadian Baru
-                    <small>form laporan kejadian</small>
+                    Edit Laporan
+                    <small>Edit Data Laporan Kejadian</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-sliders"></i> Kejadian & Bantuan</a></li>
-                    <li class="active">Input Kejadian Baru</li>
+                    <li class="active">Edit Laporan</li>
                 </ol>
             </section>
 
             <!-- Main content -->
             <section class="content">
                 <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8" style="background:#66CC00; margin-bottom: 2rem; text-align: center; padding: 1rem;">
-                        <p style="font-size: 4rem; vertical-align: middle; margin: 0;">Timer: 00 : 00 : 03</p>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
                     <div class="col-md-12">
                         <div class="nav-tabs-custom">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#laporankejadian" data-toggle="tab">Form Laporan Kejadian</a></li>
+                                <li class="active"><a href="#laporankejadian" data-toggle="tab">Form Edit Laporan</a></li>
                                 <div style="text-align: right; margin: 0.5% 0.5% 0.5% auto">
                                     <button type="submit" class="btn" style="background-color: #3399FF; color:#fff; margin: auto 0.3%;">Simpan Laporan</button>
                                     <button type="submit" class="btn" style="background-color: #FF9933; color:#fff; margin: auto 0.3%;">Batalkan Laporan</button>
@@ -308,18 +301,8 @@
                                                     <input type="text" class="form-control" placeholder="CCN1466-1615142" disabled>
                                                 </div>
                                                 <div class="col-md-1"></div>
-                                                <div class="col-md-2">
-                                                    <p>Lanjutan Laporan Dari</p>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <select class="form-control">
-                                                        <option>Pilih CCN</option>
-                                                        <option>CCN1466-1615142 - Dummy</option>
-                                                        <option>CCN1889-18426897 - Ani</option>
-                                                        <option>CCN149-1299538 - Indah</option>
-                                                        <option>CCN14679-16996212 - Arif</option>
-                                                    </select>
-                                                </div>
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-4"></div>
                                             </div><br>
                                             <div class="row">
                                                 <div class="col-md-2">
@@ -539,7 +522,6 @@
                                                 <div class="col-md-4" style=" text-align: right;">
                                                     <button type="submit" class="btn" style="background-color: #3399FF; color:#fff;">Simpan Laporan</button>
                                                     <button type="submit" class="btn" style="background-color: #f3565d; color:#fff;">Dispatch</button>
-                                                    <button type="submit" class="btn" style="background-color: #66CC00; color:#fff;">Solved By Phone</button>
                                                 </div>
                                             </div><br>
                                         </div>
@@ -556,7 +538,6 @@
                 </div>
             </section>
             <!-- /.content -->
-
         </div>
         <!-- /.content-wrapper -->
 

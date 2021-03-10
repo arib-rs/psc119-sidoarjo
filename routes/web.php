@@ -28,3 +28,15 @@ Route::get('/dashboard', function () {
 Route::get('/input_kejadian', function () {
     return view('layout.input_kejadian');
 });
+
+Route::get('/req_bantuan', function () {
+    return view('layout.req_bantuan');
+});
+
+Route::get('/edit_laporan', function () {
+    return view('layout.edit_laporan');
+});
+
+Route::get('/edit_kejadian', function () {
+    return view('layout.edit_kejadian');
+});
