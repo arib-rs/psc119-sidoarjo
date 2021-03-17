@@ -40,3 +40,23 @@ Route::get('/edit_laporan', function () {
 Route::get('/edit_kejadian', function () {
     return view('kejadian_bantuan.edit_kejadian');
 });
+
+Route::get('/personil', function () {
+    return view('user_device_management.personil');
+});
+
+Route::get('/management_user', function () {
+    return view('user_device_management.management_user');
+});
+
+Route::get('/devicelist', function () {
+    return view('user_device_management.devicelist');
+});
+
+Route::get('/emergency_button_user', function () {
+    return view('user_device_management.emergency_button_user');
+});
+
+Route::get('/konfirmasi_penugasan', function () {
+    return view('konfirmasi_approval.konfirmasi_penugasan');
+});

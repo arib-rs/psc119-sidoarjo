@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{asset('template')}}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/select2/dist/css/select2.min.css">
     <!-- <link rel="stylesheet" href="{{asset('template')}}/plugins/style.css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -42,6 +44,7 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    @yield('head')
 
     @yield('css')
 </head>
@@ -167,7 +170,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Konfirmasi Penugasan</a></li>
+                            <li><a href="{{url('/konfirmasi_penugasan')}}">Konfirmasi Penugasan</a></li>
                             <li><a href='#'>Shift Approval</a></li>
                         </ul>
                     </li>
@@ -208,10 +211,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Personil</a></li>
-                            <li><a href='#'>User Management</a></li>
-                            <li><a href='#'>Device Management</a></li>
-                            <li><a href='#'>User Emergency Button</a></li>
+                            <li><a href="{{url('/personil')}}">Personil</a></li>
+                            <li><a href="{{url('/management_user')}}">User Management</a></li>
+                            <li><a href="{{url('/devicelist')}}">Device Management</a></li>
+                            <li><a href="{{url('/emergency_button_user')}}">User Emergency Button</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -296,9 +299,16 @@
     <script src="{{asset('template')}}/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{asset('template')}}/dist/js/demo.js"></script>
+    <!-- Select2 -->
+    <script src="{{asset('template')}}/bower_components/select2/dist/js/select2.full.min.js"></script>
 </body>
 
 <script>
+    $(function() {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+    })
+
     function showTime() {
         arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
         var date = new Date();

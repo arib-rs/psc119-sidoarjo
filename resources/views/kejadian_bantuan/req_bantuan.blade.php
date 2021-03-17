@@ -48,7 +48,7 @@
                                                 <th class="text-center">KATEGORI KEJADIAN</th>
                                                 <th class="text-center" style="width: 120px;">JUMLAH KORBAN</th>
                                                 <th class="text-center">KETERANGAN</th>
-                                                <th class="text-center" style="width: 60px;">AKSI</th>
+                                                <th class="text-center" style="width: 110px;">AKSI</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -154,7 +154,7 @@
 
 @section('modal')
 <div id="ModalInput" class="modal">
-    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:60%">
+    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:50%">
         <div class="modal-content">
             <div class="modal-header" style="padding: 10px auto;">
                 <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Periksa Bantuan</b></h4>
