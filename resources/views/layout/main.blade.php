@@ -171,7 +171,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="{{url('/konfirmasi_penugasan')}}">Konfirmasi Penugasan</a></li>
-                            <li><a href='#'>Shift Approval</a></li>
+                            <li><a href="{{url('/rekap_shift')}}">Shift Approval</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -183,7 +183,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href='#'>Monitoring Alarm Kejadian</a></li>
-                            <li><a href='#'>Penanganan Kejadian</a></li>
+                            <li><a href="{{url('/penanganan_kejadian')}}">Penanganan Kejadian</a></li>
                             <li><a href='#'>Resource Management</a></li>
                         </ul>
                     </li>
@@ -195,12 +195,12 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Laporan Kejadian</a></li>
-                            <li><a href='#'>Rekap Laporan Kejadian </a></li>
-                            <li><a href='#'>Rekap Bantuan</a></li>
-                            <li><a href='#'>Rekap Penolakan & <br>Pembatalan Penugasan</a></li>
-                            <li><a href='#'>Rekap Perawat</a></li>
-                            <li><a href='#'>Ambulan Tidak Aktif</a></li>
+                            <li><a href="{{url('/laporan_kejadian')}}">Laporan Kejadian</a></li>
+                            <li><a href="{{url('/rekap_kejadian')}}">Rekap Laporan Kejadian </a></li>
+                            <li><a href="{{url('/rekap_bantuan')}}">Rekap Bantuan</a></li>
+                            <li><a href="{{url('/rekap_penolakan_pembatalan')}}">Rekap Penolakan & <br>Pembatalan Penugasan</a></li>
+                            <li><a href="{{url('/rekap_perawat')}}">Rekap Perawat</a></li>
+                            <li><a href="{{url('/rekap_ambulan_offline')}}">Ambulan Tidak Aktif</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -231,7 +231,6 @@
                             <li><a href='#'>Kategori</a></li>
                             <li><a href='#'>Kategori Mobil Sehat</a></li>
                             <li><a href='#'>Sub Kategori</a></li>
-                            <li><a href='#'>Berita & Artikel</a></li>
                             <li><a href='#'>Obat</a></li>
                             <li><a href='#'>Sift</a></li>
                             <li><a href='#'>Data Pasien</a></li>
@@ -249,7 +248,7 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 1.0
             </div>
-            <strong>Copyright &copy; 2021 Diskominfo Kab. Sidoarjo</a>.</strong> All rights
+            <strong>Copyright &copy; 2021 Dinas Kesehatan Kab. Sidoarjo</a>.</strong> All rights
             reserved.
         </footer>
 

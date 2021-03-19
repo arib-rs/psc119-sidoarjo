@@ -60,3 +60,35 @@ Route::get('/emergency_button_user', function () {
 Route::get('/konfirmasi_penugasan', function () {
     return view('konfirmasi_approval.konfirmasi_penugasan');
 });
+
+Route::get('/rekap_shift', function () {
+    return view('konfirmasi_approval.rekap_shift');
+});
+
+Route::get('/penanganan_kejadian', function () {
+    return view('monitoring.penanganan_kejadian');
+});
+
+Route::get('/laporan_kejadian', function () {
+    return view('laporan.laporan_kejadian');
+});
+
+Route::get('/rekap_kejadian', function () {
+    return view('laporan.rekap_kejadian');
+});
+
+Route::get('/rekap_bantuan', function () {
+    return view('laporan.rekap_bantuan');
+});
+
+Route::get('/rekap_penolakan_pembatalan', function () {
+    return view('laporan.rekap_penolakan_pembatalan');
+});
+
+Route::get('/rekap_perawat', function () {
+    return view('laporan.rekap_perawat');
+});
+
+Route::get('/rekap_ambulan_offline', function () {
+    return view('laporan.rekap_ambulan_offline');
+});

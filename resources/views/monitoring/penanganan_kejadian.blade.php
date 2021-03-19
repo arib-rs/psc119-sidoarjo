@@ -1,6 +1,6 @@
 @extends('layout/main')
 
-@section('title', 'Konfirmasi Penugasan')
+@section('title', 'Penanganan Kejadian')
 
 @section('css')
 <style>
@@ -15,12 +15,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Konfirmasi Penugasan
-            <small>Daftar Penugasan</small>
+            Penanganan Kejadian
+            <small>Penanganan Kejadian di Lapangan</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-send"></i> Konfirmasi & Approval</a></li>
-            <li class="active"> Konfirmasi Penugasan</li>
+            <li><a href="#"><i class="fa fa-television"></i> Monitoring</a></li>
+            <li class="active"> Penanganan Kejadian</li>
         </ol>
     </section>
 
@@ -28,99 +28,41 @@
     <section class="content">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#konfirmasi" data-toggle="tab">Konfirmasi</a></li>
-                <li><a href="#sudah_konfirmasi" data-toggle="tab">Sudah Konfirmasi</a></li>
+                <li class="active"><a href="#tracking_bantuan" data-toggle="tab">Tracking Bantuan</a></li>
             </ul>
             <div class="tab-content">
                 <!-- Font Awesome Icons -->
-                <div class="tab-pane active" id="konfirmasi">
-                    <div class="row">
-                        <div class="col-md-12 text-right">
-                            <div class="btn-group">
-                                <button role="button" class="btn btn-success">
-                                    <i class="fa fa-check"></i> Konfirmasi</button>
-                            </div>
-                        </div>
-                    </div><br>
+                <div class="tab-pane active" id="tracking_bantuan">
                     <table id="example1" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
-                                <th class="text-center">#</th>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CallCard Number</th>
-                                <th class="text-center">Tanggal</th>
+                                <th class="text-center">CCN</th>
+                                <th class="text-center">Pelapor</th>
                                 <th class="text-center">Waktu</th>
-                                <th class="text-center">Ambulan</th>
-                                <th class="text-center">Rumah Sakit Asal</th>
-                                <th class="text-center">Menuju Lokasi</th>
-                                <th class="text-center">Tiba Di Lokasi</th>
-                                <th class="text-center">Menuju RS</th>
-                                <th class="text-center">Tiba di RS</th>
-                                <th class="text-center">Rumah Sakit Tujuan</th>
-                                <th class="text-center">Detail</th>
+                                <th class="text-center">Lokasi</th>
+                                <th class="text-center">Ambulan Milik</th>
+                                <th class="text-center">Nopol</th>
+                                <th class="text-center">Status Penugasan</th>
+                                <th class="text-center">Faskes Tujuan</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="text-center"><input type="checkbox" name="" value=""></td>
-                                <td class="text-center">1</td>
-                                <td class="text-center">CCN1001-1554895244</td>
-                                <td class="text-center">10/04/2019</td>
-                                <td class="text-center">18:20:45</td>
-                                <td class="text-center">W 8382 PP</td>
-                                <td class="text-center">RSUD SIDOARJO</td>
-                                <td class="text-center">2019-04-10 18:23:28</td>
-                                <td class="text-center">2019-04-10 18:29:30</td>
-                                <td class="text-center">2019-04-10 18:33:34</td>
-                                <td class="text-center">2019-04-10 18:40:36</td>
-                                <td class="text-center">RSUD SIDOARJO</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center"><input type="checkbox" name="" value=""></td>
-                                <td class="text-center">2</td>
-                                <td class="text-center">CCN1001-1568080592</td>
-                                <td class="text-center">10/09/2019</td>
-                                <td class="text-center">09:00:11</td>
-                                <td class="text-center">W 7403 NB</td>
-                                <td class="text-center">RS. ANWAR MEDIKA</td>
-                                <td class="text-center">2019-09-10 11:12:04</td>
-                                <td class="text-center">2019-09-10 11:17:22</td>
-                                <td class="text-center"></td>
-                                <td class="text-center">2019-09-10 11:25:37</td>
-                                <td class="text-center">RS. ANWAR MEDIKA</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center"><input type="checkbox" name="" value=""></td>
-                                <td class="text-center">3</td>
-                                <td class="text-center">CCN1001-1554895244</td>
-                                <td class="text-center">10/04/2019</td>
-                                <td class="text-center">18:20:45</td>
-                                <td class="text-center">L 1664 VS</td>
-                                <td class="text-center">RSU BUNDA WARU</td>
-                                <td class="text-center">2019-04-10 18:23:28</td>
+                            <!-- <tr>
                                 <td class="text-center"></td>
                                 <td class="text-center"></td>
-                                <td class="text-center">2019-04-10 18:40:36</td>
-                                <td class="text-center">RSU BUNDA WARU</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center"><input type="checkbox" name="" value=""></td>
-                                <td class="text-center">4</td>
-                                <td class="text-center">CCN1001-1554895244</td>
-                                <td class="text-center">10/04/2019</td>
-                                <td class="text-center">18:20:45</td>
-                                <td class="text-center">W 8382 PP</td>
-                                <td class="text-center">RSUD SIDOARJO</td>
-                                <td class="text-center">2019-04-10 18:23:28</td>
-                                <td class="text-center">2019-04-10 18:29:30</td>
-                                <td class="text-center">2019-04-10 18:33:34</td>
-                                <td class="text-center">2019-04-10 18:40:36</td>
-                                <td class="text-center">RSUD SIDOARJO</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
-                            </tr>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>

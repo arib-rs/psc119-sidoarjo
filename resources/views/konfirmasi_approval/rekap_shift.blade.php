@@ -1,6 +1,6 @@
 @extends('layout/main')
 
-@section('title', 'Konfirmasi Penugasan')
+@section('title', 'Shift Approval')
 
 @section('css')
 <style>
@@ -15,12 +15,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Konfirmasi Penugasan
-            <small>Daftar Penugasan</small>
+            Shift Approval
+            <small>Daftar Semua Shift</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-send"></i> Konfirmasi & Approval</a></li>
-            <li class="active"> Konfirmasi Penugasan</li>
+            <li class="active"> Shift Approval</li>
         </ol>
     </section>
 
@@ -28,17 +28,33 @@
     <section class="content">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#konfirmasi" data-toggle="tab">Konfirmasi</a></li>
-                <li><a href="#sudah_konfirmasi" data-toggle="tab">Sudah Konfirmasi</a></li>
+                <li class="active"><a href="#pengajuan" data-toggle="tab">Pengajuan</a></li>
+                <li><a href="#disetujui" data-toggle="tab">Disetujui</a></li>
             </ul>
             <div class="tab-content">
                 <!-- Font Awesome Icons -->
-                <div class="tab-pane active" id="konfirmasi">
+                <div class="tab-pane active" id="pengajuan">
                     <div class="row">
-                        <div class="col-md-12 text-right">
+                        <div class="col-md-2">
+                            <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                        <div class="col-md-4">
+                            <select name="shift" id="shift" class="form-control select">
+                                <option value="">PILIH</option>
+                                <option value="07:00:00-14:00:00">Shift 1: 07:00:00 - 14:00:00</option>
+                                <option value="07:00:00-14:00:00">Shift 1: 07:00:00 - 14:00:00</option>
+                                <option value="14:00:00-21:00:00">Shift 2: 14:00:00 - 21:00:00</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" id="btnSearch"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Tampilkan </button>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-1 text-right">
                             <div class="btn-group">
                                 <button role="button" class="btn btn-success">
-                                    <i class="fa fa-check"></i> Konfirmasi</button>
+                                    <i class="fa fa-check"></i> Approve</button>
                             </div>
                         </div>
                     </div><br>
@@ -91,42 +107,12 @@
                                 <td class="text-center">RS. ANWAR MEDIKA</td>
                                 <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
                             </tr>
-                            <tr>
-                                <td class="text-center"><input type="checkbox" name="" value=""></td>
-                                <td class="text-center">3</td>
-                                <td class="text-center">CCN1001-1554895244</td>
-                                <td class="text-center">10/04/2019</td>
-                                <td class="text-center">18:20:45</td>
-                                <td class="text-center">L 1664 VS</td>
-                                <td class="text-center">RSU BUNDA WARU</td>
-                                <td class="text-center">2019-04-10 18:23:28</td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center">2019-04-10 18:40:36</td>
-                                <td class="text-center">RSU BUNDA WARU</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center"><input type="checkbox" name="" value=""></td>
-                                <td class="text-center">4</td>
-                                <td class="text-center">CCN1001-1554895244</td>
-                                <td class="text-center">10/04/2019</td>
-                                <td class="text-center">18:20:45</td>
-                                <td class="text-center">W 8382 PP</td>
-                                <td class="text-center">RSUD SIDOARJO</td>
-                                <td class="text-center">2019-04-10 18:23:28</td>
-                                <td class="text-center">2019-04-10 18:29:30</td>
-                                <td class="text-center">2019-04-10 18:33:34</td>
-                                <td class="text-center">2019-04-10 18:40:36</td>
-                                <td class="text-center">RSUD SIDOARJO</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <!-- sudah konfirmasi -->
-                <div class="tab-pane" id="sudah_konfirmasi">
+                <div class="tab-pane" id="disetujui">
                     <div class="row">
                         <div class="col-md-3">
                             <button type="button" class="btn btn-default" id="daterange-btn" style="width: 100%;">
@@ -151,7 +137,8 @@
                                 <th class="text-center">Rumah Sakit Asal</th>
                                 <th class="text-center">Rumah Sakit Tujuan</th>
                                 <th class="text-center">Verifikator</th>
-                                <th class="text-center">Jam & Tanggal Konfirmasi</th>
+                                <th class="text-center">Shift</th>
+                                <th class="text-center">Jam & Tanggal Verifikasi</th>
                                 <th class="text-center">Detail</th>
                             </tr>
                         </thead>
@@ -165,6 +152,7 @@
                                 <td class="text-center">RSI SITI HAJAR</td>
                                 <td class="text-center">RSUD SIDOARJO</td>
                                 <td class="text-center">DUWI - ARDI DUWI PUTRI, S. KEP. NS,.</td>
+                                <td class="text-center">Shift 1</td>
                                 <td class="text-center">21:24:34 04/02/2021</td>
                                 <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
                             </tr>
@@ -346,6 +334,10 @@
             'info': true,
             'autoWidth': false
         })
+    })
+
+    $('#datepicker').datepicker({
+        autoclose: true
     })
 </script>
 @endsection
