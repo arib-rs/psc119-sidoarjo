@@ -92,3 +92,43 @@ Route::get('/rekap_perawat', function () {
 Route::get('/rekap_ambulan_offline', function () {
     return view('laporan.rekap_ambulan_offline');
 });
+
+Route::get('/faskes', function () {
+    return view('master.faskes');
+});
+
+Route::get('/ambulan', function () {
+    return view('master.ambulan');
+});
+
+Route::get('/spesialis_dokter', function () {
+    return view('master.spesialis_dokter');
+});
+
+Route::get('/kategori', function () {
+    return view('master.kategori');
+});
+
+Route::get('/mobil_sehat', function () {
+    return view('master.mobil_sehat');
+});
+
+Route::get('/sub_kategori', function () {
+    return view('master.sub_kategori');
+});
+
+Route::get('/obat', function () {
+    return view('master.obat');
+});
+
+Route::get('/shift', function () {
+    return view('master.shift');
+});
+
+Route::get('/pasien', function () {
+    return view('master.pasien');
+});
+
+Route::get('/task', function () {
+    return view('master.task');
+});

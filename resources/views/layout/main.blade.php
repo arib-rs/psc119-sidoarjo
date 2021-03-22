@@ -225,15 +225,16 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Faskes</a></li>
-                            <li><a href='#'>Ambulan</a></li>
-                            <li><a href='#'>Spesialisasi Dokter </a></li>
-                            <li><a href='#'>Kategori</a></li>
-                            <li><a href='#'>Kategori Mobil Sehat</a></li>
-                            <li><a href='#'>Sub Kategori</a></li>
-                            <li><a href='#'>Obat</a></li>
-                            <li><a href='#'>Sift</a></li>
-                            <li><a href='#'>Data Pasien</a></li>
+                            <li><a href="{{url('/faskes')}}">Faskes</a></li>
+                            <li><a href="{{url('/ambulan')}}">Ambulan</a></li>
+                            <li><a href="{{url('/spesialis_dokter')}}">Spesialisasi Dokter </a></li>
+                            <li><a href="{{url('/kategori')}}">Kategori</a></li>
+                            <li><a href="{{url('/mobil_sehat')}}">Kategori Mobil Sehat</a></li>
+                            <li><a href="{{url('/sub_kategori')}}">Sub Kategori</a></li>
+                            <li><a href="{{url('/obat')}}">Obat</a></li>
+                            <li><a href="{{url('/shift')}}">Shift</a></li>
+                            <li><a href="{{url('/pasien')}}">Data Pasien</a></li>
+                            <li><a href="{{url('/task')}}">Master Task</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fa fa-map-marker"></i> <span>Buka Peta</span></a></li>
