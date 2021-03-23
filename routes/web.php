@@ -101,17 +101,17 @@ Route::get('/ambulan', function () {
     return view('master.ambulan');
 });
 
-Route::get('/spesialis_dokter', function () {
-    return view('master.spesialis_dokter');
+Route::get('/spesialisasi_dokter', function () {
+    return view('master.spesialisasi_dokter');
 });
 
 Route::get('/kategori', function () {
     return view('master.kategori');
 });
 
-Route::get('/mobil_sehat', function () {
-    return view('master.mobil_sehat');
-});
+// Route::get('/mobil_sehat', function () {
+//     return view('master.mobil_sehat');
+// });
 
 Route::get('/sub_kategori', function () {
     return view('master.sub_kategori');

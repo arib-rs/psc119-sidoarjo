@@ -227,9 +227,9 @@
                         <ul class="treeview-menu">
                             <li><a href="{{url('/faskes')}}">Faskes</a></li>
                             <li><a href="{{url('/ambulan')}}">Ambulan</a></li>
-                            <li><a href="{{url('/spesialis_dokter')}}">Spesialisasi Dokter </a></li>
+                            <li><a href="{{url('/spesialisasi_dokter')}}">Spesialisasi Dokter </a></li>
                             <li><a href="{{url('/kategori')}}">Kategori</a></li>
-                            <li><a href="{{url('/mobil_sehat')}}">Kategori Mobil Sehat</a></li>
+                            <!-- <li><a href="{{url('/mobil_sehat')}}">Kategori Mobil Sehat</a></li> -->
                             <li><a href="{{url('/sub_kategori')}}">Sub Kategori</a></li>
                             <li><a href="{{url('/obat')}}">Obat</a></li>
                             <li><a href="{{url('/shift')}}">Shift</a></li>

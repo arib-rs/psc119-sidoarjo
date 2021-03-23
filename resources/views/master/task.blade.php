@@ -28,11 +28,11 @@
     <section class="content">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#rekap_bantuan" data-toggle="tab">Data Task</a></li>
+                <li class="active"><a href="#task" data-toggle="tab">Data Task</a></li>
             </ul>
             <div class="tab-content">
                 <!-- Font Awesome Icons -->
-                <div class="tab-pane active" id="rekap_bantuan">
+                <div class="tab-pane active" id="task">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
