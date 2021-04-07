@@ -15,14 +15,14 @@ class CreateHealthFacilitiesTable extends Migration
     {
         Schema::create('health_facilities', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->longText('address')->nullable();
-            $table->longText('pict_url')->nullable();
-            $table->string('category')->nullable();
+            $table->string('nama');
+            $table->longText('alamat')->nullable();
+            $table->string('pict_url')->nullable();
+            $table->string('kategori')->nullable();
             $table->boolean('is_fullday');
             $table->boolean('is_has_ekg');
-            $table->integer('shift_amount')->nullable();
-            $table->longText('information')->nullable();
+            $table->integer('jumlah_shift')->nullable();
+            $table->longText('keterangan')->nullable();
             $table->string('phone_num')->nullable();
             $table->string('contact_person')->nullable();
             $table->string('email')->nullable();
