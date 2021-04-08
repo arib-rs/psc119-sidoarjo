@@ -15,7 +15,7 @@ class CreateRequestsTable extends Migration
     {
         Schema::create('requests', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_kasus')->unique();
+            $table->string('kode_kasus');
             $table->bigInteger('health_facility_id');
             $table->bigInteger('person_id');
             $table->bigInteger('resource_id');

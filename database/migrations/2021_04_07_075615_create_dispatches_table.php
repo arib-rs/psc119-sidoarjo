@@ -15,7 +15,7 @@ class CreateDispatchesTable extends Migration
     {
         Schema::create('dispatches', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_kasus')->unique();
+            $table->string('kode_kasus');
             $table->bigInteger('resource_id');
             $table->bigInteger('faskes_asal_id');
             $table->dateTime('ke_lokasi_at');

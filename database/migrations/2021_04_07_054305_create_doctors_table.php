@@ -20,6 +20,7 @@ class CreateDoctorsTable extends Migration
             $table->string('hari_praktik')->nullable();
             $table->string('jam_praktik')->nullable();
             $table->bigInteger('service_id')->nullable();
+            $table->bigInteger('health_facility_id');
             $table->timestamps();
         });
     }

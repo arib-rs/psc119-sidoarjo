@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTripsTable extends Migration
+class CreateHFProfessionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateTripsTable extends Migration
      */
     public function up()
     {
-        Schema::create('trips', function (Blueprint $table) {
+        Schema::create('h_f_professions', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_kasus');
-            $table->string('longitude');
-            $table->string('latitude');
-            $table->string('keterangan');
+            $table->bigInteger('profession_id');
+            $table->bigInteger('health_facility_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateTripsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trips');
+        Schema::dropIfExists('h_f_professions');
     }
 }
