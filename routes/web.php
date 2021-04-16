@@ -33,6 +33,10 @@ Route::get('/req_bantuan', function () {
     return view('kejadian_bantuan.req_bantuan');
 });
 
+Route::get('/detail_penanganan', function () {
+    return view('kejadian_bantuan.detail_penanganan');
+});
+
 Route::get('/edit_laporan', function () {
     return view('kejadian_bantuan.edit_laporan');
 });
@@ -65,8 +69,16 @@ Route::get('/rekap_shift', function () {
     return view('konfirmasi_approval.rekap_shift');
 });
 
+Route::get('/monitoring_alarm', function () {
+    return view('monitoring.monitoring_alarm');
+});
+
 Route::get('/penanganan_kejadian', function () {
     return view('monitoring.penanganan_kejadian');
+});
+
+Route::get('/resource_management', function () {
+    return view('monitoring.resource_management');
 });
 
 Route::get('/laporan_kejadian', function () {

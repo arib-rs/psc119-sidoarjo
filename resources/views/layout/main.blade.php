@@ -182,9 +182,9 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href='#'>Monitoring Alarm Kejadian</a></li>
+                            <li><a href="{{url('/monitoring_alarm')}}">Monitoring Alarm Kejadian</a></li>
                             <li><a href="{{url('/penanganan_kejadian')}}">Penanganan Kejadian</a></li>
-                            <li><a href='#'>Resource Management</a></li>
+                            <li><a href="{{url('/resource_management')}}">Resource Management</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
