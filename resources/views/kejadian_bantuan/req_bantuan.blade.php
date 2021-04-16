@@ -63,7 +63,7 @@
                                                 <td class="text-center">pengamen tidak sadar di depan kantor bpbd sidoarjo</td>
                                                 <td class="text-center">
                                                     <a class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Lihat Detail" style="width: 24px; margin: 4px 3px; background-color: #8e44ad; border-color: #8e44ad;"><i class="glyphicon glyphicon-pushpin"></i></a>
-                                                    <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-placement="left" title="Detail Kejadian" style="width: 24px; margin: 4px 3px; background-color: #428bca; border-color: #428bca;"><i class="fa fa-files-o"></i></a><br>
+                                                    <a href="{{url('/detail_penanganan')}}" id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-placement="left" title="Detail Kejadian" style="width: 24px; margin: 4px 3px; background-color: #428bca; border-color: #428bca;"><i class="fa fa-files-o"></i></a><br>
                                                     <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-primary" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: 4px 3px; background-color: #45b6e0; border-color: #45b6e0;"><i class="fa fa-pencil-square-o"></i></a>
                                                     <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-placement="left" title="Monitoring Penanganan" style="width: 24px; margin: 4px 3px; background-color: #89c4f4; border-color: #89c4f4;"><i class="fa fa-desktop"></i></a>
                                                 </td>
@@ -79,7 +79,7 @@
                                                 <td class="text-center">pasien tidak sadar</td>
                                                 <td class="text-center">
                                                     <a class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Lihat Detail" style="width: 24px; margin: 4px 3px; background-color: #8e44ad; border-color: #8e44ad;"><i class="glyphicon glyphicon-pushpin"></i></a>
-                                                    <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-placement="left" title="Detail Kejadian" style="width: 24px; margin: 4px 3px; background-color: #428bca; border-color: #428bca;"><i class="fa fa-files-o"></i></a><br>
+                                                    <a href="{{url('/detail_penanganan')}}" id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-placement="left" title="Detail Kejadian" style="width: 24px; margin: 4px 3px; background-color: #428bca; border-color: #428bca;"><i class="fa fa-files-o"></i></a><br>
                                                     <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-primary" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: 4px 3px; background-color: #45b6e0; border-color: #45b6e0;"><i class="fa fa-pencil-square-o"></i></a>
                                                     <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-placement="left" title="Monitoring Penanganan" style="width: 24px; margin: 4px 3px; background-color: #89c4f4; border-color: #89c4f4;"><i class="fa fa-desktop"></i></a>
                                                 </td>

@@ -58,38 +58,40 @@
                     </table>
                     <br><br>
                     <h3 style="margin-top: 10px;">Lokasi Kejadian</h3>
-                    <table>
-                        <tr>
-                            <td style="width: 12em; height: 32px;">
-                                <b>Alamat</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 60em;">
-                                Jalan Diponegroro No. 139, Lemah Putro, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61231
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 12em; height: 32px;">
-                                <b>Detail Lokasi</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 60em;">
-                                Toko Roti Larrita Bakery, Sebelah Kantor DISKOMINFO
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 12em; height: 32px;">
-                                <b>Koordinat</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 60em;">
-                                -7.432243074443844, 112.59669414550783
-                            </td>
-                        </tr>
-                    </table>
+                    <div style="margin-bottom: 1em;">
+                        <table>
+                            <tr>
+                                <td style="width: 12em; height: 32px;">
+                                    <b>Alamat</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 60em;">
+                                    Jalan Diponegroro No. 139, Lemah Putro, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61231
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 12em; height: 32px;">
+                                    <b>Detail Lokasi</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 60em;">
+                                    Toko Roti Larrita Bakery, Sebelah Kantor DISKOMINFO
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 12em; height: 32px;">
+                                    <b>Koordinat</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 60em;">
+                                    -7.432243074443844, 112.59669414550783
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <h3 style="margin-top: 10px;">Bantuan</h3>
