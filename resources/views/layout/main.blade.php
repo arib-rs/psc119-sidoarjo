@@ -84,7 +84,7 @@
                         </li>
                         <!-- Notifications: style can be found in dropdown.less -->
                         <li class="dropdown notifications-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="{{url('/monitoring_alarm')}}">
                                 <span style="color:white">Emergency Alarm</span>
                                 <i class="fa fa-bell-o"></i>
                                 <span class="label label-warning">0</span>
@@ -184,7 +184,7 @@
                         <ul class="treeview-menu">
                             <li><a href="{{url('/monitoring_alarm')}}">Monitoring Alarm Kejadian</a></li>
                             <li><a href="{{url('/penanganan_kejadian')}}">Penanganan Kejadian</a></li>
-                            <li><a href="{{url('/resource_management')}}">Resource Management</a></li>
+                            <li><a href="{{url('/monitoring_resources')}}">Monitoring Resources</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -272,13 +272,6 @@
     <!-- Morris.js charts -->
     <script src="{{asset('template')}}/bower_components/raphael/raphael.min.js"></script>
     <script src="{{asset('template')}}/bower_components/morris.js/morris.min.js"></script>
-    <!-- Sparkline -->
-    <script src="{{asset('template')}}/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-    <!-- jvectormap -->
-    <script src="{{asset('template')}}/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="{{asset('template')}}/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="{{asset('template')}}/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
     <!-- daterangepicker -->
     <script src="{{asset('template')}}/bower_components/moment/min/moment.min.js"></script>
     <script src="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>

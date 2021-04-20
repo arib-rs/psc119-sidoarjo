@@ -77,8 +77,8 @@ Route::get('/penanganan_kejadian', function () {
     return view('monitoring.penanganan_kejadian');
 });
 
-Route::get('/resource_management', function () {
-    return view('monitoring.resource_management');
+Route::get('/monitoring_resources', function () {
+    return view('monitoring.monitoring_resources');
 });
 
 Route::get('/laporan_kejadian', function () {
