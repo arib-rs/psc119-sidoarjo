@@ -34,7 +34,7 @@
                 <div class="tab-pane active" id="resource">
                     <div class="row">
                         <div class="col-md-4">
-                            <select id="lokasi" class="form-control select">
+                            <select id="lokasi" class="form-control select2ambulan">
                                 <option value=''>PILIH LOKASI</option>
                                 <option value='0'>Command Center</option>
                                 <option value='1'>RSUD SIDOARJO</option>
@@ -99,10 +99,10 @@
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <select id="lokasi" class="form-control select">
-                                <option value=''>JENIS RESOURCE</option>
-                                <option value='0'>Mobil</option>
-                                <option value='1'>Motor</option>
+                            <select id="lokasi" class="form-control select2">
+                                <option value="">JENIS RESOURCE</option>
+                                <option value="0">Mobil</option>
+                                <option value="1">Motor</option>
                             </select>
                         </div>
                         <div class="col-md-3">
@@ -478,6 +478,8 @@
 @section('scripts')
 <script>
     $(function() {
+        $('.select2ambulan').select2()
+
         $('#example1').DataTable()
         $('#example2').DataTable({
             'paging': true,

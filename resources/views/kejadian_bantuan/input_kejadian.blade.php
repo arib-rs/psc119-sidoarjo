@@ -46,12 +46,12 @@
 
     <!-- Main content -->
     <section class="content">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8" style="background:#66CC00; margin-bottom: 2rem; text-align: center; padding: 1rem;">
-                <p style="font-size: 4rem; vertical-align: middle; margin: 0;">Timer: 00 : 00 : 03</p>
+        <div class="row" style="margin: 0px;">
+            <!-- <div class="col-md-2"></div> -->
+            <div class="col-md-12" style="background:#66CC00; margin: 0; margin-bottom: 1em; text-align: center; padding: 1rem;">
+                <p style="font-size: 4rem; vertical-align: middle; margin: 0; color: #F4F4F4;">Timer: 00 : 00 : 01</p>
             </div>
-            <div class="col-md-2"></div>
+            <!-- <div class="col-md-2"></div> -->
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -123,7 +123,7 @@
                                                 <input type="text" class="form-control" placeholder="Masukan nama tempat atau alamat contoh Jl. Diponegoro no. 139 Sidoarjo">
                                             </div>
                                         </div>
-                                        <div class="col-md-1" style="padding-left: 0;">
+                                        <div class="col-md-1">
                                             <button type="submit" class="btn btn-primary" style="width: 100%;">Search</button>
                                         </div>
                                     </div><br>

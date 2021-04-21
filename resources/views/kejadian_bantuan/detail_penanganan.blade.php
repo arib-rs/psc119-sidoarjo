@@ -175,7 +175,7 @@
                                     <th class="text-center">USIA</th>
                                     <th class="text-center">AMBULAN</th>
                                     <th class="text-center">TINDAKAN</th>
-                                    <th class="text-center"></th>
+                                    <th class="text-center">AKSI</th>
                                 </tr>
                             </thead>
                             <tbody>

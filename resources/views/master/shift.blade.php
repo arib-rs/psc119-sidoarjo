@@ -35,7 +35,7 @@
                 <div class="tab-pane active" id="shift">
                     <div class="row">
                         <div class="col-md-2">
-                            <select id="pilih_lokasi" name="lokasi" class="form-control select">
+                            <select id="pilih_lokasi" name="lokasi" class="form-control select2shift">
                                 <option value="">PILIH LOKASI</option>
                                 <option value="-1">Harmoni Integra</option>
                                 <option value="0">Command Center</option>
@@ -205,83 +205,83 @@
                 <!-- BEGIN VALIDATION STATES-->
                 <div class="portlet-body form">
                     <!-- BEGIN FORM-->
-                    <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
+                    <form method="post" id="form_req" enctype="multipart/form-data" class="form-horizontal">
                         <div class="form-body">
                             <div class="form-group">
                                 <label class="control-label col-md-4 font-green-haze">Shift<span class="required" style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type='text' id='shift' name='shift' class='form-control'>
+                                    <input type="text" id="shift" name="shift" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Lokasi<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">Lokasi<span class="required" style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <select name='lokasi' id="lokasi" onchange="" class="form-control select">
-                                        <option value=''>Pilih Lokasi</option>
-                                        <option value='0'>Command Center</option>
-                                        <option value='1'>RSUD SIDOARJO</option>
-                                        <option value='2'>RUMKITBAN SIDOARJO</option>
-                                        <option value='3'>RSU AL-Islam HM Mawardi</option>
-                                        <option value='4'>RS Citra Medika</option>
-                                        <option value='5'>RSI Siti Hajar</option>
-                                        <option value='6'>RSU BUNDA WARU</option>
-                                        <option value='7'>RS Mitra Sehat Mandiri</option>
-                                        <option value='8'>RS Dummy 1</option>
-                                        <option value='9'>RS SITI KHODIJAH</option>
-                                        <option value='10'>RS Bhayangkara Pusdik Porong</option>
-                                        <option value='11'>RS. ANWAR MEDIKA</option>
-                                        <option value='12'>RS MATA FATMA SIDOARJO</option>
-                                        <option value='13'>PKM GANTING</option>
-                                        <option value='14'>PKM SIDOARJO</option>
-                                        <option value='15'>PKM SEKARDANGAN</option>
-                                        <option value='16'>PKM URANGAGUNG</option>
-                                        <option value='17'>PKM BUDURAN</option>
-                                        <option value='18'>PKM CANDI</option>
-                                        <option value='19'>PKM PORONG</option>
-                                        <option value='20'>PKM KEDUNGSOLO</option>
-                                        <option value='21'>PKM JABON</option>
-                                        <option value='22'>PKM KREMBUNG</option>
-                                        <option value='23'>PKM TANGGULANGIN</option>
-                                        <option value='24'>PKM TULANGAN</option>
-                                        <option value='25'>PKM KEPADANGAN</option>
-                                        <option value='26'>PKM TAMAN</option>
-                                        <option value='27'>PKM TROSOBO</option>
-                                        <option value='28'>PKM WARU</option>
-                                        <option value='29'>PKM MEDAENG</option>
-                                        <option value='30'>PKM SEDATI</option>
-                                        <option value='31'>PKM GEDANGAN</option>
-                                        <option value='32'>PKM SUKODONO</option>
-                                        <option value='33'>PKM KRIAN</option>
-                                        <option value='34'>PKM BARENGKRAJAN</option>
-                                        <option value='35'>RS Aisyiyah Siti Fatimah Tulangan</option>
-                                        <option value='36'>PKM BALONGBENDO</option>
-                                        <option value='37'>PKM WONOAYU</option>
-                                        <option value='38'>PKM TARIK</option>
-                                        <option value='39'>PKM PRAMBON</option>
-                                        <option value='40'>RS Delta Surya</option>
-                                        <option value='41'>RS Jasem</option>
-                                        <option value='42'>RS Mitra Keluarga Waru</option>
-                                        <option value='43'>RS Assakinah Medika</option>
-                                        <option value='44'>RSIA Soerya</option>
-                                        <option value='45'>RSIA Prima Husada</option>
-                                        <option value='46'>RSIA Pondok Tjandra</option>
-                                        <option value='47'>RSIA Arafah Anwar Medika Sukodono</option>
-                                        <option value='48'>RS Aminah</option>
-                                        <option value='49'>RS Usada Sidoarjo</option>
-                                        <option value='50'>RSIA Kirana</option>
-                                        <option value='51'>RSIA Buah Delima</option>
-                                        <option value='52'>RS Rahman Rahim</option>
-                                        <option value='53'>RSIA Mitra Husada</option>
-                                        <option value='54'>Puskesmas Wiguna</option>
-                                        <option value='55'>Dinas Kesehatan</option>
-                                        <option value='56'>faskes wiguna</option>
-                                        <option value='57'>PMI Sidoarjo</option>
-                                        <option value='75'>Faskes Simulasi Medokan Asri</option>
-                                        <option value='84'>RS DKT Sidoarjo</option>
+                                    <select name="lokasi" id="lokasi" class="form-control select">
+                                        <option value="">Pilih Lokasi</option>
+                                        <option value="0">Command Center</option>
+                                        <option value="1">RSUD SIDOARJO</option>
+                                        <option value="2">RUMKITBAN SIDOARJO</option>
+                                        <option value="3">RSU AL-Islam HM Mawardi</option>
+                                        <option value="4">RS Citra Medika</option>
+                                        <option value="5">RSI Siti Hajar</option>
+                                        <option value="6">RSU BUNDA WARU</option>
+                                        <option value="7">RS Mitra Sehat Mandiri</option>
+                                        <option value="8">RS Dummy 1</option>
+                                        <option value="9">RS SITI KHODIJAH</option>
+                                        <option value="10">RS Bhayangkara Pusdik Porong</option>
+                                        <option value="11">RS. ANWAR MEDIKA</option>
+                                        <option value="12">RS MATA FATMA SIDOARJO</option>
+                                        <option value="13">PKM GANTING</option>
+                                        <option value="14">PKM SIDOARJO</option>
+                                        <option value="15">PKM SEKARDANGAN</option>
+                                        <option value="16">PKM URANGAGUNG</option>
+                                        <option value="17">PKM BUDURAN</option>
+                                        <option value="18">PKM CANDI</option>
+                                        <option value="19">PKM PORONG</option>
+                                        <option value="20">PKM KEDUNGSOLO</option>
+                                        <option value="21">PKM JABON</option>
+                                        <option value="22">PKM KREMBUNG</option>
+                                        <option value="23">PKM TANGGULANGIN</option>
+                                        <option value="24">PKM TULANGAN</option>
+                                        <option value="25">PKM KEPADANGAN</option>
+                                        <option value="26">PKM TAMAN</option>
+                                        <option value="27">PKM TROSOBO</option>
+                                        <option value="28">PKM WARU</option>
+                                        <option value="29">PKM MEDAENG</option>
+                                        <option value="30">PKM SEDATI</option>
+                                        <option value="31">PKM GEDANGAN</option>
+                                        <option value="32">PKM SUKODONO</option>
+                                        <option value="33">PKM KRIAN</option>
+                                        <option value="34">PKM BARENGKRAJAN</option>
+                                        <option value="35">RS Aisyiyah Siti Fatimah Tulangan</option>
+                                        <option value="36">PKM BALONGBENDO</option>
+                                        <option value="37">PKM WONOAYU</option>
+                                        <option value="38">PKM TARIK</option>
+                                        <option value="39">PKM PRAMBON</option>
+                                        <option value="40">RS Delta Surya</option>
+                                        <option value="41">RS Jasem</option>
+                                        <option value="42">RS Mitra Keluarga Waru</option>
+                                        <option value="43">RS Assakinah Medika</option>
+                                        <option value="44">RSIA Soerya</option>
+                                        <option value="45">RSIA Prima Husada</option>
+                                        <option value="46">RSIA Pondok Tjandra</option>
+                                        <option value="47">RSIA Arafah Anwar Medika Sukodono</option>
+                                        <option value="48">RS Aminah</option>
+                                        <option value="49">RS Usada Sidoarjo</option>
+                                        <option value="50">RSIA Kirana</option>
+                                        <option value="51">RSIA Buah Delima</option>
+                                        <option value="52">RS Rahman Rahim</option>
+                                        <option value="53">RSIA Mitra Husada</option>
+                                        <option value="54">Puskesmas Wiguna</option>
+                                        <option value="55">Dinas Kesehatan</option>
+                                        <option value="56">faskes wiguna</option>
+                                        <option value="57">PMI Sidoarjo</option>
+                                        <option value="75">Faskes Simulasi Medokan Asri</option>
+                                        <option value="84">RS DKT Sidoarjo</option>
                                     </select>
                                 </div>
                             </div>
@@ -330,6 +330,8 @@
 @section('scripts')
 <script>
     $(function() {
+        $('.select2shift').select2()
+
         $('#example1').DataTable({
             'paging': true,
             'lengthChange': true,

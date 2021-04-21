@@ -8,6 +8,7 @@
     <title>PSC-119 Kabupaten Sidoarjo - @yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -16,6 +17,20 @@
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/Ionicons/css/ionicons.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="{{asset('template')}}/plugins/iCheck/all.css">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="{{asset('template')}}/plugins/timepicker/bootstrap-timepicker.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset('template')}}/bower_components/select2/dist/css/select2.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('template')}}/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -23,17 +38,6 @@
     <link rel="stylesheet" href="{{asset('template')}}/dist/css/skins/_all-skins.min.css">
     <!-- Morris chart -->
     <link rel="stylesheet" href="{{asset('template')}}/bower_components/morris.js/morris.css">
-    <!-- jvectormap -->
-    <link rel="stylesheet" href="{{asset('template')}}/bower_components/jvectormap/jquery-jvectormap.css">
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{asset('template')}}/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="{{asset('template')}}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-    <!-- Select2 -->
-    <link rel="stylesheet" href="{{asset('template')}}/bower_components/select2/dist/css/select2.min.css">
-    <!-- <link rel="stylesheet" href="{{asset('template')}}/plugins/style.css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -134,18 +138,18 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="{{url('/dashboard')}}">Home</a></li>
-                            <li><a href='#'>Kategori Kejadian</a></li>
-                            <li><a href='#'>Respon Kejadian</a></li>
-                            <li><a href='#'>Status Triase</a></li>
-                            <li><a href='#'>Ambulan Terbaik & <br>Terburuk</a></li>
-                            <li><a href='#'>Kejadian Per Kecamatan</a></li>
-                            <li><a href='#'>Kategori Kejadian Per <br>Kecamatan</a></li>
-                            <li><a href='#'>Kejadian On Map</a></li>
-                            <li><a href='#'>Status Ambulan</a></li>
-                            <li><a href='#'>Status Laporan Kejadian</a></li>
-                            <li><a href='#'>Monitoring Dashboard</a></li>
-                            <li><a href='#'>Rekap Panggilan</a></li>
-                            <li><a href='#'>Kejadian Berdasarkan <br>Kategori EMD</a></li>
+                            <li><a href="#">Kategori Kejadian</a></li>
+                            <li><a href="#">Respon Kejadian</a></li>
+                            <li><a href="#">Status Triase</a></li>
+                            <li><a href="#">Ambulan Terbaik & <br>Terburuk</a></li>
+                            <li><a href="#">Kejadian Per Kecamatan</a></li>
+                            <li><a href="#">Kategori Kejadian Per <br>Kecamatan</a></li>
+                            <li><a href="#">Kejadian On Map</a></li>
+                            <li><a href="#">Status Ambulan</a></li>
+                            <li><a href="#">Status Laporan Kejadian</a></li>
+                            <li><a href="#">Monitoring Dashboard</a></li>
+                            <li><a href="#">Rekap Panggilan</a></li>
+                            <li><a href="#">Kejadian Berdasarkan <br>Kategori EMD</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -288,10 +292,6 @@
     <script src="{{asset('template')}}/bower_components/fastclick/lib/fastclick.js"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('template')}}/dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{asset('template')}}/dist/js/pages/dashboard.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{asset('template')}}/dist/js/demo.js"></script>
     <!-- Select2 -->
     <script src="{{asset('template')}}/bower_components/select2/dist/js/select2.full.min.js"></script>
 </body>

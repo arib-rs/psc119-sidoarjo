@@ -41,37 +41,86 @@
                     <div class="box-body">
                         <div class="row" style="margin-left: 2px;">
                             <div class="col-md-3">
-                                <div class="box box-default box-solid">
+                                <div class="box box-danger box-solid">
                                     <div class="box-header with-border">
                                         <h3 class="box-title">Jenis Resource</h3>
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        The body of the box
+                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><i class="fa fa-ambulance"></i><span> Mobil</span></div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><i class="fa fa-motorcycle"></i><span> Motor</span></div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><i class="fa fa-tasks"></i><span> Task</span></div>
+                                        </div>
                                     </div>
                                     <!-- /.box-body -->
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="box box-default box-solid">
+                                <div class="box box-danger box-solid">
                                     <div class="box-header with-border">
                                         <h3 class="box-title">Status Resource</h3>
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        The body of the box
+                                        <div class="col-md-4" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #00A65A; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10 btn btn-success" style="border-radius: 0px; height: 25px; padding-top: 2px; text-align: left;"><span style="color: #fff">Tersedia : 27</span></div>
+                                        </div>
+                                        <div class="col-md-4" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #00A65A; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10 btn btn-success" style="border-radius: 0px; height: 25px; padding-top: 2px; text-align: left;"><span style="color: #fff">Sibuk : 1</span></div>
+                                        </div>
+                                        <div class="col-md-4" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #F4F4F4; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10 btn btn-default" style="border-radius: 0px; height: 25px; padding-top: 2px; text-align: left;"><span>Belum Siap : 37</span></div>
+                                        </div>
+                                        <div class="col-md-4" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #DD4B39; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10 btn btn-danger" style="border-radius: 0px; height: 25px; padding-top: 2px; text-align: left;"><span style="color: #fff">Menuju TKP : 0</span></div>
+                                        </div>
+                                        <div class="col-md-4" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #F39C12; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10 btn btn-warning" style="border-radius: 0px; height: 25px; padding-top: 2px; text-align: left;"><span style="color: #fff">Di TKP : 0</span></div>
+                                        </div>
+                                        <div class="col-md-4" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #3C8DBC; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10 btn btn-primary" style="border-radius: 0px; height: 25px; padding-top: 2px; text-align: left;"><span style="color: #fff">Menuju RS : 0</span></div>
+                                        </div>
                                     </div>
                                     <!-- /.box-body -->
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="box box-default box-solid">
+                                <div class="box box-danger box-solid">
                                     <div class="box-header with-border">
                                         <h3 class="box-title">Kelas Resource</h3>
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        The body of the box
+                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas A</span></div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas B</span></div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas C</span></div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
+                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas D</span></div>
+                                        </div>
                                     </div>
                                     <!-- /.box-body -->
                                 </div>
