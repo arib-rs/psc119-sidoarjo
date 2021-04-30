@@ -136,7 +136,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{url('/dashboard')}}">Home</a></li>
                             <li><a href="#">Kategori Kejadian</a></li>
                             <li><a href="#">Respon Kejadian</a></li>
@@ -241,7 +241,7 @@
                             <li><a href="{{url('/task')}}">Master Task</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fa fa-map-marker"></i> <span>Buka Peta</span></a></li>
+                    <li><a href="{{url('/peta')}}" target="popup" onclick="myFunction()"><i class="fa fa-map-marker"></i> <span>Buka Peta</span></a></li>
                 </ul>
             </section>
             <!-- /.sidebar -->
@@ -294,6 +294,7 @@
     <script src="{{asset('template')}}/dist/js/adminlte.min.js"></script>
     <!-- Select2 -->
     <script src="{{asset('template')}}/bower_components/select2/dist/js/select2.full.min.js"></script>
+
 </body>
 
 <script>
@@ -321,6 +322,12 @@
         setTimeout(showTime, 1000);
     }
     showTime();
+</script>
+
+<script>
+    function myFunction() {
+        var myWindow = window.open("{{url('/peta')}}", "name", "width=auto,height=600");
+    }
 </script>
 
 @yield('scripts')

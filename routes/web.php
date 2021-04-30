@@ -144,3 +144,7 @@ Route::get('/pasien', function () {
 Route::get('/task', function () {
     return view('master.task');
 });
+
+Route::get('/peta', function () {
+    return view('buka_peta.show_map');
+});
