@@ -23,7 +23,7 @@
             <li class="active">Kategori</li>
         </ol>
     </section>
-
+                                                                                                                                                                                 
     <!-- Main content -->
     <section class="content">
         <div class="nav-tabs-custom">
@@ -168,38 +168,120 @@
                 <!-- BEGIN VALIDATION STATES-->
                 <div class="portlet-body form">
                     <!-- BEGIN FORM-->
-                    <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
+                    <form method="post" id="form_req" enctype="multipart/form-data" class="form-horizontal">
                         <div class="form-body">
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Medis<span class="required" style="color: red;">
+                                <label class="control-label col-md-4 font-green-haze">Kategori<span class="required" style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <select id='kemasan' name='kemasan' class='form-control'>
-                                        <option value="">Pilih Medis</option>
-                                        <option value="">Non Medis</option>
-                                        <option value="">Medis</option>
+                                    <select id="kategori" name="kategori" class="form-control">
+                                        <option value="">SIMULASI</option>
+                                        <option value="">Lain-lain</option>
+                                        <option value="">Keracunan/Over Dosis</option>
+                                        <option value="">Sakit Perut</option>
+                                        <option value="">Hamil/Bersalin/Keguguran</option>
+                                        <option value="">Tidak Sadar/Pingsan/Hampir Pingsan/Tidak Bernyawa</option>
+                                        <option value="">Stroke</option>
+                                        <option value="">Alergi</option>
+                                        <option value="">Sakit Dada</option>
+                                        <option value="">Masalah Jantung / A.I.C.D</option>
+                                        <option value="">Trauma Cedera</option>
+                                        <option value="">Kecelakaan Lalu Lintas (KLL)</option>
+                                        <option value="">Masalah Tidak Diketahui</option>
+                                        <option value="">Sakit Kepala</option>
+                                        <option value="">Terbakar</option>
+                                        <option value="">Masalah Pernafasan</option>
+                                        <option value="">Kejang / Sawan</option>
+                                        <option value="">Kepanasan</option>
+                                        <option value="">Kencing Manis / Diabetes</option>
+                                        <option value="">Jatuh</option>
+                                        <option value="">Serangan/Gigitan Hewan</option>
+                                        <option value="">Lemas</option>
+                                        <option value="">Orang Sakit(diagnosa spesifik)</option>
+                                        <option value="">Alergi / Bisa Binatang (sengatan/gigitan)</option>
+                                        <option value="">Sakit bagian belakang (bukan terluka)</option>
+                                        <option value="">Pendarahan/Luka</option>
+                                        <option value="">Psikiatrik/Percobaan Bunuh Dir</option>
+                                        <option value="">Nyeri Punggung / Trauma</option>
+                                        <option value="">Karbon Monoksida / Inhasi/ Cai</option>
+                                        <option value="">Dipukul/Serangan</option>
+                                        <option value="">Bantuan Pernafasan</option>
+                                        <option value="">Kesetrum</option>
+                                        <option value="">Cedera Mata</option>
+                                        <option value="">Tikaman/Tembakan/Luka Tusuk</option>
+                                        <option value="">Tercekik</option>
+                                        <option value="">Terperangkap (Bukan di Kendaraan)</option>
+                                        <option value="">Karbon Monoksida/Terhirup(Inhaled)</option>
+                                        <option value="">Patah Tulang Terbuka</option>
+                                        <option value="">sakit seluruh tubuh</option>
+                                        <option value="">lemas dan kurang respon</option>
+                                        <option value="">Home Care</option>
+                                        <option value="">keluar darah dari jalan lahir</option>
+                                        <option value="">konsultasi dokter</option>
+                                        <option value="">pasang kateter</option>
+                                        <option value="">mual muntah dan nyeri</option>
+                                        <option value="">sesak dan deman</option>
+                                        <option value="">penurunan kesadaran</option>
+                                        <option value="">Stroke</option>
+                                        <option value="">pusing berputar</option>
+                                        <option value="">tidak bisa jalan dan nyeri perut</option>
+                                        <option value="">Sesak Napas</option>
+                                        <option value="">gemetar</option>
+                                        <option value="">Visite dokter</option>
+                                        <option value="">dingin dan kaki kesemutan</option>
+                                        <option value="">perawatan luka</option>
+                                        <option value="">Sesak Napas</option>
+                                        <option value="">Penggunaan Mobil Sehat</option>
+                                        <option value="">pasien poli</option>
+                                        <option value="">pasang NGT</option>
+                                        <option value="">nyeri seluruh tubuh</option>
+                                        <option value="">Lemas dan sesak</option>
+                                        <option value="">pasang NGT dan kateter</option>
+                                        <option value="">pusing berputar dan sakit perut</option>
+                                        <option value="">frakture</option>
+                                        <option value="">tidak bisa ngapa-ngapain</option>
+                                        <option value="">kejang</option>
+                                        <option value="">rawat luka</option>
+                                        <option value="">Sesak Napas</option>
+                                        <option value="">KDM</option>
+                                        <option value="">Layanan Ambulan</option>
+                                        <option value="">Bencana Alam</option>
+                                        <option value="">mual muntah dan panas </option>
+                                        <option value="">sesak dan batuk</option>
+                                        <option value="">Demam</option>
+                                        <option value="">nyeri perut, pipis sakit</option>
+                                        <option value="">kebakaran</option>
+                                        <option value="">Lemas dan demam</option>
+                                        <option value="">tidak bisa jalan</option>
+                                        <option value="">vertigo</option>
+                                        <option value="">Dehidrasi</option>
+                                        <option value="">perut tegang dan lemas</option>
+                                        <option value="">fisioterapi</option>
+                                        <option value="">meninggal dunia</option>
+                                        <option value="">mual muntah</option>
+                                        <option value="">diduga dislokasi</option>
+                                        <option value="">Sesak Napas</option>
+                                        <option value="">tensi naik rasanya mau pingsan</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Emergency<span class="required" style="color: red;">
+                                <label class="control-label col-md-4 font-green-haze">Sub Kategori<span class="required" style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <select name='kategori' id='kategori' class="form-control select">
-                                        <option value=''>Pilih Emergency</option>
-                                        <option value=''>Non Emergency</option>
-                                        <option value=''>Emergency</option>
+                                    <select name="sub_kategori" id="sub_kategori" class="form-control select">
+                                        <option value="1">Trauma KLL</option>
+                                        <option value="2">Trauma Non KLL</option>
+                                        <option value="3">Non Trauma - Emergency</option>
+                                        <option value="4">Kebakaran</option>
+                                        <option value="5">Bencana Alam</option>
+                                        <option value="6">Tidak Diketahui</option>
+                                        <option value="7">Keamanan dan Ketertiban</option>
+                                        <option value="8">Non Trauma - Non Emergency</option>
+                                        <option value="9">Kesedak</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Keterangan<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <textarea id='paramedis' name='paramedis' class="form-control" rows="2"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -209,7 +291,7 @@
                 <!-- END VALIDATION STATES-->
             </div>
             <div class="modal-footer">
-                <button type="submit" onclick='' class="btn btn-primary">Simpan</button>
+                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
             </div>
         </div>
     </div>

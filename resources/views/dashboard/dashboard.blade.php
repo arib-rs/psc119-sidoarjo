@@ -43,8 +43,8 @@
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <p style="font-size: 28px;">170</p>
-                        <!-- <h3>170</h3> -->
+                        <!-- <p style="font-size: 28px;">170</p> -->
+                        <h3>170</h3>
 
                         <p>Total Laporan Kejadian Tahun ini</p>
                     </div>
@@ -59,8 +59,8 @@
                 <!-- small box -->
                 <div class="small-box bg-purple">
                     <div class="inner">
-                        <p style="font-size: 28px;">36</p>
-                        <!-- <h3>36</h3> -->
+                        <!-- <p style="font-size: 28px;">36</p> -->
+                        <h3>36</h3>
 
                         <p>Total Laporan Kejadian Bulan ini</p>
                     </div>
@@ -75,8 +75,8 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <p style="font-size: 28px;">3</p>
-                        <!-- <h3>3</h3> -->
+                        <!-- <p style="font-size: 28px;">3</p> -->
+                        <h3>3</h3>
 
                         <p>Total Laporan Kejadian Hari ini</p>
                     </div>
@@ -91,8 +91,8 @@
                 <!-- small box -->
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <p style="font-size: 28px;">2 Bantuan / 2 Kejadian</p>
-                        <!-- <h3>Bantuan / 2 Kejadian</h3> -->
+                        <!-- <p style="font-size: 28px;">2 Bantuan / 2 Kejadian</p> -->
+                        <h3>Bantuan / 2 Kejadian</h3>
 
                         <p>Kirim Bantuan Hari ini</p>
                     </div>

@@ -43,7 +43,8 @@
                             <div class="col-md-3">
                                 <div class="box box-danger box-solid">
                                     <div class="box-header with-border">
-                                        <h3 class="box-title">Jenis Resource</h3>
+                                        <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px; background: #ffffff;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                        <h3 class="box-title" style="padding-top: 4px; padding-left: 8px;">Jenis Resource</h3>
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
@@ -66,7 +67,8 @@
                             <div class="col-md-6">
                                 <div class="box box-danger box-solid">
                                     <div class="box-header with-border">
-                                        <h3 class="box-title">Status Resource</h3>
+                                        <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px; background: #ffffff;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                        <h3 class="box-title" style="padding-top: 4px; padding-left: 8px;">Status Resource</h3>
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
@@ -101,7 +103,8 @@
                             <div class="col-md-3">
                                 <div class="box box-danger box-solid">
                                     <div class="box-header with-border">
-                                        <h3 class="box-title">Kelas Resource</h3>
+                                        <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px; background: #ffffff;"><input type="checkbox" style="margin-top: 0px;"></div>
+                                        <h3 class="box-title" style="padding-top: 4px; padding-left: 8px;">Kelas Resource</h3>
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
