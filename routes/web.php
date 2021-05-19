@@ -1,150 +1,103 @@
 <?php
 
+use App\Http\Controllers\LoginsController;
+use App\Http\Controllers\DashboardsController;
+use App\Http\Controllers\InputIncidentsController;
+use App\Http\Controllers\RequestAssistsController;
+use App\Http\Controllers\DetailHandlingsController;
+use App\Http\Controllers\EditReportsController;
+use App\Http\Controllers\EditIncidentsController;
+use App\Http\Controllers\AssignmentConfirmationsController;
+use App\Http\Controllers\RecapShiftsController;
+use App\Http\Controllers\MonitoringAlarmsController;
+use App\Http\Controllers\IncidentHandlingsController;
+use App\Http\Controllers\MonitoringResourcesController;
+use App\Http\Controllers\ReportIncidentsController;
+use App\Http\Controllers\RecapIncidentsController;
+use App\Http\Controllers\RecapAssistsController;
+use App\Http\Controllers\RecapRejectionCancellationsController;
+use App\Http\Controllers\RecapNursesController;
+use App\Http\Controllers\RecapAmbulancesController;
+use App\Http\Controllers\PersonsController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\DevicesController;
+use App\Http\Controllers\EmergencyButtonUsersController;
+use App\Http\Controllers\HealthFacilitiesController;
+use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\SpecialistsController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\SubCategoriesController;
+use App\Http\Controllers\MedicinesController;
+use App\Http\Controllers\RShiftsController;
+use App\Http\Controllers\PatientDatasController;
+use App\Http\Controllers\TasksController;
+use App\Http\Controllers\ShowMapsController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('layout.login');
-});
+Route::get('/', [LoginsController::class, 'index']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard');
-});
+Route::get('/dashboard', [DashboardsController::class, 'index']);
 
-Route::get('/input_kejadian', function () {
-    return view('kejadian_bantuan.input_kejadian');
-});
+Route::get('/detail_penanganan', [DetailHandlingsController::class, 'index']);
 
-Route::get('/req_bantuan', function () {
-    return view('kejadian_bantuan.req_bantuan');
-});
+Route::get('/input_kejadian', [InputIncidentsController::class, 'index']);
 
-Route::get('/detail_penanganan', function () {
-    return view('kejadian_bantuan.detail_penanganan');
-});
+Route::get('/req_bantuan', [RequestAssistsController::class, 'index']);
 
-Route::get('/edit_laporan', function () {
-    return view('kejadian_bantuan.edit_laporan');
-});
+Route::get('/edit_laporan', [EditReportsController::class, 'index']);
 
-Route::get('/edit_kejadian', function () {
-    return view('kejadian_bantuan.edit_kejadian');
-});
+Route::get('/edit_kejadian', [EditIncidentsController::class, 'index']);
 
-Route::get('/personil', function () {
-    return view('user_device_management.personil');
-});
+Route::get('/konfirmasi_penugasan', [AssignmentConfirmationsController::class, 'index']);
 
-Route::get('/management_user', function () {
-    return view('user_device_management.management_user');
-});
+Route::get('/rekap_shift', [RecapShiftsController::class, 'index']);
 
-Route::get('/devicelist', function () {
-    return view('user_device_management.devicelist');
-});
+Route::get('/monitoring_alarm', [MonitoringAlarmsController::class, 'index']);
 
-Route::get('/emergency_button_user', function () {
-    return view('user_device_management.emergency_button_user');
-});
+Route::get('/penanganan_kejadian', [IncidentHandlingsController::class, 'index']);
 
-Route::get('/konfirmasi_penugasan', function () {
-    return view('konfirmasi_approval.konfirmasi_penugasan');
-});
+Route::get('/monitoring_resources', [MonitoringResourcesController::class, 'index']);
 
-Route::get('/rekap_shift', function () {
-    return view('konfirmasi_approval.rekap_shift');
-});
+Route::get('/laporan_kejadian', [ReportIncidentsController::class, 'index']);
 
-Route::get('/monitoring_alarm', function () {
-    return view('monitoring.monitoring_alarm');
-});
+Route::get('/rekap_kejadian', [RecapIncidentsController::class, 'index']);
 
-Route::get('/penanganan_kejadian', function () {
-    return view('monitoring.penanganan_kejadian');
-});
+Route::get('/rekap_bantuan', [RecapAssistsController::class, 'index']);
 
-Route::get('/monitoring_resources', function () {
-    return view('monitoring.monitoring_resources');
-});
+Route::get('/rekap_penolakan_pembatalan', [RecapRejectionCancellationsController::class, 'index']);
 
-Route::get('/laporan_kejadian', function () {
-    return view('laporan.laporan_kejadian');
-});
+Route::get('/rekap_perawat', [RecapNursesController::class, 'index']);
 
-Route::get('/rekap_kejadian', function () {
-    return view('laporan.rekap_kejadian');
-});
+Route::get('/rekap_ambulan_offline', [RecapAmbulancesController::class, 'index']);
 
-Route::get('/rekap_bantuan', function () {
-    return view('laporan.rekap_bantuan');
-});
+Route::get('/personil', [PersonsController::class, 'index']);
 
-Route::get('/rekap_penolakan_pembatalan', function () {
-    return view('laporan.rekap_penolakan_pembatalan');
-});
+Route::get('/management_user', [UsersController::class, 'index']);
 
-Route::get('/rekap_perawat', function () {
-    return view('laporan.rekap_perawat');
-});
+Route::get('/devicelist', [DevicesController::class, 'index']);
 
-Route::get('/rekap_ambulan_offline', function () {
-    return view('laporan.rekap_ambulan_offline');
-});
+Route::get('/emergency_button_user', [EmergencyButtonUsersController::class, 'index']);
 
-Route::get('/faskes', function () {
-    return view('master.faskes');
-});
+Route::get('/faskes', [HealthFacilitiesController::class, 'index']);
 
-Route::get('/ambulan', function () {
-    return view('master.ambulan');
-});
+Route::get('/ambulan', [ResourcesController::class, 'index']);
 
-Route::get('/spesialisasi_dokter', function () {
-    return view('master.spesialisasi_dokter');
-});
+Route::get('/spesialisasi_dokter', [SpecialistsController::class, 'index']);
 
-Route::get('/kategori', function () {
-    return view('master.kategori');
-});
+Route::get('/kategori', [CategoriesController::class, 'index']);
 
-// Route::get('/mobil_sehat', function () {
-//     return view('master.mobil_sehat');
-// });
+Route::get('/sub_kategori', [SubCategoriesController::class, 'index']);
 
-Route::get('/sub_kategori', function () {
-    return view('master.sub_kategori');
-});
+Route::get('/obat', [MedicinesController::class, 'index']);
 
-Route::get('/obat', function () {
-    return view('master.obat');
-});
+Route::get('/shift', [RShiftsController::class, 'index']);
 
-Route::get('/shift', function () {
-    return view('master.shift');
-});
+Route::get('/pasien', [PatientDatasController::class, 'index']);
 
-Route::get('/pasien', function () {
-    return view('master.pasien');
-});
+Route::get('/task', [TasksController::class, 'index']);
 
-Route::get('/task', function () {
-    return view('master.task');
-});
-
-Route::get('/peta', function () {
-    return view('buka_peta.show_map');
-});
+Route::get('/peta', [ShowMapsController::class, 'index']);
