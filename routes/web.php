@@ -1,8 +1,9 @@
 <?php
 
+
 use App\Http\Controllers\LoginsController;
 use App\Http\Controllers\DashboardsController;
-use App\Http\Controllers\InputIncidentsController;
+// use App\Http\Controllers\InputIncidentsController;
 use App\Http\Controllers\RequestAssistsController;
 use App\Http\Controllers\DetailHandlingsController;
 use App\Http\Controllers\EditReportsController;
@@ -34,70 +35,39 @@ use App\Http\Controllers\TasksController;
 use App\Http\Controllers\ShowMapsController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', [LoginsController::class, 'index']);
 
-Route::get('/dashboard', [DashboardsController::class, 'index']);
-
-Route::get('/detail_penanganan', [DetailHandlingsController::class, 'index']);
-
-Route::get('/input_kejadian', [InputIncidentsController::class, 'index']);
-
-Route::get('/req_bantuan', [RequestAssistsController::class, 'index']);
-
-Route::get('/edit_laporan', [EditReportsController::class, 'index']);
-
-Route::get('/edit_kejadian', [EditIncidentsController::class, 'index']);
-
-Route::get('/konfirmasi_penugasan', [AssignmentConfirmationsController::class, 'index']);
-
-Route::get('/rekap_shift', [RecapShiftsController::class, 'index']);
-
-Route::get('/monitoring_alarm', [MonitoringAlarmsController::class, 'index']);
-
-Route::get('/penanganan_kejadian', [IncidentHandlingsController::class, 'index']);
-
-Route::get('/monitoring_resources', [MonitoringResourcesController::class, 'index']);
-
-Route::get('/laporan_kejadian', [ReportIncidentsController::class, 'index']);
-
-Route::get('/rekap_kejadian', [RecapIncidentsController::class, 'index']);
-
-Route::get('/rekap_bantuan', [RecapAssistsController::class, 'index']);
-
-Route::get('/rekap_penolakan_pembatalan', [RecapRejectionCancellationsController::class, 'index']);
-
-Route::get('/rekap_perawat', [RecapNursesController::class, 'index']);
-
-Route::get('/rekap_ambulan_offline', [RecapAmbulancesController::class, 'index']);
-
-Route::get('/personil', [PersonsController::class, 'index']);
-
-Route::get('/management_user', [UsersController::class, 'index']);
-
-Route::get('/devicelist', [DevicesController::class, 'index']);
-
-Route::get('/emergency_button_user', [EmergencyButtonUsersController::class, 'index']);
-
-Route::get('/faskes', [HealthFacilitiesController::class, 'index']);
-
-Route::get('/ambulan', [ResourcesController::class, 'index']);
-
-Route::get('/spesialisasi_dokter', [SpecialistsController::class, 'index']);
-
-Route::get('/kategori', [CategoriesController::class, 'index']);
-
-Route::get('/sub_kategori', [SubCategoriesController::class, 'index']);
-
-Route::get('/obat', [MedicinesController::class, 'index']);
-
-Route::get('/shift', [RShiftsController::class, 'index']);
-
-Route::get('/pasien', [PatientDatasController::class, 'index']);
-
-Route::get('/task', [TasksController::class, 'index']);
-
-Route::get('/peta', [ShowMapsController::class, 'index']);
+Route::resources([
+    'dashboard' => 'DashboardsController',
+    'detail_penanganan' => 'DetailHandlingsController',
+    'input_kejadian' => 'InputIncidentsController',
+    'req_bantuan' => 'RequestAssistsController',
+    'edit_laporan' => 'EditReportsController',
+    'edit_kejadian' => 'EditIncidentsController',
+    'konfirmasi_penugasan' => 'AssignmentConfirmationsController',
+    'rekap_shift' => 'RecapShiftsController',
+    'monitoring_alarm' => 'MonitoringAlarmsController',
+    'penanganan_kejadian' => 'IncidentHandlingsController',
+    'monitoring_resources' => 'MonitoringResourcesController',
+    'laporan_kejadian' => 'ReportIncidentsController',
+    'rekap_kejadian' => 'RecapIncidentsController',
+    'rekap_bantuan' => 'RecapAssistsController',
+    'rekap_penolakan_pembatalan' => 'RecapRejectionCancellationsController',
+    'rekap_perawat' => 'RecapNursesController',
+    'rekap_ambulan_offline' => 'RecapAmbulancesController',
+    'personil' => 'PersonsController',
+    'management_user' => 'UsersController',
+    'devicelist' => 'DevicesController',
+    'emergency_button_user' => 'EmergencyButtonUsersController',
+    'faskes' => 'HealthFacilitiesController',
+    'ambulan' => 'ResourcesController',
+    'spesialisasi_dokter' => 'SpecialistsController',
+    'kategori' => 'CategoriesController',
+    'sub_kategori' => 'SubCategoriesController',
+    'obat' => 'MedicinesController',
+    'shift' => 'RShiftsController',
+    'pasien' => 'PatientDatasController',
+    'task' => 'TasksController',
+    'peta' => 'ShowMapsController'
+]);

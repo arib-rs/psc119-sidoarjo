@@ -8,7 +8,8 @@ class InputIncidentsController extends Controller
 {
     public function index()
     {
-        return view('kejadian_bantuan.input_kejadian');
+        $data['categories'] = '';
+        return view('kejadian_bantuan.input_kejadian', $data);
     }
 
     public function create()
