@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Incident;
 use Illuminate\Http\Request;
 
 class InputIncidentsController extends Controller
 {
     public function index()
     {
+        $data['ccn'] = Incident::orderBy('created_at', 'desc')->get();
         $data['categories'] = '';
         return view('kejadian_bantuan.input_kejadian', $data);
     }
