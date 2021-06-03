@@ -32,7 +32,7 @@
                                             <th class="text-center">WAKTU</th>
                                             <th class="text-center" style="width: 490px;">LOKASI</th>
                                             <th class="text-center" style="width: 370px;">KETERANGAN</th>
-                                            <th class="text-center" style="width: 60px;">AKSI</th>
+                                            <th class="text-center" style="width: 110px;">AKSI</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -43,8 +43,8 @@
                                             <td class="text-center">deltasari waru sidaorjo</td>
                                             <td class="text-center">Menanyakan informasi tentang vaksin covid19 untuk lansia</td>
                                             <td class="text-center">
-                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="btn-pembatalan-tugas" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -54,8 +54,8 @@
                                             <td class="text-center">krembung sidoarjo</td>
                                             <td class="text-center">menyakan untuk mengetahui hasil pcr</td>
                                             <td class="text-center">
-                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="btn-pembatalan-tugas" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -65,8 +65,8 @@
                                             <td class="text-center">jakarta</td>
                                             <td class="text-center"></td>
                                             <td class="text-center">
-                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="width: 24px; margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="btn-pembatalan-tugas" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                     </tbody>

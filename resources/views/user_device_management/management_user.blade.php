@@ -60,12 +60,12 @@
                                             <td class="text-center">081233019130</td>
                                             <td class="text-center"><button class="btn btn-success btn-sm" style="border-radius: 20px;">User Mobile</button></td>
                                             <td class=" text-center">
-                                                <a href="#" class="btn btn-xs btn-success" data-placement="left" title="Kirim Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-send"></i></a>
-                                                <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Hapus Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
+                                                <a href="#" class="btn btn-success" data-placement="left" title="Kirim Data" style="margin: auto 2px;"><i class="fa fa-send"></i></a>
+                                                <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-success" style="width: 24px; margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a href="#" class="btn btn-success" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -79,12 +79,12 @@
                                             <td class="text-center">081234567899</td>
                                             <td class="text-center"><button class="btn btn-primary btn-sm" style="border-radius: 20px;">User Web</button></td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-success" data-placement="left" title="Kirim Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-send"></i></a>
-                                                <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Hapus Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
+                                                <a href="#" class="btn btn-success" data-placement="left" title="Kirim Data" style="margin: auto 2px;"><i class="fa fa-send"></i></a>
+                                                <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-success" style="width: 24px; margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a href="#" class="btn btn-success" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -98,12 +98,12 @@
                                             <td class="text-center">085739088836</td>
                                             <td class="text-center"><button class="btn btn-primary btn-sm" style="border-radius: 20px;">User Web</button></td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-success" data-placement="left" title="Kirim Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-send"></i></a>
-                                                <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Hapus Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
+                                                <a href="#" class="btn btn-success" data-placement="left" title="Kirim Data" style="margin: auto 2px;"><i class="fa fa-send"></i></a>
+                                                <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-success" style="width: 24px; margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a href="#" class="btn btn-success" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
                                             </td>
                                         </tr>
                                     </tbody>
