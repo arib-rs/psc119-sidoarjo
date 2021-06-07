@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="{{ asset('template') }}/dist/img/logo.ico" />
     <title>PSC-119 Kabupaten Sidoarjo - @yield('title')</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -50,7 +51,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    @toastr_css
     <!-- Google Font -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -310,7 +311,8 @@
     <script src="{{ asset('template') }}/bower_components/select2/dist/js/select2.full.min.js"></script>
 
 </body>
-
+@toastr_js
+@toastr_render
 <script>
     $(function() {
         //Initialize Select2 Elements

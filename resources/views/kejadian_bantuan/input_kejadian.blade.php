@@ -33,7 +33,7 @@
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#laporankejadian" data-toggle="tab">Form Laporan Kejadian</a></li>
                             <div style="text-align: right; margin: 0.5% 0.5% 0.5% auto">
-                                <button type="submit" class="btn"
+                                <button type="submit" class="btn btn-save"
                                     style="background-color: #3399FF; color:#fff; margin: auto 0.3%;">Simpan
                                     Laporan</button>
                                 <button type="submit" class="btn"
@@ -44,7 +44,8 @@
                         <div class="tab-content">
                             <div class="active tab-pane" id="laporankejadian">
                                 <!-- Post -->
-                                <form role="form">
+                                <form role="form" id="form-data">
+                                    @csrf
                                     <div class="post">
                                         <div class="row">
                                             <div class="col-md-2">
@@ -61,7 +62,7 @@
                                             <div class="col-md-4">
                                                 <select class="form-control select2" id="lanjutan_kasus"
                                                     name="lanjutan_kasus">
-                                                    <option> -- Pilih CCN -- </option>
+                                                    <option value=""> -- Pilih CCN -- </option>
                                                     @foreach ($ccn as $d)
                                                         <option value='{{ $d->kode_kasus }}'>
                                                             {{ $d->kode_kasus . ' - ' . $d->nama_pelapor }}</option>
@@ -173,15 +174,17 @@
                                                         <p>Nama Pelapor</p>
                                                     </div>
                                                     <div class="col-md-7">
-                                                        <input type="text" class="form-control" placeholder="Nama Pelapor">
+                                                        <input type="text" class="form-control" name="nama_pelapor"
+                                                            placeholder="Nama Pelapor">
                                                     </div>
                                                 </div><br>
                                                 <div class="row">
                                                     <div class="col-md-5">
-                                                        <p>Nama Pelapor</p>
+                                                        <p>Telp Pelapor</p>
                                                     </div>
                                                     <div class="col-md-7">
-                                                        <input type="text" class="form-control" placeholder="0812xxxxxxxx">
+                                                        <input type="text" class="form-control" name="telp_pelapor"
+                                                            placeholder="0812xxxxxxxx">
                                                     </div>
                                                 </div>
                                             </div>
@@ -190,7 +193,7 @@
                                                 <p>Alamat Pelapor</p>
                                             </div>
                                             <div class="col-md-4">
-                                                <textarea class="form-control" rows="4"
+                                                <textarea class="form-control" rows="4" name="alamat_pelapor"
                                                     placeholder="This textarea has a limit of 255 chars"></textarea>
                                             </div>
                                         </div><br>
@@ -204,23 +207,11 @@
                                                 <p>Jenis Kejadian</p>
                                             </div>
                                             <div class="col-md-3">
-                                                <select class="form-control">
-                                                    <option>Pilih Kategori</option>
-                                                    <option>SIMULASI</option>
-                                                    <option>Lain - lain</option>
-                                                    <option>Keracunan/Over Dosis</option>
-                                                    <option>Sakit Perut</option>
-                                                    <option>Tidak Sadar/Pingsan/Hampir Pingsan/Tidak bernyawa</option>
-                                                    <option>Hamil/Bersalin/Keguguran</option>
-                                                    <option>Stroke</option>
-                                                    <option>Alergi</option>
-                                                    <option>Sakit Dada</option>
-                                                    <option>Masalah Jantung / A.I.C.D</option>
-                                                    <option>Trauma Cedera</option>
-                                                    <option>Kecelakaan Lalu Lintas (KLL)</option>
-                                                    <option>Masalah Tidak Diketahui</option>
-                                                    <option>Sakit Kepala</option>
-                                                    <option>Terbakar</option>
+                                                <select class="form-control select2" name="category_id">
+                                                    <option value="">-- Pilih Kategori --</option>
+                                                    @foreach ($categories as $d)
+                                                        <option value={{ $d->id }}>{{ $d->kategori }}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                             <div class="col-md-1"></div>
@@ -228,7 +219,8 @@
                                                 <p>Jumlah Pasien</p>
                                             </div>
                                             <div class="col-md-4">
-                                                <input type="text" class="form-control" placeholder="">
+                                                <input type="number" name="jumlah_pasien" class="form-control"
+                                                    placeholder="">
                                             </div>
                                         </div>
 
@@ -242,7 +234,7 @@
                                             <p>Keterangan Kejadian</p>
                                         </div>
                                         <div class="col-md-12">
-                                            <textarea class="form-control" rows="4"
+                                            <textarea class="form-control" rows="4" name="keterangan"
                                                 placeholder="Keterangan Kejadian"></textarea>
                                         </div>
                                     </div><br>
@@ -261,32 +253,32 @@
                                                 <div class="form-group">
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input type="checkbox">
+                                                            <input type="checkbox" name="is_polres">
                                                             Polresta Sidoarjo
                                                         </label>
                                                     </div>
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input type="checkbox">
+                                                            <input type="checkbox" name="is_pmk" value=true>
                                                             Dinas Pemadakam Kebaran Sidoarjo
                                                         </label>
                                                     </div>
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input type="checkbox">
+                                                            <input type="checkbox" name="is_bpbd" value=true>
                                                             BPBD Sidoarjo
                                                         </label>
                                                     </div>
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input type="checkbox">
+                                                            <input type="checkbox" name="is_komando" value=true>
                                                             Komando Daerah Militer Sidoarjo
                                                         </label>
                                                     </div>
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input type="checkbox">
-                                                            SiManeis
+                                                            <input type="checkbox" name="is_manies" value=true>
+                                                            SiManies
                                                         </label>
                                                     </div>
                                                 </div>
@@ -294,16 +286,16 @@
                                             <div class="col-md-4">
                                                 <h4><b>Sumber Informasi</b></h4>
                                                 <hr style="border-color: #d2d6de; margin: 5px 0 15px 0;">
-                                                <select class="form-control">
-                                                    <option>Pilih Informasi</option>
-                                                    <option>Telepon 119</option>
-                                                    <option>Rumah Sakit - PSTN</option>
-                                                    <option>Si Manies</option>
-                                                    <option>Radio SPGDT</option>
-                                                    <option>Sosial Media</option>
-                                                    <option>HP</option>
-                                                    <option>SIMULASI</option>
-                                                    <option>Emergency Button</option>
+                                                <select class="form-control" name="sumber_informasi">
+                                                    <option value="">-- Pilih Informasi --</option>
+                                                    <option value="Telepon 119">Telepon 119</option>
+                                                    <option value="Rumah Sakit - PSTN">Rumah Sakit - PSTN</option>
+                                                    <option value="Si Manies">Si Manies</option>
+                                                    <option value="Radio SPGDT">Radio SPGDT</option>
+                                                    <option value="Sosial Media">Sosial Media</option>
+                                                    <option value="HP">HP</option>
+                                                    <option value="Simulasi">SIMULASI</option>
+                                                    <option value="Emergency Button">Emergency Button</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -315,7 +307,7 @@
                                             <div class="col-md-4"></div>
                                             <div class="col-md-4"></div>
                                             <div class="col-md-4" style=" text-align: right;">
-                                                <button type="submit" class="btn"
+                                                <button type="submit" class="btn btn-save"
                                                     style="background-color: #3399FF; color:#fff;">Simpan Laporan</button>
                                                 <button type="submit" class="btn"
                                                     style="background-color: #f3565d; color:#fff;">Dispatch</button>
@@ -365,7 +357,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    {{-- <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" /> --}}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.5/dist/geosearch.css" />
     <style>
         .nav-tabs-custom>.nav-tabs>li.active {
             border-top-color: #dd4b39;
@@ -398,8 +391,8 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin="">
     </script>
-
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    {{-- <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script> --}}
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.5/dist/geosearch.umd.js"></script>
     <script>
         const timer = document.getElementById('timer');
         // timerbg = document.getElementById('timer-bg');
@@ -432,7 +425,7 @@
                 sec = '0' + sec;
 
             $('#kode_kasus').val('CCN' + year + '-' + month + day + hour + min + sec);
-            $('#waktu').val(day + '/' + month + '/' + year);
+            $('#waktu').val(year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec);
         }
 
         function startTimer() {
@@ -502,32 +495,7 @@
                 });
         }
         $(function() {
-            mymap = L.map('mapid').setView([-7.445999016651402, 112.71844103230215], 13);
-
-            var geocoder = L.Control.Geocoder.nominatim();
-            // if (typeof URLSearchParams !== 'undefined' && location.search) {
-            //     // parse /?geocoder=nominatim from URL
-            //     var params = new URLSearchParams(location.search);
-            //     var geocoderString = params.get('geocoder');
-            //     if (geocoderString && L.Control.Geocoder[geocoderString]) {
-            //         console.log('Using geocoder', geocoderString);
-            //         geocoder = L.Control.Geocoder[geocoderString]();
-            //     } else if (geocoderString) {
-            //         console.warn('Unsupported geocoder', geocoderString);
-            //     }
-            // }
-
-            var control = L.Control.geocoder({
-                    position: "topleft",
-                    query: '',
-                    placeholder: 'Cari lokasi..',
-                    geocoder: geocoder,
-                    defaultMarkGeocode: false
-                }).on('markgeocode', function(e) {
-                    var latlng = e.geocode.center;
-                    mymap.fitBounds(e.geocode.bbox);
-                })
-                .addTo(mymap);
+            mymap = L.map('mapid').setView([-7.445999016651402, 112.71844103230215], 14);
 
             L.tileLayer(
                 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXJpYnJzIiwiYSI6ImNrb3V6ODhyYTAyeGwycHB0Z2RqZXZ2dTgifQ.0OhJv5NM-IiX9GE9E00CWw', {
@@ -539,9 +507,24 @@
                     accessToken: 'your.mapbox.access.token'
                 }).addTo(mymap);
 
-            //searchLayer is a L.LayerGroup contains searched markers
-            mymap.on('click', onMapClick);
+            const search = new GeoSearch.GeoSearchControl({
+                style: 'bar',
+                autoComplete: true,
+                autoCompleteDelay: 100,
+                searchLabel: 'Cari lokasi..',
+                maxSuggestions: 6,
+                autoClose: true,
 
+                provider: new GeoSearch.OpenStreetMapProvider(),
+            })
+            mymap.addControl(search);
+
+            mymap.on('geosearch/showlocation', function() {
+                mymap.scrollWheelZoom.enable();
+                mymap.dragging.enable();
+            });
+
+            mymap.on('click', onMapClick);
 
             $('#ModalMulai').modal({
                 backdrop: 'static',
@@ -558,7 +541,45 @@
             $('#btn-batal').click(function() {
                 history.go(-1);
             })
+            $('#form-data').submit(function(e) {
+                e.preventDefault();
+            });
+            $('.btn-save').click(function() {
+                var b = $(this);
 
+                var form = $('#form-data'),
+                    data = form.serializeArray();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "{{ route('input_kejadian.store') }}",
+                    method: "POST",
+                    data: data,
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                    },
+                    success: function(result) {
+                        if (result.success) {
+                            toastr['success'](result.success);
+                            // location.href = "/pengaduan"
+                        } else {
+                            $.each(result.errors, function(key, value) {
+                                toastr['error'](value);
+                            });
+                        }
+                        b.removeAttr('disabled');
+
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                    }
+                });
+
+            })
         })
 
     </script>
