@@ -295,7 +295,7 @@
                             <div class="nav-tabs-custom">
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a href="#form" data-toggle="tab">Form</a></li>
-                                    <li><a href="#info_resource" data-toggle="tab">Info-Resource</a></li>
+                                    <li><a href="#info_resource" data-toggle="tab">Info-Resource<span class="badge bg-red" style="margin-left: 5px;">3</span></a></li>
                                 </ul><br>
                                 <div class="tab-content" style="padding-top: 0px;">
                                     <div class="active tab-pane" id="form">
@@ -448,7 +448,40 @@
                                     <div class="tab-pane" id="info_resource">
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <h6>Hi</h6>
+                                                <table id="example3" class="table table-bordered dataTable no-footer table-hover">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">1</td>
+                                                            <td class="text-center">W 8504 PP</td>
+                                                            <td class="text-center">Mobil</td>
+                                                            <td class="text-center">A</td>
+                                                            <td class="text-center">PKM SIDOARJO</td>
+                                                            <td class="text-center">
+                                                                <a class="btn btn-danger" data-toggle="modal" data-placement="left" data-target="" title="Goto Location" style="margin: 4px 3px;">Goto Location</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">2</td>
+                                                            <td class="text-center">W 8483 NP</td>
+                                                            <td class="text-center">Mobil</td>
+                                                            <td class="text-center">A</td>
+                                                            <td class="text-center">PKM SUKODONO</td>
+                                                            <td class="text-center">
+                                                                <a class="btn btn-danger" data-toggle="modal" data-placement="left" data-target="" title="Goto Location" style="margin: 4px 3px;">Goto Location</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">3</td>
+                                                            <td class="text-center">W 8379 PP</td>
+                                                            <td class="text-center">Mobil</td>
+                                                            <td class="text-center">A</td>
+                                                            <td class="text-center">PKM TAMAN</td>
+                                                            <td class="text-center">
+                                                                <a class="btn btn-danger" data-toggle="modal" data-placement="left" data-target="" title="Goto Location" style="margin: 4px 3px;">Goto Location</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -499,6 +532,14 @@
             'paging': true,
             'lengthChange': true,
             'searching': true,
+            'ordering': true,
+            'info': true,
+            'autoWidth': false
+        })
+        $('#example3').DataTable({
+            'paging': true,
+            'lengthChange': true,
+            'searching': false,
             'ordering': true,
             'info': true,
             'autoWidth': false

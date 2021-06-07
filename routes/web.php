@@ -29,7 +29,7 @@ use App\Http\Controllers\SpecialistsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\SubCategoriesController;
 use App\Http\Controllers\MedicinesController;
-use App\Http\Controllers\RShiftsController;
+use App\Http\Controllers\RshiftsController;
 use App\Http\Controllers\PatientDatasController;
 use App\Http\Controllers\TasksController;
 use App\Http\Controllers\ShowMapsController;
@@ -66,7 +66,7 @@ Route::resources([
     'kategori' => 'CategoriesController',
     'sub_kategori' => 'SubCategoriesController',
     'obat' => 'MedicinesController',
-    'shift' => 'RShiftsController',
+    'shift' => 'RshiftsController',
     'pasien' => 'PatientDatasController',
     'task' => 'TasksController',
     'peta' => 'ShowMapsController'
