@@ -30,8 +30,8 @@
             <div class="col-md-12" style="padding: 0px;">
                 <div class="box box-danger box-solid">
                     <div class="box-header with-border">
-                        <div class="col-md-3" style="width: 350px; padding: 0px;">
-                            <h3 class="box-title" style="padding-top: 0.35em;"> Total Resources SEMES PSC-119 Sidoarjo : 63 </h3>
+                        <div class="col-md-3" style="width: 300px; padding: 0px;">
+                            <h3 class="box-title" style="padding-top: 0.35em;"> Total Resources PSC-119 Sidoarjo : 63 </h3>
                         </div>
                         <div class="col-md-8" style="padding-left: 0px;">
                             <button type="submit" class="btn btn-default btn-sm" style="background-color: #E7E7E7; color:#333333;">Lihat di Peta</button>

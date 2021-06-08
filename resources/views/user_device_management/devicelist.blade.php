@@ -55,7 +55,7 @@
                                             <td class=" text-center"><label class="label label-danger"><i class="fa fa-times-circle"></i> Offline</label></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-default" style="width: 24px; margin: auto 2px;"><i class="fa fa-square-o"></i></a>
+                                                <a href="#" class="btn btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -74,7 +74,7 @@
                                             <td class=" text-center"><label class="label label-danger"><i class="fa fa-times-circle"></i> Offline</label></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-default" style="width: 24px; margin: auto 2px;"><i class="fa fa-square-o"></i></a>
+                                                <a href="#" class="btn btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -93,7 +93,7 @@
                                             <td class=" text-center"><label class="label label-success"><i class="fa fa-check-circle"></i> Online</label></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-default" style="width: 24px; margin: auto 2px;"><i class="fa fa-square-o"></i></a>
+                                                <a href="#" class="btn btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
                                             </td>
                                         </tr>
                                     </tbody>

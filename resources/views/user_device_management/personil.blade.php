@@ -128,11 +128,11 @@
                                             <td class="text-center">Spesialis Emergency Medicine</td>
                                             <td class="text-center">Command Center</td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Hapus Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
+                                                <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-danger" style="width: 24px; margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -144,11 +144,11 @@
                                             <td class="text-center">Administrator PSC Kab. Sidoarjo</td>
                                             <td class="text-center">Command Center</td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Hapus Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
+                                                <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-danger" style="width: 24px; margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -160,11 +160,11 @@
                                             <td class="text-center">Koordinator PSC</td>
                                             <td class="text-center">Command Center</td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Hapus Data" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
+                                                <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-xs btn-danger" style="width: 24px; margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a href="#" class="btn btn-danger" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
                                             </td>
                                         </tr>
                                     </tbody>

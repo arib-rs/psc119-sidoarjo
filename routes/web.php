@@ -38,7 +38,7 @@ Route::resources([
     'kategori' => 'CategoriesController',
     'sub_kategori' => 'SubCategoriesController',
     'obat' => 'MedicinesController',
-    'shift' => 'RShiftsController',
+    'shift' => 'RshiftsController',
     'pasien' => 'PatientDatasController',
     'task' => 'TasksController',
     'peta' => 'ShowMapsController'
