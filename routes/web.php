@@ -1,11 +1,14 @@
 <?php
 
-
-use App\Http\Controllers\LoginsController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-
-Route::get('/', 'LoginsController@index');
+// Auth::routes();
+Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/login', 'Auth\LoginController@login')->name('login');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register')->name('register');
 
 Route::resources([
     'dashboard' => 'DashboardsController',
