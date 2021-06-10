@@ -64,13 +64,13 @@
 
             <form action="{{ route('login') }}" method="POST">
                 @csrf
-                <div class="form-group has-feedback @error('email') has-error @enderror">
-                    <input type="text" class="form-control" placeholder="Email" value="{{ old('email') }}"
-                        name="email">
+                <div class="form-group has-feedback @error('username') has-error @enderror">
+                    <input type="text" class="form-control" placeholder="Username" value="{{ old('username') }}"
+                        name="username">
                     <span class="glyphicon glyphicon-user form-control-feedback">
 
                     </span>
-                    @error('email')
+                    @error('username')
                         <span class="help-block" role="alert">
                             {{ $message }}
                         </span>

@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class DashboardsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        // dd(session()->all());
         return view('dashboard.dashboard');
     }
 

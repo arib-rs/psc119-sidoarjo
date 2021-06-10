@@ -108,7 +108,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="{{ asset('template') }}/dist/img/userprofil.png" class="user-image"
                                     alt="User Image">
-                                <span class="hidden-xs">Admin PSC-119 Sidoarjo</span>
+                                <span class="hidden-xs">{{ session()->get('user.person.fullname') }}</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -117,13 +117,17 @@
                                         alt="User Image">
 
                                     <p>
-                                        Admin PSC-119 Sidoarjo
+                                        {{ session()->get('user.person.fullname') }}
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="{{ url('/') }}" class="btn btn-default btn-flat">Sign out</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                            <button type="submit" class="btn btn-default btn-flat">Sign Out</button>
+                                        </form>
                                     </div>
                                 </li>
                             </ul>
