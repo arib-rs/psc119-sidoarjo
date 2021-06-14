@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class InputIncidentsController extends Controller
 {
+    public function getDataKejadian($kode_kasus)
+    {
+        $kejadian = Incident::where('kode_kasus', $kode_kasus)->first();
+        return response()->json($kejadian);
+    }
     public function index()
     {
         $data['ccn'] = Incident::orderBy('created_at', 'desc')->get();

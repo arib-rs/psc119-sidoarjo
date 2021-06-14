@@ -176,7 +176,7 @@
                                                         </div>
                                                         <div class="col-md-7">
                                                             <input type="text" class="form-control" name="nama_pelapor"
-                                                                placeholder="Nama Pelapor">
+                                                                id="nama_pelapor" placeholder="Nama Pelapor">
                                                         </div>
                                                     </div><br>
                                                     <div class="row">
@@ -185,7 +185,7 @@
                                                         </div>
                                                         <div class="col-md-7">
                                                             <input type="text" class="form-control" name="telp_pelapor"
-                                                                placeholder="0812xxxxxxxx">
+                                                                id="telp_pelapor" placeholder="0812xxxxxxxx">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -195,6 +195,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <textarea class="form-control" rows="4" name="alamat_pelapor"
+                                                        id="alamat_pelapor"
                                                         placeholder="This textarea has a limit of 255 chars"></textarea>
                                                 </div>
                                             </div><br>
@@ -208,7 +209,8 @@
                                                     <p>Jenis Kejadian</p>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <select class="form-control select2" name="category_id">
+                                                    <select class="form-control select2" name="category_id"
+                                                        autocomplete="off" id="category_id">
                                                         <option value="">-- Pilih Kategori --</option>
                                                         @foreach ($categories as $d)
                                                             <option value={{ $d->id }}>{{ $d->kategori }}</option>
@@ -220,8 +222,8 @@
                                                     <p>Jumlah Pasien</p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <input type="number" name="jumlah_pasien" class="form-control"
-                                                        placeholder="">
+                                                    <input type="number" name="jumlah_pasien" id="jumlah_pasien"
+                                                        class="form-control" placeholder="">
                                                 </div>
 
                                             </div>
@@ -236,7 +238,7 @@
                                                 <p>Keterangan Kejadian</p>
                                             </div>
                                             <div class="col-md-12">
-                                                <textarea class="form-control" rows="4" name="keterangan"
+                                                <textarea class="form-control" rows="4" name="keterangan" id="keterangan"
                                                     placeholder="Keterangan Kejadian"></textarea>
                                             </div>
                                         </div><br>
@@ -429,7 +431,7 @@
                 sec = '0' + sec;
 
             $('#kode_kasus').val('CCN' + year + '-' + month + day + hour + min + sec);
-            $('#waktu').val(year + '/' + month + '/' + day);
+            $('#waktu').val(year + '-' + month + '-' + day);
         }
 
         function startTimer() {
@@ -583,6 +585,29 @@
                     }
                 });
 
+            })
+            $('#lanjutan_kasus').change(function() {
+                var kode_kasus = $('#lanjutan_kasus').val();
+
+                $.ajax({
+                    url: "get-incident/" + kode_kasus,
+                    method: 'GET',
+                    success: function(result) {
+                        $('#nama_pelapor').val(result.nama_pelapor);
+                        $('#telp_pelapor').val(result.telp_pelapor);
+                        $('#alamat_pelapor').val(result.alamat_pelapor);
+                        $('#jumlah_pasien').val(result.jumlah_pasien);
+                        $('#keterangan').val(result.keterangan);
+                        if (result.category_id == null) {
+                            $('#category_id').find(':selected').removeAttr('selected');
+                        } else {
+                            $('#category_id option[value="' + result.category_id + '"]').attr(
+                                'selected',
+                                'selected');
+                        }
+                        // $('input:checkbox').prop('checked', false);
+                    }
+                });
             })
         })
 
