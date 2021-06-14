@@ -42,6 +42,7 @@ class RequestAssistsController extends Controller
     public function getIncident($id)
     {
         $data = Incident::with('category')->find($id);
+        // dd($data);
         return response()->json($data);
     }
     public function index()

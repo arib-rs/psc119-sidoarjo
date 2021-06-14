@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(
             'peta' => 'ShowMapsController'
         ]);
         Route::get('get-incidents', 'RequestAssistsController@getIncidents')->name('get-incidents');
-        Route::get('get-incident/{kode}', 'InputIncidentsController@getDataKejadian');
-        Route::get('get-incident/{id}', 'RequestAssistsController@getIncident');
+        Route::get('get-incident-by-kode/{kode}', 'InputIncidentsController@getDataKejadian');
+        Route::get('get-incident-by-id/{id}', 'RequestAssistsController@getIncident');
     }
 );

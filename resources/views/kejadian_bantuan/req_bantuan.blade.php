@@ -220,28 +220,28 @@
                     <!-- END VALIDATION STATES-->
                 </div>
                 <!-- <form id="form-data">
-                                                                                                                    <div class="modal-body">
-                                                                                                                        <table id="example-table" class="table table-bordered dataTable no-footer">
-                                                                                                                            <thead>
-                                                                                                                                <tr>
-                                                                                                                                    <th class="text-center">Resource</th>
-                                                                                                                                    <th class="text-center">Tujuan</th>
-                                                                                                                                    <th class="text-center">Waktu Request</th>
-                                                                                                                                    <th class="text-center">Status</th>
-                                                                                                                                    <th class="text-center">Aksi</th>
-                                                                                                                                </tr>
-                                                                                                                            </thead>
-                                                                                                                            <tbody>
-                                                                                                                                <tr>
-                                                                                                                                    <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
-                                                                                                                                    <td class="text-center">RSI Siti Hajar</td>
-                                                                                                                                    <td class="text-center">2021-03-09 12:27:08</td>
-                                                                                                                                    <td class="text-center">DITERIMA</td>
-                                                                                                                                    <td class="text-center">(SELESAI)</td>
-                                                                                                                                </tr>
-                                                                                                                            </tbody>
-                                                                                                                        </table>
-                                                                                                                </form> -->
+                                                                                                                                            <div class="modal-body">
+                                                                                                                                                <table id="example-table" class="table table-bordered dataTable no-footer">
+                                                                                                                                                    <thead>
+                                                                                                                                                        <tr>
+                                                                                                                                                            <th class="text-center">Resource</th>
+                                                                                                                                                            <th class="text-center">Tujuan</th>
+                                                                                                                                                            <th class="text-center">Waktu Request</th>
+                                                                                                                                                            <th class="text-center">Status</th>
+                                                                                                                                                            <th class="text-center">Aksi</th>
+                                                                                                                                                        </tr>
+                                                                                                                                                    </thead>
+                                                                                                                                                    <tbody>
+                                                                                                                                                        <tr>
+                                                                                                                                                            <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
+                                                                                                                                                            <td class="text-center">RSI Siti Hajar</td>
+                                                                                                                                                            <td class="text-center">2021-03-09 12:27:08</td>
+                                                                                                                                                            <td class="text-center">DITERIMA</td>
+                                                                                                                                                            <td class="text-center">(SELESAI)</td>
+                                                                                                                                                        </tr>
+                                                                                                                                                    </tbody>
+                                                                                                                                                </table>
+                                                                                                                                        </form> -->
             </div>
         </div>
     </div>
@@ -487,28 +487,28 @@
                     <!-- END VALIDATION STATES-->
                 </div>
                 <!-- <form id="form-data">
-                                        <div class="modal-body">
-                                            <table id="example-table" class="table table-bordered dataTable no-footer">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="text-center">Resource</th>
-                                                        <th class="text-center">Tujuan</th>
-                                                        <th class="text-center">Waktu Request</th>
-                                                        <th class="text-center">Status</th>
-                                                        <th class="text-center">Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
-                                                        <td class="text-center">RSI Siti Hajar</td>
-                                                        <td class="text-center">2021-03-09 12:27:08</td>
-                                                        <td class="text-center">DITERIMA</td>
-                                                        <td class="text-center">(SELESAI)</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                    </form> -->
+                                                                <div class="modal-body">
+                                                                    <table id="example-table" class="table table-bordered dataTable no-footer">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="text-center">Resource</th>
+                                                                                <th class="text-center">Tujuan</th>
+                                                                                <th class="text-center">Waktu Request</th>
+                                                                                <th class="text-center">Status</th>
+                                                                                <th class="text-center">Aksi</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
+                                                                                <td class="text-center">RSI Siti Hajar</td>
+                                                                                <td class="text-center">2021-03-09 12:27:08</td>
+                                                                                <td class="text-center">DITERIMA</td>
+                                                                                <td class="text-center">(SELESAI)</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                            </form> -->
             </div>
         </div>
     </div>
@@ -581,19 +581,19 @@
                 'info': true,
                 'autoWidth': false
             })
-            $('#example3').DataTable({
-                'paging': true,
-                'lengthChange': true,
-                'searching': false,
-                'ordering': true,
-                'info': true,
-                'autoWidth': false
-            })
+            // $('#example3').DataTable({
+            //     'paging': true,
+            //     'lengthChange': true,
+            //     'searching': false,
+            //     'ordering': true,
+            //     'info': true,
+            //     'autoWidth': false
+            // })
         }).on('click', '#btn-lihat', function() {
             var id = $(this).data('id'),
                 b = $(this);
             $.ajax({
-                url: "get-incident/" + id,
+                url: "get-incident-by-id/" + id,
                 method: 'GET',
                 beforeSend: function() {
                     b.attr('disabled', 'disabled');
@@ -603,6 +603,7 @@
                     $('#pelapor').html(result.nama_pelapor);
                     $('#lokasi').html(result.lokasi + '<br>' + result.detail_lokasi);
                     $('#keterangan').html(result.keterangan);
+                    console.log(result);
                     b.removeAttr('disabled');
                     $('#ModalInput').modal('show');
                 },

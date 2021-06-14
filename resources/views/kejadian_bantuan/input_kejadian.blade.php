@@ -590,7 +590,7 @@
                 var kode_kasus = $('#lanjutan_kasus').val();
 
                 $.ajax({
-                    url: "get-incident/" + kode_kasus,
+                    url: "get-incident-by-kode/" + kode_kasus,
                     method: 'GET',
                     success: function(result) {
                         $('#nama_pelapor').val(result.nama_pelapor);
