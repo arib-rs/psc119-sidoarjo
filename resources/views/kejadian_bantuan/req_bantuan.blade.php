@@ -98,14 +98,14 @@
                                                         Sedati, Kabupaten Sidoarjo, Jawa Timur 61253, Indonesia</td>
                                                     <td class="text-center">W 8511 PP</td>
                                                     <td class="text-center">
-                                                        <a class="btn btn-xs btn-primary" data-toggle="tooltip"
+                                                        <a class="btn btn-sm btn-primary" data-toggle="tooltip"
                                                             data-placement="left" title="Kirim Ulang Notifikasi"
-                                                            style="width: 24px; margin: auto 2px;"><i
+                                                            style="width: 34px; margin: auto 2px;"><i
                                                                 class="fa fa-info"></i></a>
-                                                        <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger"
+                                                        <a id="btn-pembatalan-tugas" class="btn btn-sm btn-danger"
                                                             data-toggle="tooltip" data-placement="left"
                                                             title="Pembatalan Tugas"
-                                                            style="width: 24px; margin: auto 2px;"><i
+                                                            style=margin: auto 2px;"><i
                                                                 class="fa fa-reply"></i></a>
                                                     </td>
                                                 </tr>
@@ -119,15 +119,15 @@
                                                         Kabupaten Sidoarjo, Jawa Timur 61223, Indonesia</td>
                                                     <td class="text-center">W 1046 NP</td>
                                                     <td class="text-center">
-                                                        <a id="btn-kirim-ulang" class="btn btn-xs btn-primary"
+                                                        <a id="btn-kirim-ulang" class="btn btn-sm btn-primary"
                                                             data-toggle="tooltip" data-placement="left"
                                                             title="Kirim Ulang Notifikasi"
-                                                            style="width: 24px; margin: auto 2px;"><i
+                                                            style="width: 34px; margin: auto 2px;"><i
                                                                 class="fa fa-info"></i></a>
-                                                        <a id="btn-pembatalan-tugas" class="btn btn-xs btn-danger"
+                                                        <a id="btn-pembatalan-tugas" class="btn btn-sm btn-danger"
                                                             data-toggle="tooltip" data-placement="left"
                                                             title="Pembatalan Tugas"
-                                                            style="width: 24px; margin: auto 2px;"><i
+                                                            style="margin: auto 2px;"><i
                                                                 class="fa fa-reply"></i></a>
                                                     </td>
                                                 </tr>
