@@ -4,7 +4,7 @@
 
 @section('head')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
-<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+<link rel="stylesheet" href="{{ asset('template') }}/css/magnific-popup.css">
 @endsection
 
 @section('css')
@@ -168,7 +168,7 @@
                                 <td style="width: 4.4em;">
                                     <h4>Pasien</h4>
                                 </td>
-                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalEntryPasien">Entry Baru</button></td>
+                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDataPasien">Entry Baru</button></td>
                             </tr>
                         </table>
                     </div>
@@ -198,7 +198,7 @@
                                     </td>
                                     <td class="text-center">
                                         <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" title="Detail Pasien" data-target="#ModalDetailPasien" style="width: 24px; margin: auto 2px;"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="btn btn-xs btn-warning" data-toggle="modal" data-placement="left" title="Edit Pasien" data-target="#Mod" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil"></i></a>
+                                        <a href="#" class="btn btn-xs btn-warning" data-toggle="modal" data-placement="left" title="Edit Pasien" data-target="#ModalDataPasien" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil"></i></a>
                                         <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Delete Pasien" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                 </tr>
@@ -236,7 +236,14 @@
                             <div class="col-md-2 text-center">
                                 <div style="height:160px; margin-bottom:10px;">
                                     <div style="border:1px solid #ccc; padding:5px">
-                                        <center><img class="test-popup-link" src="https://cdn.iconscout.com/icon/free/png-512/laptop-user-1-1179329.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
+                                        <center><img class="show_image_incident" src="https://cdn.iconscout.com/icon/free/png-512/laptop-user-1-1179329.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <div style="height:160px; margin-bottom:10px;">
+                                    <div style="border:1px solid #ccc; padding:5px">
+                                        <center><img class="show_image_incident" src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
                                     </div>
                                 </div>
                             </div>
@@ -318,11 +325,11 @@
 @endsection
 
 @section('modal')
-<div id="ModalEntryPasien" class="modal">
+<div id="ModalDataPasien" class="modal">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Entry Pasien</b></h4>
+                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Data Pasien</b></h4>
                 <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -788,6 +795,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4 text-center">
+                        <div style="height:160px; margin-bottom:10px;">
+                            <div style="border:1px solid #ccc; padding:5px">
+                                <center><img src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <h3 class="form-section">Laporan Penanganan</h3>
                 <table id="example2" class="table dataTable no-footer table-hover">
@@ -842,8 +856,7 @@
 
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="magnific-popup/jquery.magnific-popup.js"></script>
+<script src="{{ asset('template') }}/js/jquery.magnific-popup.js"></script>
 
 <script>
     $(function() {
@@ -873,7 +886,10 @@
 
 <script>
     $(document).ready(function() {
-        $('.image-link').magnificPopup({
+        $('.show_image_incident').magnificPopup({
+            items: {
+                src: 'https://cdn.iconscout.com/icon/free/png-512/laptop-user-1-1179329.png',
+            },
             type: 'image'
         });
     });

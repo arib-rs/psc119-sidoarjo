@@ -169,19 +169,19 @@
                                     <tbody>
                                         <tr>
                                             <th width="200" align="right">CCN</th>
-                                            <td id="ccn">CCN1455-1615267395</td>
+                                            <td id="ccn"></td>
                                         </tr>
                                         <tr>
                                             <th align="right">Pelapor</th>
-                                            <td id="pelapor">ellena</td>
+                                            <td id="pelapor"></td>
                                         </tr>
                                         <tr>
                                             <th align="right">Alamat</th>
-                                            <td id="lokasi">bpbd sidoarjo<br>depan bpbd sidoarjo</td>
+                                            <td id="lokasi"><br></td>
                                         </tr>
                                         <tr>
                                             <th align="right">Keterangan</th>
-                                            <td id="keterangan">pengamen tidak sadar di depan kantor bpbd sidoarjo</td>
+                                            <td id="keterangan"></td>
                                         </tr>
                                     </tbody>
                                 </table>
