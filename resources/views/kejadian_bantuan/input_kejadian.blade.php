@@ -431,7 +431,7 @@
                 sec = '0' + sec;
 
             $('#kode_kasus').val('CCN' + year + '-' + month + day + hour + min + sec);
-            $('#waktu').val(year + '-' + month + '-' + day);
+            $('#waktu').val(year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec);
         }
 
         function startTimer() {
