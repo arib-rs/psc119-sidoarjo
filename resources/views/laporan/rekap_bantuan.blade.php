@@ -77,7 +77,7 @@
                                 <th class="text-center">JT Penanganan</th>
                                 <th class="text-center">Jarak Tempuh PP</th>
                                 <th class="text-center">Status Bantuan</th>
-                                <th class="text-center">Aksi</th>
+                                <th class="text-center" style="width: 75px;">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -96,10 +96,10 @@
                                 <td class="text-center">W 8511 PP</td>
                                 <td class="text-center">7.5717 KM</td>
                                 <td class="text-center">19.90 KM</td>
-                                <td class="text-center"><button class="btn btn-success">&nbsp;</button></td>
+                                <td class="text-center"><button class="btn btn-success" style="width: 34px; height: 30px;"></button></td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button><br><br>
-                                    <button class="btn btn-sm btn-success" type="button" title="Edit Performance" data-toggle="modal" data-target="#modal"><i class="fa fa-pencil"></i></button>
+                                    <button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button>
+                                    <button class="btn btn-sm btn-warning" type="button" title="Edit Performance" data-toggle="modal" data-target="#modal"><i class="fa fa-pencil"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -117,10 +117,10 @@
                                 <td class="text-center">B 1974 WQ</td>
                                 <td class="text-center">5.32266 KM</td>
                                 <td class="text-center">5.32 KM</td>
-                                <td class="text-center"><button class="btn btn-success">&nbsp;</button></td>
+                                <td class="text-center"><button class="btn btn-success" style="width: 34px; height: 30px;"></button></td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button><br><br>
-                                    <button class="btn btn-sm btn-success" type="button" title="Edit Performance" data-toggle="modal" data-target="#modal"><i class="fa fa-pencil"></i></button>
+                                    <button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button>
+                                    <button class="btn btn-sm btn-warning" type="button" title="Edit Performance" data-toggle="modal" data-target="#modal"><i class="fa fa-pencil"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -138,10 +138,10 @@
                                 <td class="text-center">W 1310 NP</td>
                                 <td class="text-center">2.94 KM</td>
                                 <td class="text-center">2.77 KM</td>
-                                <td class="text-center"><button class="btn btn-success">&nbsp;</button></td>
+                                <td class="text-center"><button class="btn btn-success" style="width: 34px; height: 30px;"></button></td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button><br><br>
-                                    <button class="btn btn-sm btn-success" type="button" title="Edit Performance" data-toggle="modal" data-target="#modal"><i class="fa fa-pencil"></i></button>
+                                    <button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button>
+                                    <button class="btn btn-sm btn-warning" type="button" title="Edit Performance" data-toggle="modal" data-target="#modal"><i class="fa fa-pencil"></i></button>
                                 </td>
                             </tr>
                         </tbody>
