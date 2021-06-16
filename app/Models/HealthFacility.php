@@ -8,7 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class HealthFacility extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'nama',
+        'alamat',
+        'pict_url',
+        'kategori',
+        'is_fullday',
+        'is_has_ekg',
+        'jumlah_shift',
+        'keterangan',
+        'phone_num',
+        'contact_person',
+        'email',
+        'status',
+        'is_active'
+    ];
     public function bed()
     {
         return $this->hasMany(Bed::class);
