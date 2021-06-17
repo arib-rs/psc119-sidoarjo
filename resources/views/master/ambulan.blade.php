@@ -134,7 +134,7 @@
                                 <th class="text-center">Foto</th>
                                 <th class="text-center">Klasifikasi</th>
                                 <th class="text-center">Status Resource</th>
-                                <th class="text-center" style="width: 150px;">Aksi</th>
+                                <th class="text-center" style="width: 80px;">Aksi</th>
                                 <th class="text-center">Aktif</th>
                             </tr>
                         </thead>
@@ -153,8 +153,10 @@
                                 <td class="text-center"></td>
                                 <td class="text-center">Tidak Siap</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
-                                    <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    <div class="row">
+                                        <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
+                                        <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    </div>
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-sm btn-primary" type="button" style="background-color: #3B9C96;"><i class="fa fa-pencil-square-o"></i></button>
@@ -174,8 +176,10 @@
                                 <td class="text-center">0</td>
                                 <td class="text-center">Tidak Siap</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
-                                    <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    <div class="row">
+                                        <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
+                                        <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    </div>
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-sm btn-primary" type="button" style="background-color: #3B9C96;"><i class="fa fa-pencil-square-o"></i></button>
@@ -195,8 +199,10 @@
                                 <td class="text-center"></td>
                                 <td class="text-center">Tidak Siap</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
-                                    <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    <div class="row">
+                                        <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
+                                        <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    </div>
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-sm btn-primary" type="button" style="background-color: #3B9C96;"><i class="fa fa-pencil-square-o"></i></button>
@@ -216,8 +222,10 @@
                                 <td class="text-center">AMBULANCE RESCUE</td>
                                 <td class="text-center">Sibuk</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
-                                    <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    <div class="row">
+                                        <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
+                                        <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    </div>
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-sm btn-primary" type="button" style="background-color: #3B9C96;"><i class="fa fa-pencil-square-o"></i></button>
@@ -237,8 +245,10 @@
                                 <td class="text-center"></td>
                                 <td class="text-center">Tidak Siap</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
-                                    <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    <div class="row">
+                                        <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
+                                        <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
+                                    </div>
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-sm btn-primary" type="button" style="background-color: #3B9C96;"><i class="fa fa-pencil-square-o"></i></button>

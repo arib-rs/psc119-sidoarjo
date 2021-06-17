@@ -15,12 +15,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Fasilitas Kesehatan
-            <small>Data Fasilitas Kesehatan</small>
+            Resource Dokter
+            <small>daftar resource Dokter</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-flag"></i> Master</a></li>
             <li class="active"> Fasilitas Kesehatan</li>
+            <li class="active"> Dokter</li>
         </ol>
     </section>
 
@@ -28,14 +29,18 @@
     <section class="content">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#resource" data-toggle="tab">Data Fasilitas Kesehatan</a></li>
+                <li class="active"><a href="#resource" data-toggle="tab">Data Dokter Command Center</a></li>
+                <div class="pull-right" style="padding-top: 4px; padding-right: 6px;">
+                    <a href="{{ url('/faskes') }}" class="btn btn-danger">X</a>
+                </div>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="resource">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
-                                <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput" class="btn btn-success">
+                                <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput"
+                                    class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
                             </div>
                         </div>
@@ -44,49 +49,27 @@
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 40px;">No</th>
-                                <th class="text-center">Nama</th>
-                                <th class="text-center">Alamat</th>
-                                <th class="text-center">Foto</th>
-                                <th class="text-center">Kategori</th>
-                                <th class="text-center">Buka 24 Jam</th>
-                                <th class="text-center">Ada EKG</th>
-                                <th class="text-center">Bed</th>
-                                <th class="text-center">Dokter</th>
-                                <th class="text-center">Darah</th>
-                                <th class="text-center" style="width: 100px;">Aksi</th>
-                                <th class="text-center" style="width: 50px;">Aktif</th>
+                                <th class="text-center">Nama Dokter</th>
+                                <th class="text-center">Spesialis</th>
+                                <th class="text-center">Hari Praktek</th>
+                                <th class="text-center">Jam Praktek</th>
+                                <th class="text-center">Jenis Pelayanan</th>
+                                <th class="text-center" style="width: 80px;">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">Command Center</td>
-                                <td class="text-center">Jl. Mojopahit No.667, Sidowayah, Celep, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61215, Indonesia</td>
-                                <td class="text-center">Foto</td>
-                                <td class="text-center">Command Center</td>
-                                <td class="text-center"><button class="btn btn-success btn-sm" id="ya" value="" style="background-color: #3B9C96;"><i class="fa fa-check-square-o"> Ya</i></button></td>
-                                <td class="text-center"><button class="btn btn-danger btn-sm" id="tidak" value=""><i class="fa fa-check-square-o"> Tidak</i></button></td>
+                                <td class="text-center">dr. Nunu</td>
+                                <td class="text-center">Dokter Umum</td>
+                                <td class="text-center">Senin - Kamis</td>
+                                <td class="text-center">09.00 - 13.00</td>
+                                <td class="text-center">Pelayanan Dokter Umum</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="List Bed"><i class="glyphicon glyphicon-list"></i></button>
-                                </td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="List Dokter"><i class="glyphicon glyphicon-list"></i></button>
-                                </td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" title="List Bag Darah"><i class="glyphicon glyphicon-list"></i></button>
-                                </td>
-                                <td class="text-center">
-                                    <div style="margin-bottom: 5px;">
+                                    <div class="row" style="margin-bottom: 5px;">
                                         <button class="btn btn-sm btn-primary" type="button" title="Edit Data" data-toggle="modal" data-target="#ModalInput"><i class="fa fa-pencil-square-o"></i></button>
                                         <button class="btn btn-sm btn-danger" type="button" title="Hapus Data"><i class="fa fa-trash"></i></button>
                                     </div>
-                                    <div>
-                                        <button class="btn btn-sm btn-success" type="button" title="Edit Profesi"><i class="glyphicon glyphicon-user"></i></button>
-                                        <button class="btn btn-sm btn-success" type="button" title="Edit Shift"><i class="glyphicon glyphicon-pencil"></i></button>
-                                    </div>
-                                </td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-primary" type="button" style="background-color: #3B9C96;"><i class="fa fa-pencil-square-o"></i></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -119,76 +102,59 @@
                     <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
                         <div class="form-body">
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Nama<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">Nama<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type='text' id='nama' name='nama' class='form-control'>
+                                    <input type="text" id="nama" name="nama" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kategori<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">Keahlian<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <select id='kategori' name='kategori' class='form-control'>
-                                        <option value="">Pilih Kategori</option>
-                                        <option value="">Command Center</option>
-                                        <option value="">Rumah Sakit</option>
-                                        <option value="">Puskesmas</option>
-                                        <option value="">Klinik</option>
+                                    <select id="keahlian" name="keahlian" class="form-control">
+                                        <option value="">Pilih Keahlian</option>
+                                        <option value="">Dokter Umum</option>
+                                        {{-- <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option> --}}
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Foto<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">Hari Praktek<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type='text' id='foto' name='foto' class='form-control'>
+                                    <input type="text" id="hari_praktek" name="hari_praktek" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Keterangan<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">Jam Praktek<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <textarea id='keterangan' name='keterangan' class="form-control" rows="2"></textarea>
+                                    <input type="text" id="jam_praktek" name="jam_praktek" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">No. Telepon<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">Jenis Layanan<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type='text' id='no_telepon' name='no_telepon' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Contact Person<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='contact_person' name='contact_person' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Email<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='email' name='email' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Status Ponek/Poned<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id='ponek_poned' name='ponek_poned' class='form-control'>
-                                        <option value="">Pilih Status</option>
-                                        <option value="">PONEK</option>
-                                        <option value="">PONED</option>
+                                    <select id="jenis_layanan" name="jenis_layanan" class="form-control">
+                                        <option value="">Pilih Pelayanan</option>
+                                        {{-- <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option> --}}
                                     </select>
                                 </div>
                             </div>
@@ -220,7 +186,8 @@
                     <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
                         <div class="form-body">
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Layanan<span class="required" style="color: red;">
+                                <label class="control-label col-md-4 font-green-haze">Layanan<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">

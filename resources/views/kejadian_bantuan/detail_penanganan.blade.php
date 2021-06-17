@@ -613,7 +613,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width: 30%;">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Vital Sign</b></h4>
+                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Tindakan</b></h4>
                 <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
