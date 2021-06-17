@@ -3,16 +3,14 @@
 @section('title', 'Fasilitas Kesehatan')
 
 @section('css')
-    <style>
-        .nav-tabs-custom>.nav-tabs>li.active {
-            border-top-color: #dd4b39;
-        }
-
-    </style>
+<style>
+    .nav-tabs-custom>.nav-tabs>li.active {
+        border-top-color: #dd4b39;
+    }
+</style>
 @endsection
 
 @section('container')
-<<<<<<< HEAD:resources/views/master/detail_faskes/darah.blade.php
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -44,36 +42,6 @@
                                 <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput"
                                     class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
-=======
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Fasilitas Kesehatan
-                <small>Data Fasilitas Kesehatan</small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-flag"></i> Master</a></li>
-                <li class="active"> Fasilitas Kesehatan</li>
-            </ol>
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-            <div class="nav-tabs-custom">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#resource" data-toggle="tab">Data Fasilitas Kesehatan</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="resource">
-                        {{-- <div class="row">
-                            <div class="col-md-4">
-                                <div class="btn-group">
-                                    <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput"
-                                        class="btn btn-success">
-                                        <i class="fa fa-plus-circle"></i> Insert Data</button>
-                                </div>
->>>>>>> 3214af051b70de3ae0d4b79d50fac8a2dcceca14:resources/views/master/faskes.blade.php
                             </div>
                         </div><br> --}}
                         {{-- <table id="example1" class="table table-bordered dataTable no-footer table-hover">
@@ -132,18 +100,18 @@
                 <!-- /.tab-content -->
             </div>
             <!-- /.nav-tabs-custom -->
-        </section>
-        <!-- /.content -->
-    </div>
+    </section>
+    <!-- /.content -->
+</div>
 @endsection
 
 @section('modal')
-<<<<<<< HEAD:resources/views/master/detail_faskes/darah.blade.php
-<div id="ModalInput" class="modal">
-    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
+<div id="ModalInput" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
+                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form Input Data Faskes</b>
+                </h4>
                 <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -155,174 +123,99 @@
                     <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
                         <div class="form-body">
                             <div class="form-group">
-                                <label class="control-label col-md-4">Nama<span class="required"
+                                <label class="control-label col-md-4 font-green-haze">Nama<span class="required"
                                         style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type="text" id="nama" name="nama" class="form-control">
+                                    <input type='text' id='nama' name='nama' class='form-control'>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Keahlian<span class="required"
+                                <label class="control-label col-md-4 font-green-haze">Kategori<span class="required"
                                         style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <select id="keahlian" name="keahlian" class="form-control">
-                                        <option value="">Pilih Keahlian</option>
-                                        <option value="">Dokter Umum</option>
-                                        {{-- <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option> --}}
+                                    <select id='kategori' name='kategori' class='form-control'>
+                                        <option value="">Pilih Kategori</option>
+                                        <option value="">Command Center</option>
+                                        <option value="">Rumah Sakit</option>
+                                        <option value="">Puskesmas</option>
+                                        <option value="">Klinik</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Hari Praktek<span class="required"
+                                <label class="control-label col-md-4 font-green-haze">Foto<span class="required"
                                         style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type="text" id="hari_praktek" name="hari_praktek" class="form-control">
+                                    <input type='text' id='foto' name='foto' class='form-control'>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Jam Praktek<span class="required"
+                                <label class="control-label col-md-4 font-green-haze">Keterangan<span class="required"
                                         style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type="text" id="jam_praktek" name="jam_praktek" class="form-control">
+                                    <textarea id='keterangan' name='keterangan' class="form-control"
+                                        rows="2"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Jenis Layanan<span class="required"
+                                <label class="control-label col-md-4 font-green-haze">No. Telepon<span class="required"
                                         style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <select id="jenis_layanan" name="jenis_layanan" class="form-control">
-                                        <option value="">Pilih Pelayanan</option>
-                                        {{-- <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option> --}}
+                                    <input type='text' id='no_telepon' name='no_telepon' class='form-control'>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4 font-green-haze">Contact Person<span
+                                        class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <input type='text' id='contact_person' name='contact_person' class='form-control'>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4 font-green-haze">Email<span class="required"
+                                        style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <input type='text' id='email' name='email' class='form-control'>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4 font-green-haze">Status Ponek/Poned<span
+                                        class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <select id='ponek_poned' name='ponek_poned' class='form-control'>
+                                        <option value="">Pilih Status</option>
+                                        <option value="">PONEK</option>
+                                        <option value="">PONED</option>
                                     </select>
-=======
-    <div id="ModalInput" class="modal fade">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form Input Data Faskes</b>
-                    </h4>
-                    <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body form">
-                    <!-- BEGIN VALIDATION STATES-->
-                    <div class="portlet-body form">
-                        <!-- BEGIN FORM-->
-                        <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
-                            <div class="form-body">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Nama<span class="required"
-                                            style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <input type='text' id='nama' name='nama' class='form-control'>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Kategori<span class="required"
-                                            style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <select id='kategori' name='kategori' class='form-control'>
-                                            <option value="">Pilih Kategori</option>
-                                            <option value="">Command Center</option>
-                                            <option value="">Rumah Sakit</option>
-                                            <option value="">Puskesmas</option>
-                                            <option value="">Klinik</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Foto<span class="required"
-                                            style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <input type='text' id='foto' name='foto' class='form-control'>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Keterangan<span class="required"
-                                            style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <textarea id='keterangan' name='keterangan' class="form-control"
-                                            rows="2"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">No. Telepon<span class="required"
-                                            style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <input type='text' id='no_telepon' name='no_telepon' class='form-control'>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Contact Person<span
-                                            class="required" style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <input type='text' id='contact_person' name='contact_person' class='form-control'>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Email<span class="required"
-                                            style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <input type='text' id='email' name='email' class='form-control'>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Status Ponek/Poned<span
-                                            class="required" style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <select id='ponek_poned' name='ponek_poned' class='form-control'>
-                                            <option value="">Pilih Status</option>
-                                            <option value="">PONEK</option>
-                                            <option value="">PONED</option>
-                                        </select>
-                                    </div>
->>>>>>> 3214af051b70de3ae0d4b79d50fac8a2dcceca14:resources/views/master/faskes.blade.php
                                 </div>
                             </div>
-                        </form>
-                        <!-- END FORM-->
-                    </div>
-                    <!-- END VALIDATION STATES-->
+                        </div>
+                    </form>
+                    <!-- END FORM-->
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
-                </div>
+                <!-- END VALIDATION STATES-->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
             </div>
         </div>
     </div>
-<<<<<<< HEAD:resources/views/master/detail_faskes/darah.blade.php
 </div>
 <div id="ModalInputLayanan" class="modal">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
@@ -346,49 +239,25 @@
                                 </label>
                                 <div class="col-md-8">
                                     <input type="text" id="layanan" name="layanan" class="form-control">
-=======
-    <div id="ModalInputLayanan" class="modal">
-        <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
-                    <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body form">
-                    <!-- BEGIN VALIDATION STATES-->
-                    <div class="portlet-body form">
-                        <!-- BEGIN FORM-->
-                        <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
-                            <div class="form-body">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 font-green-haze">Layanan<span class="required"
-                                            style="color: red;">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-8">
-                                        <input type="text" id="layanan" name="layanan" class="form-control">
-                                    </div>
->>>>>>> 3214af051b70de3ae0d4b79d50fac8a2dcceca14:resources/views/master/faskes.blade.php
                                 </div>
                             </div>
-                        </form>
-                        <!-- END FORM-->
-                    </div>
-                    <!-- END VALIDATION STATES-->
+                        </div>
+                    </form>
+                    <!-- END FORM-->
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
-                </div>
+                <!-- END VALIDATION STATES-->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
             </div>
         </div>
     </div>
+</div>
 @endsection
 
 @section('scripts')
-    <script>
-        $(function() {
+<script>
+    $(function() {
             // $('#example1').DataTable()
             // $('#example2').DataTable({
             //     'paging': true,
@@ -481,5 +350,5 @@
             autoclose: true
         })
 
-    </script>
+</script>
 @endsection
