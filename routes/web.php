@@ -49,5 +49,10 @@ Route::middleware(['auth'])->group(
         Route::get('get-incidents', 'RequestAssistsController@getIncidents')->name('get-incidents');
         Route::get('get-incident-by-kode/{kode}', 'InputIncidentsController@getDataKejadian');
         Route::get('get-incident-by-id/{id}', 'RequestAssistsController@getIncident');
+        Route::get('get-faskes', 'HealthFacilitiesController@getFaskes');
+        Route::get('get-faskes-by-id/{id}', 'HealthFacilitiesController@getFaskesById');
+        Route::get('get-beds/{idhf}', 'HealthFacilitiesController@getBeds');
+        Route::get('get-doctors/{idhf}', 'HealthFacilitiesController@getDoctors');
+        Route::get('get-bloods/{idhf}', 'HealthFacilitiesController@getBloods');
     }
 );
