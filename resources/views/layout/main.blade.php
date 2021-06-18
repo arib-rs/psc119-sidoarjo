@@ -175,7 +175,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/input_kejadian') }}">Input Kejadian Baru</a></li>
                             <li><a href="{{ url('/req_bantuan') }}">Request Bantuan</a></li>
                             <li><a href="{{ url('/edit_laporan') }}">Edit Laporan Kejadian</a></li>
@@ -188,7 +188,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/konfirmasi_penugasan') }}">Konfirmasi Penugasan</a></li>
                             <li><a href="{{ url('/rekap_shift') }}">Shift Approval</a></li>
                         </ul>
@@ -200,7 +200,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/monitoring_alarm') }}">Monitoring Alarm Kejadian</a></li>
                             <li><a href="{{ url('/penanganan_kejadian') }}">Penanganan Kejadian</a></li>
                             <li><a href="{{ url('/monitoring_resources') }}">Monitoring Resources</a></li>
@@ -213,7 +213,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/laporan_kejadian') }}">Laporan Kejadian</a></li>
                             <li><a href="{{ url('/rekap_kejadian') }}">Rekap Laporan Kejadian </a></li>
                             <li><a href="{{ url('/rekap_bantuan') }}">Rekap Bantuan</a></li>
@@ -230,7 +230,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/personil') }}">Personil</a></li>
                             <li><a href="{{ url('/management_user') }}">User Management</a></li>
                             <li><a href="{{ url('/devicelist') }}">Device Management</a></li>
@@ -244,7 +244,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/faskes') }}">Faskes</a></li>
                             <li><a href="{{ url('/ambulan') }}">Ambulan</a></li>
                             <li><a href="{{ url('/spesialisasi_dokter') }}">Spesialisasi Dokter </a></li>

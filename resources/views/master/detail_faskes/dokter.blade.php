@@ -87,7 +87,7 @@
 
 @section('modal')
 <div id="ModalInput" class="modal">
-    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
+    <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
@@ -156,42 +156,6 @@
                                         <option value=""></option>
                                         <option value=""></option> --}}
                                     </select>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- END FORM-->
-                </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="ModalInputLayanan" class="modal">
-    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Layanan<span class="required"
-                                        style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="text" id="layanan" name="layanan" class="form-control">
                                 </div>
                             </div>
                         </div>
