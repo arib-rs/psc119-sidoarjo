@@ -48,17 +48,14 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
-                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
-                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><i class="fa fa-ambulance"></i><span> Mobil</span></div>
+                                        <div class="col-md-6" style="margin-bottom: 1em;">
+                                            <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input type="checkbox" style="padding: 0px; margin: 0px;"></span><i class="fa fa-ambulance"></i><span> Mobil</span></div>
                                         </div>
-                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
-                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
-                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><i class="fa fa-motorcycle"></i><span> Motor</span></div>
+                                        <div class="col-md-6" style="margin-bottom: 1em;">
+                                            <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input type="checkbox" style="padding: 0px; margin: 0px;"></span><i class="fa fa-motorcycle"></i><span> Motor</span></div>
                                         </div>
-                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
-                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
-                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><i class="fa fa-tasks"></i><span> Task</span></div>
+                                        <div class="col-md-6" style="margin-bottom: 1em;">
+                                            <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input type="checkbox" style="padding: 0px; margin: 0px;"></span><i class="fa fa-tasks"></i><span> Task</span></div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -108,174 +105,258 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
-                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
-                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas A</span></div>
+                                        <div class="col-md-6" style="margin-bottom: 1em;">
+                                            <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input type="checkbox" style="padding: 0px; margin: 0px;"></span><span> Kelas A</span></div>
                                         </div>
-                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
-                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
-                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas B</span></div>
+                                        <div class="col-md-6" style="margin-bottom: 1em;">
+                                            <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input type="checkbox" style="padding: 0px; margin: 0px;"></span><span> Kelas B</span></div>
                                         </div>
-                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
-                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
-                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas C</span></div>
+                                        <div class="col-md-6" style="margin-bottom: 1em;">
+                                            <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input type="checkbox" style="padding: 0px; margin: 0px;"></span><span> Kelas C</span></div>
                                         </div>
-                                        <div class="col-md-6" style="margin-bottom: 0.6em;">
-                                            <div class="col-md-2" style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px;"><input type="checkbox" style="margin-top: 0px;"></div>
-                                            <div class="col-md-10" style="padding-top: 2px; padding-left: 12px; padding-bottom: 3px;"><span>Kelas D</span></div>
+                                        <div class="col-md-6" style="margin-bottom: 1em;">
+                                            <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input type="checkbox" style="padding: 0px; margin: 0px;"></span><span> Kelas D</span></div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
                                 </div>
                             </div>
                         </div>
-                        <div style="position:relative; height: 345px; overflow:scroll;padding-top: 10px;">
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 226px;">
-                                <span style="font-size: 16px;">W 1100 OK</span> <br> <span style="font-size: 11px;">RS DUMMY</span>
+                        <div style="position:relative; height: 345px; overflow:scroll;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style="padding: 0px 7px;">
+                                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                            <span style="font-size: 16px;">W 1100 OK</span> <br> <span
+                                                style="font-size: 11px;">RS
+                                                DUMMY</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -292,132 +373,302 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-success" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
-                            </div>
-                            <div class="col-md-2 btn btn-default" style="padding: 10px; display: block; margin: 0.5em 1em; width: 229px;">
-                                <span style="font-size: 16px;">RS DUMMY</span> <br> <span style="font-size: 11px;">IGDDUMMY</span>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-success" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding: 0px 7px;">
+                                    <div class="btn btn-default" style="width: 100%; margin: 5px 0px;">
+                                        <span style="font-size: 16px;">RS DUMMY</span> <br> <span
+                                            style="font-size: 11px;">IGD
+                                            DUMMY</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
