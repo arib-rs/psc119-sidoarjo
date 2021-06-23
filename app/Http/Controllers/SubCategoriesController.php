@@ -9,7 +9,9 @@ class SubCategoriesController extends Controller
 {
     public function index()
     {
-        return view('master.sub_kategori');
+        $sub_category = SubCategory::all();
+
+        return view('master.sub_kategori', ['sub_category' => $sub_category]);
     }
 
     public function create()
@@ -19,7 +21,13 @@ class SubCategoriesController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'sub_kategori' => 'required',
+            'is_medis' => 'required',
+            'is_emergency' => 'required',
+        ]);
+
+        SubCategory::create($request->all());
     }
 
     public function show($id)

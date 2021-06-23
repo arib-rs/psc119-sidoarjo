@@ -61,7 +61,7 @@
             <small>Sidoarjo</small>
         </h2>
         <div class="row">
-            <div class="col-md-11" style="padding-right: 0;">
+            <div class="col-md-11">
                 <div class="input-group date">
                     <div class="input-group-addon">
                         <i class="fa fa-map-marker"></i>
