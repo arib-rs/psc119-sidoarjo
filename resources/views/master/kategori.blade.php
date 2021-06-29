@@ -23,7 +23,7 @@
             <li class="active">Kategori</li>
         </ol>
     </section>
-                                                                                                                                                                                 
+
     <!-- Main content -->
     <section class="content">
         <div class="nav-tabs-custom">
@@ -32,15 +32,15 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="sub_kategori">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
                                 <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput" class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
                             </div>
                         </div>
-                    </div><br>
-                    <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                    </div><br> --}}
+                    {{-- <table id="example1" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 50px;">No</th>
@@ -143,6 +143,21 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table> --}}
+
+                    <table class="table table-bordered table-hover datatable">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 50px;">No</th>
+                                <th class="text-center">Kategori</th>
+                                <th class="text-center">Sub Kategori</th>
+                                <th class="text-center" style="width: 200px;">Medis</th>
+                                <th class="text-center" style="width: 200px;">Emergency</th>
+                                <th class="text-center" style="width: 100px;"><a data-toggle="modal"
+                                        data-target="#ModalInput" class="btn btn-xs btn-success"><i
+                                            class="fa fa-plus-circle"></i> Input Data</a></th>
+                            </tr>
+                        </thead>
                     </table>
 
                 </div>
@@ -155,7 +170,7 @@
 @endsection
 
 @section('modal')
-<div id="ModalInput" class="modal">
+<div id="ModalInput" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
         <div class="modal-content">
             <div class="modal-header">
@@ -301,16 +316,64 @@
 @section('scripts')
 <script>
     $(function() {
-        $('#example1').DataTable()
-        $('#example2').DataTable()
-        $('#example3').DataTable({
-            'paging': true,
-            'lengthChange': true,
-            'searching': true,
-            'ordering': true,
-            'info': true,
-            'autoWidth': false
-        })
+        // $('#example1').DataTable()
+        // $('#example2').DataTable()
+        // $('#example3').DataTable({
+        //     'paging': true,
+        //     'lengthChange': true,
+        //     'searching': true,
+        //     'ordering': true,
+        //     'info': true,
+        //     'autoWidth': false
+        // })
+
+        var dataTable = $('.datatable').DataTable({
+            processing: true,
+            serverSide: true,
+            lengthChange: false,
+            autoWidth: false,
+            searching: true,
+            ordering: false,
+            info: true,
+            pageLength: 10,
+            // scrollX: true,
+            "order": [
+                [0, "desc"]
+            ],
+            ajax: 'get-kategori',
+            columns:
+            [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex'
+                },
+                {
+                    data: 'kategori',
+                    name: 'kategori'
+                },
+                {
+                    data: 'subcategory.sub_kategori',
+                    name: 'sub_kategori'
+                },
+                {
+                    data: 'is_medis',
+                    name: 'is_medis',
+                    sClass: 'text-center'
+                },
+                {
+                    data: 'is_emergency',
+                    name: 'is_emergency',
+                    sClass: 'text-center'
+                },
+                {
+                    data: 'Aksi',
+                    name: 'Aksi',
+                    orderable: false,
+                    serachable: false,
+                    sClass: 'text-center'
+                }
+            ]
+        });
     })
 
     $('#datepicker').datepicker({

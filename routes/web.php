@@ -49,13 +49,40 @@ Route::middleware(['auth'])->group(
             'task' => 'TasksController',
             'peta' => 'ShowMapsController'
         ]);
+
+        Route::get('layanan_dokter/{id}/edit', 'SpecialistsController@editLayanan')->name('layanan_dokter.edit');
+        Route::post('layanan_dokter', 'SpecialistsController@storeLayanan')->name('layanan_dokter.store');
+        Route::put('layanan_dokter/{id}', 'SpecialistsController@updateLayanan')->name('layanan_dokter.update');
+        Route::delete('layanan_dokter/{id}', 'SpecialistsController@destroyLayanan')->name('layanan_dokter.destroy');
+
+        Route::get('kemasan/{id}/edit', 'MedicinesController@editKemasan')->name('kemasan.edit');
+        Route::post('kemasan', 'MedicinesController@storeKemasan')->name('kemasan.store');
+        Route::put('kemasan/{id}', 'MedicinesController@updateKemasan')->name('kemasan.update');
+        Route::delete('kemasan/{id}', 'MedicinesController@destroyKemasan')->name('kemasan.destroy');
+
+        Route::get('kategoriobat/{id}/edit', 'MedicinesController@editKategori')->name('kategoriobat.edit');
+        Route::post('kategoriobat', 'MedicinesController@storeKategori')->name('kategoriobat.store');
+        Route::put('kategoriobat/{id}', 'MedicinesController@updateKategori')->name('kategoriobat.update');
+        Route::delete('kategoriobat/{id}', 'MedicinesController@destroyKategori')->name('kategoriobat.destroy');
+
         Route::get('get-incidents', 'RequestAssistsController@getIncidents')->name('get-incidents');
         Route::get('get-incident-by-kode/{kode}', 'InputIncidentsController@getDataKejadian');
         Route::get('get-incident-by-id/{id}', 'RequestAssistsController@getIncident');
+        Route::get('get-health-facilities', 'ResourcesController@getHealthFacilities')->name('get-health-facilities');
         Route::get('get-faskes', 'HealthFacilitiesController@getFaskes');
         Route::get('get-faskes-by-id/{id}', 'HealthFacilitiesController@getFaskesById');
         Route::get('get-beds/{idhf}', 'HealthFacilitiesController@getBeds');
         Route::get('get-doctors/{idhf}', 'HealthFacilitiesController@getDoctors');
         Route::get('get-bloods/{idhf}', 'HealthFacilitiesController@getBloods');
+        Route::get('get-ambulan', 'ResourcesController@getAmbulan');
+        Route::get('get-sub-kategori', 'SubCategoriesController@getSubKategori');
+        Route::get('get-kategori', 'CategoriesController@getKategori');
+        Route::get('get-packaging-category', 'MedicinesController@getDataPackagingCategory')->name('get-packaging-category');
+        Route::get('get-obat', 'MedicinesController@getObat');
+        Route::get('get-kemasan', 'MedicinesController@getKemasan');
+        Route::get('get-kategori-obat', 'MedicinesController@getKategori');
+        Route::get('get-spesialis', 'SpecialistsController@getSpesialis');
+        Route::get('get-layanan', 'SpecialistsController@getLayanan');
+        Route::get('get-task', 'TasksController@getTask');
     }
 );

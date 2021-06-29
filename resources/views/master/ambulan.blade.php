@@ -34,72 +34,72 @@
                 <div class="tab-pane active" id="resource">
                     <div class="row">
                         <div class="col-md-4">
-                            <select id="lokasi" class="form-control select2ambulan">
-                                <option value=''>PILIH LOKASI</option>
-                                <option value='0'>Command Center</option>
-                                <option value='1'>RSUD SIDOARJO</option>
-                                <option value='2'>RUMKITBAN SIDOARJO</option>
-                                <option value='3'>RSU AL-Islam HM Mawardi</option>
-                                <option value='4'>RS Citra Medika</option>
-                                <option value='5'>RSI Siti Hajar</option>
-                                <option value='6'>RSU BUNDA WARU</option>
-                                <option value='7'>RS Mitra Sehat Mandiri</option>
-                                <option value='8'>RS Dummy 1</option>
-                                <option value='9'>RS SITI KHODIJAH</option>
-                                <option value='10'>RS Bhayangkara Pusdik Porong</option>
-                                <option value='11'>RS. ANWAR MEDIKA</option>
-                                <option value='12'>RS MATA FATMA SIDOARJO</option>
-                                <option value='13'>PKM GANTING</option>
-                                <option value='14'>PKM SIDOARJO</option>
-                                <option value='15'>PKM SEKARDANGAN</option>
-                                <option value='16'>PKM URANGAGUNG</option>
-                                <option value='17'>PKM BUDURAN</option>
-                                <option value='18'>PKM CANDI</option>
-                                <option value='19'>PKM PORONG</option>
-                                <option value='20'>PKM KEDUNGSOLO</option>
-                                <option value='21'>PKM JABON</option>
-                                <option value='22'>PKM KREMBUNG</option>
-                                <option value='23'>PKM TANGGULANGIN</option>
-                                <option value='24'>PKM TULANGAN</option>
-                                <option value='25'>PKM KEPADANGAN</option>
-                                <option value='26'>PKM TAMAN</option>
-                                <option value='27'>PKM TROSOBO</option>
-                                <option value='28'>PKM WARU</option>
-                                <option value='29'>PKM MEDAENG</option>
-                                <option value='30'>PKM SEDATI</option>
-                                <option value='31'>PKM GEDANGAN</option>
-                                <option value='32'>PKM SUKODONO</option>
-                                <option value='33'>PKM KRIAN</option>
-                                <option value='34'>PKM BARENGKRAJAN</option>
-                                <option value='35'>RS Aisyiyah Siti Fatimah Tulangan</option>
-                                <option value='36'>PKM BALONGBENDO</option>
-                                <option value='37'>PKM WONOAYU</option>
-                                <option value='38'>PKM TARIK</option>
-                                <option value='39'>PKM PRAMBON</option>
-                                <option value='40'>RS Delta Surya</option>
-                                <option value='41'>RS Jasem</option>
-                                <option value='42'>RS Mitra Keluarga Waru</option>
-                                <option value='43'>RS Assakinah Medika</option>
-                                <option value='44'>RSIA Soerya</option>
-                                <option value='45'>RSIA Prima Husada</option>
-                                <option value='46'>RSIA Pondok Tjandra</option>
-                                <option value='47'>RSIA Arafah Anwar Medika Sukodono</option>
-                                <option value='48'>RS Aminah</option>
-                                <option value='49'>RS Usada Sidoarjo</option>
-                                <option value='50'>RSIA Kirana</option>
-                                <option value='51'>RSIA Buah Delima</option>
-                                <option value='52'>RS Rahman Rahim</option>
-                                <option value='53'>RSIA Mitra Husada</option>
-                                <option value='54'>Puskesmas Wiguna</option>
-                                <option value='55'>Dinas Kesehatan</option>
-                                <option value='56'>faskes wiguna</option>
-                                <option value='57'>PMI Sidoarjo</option>
-                                <option value='75'>Faskes Simulasi Medokan Asri</option>
-                                <option value='84'>RS DKT Sidoarjo</option>
+                            <select id="health_facility_id" class="form-control select2lokasi">
+                                <option value="">PILIH LOKASI</option>
+                                <option value="0">Command Center</option>
+                                <option value="1">RSUD SIDOARJO</option>
+                                <option value="2">RUMKITBAN SIDOARJO</option>
+                                <option value="3">RSU AL-Islam HM Mawardi</option>
+                                <option value="4">RS Citra Medika</option>
+                                <option value="5">RSI Siti Hajar</option>
+                                <option value="6">RSU BUNDA WARU</option>
+                                <option value="7">RS Mitra Sehat Mandiri</option>
+                                <option value="8">RS Dummy 1</option>
+                                <option value="9">RS SITI KHODIJAH</option>
+                                <option value="10">RS Bhayangkara Pusdik Porong</option>
+                                <option value="11">RS. ANWAR MEDIKA</option>
+                                <option value="12">RS MATA FATMA SIDOARJO</option>
+                                <option value="13">PKM GANTING</option>
+                                <option value="14">PKM SIDOARJO</option>
+                                <option value="15">PKM SEKARDANGAN</option>
+                                <option value="16">PKM URANGAGUNG</option>
+                                <option value="17">PKM BUDURAN</option>
+                                <option value="18">PKM CANDI</option>
+                                <option value="19">PKM PORONG</option>
+                                <option value="20">PKM KEDUNGSOLO</option>
+                                <option value="21">PKM JABON</option>
+                                <option value="22">PKM KREMBUNG</option>
+                                <option value="23">PKM TANGGULANGIN</option>
+                                <option value="24">PKM TULANGAN</option>
+                                <option value="25">PKM KEPADANGAN</option>
+                                <option value="26">PKM TAMAN</option>
+                                <option value="27">PKM TROSOBO</option>
+                                <option value="28">PKM WARU</option>
+                                <option value="29">PKM MEDAENG</option>
+                                <option value="30">PKM SEDATI</option>
+                                <option value="31">PKM GEDANGAN</option>
+                                <option value="32">PKM SUKODONO</option>
+                                <option value="33">PKM KRIAN</option>
+                                <option value="34">PKM BARENGKRAJAN</option>
+                                <option value="35">RS Aisyiyah Siti Fatimah Tulangan</option>
+                                <option value="36">PKM BALONGBENDO</option>
+                                <option value="37">PKM WONOAYU</option>
+                                <option value="38">PKM TARIK</option>
+                                <option value="39">PKM PRAMBON</option>
+                                <option value="40">RS Delta Surya</option>
+                                <option value="41">RS Jasem</option>
+                                <option value="42">RS Mitra Keluarga Waru</option>
+                                <option value="43">RS Assakinah Medika</option>
+                                <option value="44">RSIA Soerya</option>
+                                <option value="45">RSIA Prima Husada</option>
+                                <option value="46">RSIA Pondok Tjandra</option>
+                                <option value="47">RSIA Arafah Anwar Medika Sukodono</option>
+                                <option value="48">RS Aminah</option>
+                                <option value="49">RS Usada Sidoarjo</option>
+                                <option value="50">RSIA Kirana</option>
+                                <option value="51">RSIA Buah Delima</option>
+                                <option value="52">RS Rahman Rahim</option>
+                                <option value="53">RSIA Mitra Husada</option>
+                                <option value="54">Puskesmas Wiguna</option>
+                                <option value="55">Dinas Kesehatan</option>
+                                <option value="56">faskes wiguna</option>
+                                <option value="57">PMI Sidoarjo</option>
+                                <option value="75">Faskes Simulasi Medokan Asri</option>
+                                <option value="84">RS DKT Sidoarjo</option>
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <select id="lokasi" class="form-control select2">
+                            <select id="jenis" class="form-control select2jenis">
                                 <option value="">JENIS RESOURCE</option>
                                 <option value="0">Mobil</option>
                                 <option value="1">Motor</option>
@@ -107,19 +107,20 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <button type="button" class="btn btn-primary col-md-6" id="bt_search_laporan"><i class="fa fa-search"></i>&nbsp; Tampilkan</button>
+                                <button type="button" class="btn btn-primary col-md-6" id="bt_search_laporan"><i
+                                        class="fa fa-search"></i>&nbsp; Tampilkan</button>
                             </div>
                         </div>
                     </div><br>
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
                                 <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput" class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
                             </div>
                         </div>
-                    </div><br>
-                    <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                    </div><br> --}}
+                    {{-- <table id="example1" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 40px;">No</th>
@@ -255,6 +256,29 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table> --}}
+
+                    <table class="table table-bordered table-hover datatable">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 40px;">No</th>
+                                <th class="text-center">Jns Resource</th>
+                                <th class="text-center">No Polisi</th>
+                                <th class="text-center">Kode Resource</th>
+                                <th class="text-center">Kelas</th>
+                                <th class="text-center">Produksi</th>
+                                <th class="text-center">Lokasi</th>
+                                <th class="text-center">Merk Mobil</th>
+                                <th class="text-center">Tahun Pakai</th>
+                                <th class="text-center">Foto</th>
+                                <th class="text-center">Klasifikasi</th>
+                                <th class="text-center">Status Resource</th>
+                                <th class="text-center" style="width: 50px;">Aktif</th>
+                                <th class="text-center" style="width: 100px;"><a id="btn-add" data-toggle="tooltip"
+                                        class="btn btn-xs btn-success"><i class="fa fa-plus-circle"></i> Input Data</a>
+                                </th>
+                            </tr>
+                        </thead>
                     </table>
                 </div>
 
@@ -268,7 +292,7 @@
 @endsection
 
 @section('modal')
-<div id="ModalInput" class="modal">
+<div id="ModalInput" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
         <div class="modal-content">
             <div class="modal-header">
@@ -277,209 +301,115 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Jenis Resource<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id='jenis_resource' name='jenis_resource' class='form-control'>
-                                        <option value="">Jenis Resource</option>
-                                        <option value="">Mobil</option>
-                                        <option value="">Motor</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">No Polisi<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='no_polisi' name='no_polisi' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kode Ambulan<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='kode_ambulan' name='kode_ambulan' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kelas<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id='kelas' name='kelas' class='form-control'>
-                                        <option value="">Pilih Kelas</option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Tahun Pembuatan<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='tahun_pembuatan' name='tahun_pembuatan' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Lokasi<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select name='lokasi' id='lokasi' class="form-control select">
-                                        <option value=''>Pilih Lokasi</option>
-                                        <option value='0'>Command Center</option>
-                                        <option value='1'>RSUD SIDOARJO</option>
-                                        <option value='2'>RUMKITBAN SIDOARJO</option>
-                                        <option value='3'>RSU AL-Islam HM Mawardi</option>
-                                        <option value='4'>RS Citra Medika</option>
-                                        <option value='5'>RSI Siti Hajar</option>
-                                        <option value='6'>RSU BUNDA WARU</option>
-                                        <option value='7'>RS Mitra Sehat Mandiri</option>
-                                        <option value='8'>RS Dummy 1</option>
-                                        <option value='9'>RS SITI KHODIJAH</option>
-                                        <option value='10'>RS Bhayangkara Pusdik Porong</option>
-                                        <option value='11'>RS. ANWAR MEDIKA</option>
-                                        <option value='12'>RS MATA FATMA SIDOARJO</option>
-                                        <option value='13'>PKM GANTING</option>
-                                        <option value='14'>PKM SIDOARJO</option>
-                                        <option value='15'>PKM SEKARDANGAN</option>
-                                        <option value='16'>PKM URANGAGUNG</option>
-                                        <option value='17'>PKM BUDURAN</option>
-                                        <option value='18'>PKM CANDI</option>
-                                        <option value='19'>PKM PORONG</option>
-                                        <option value='20'>PKM KEDUNGSOLO</option>
-                                        <option value='21'>PKM JABON</option>
-                                        <option value='22'>PKM KREMBUNG</option>
-                                        <option value='23'>PKM TANGGULANGIN</option>
-                                        <option value='24'>PKM TULANGAN</option>
-                                        <option value='25'>PKM KEPADANGAN</option>
-                                        <option value='26'>PKM TAMAN</option>
-                                        <option value='27'>PKM TROSOBO</option>
-                                        <option value='28'>PKM WARU</option>
-                                        <option value='29'>PKM MEDAENG</option>
-                                        <option value='30'>PKM SEDATI</option>
-                                        <option value='31'>PKM GEDANGAN</option>
-                                        <option value='32'>PKM SUKODONO</option>
-                                        <option value='33'>PKM KRIAN</option>
-                                        <option value='34'>PKM BARENGKRAJAN</option>
-                                        <option value='35'>RS Aisyiyah Siti Fatimah Tulangan</option>
-                                        <option value='36'>PKM BALONGBENDO</option>
-                                        <option value='37'>PKM WONOAYU</option>
-                                        <option value='38'>PKM TARIK</option>
-                                        <option value='39'>PKM PRAMBON</option>
-                                        <option value='40'>RS Delta Surya</option>
-                                        <option value='41'>RS Jasem</option>
-                                        <option value='42'>RS Mitra Keluarga Waru</option>
-                                        <option value='43'>RS Assakinah Medika</option>
-                                        <option value='44'>RSIA Soerya</option>
-                                        <option value='45'>RSIA Prima Husada</option>
-                                        <option value='46'>RSIA Pondok Tjandra</option>
-                                        <option value='47'>RSIA Arafah Anwar Medika Sukodono</option>
-                                        <option value='48'>RS Aminah</option>
-                                        <option value='49'>RS Usada Sidoarjo</option>
-                                        <option value='50'>RSIA Kirana</option>
-                                        <option value='51'>RSIA Buah Delima</option>
-                                        <option value='52'>RS Rahman Rahim</option>
-                                        <option value='53'>RSIA Mitra Husada</option>
-                                        <option value='54'>Puskesmas Wiguna</option>
-                                        <option value='55'>Dinas Kesehatan</option>
-                                        <option value='56'>faskes wiguna</option>
-                                        <option value='57'>PMI Sidoarjo</option>
-                                        <option value='75'>Faskes Simulasi Medokan Asri</option>
-                                        <option value='84'>RS DKT Sidoarjo</option>
-
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Tahun Pakai<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='tahun_pakai' name='tahun_pakai' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Merk Mobil<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='merk_mobil' name='merk_mobil' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Foto<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='foto' name='foto' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Klasifikasi<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <textarea id='klasifikasi' name='klasifikasi' class="form-control" rows="2"></textarea>
-                                </div>
+            <form id="form-data" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id" name="id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Jenis Resource<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" id="jenis" name="jenis">
+                                    <option value="">Jenis Resource</option>
+                                    <option value="Mobil">Mobil</option>
+                                    <option value="Motor">Motor</option>
+                                </select>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
-                </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="ModalInputLayanan" class="modal">
-    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Layanan<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="text" id="layanan" name="layanan" class="form-control">
-                                </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">No Polisi<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="nomor_polisi" name="nomor_polisi" required>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Kode Ambulan<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="kode" name="kode" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Kelas<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" id="kelas" name="kelas">
+                                    <option value="">Pilih Kelas</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Tahun Pembuatan<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="tahun_produksi" name="tahun_produksi"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Lokasi<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control select2" name="health_facility_id"
+                                    id="health_facility_id" style="width: 100%;">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Tahun Pakai<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="tahun_pakai" name="tahun_pakai"
+                                    autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Merk Mobil<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="merk" name="merk">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Foto<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="pict_url" name="pict_url">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Klasifikasi<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="klasifikasi" name="klasifikasi" rows="2"
+                                    value=""></textarea>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
-            </div>
+                <div class="modal-footer">
+                    <button id="btn-reset" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button id="btn-save" type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -488,21 +418,257 @@
 @section('scripts')
 <script>
     $(function() {
-        $('.select2ambulan').select2()
+        $('.select2lokasi').select2();
+        $('.select2jenis').select2();
 
-        $('#example1').DataTable()
-        $('#example2').DataTable({
-            'paging': true,
-            'lengthChange': true,
-            'searching': true,
-            'ordering': true,
-            'info': true,
-            'autoWidth': false
-        })
-    })
+        var dataTable = $('.datatable').DataTable({
+            processing: true,
+            serverSide: true,
+            lengthChange: false,
+            autoWidth: false,
+            searching: true,
+            ordering: false,
+            info: true,
+            pageLength: 10,
+            // scrollX: true,
+            "order": [
+                [0, "desc"]
+            ],
+            ajax: 'get-ambulan',
+            columns:
+            [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex'
+                },
+                {
+                    data: 'jenis',
+                    name: 'jenis'
+                },
+                {
+                    data: 'nomor_polisi',
+                    name: 'nomor_polisi'
+                },
+                {
+                    data: 'kode',
+                    name: 'kode'
+                },
+                {
+                    data: 'kelas',
+                    name: 'kelas'
+                },
+                {
+                    data: 'tahun_produksi',
+                    name: 'tahun_produksi'
+                },
+                {
+                    data: 'healthfacility.nama',
+                    name: 'nama',
+                    defaultContent: ""
+                },
+                {
+                    data: 'merk',
+                    name: 'merk'
+                },
+                {
+                    data: 'tahun_pakai',
+                    name: 'tahun_pakai'
+                },
+                {
+                    data: 'pict_url',
+                    name: 'pict_url',
+                    sClass: 'text-center'
+                },
+                {
+                    data: 'klasifikasi',
+                    name: 'klasifikasi'
+                },
+                {
+                    data: 'status',
+                    name: 'status'
+                },
+                {
+                    data: 'is_active',
+                    name: 'is_active',
+                    sClass: 'text-center'
+                },
+                {
+                    data: 'Aksi',
+                    name: 'Aksi',
+                    orderable: false,
+                    serachable: false,
+                    sClass: 'text-center'
+                }
+            ]
+        });
 
-    $('#datepicker').datepicker({
-        autoclose: true
-    })
+        $('#form-data').submit(function(e) {
+            e.preventDefault();
+        });
+
+        $('#btn-add').click(function() {
+            //reset
+            $('#form-data').find('.form-control').val('');
+            //show modal
+            $('.modal-title').html('<b>Input Data</b>');
+            $('#ModalInput').modal('show');
+                var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class');
+                $.ajax({
+                    url: "{{ route('get-health-facilities') }}",
+                    method: 'GET',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        // console.log(result);
+                        $('.select2').select2().html(result.health_facilities);
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                        $('#btn-save').html('Simpan');
+                        $('#ModalInput').modal('show');
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+        });
+
+        $('#btn-save').click(function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $('#id').val(),
+                url = '',
+                method = '';
+
+            var form = $('#form-data'),
+                data = form.serializeArray();
+
+            if (id == '') {
+                url = "{{ route('ambulan.store') }}";
+                method = 'POST';
+            } else {
+                url = "ambulan/" + id;
+                method = 'PUT';
+            }
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: url,
+                method: method,
+                data: data,
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                },
+                success: function(result) {
+                    if (result.success) {
+                        toastr['success'](result.success);
+                        $('.datatable').DataTable().ajax.reload();
+                        $('#ModalInput').modal('hide');
+                        $('#form-data').find('input.form-control').val('');
+                    } else {
+                        $.each(result.errors, function(key, value) {
+                            toastr['error'](value);
+                        });
+                    }
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        });
+
+    }).on('click', '#btn-edit', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data');
+
+            $.ajax({
+                url: "ambulan/" + id + "/edit",
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+
+                },
+                success: function(result) {
+                    // console.log(result);
+                    $('.modal-title').html('<b>Edit Data</b>');
+                    form.find('#btn-save').html('Edit');
+                    form.find('#id').val(result.resources.id);
+                    form.find('#jenis').val(result.resources.jenis);
+                    form.find('#nomor_polisi').val(result.resources.nomor_polisi);
+                    form.find('#kode').val(result.resources.kode);
+                    form.find('#kelas').val(result.resources.kelas);
+                    form.find('#tahun_produksi').val(result.resources.tahun_produksi);
+                    form.find('#merk').val(result.resources.merk);
+                    form.find('#tahun_pakai').val(result.resources.kode);
+                    form.find('#pict_url').val(result.resources.pict_url);
+                    form.find('#klasifikasi').val(result.resources.klasifikasi);
+                    if (result.resources.health_facility_id == null) {
+                        $('.select2').select2().html("<option value=''>Pilih Lokasi</option>");
+                        $('.select2').select2().append(result.health_facilities);
+                    } else {
+                        $('.select2').select2().html(result.health_facilities);
+                        form.find('#health_facility_id option[value="' + result.resources.health_facility_id + '"]').attr(
+                            'selected',
+                            'selected');
+                    }
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                    $('#ModalInput').modal('show');
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        }).on('click', '#btn-delete', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+            var del = confirm("Apakah anda yakin menghapus data ini?");
+            if (del) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "ambulan/" + id,
+                    method: 'DELETE',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('.datatable').DataTable().ajax.reload();
+                        toastr['success'](result.success);
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            }
+        });
 </script>
 @endsection

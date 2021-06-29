@@ -151,7 +151,7 @@
 @endsection
 
 @section('modal')
-    <div id="ModalInput" class="modal">
+    <div id="ModalInput" class="modal fade">
         <div class="modal-dialog modal-dialog-centered modal-lg" style="width:50%">
             <div class="modal-content">
                 <div class="modal-header" style="padding: 10px auto;">
@@ -247,7 +247,7 @@
     </div>
 
 
-    <div id="ModalRequest" class="modal">
+    <div id="ModalRequest" class="modal fade">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header" style="padding: 10px auto;">

@@ -32,15 +32,16 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="sub_kategori">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
-                                <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput" class="btn btn-success">
+                                <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput"
+                                    class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
                             </div>
                         </div>
-                    </div><br>
-                    <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                    </div><br> --}}
+                    {{-- <table id="example1" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 50px;">No</th>
@@ -163,6 +164,20 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table> --}}
+
+                    <table class="table table-bordered table-hover datatable">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 50px;">No</th>
+                                <th class="text-center">Keterangan</th>
+                                <th class="text-center" style="width: 200px;">Medis</th>
+                                <th class="text-center" style="width: 200px;">Emergency</th>
+                                <th class="text-center" style="width: 100px;"><a id="btn-add" data-toggle="tooltip"
+                                        class="btn btn-xs btn-success"><i class="fa fa-plus-circle"></i> Input Data</a>
+                                </th>
+                            </tr>
+                        </thead>
                     </table>
 
                 </div>
@@ -175,7 +190,7 @@
 @endsection
 
 @section('modal')
-<div id="ModalInput" class="modal">
+<div id="ModalInput" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
         <div class="modal-content">
             <div class="modal-header">
@@ -184,53 +199,52 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Medis<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id='kemasan' name='kemasan' class='form-control'>
-                                        <option value="">Pilih Medis</option>
-                                        <option value="">Non Medis</option>
-                                        <option value="">Medis</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Emergency<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select name='kategori' id='kategori' class="form-control select">
-                                        <option value=''>Pilih Emergency</option>
-                                        <option value=''>Non Emergency</option>
-                                        <option value=''>Emergency</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Keterangan<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <textarea id='paramedis' name='paramedis' class="form-control" rows="2"></textarea>
-                                </div>
+            <form id="form-data" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id" name="id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Keterangan<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="sub_kategori" name="sub_kategori" rows="2" value=""
+                                    required></textarea>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
+                        <div class="form-group">
+                            <label class="control-label col-md-4" for="is_medis">Medis<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" id="is_medis" name="is_medis">
+                                    <option value="">Pilih Medis</option>
+                                    <option value="0">Non Medis</option>
+                                    <option value="1">Medis</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" for="is_emergency">Emergency<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" name="is_emergency" id="is_emergency">
+                                    <option value="">Pilih Emergency</option>
+                                    <option value="0">Non Emergency</option>
+                                    <option value="1">Emergency</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick='' class="btn btn-primary">Simpan</button>
-            </div>
+                <div class="modal-footer">
+                    <button id="btn-reset" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button id="btn-save" type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -239,20 +253,180 @@
 @section('scripts')
 <script>
     $(function() {
-        $('#example1').DataTable()
-        $('#example2').DataTable()
-        $('#example3').DataTable({
-            'paging': true,
-            'lengthChange': true,
-            'searching': true,
-            'ordering': true,
-            'info': true,
-            'autoWidth': false
-        })
-    })
+        var dataTable = $('.datatable').DataTable({
+            processing: true,
+            serverSide: true,
+            lengthChange: false,
+            autoWidth: false,
+            searching: true,
+            ordering: false,
+            info: true,
+            pageLength: 10,
+            // scrollX: true,
+            "order": [
+                [0, "desc"]
+            ],
+            ajax: 'get-sub-kategori',
+            columns:
+            [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex'
+                },
+                {
+                    data: 'sub_kategori',
+                    name: 'sub_kategori'
+                },
+                {
+                    data: 'is_medis',
+                    name: 'is_medis',
+                    sClass: 'text-center'
+                },
+                {
+                    data: 'is_emergency',
+                    name: 'is_emergency',
+                    sClass: 'text-center'
+                },
+                {
+                    data: 'Aksi',
+                    name: 'Aksi',
+                    orderable: false,
+                    serachable: false,
+                    sClass: 'text-center'
+                }
+            ]
+        });
 
-    $('#datepicker').datepicker({
-        autoclose: true
-    })
+        $('#form-data').submit(function(e) {
+            e.preventDefault();
+        });
+
+        $('#btn-add').click(function() {
+            //reset
+            $('#form-data').find('.form-control').val('');
+            //show modal
+            $('.modal-title').html('<b>Input Data</b>');
+            $('#ModalInput').modal('show');
+        });
+
+        $('#btn-save').click(function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $('#id').val(),
+                url = '',
+                method = '';
+
+            var form = $('#form-data'),
+                data = form.serializeArray();
+
+            if (id == '') {
+                url = "{{ route('sub_kategori.store') }}";
+                method = 'POST';
+            } else {
+                url = "sub_kategori/" + id;
+                method = 'PUT';
+            }
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: url,
+                method: method,
+                data: data,
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                },
+                success: function(result) {
+                    if (result.success) {
+                        toastr['success'](result.success);
+                        $('.datatable').DataTable().ajax.reload();
+                        $('#ModalInput').modal('hide');
+                        $('#form-data').find('input.form-control').val('');
+                    } else {
+                        $.each(result.errors, function(key, value) {
+                            toastr['error'](value);
+                        });
+                    }
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        });
+
+    }).on('click', '#btn-edit', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data');
+
+            $.ajax({
+                url: "sub_kategori/" + id + "/edit",
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+
+                },
+                success: function(result) {
+                    // console.log(result);
+                    $('.modal-title').html('<b>Edit Data</b>');
+                    form.find('#btn-save').html('Edit');
+                    form.find('#id').val(result.id);
+                    form.find('#sub_kategori').val(result.sub_kategori);
+                    form.find('#is_medis').val(result.is_medis);
+                    form.find('#is_emergency').val(result.is_emergency);
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                    $('#ModalInput').modal('show');
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        }).on('click', '#btn-delete', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+            var del = confirm("Apakah anda yakin menghapus data ini?");
+            if (del) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "sub_kategori/" + id,
+                    method: 'DELETE',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('.datatable').DataTable().ajax.reload();
+                        toastr['success'](result.success);
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            }
+        });
+
 </script>
 @endsection
