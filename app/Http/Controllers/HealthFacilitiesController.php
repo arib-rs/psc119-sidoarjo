@@ -109,12 +109,12 @@ class HealthFacilitiesController extends Controller
             ->addColumn('Aksi', function ($data) {
                 return '
                 <div style="margin-bottom:3px;">
-                <a id="btn-edit" class="btn btn-sm btn-primary" data-id="' .
+                <a id="btn-edit-faskes" class="btn btn-sm btn-primary" data-id="' .
                     $data->id .
                     '" title="Edit Data">
                 <i class="fa fa-pencil"></i>
                 </a>
-                <a id="btn-delete" class="btn btn-sm btn-danger" data-id="' .
+                <a id="btn-delete-faskes" class="btn btn-sm btn-danger" data-id="' .
                     $data->id .
                     '" title="Hapus Data">
                 <i class="fa fa-trash"></i>
@@ -150,7 +150,33 @@ class HealthFacilitiesController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $validator = \Validator::make($request->all(), [
+            'nama' => 'required',
+            // 'alamat' => 'required',
+            'kategori' => 'required',
+            'is_fullday' => 'required',
+            'is_has_ekg' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->all()]);
+        } else {
+            HealthFacility::create([
+                'nama' => $request->nama,
+                // 'alamat' => $request->alamat,
+                'kategori' => $request->kategori,
+                'is_fullday' => $request->is_fullday,
+                'is_has_ekg' => $request->is_has_ekg,
+                'keterangan' => $request->keterangan,
+                'phone_num' => $request->phone_num,
+                'contact_person' => $request->contact_person,
+                'email' => $request->email,
+                'status' => $request->status,
+                'is_active' => "1"
+            ]);
+
+            return response()->json(['success' => 'Data telah disimpan.']);
+        }
     }
 
     public function show($id)
@@ -160,16 +186,44 @@ class HealthFacilitiesController extends Controller
 
     public function edit($id)
     {
-        //
+        $data = HealthFacility::find($id);
+        return response()->json($data);
     }
 
     public function update(Request $request, $id)
     {
-        //
+        $validator = \Validator::make($request->all(), [
+            'nama' => 'required',
+            // 'alamat' => 'required',
+            'kategori' => 'required',
+            'is_fullday' => 'required',
+            'is_has_ekg' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->all()]);
+        }
+
+        HealthFacility::find($id)->update([
+            'nama' => $request->nama,
+            // 'alamat' => $request->alamat,
+            'kategori' => $request->kategori,
+            'is_fullday' => $request->is_fullday,
+            'is_has_ekg' => $request->is_has_ekg,
+            'keterangan' => $request->keterangan,
+            'phone_num' => $request->phone_num,
+            'contact_person' => $request->contact_person,
+            'email' => $request->email,
+            'status' => $request->status,
+            'is_active' => "1"
+        ]);
+
+        return response()->json(['success' => 'Data telah diubah.']);
     }
 
     public function destroy($id)
     {
-        //
+        HealthFacility::find($id)->delete();
+        return response()->json(['success' => 'Data telah dihapus.']);
     }
 }

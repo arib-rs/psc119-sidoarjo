@@ -84,5 +84,9 @@ Route::middleware(['auth'])->group(
         Route::get('get-spesialis', 'SpecialistsController@getSpesialis');
         Route::get('get-layanan', 'SpecialistsController@getLayanan');
         Route::get('get-task', 'TasksController@getTask');
+        Route::get('get-form-data-category', 'CategoriesController@getFormDataCategory')->name('get-form-data-category');
+        Route::get('get-rshift', 'RShiftsController@getRShift');
+        Route::get('get-form-data-healthfacility', 'RShiftsController@getFormDataHealthFacility')->name('get-form-data-healthfacility');
+        Route::get('get-form-data-resource/{id}', 'RShiftsController@getFormDataResource')->name('get-form-data-resource');
     }
 );

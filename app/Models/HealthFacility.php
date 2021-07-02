@@ -49,4 +49,9 @@ class HealthFacility extends Model
     {
         return $this->hasMany(Resource::class);
     }
+
+    public function rshift()
+    {
+        return $this->hasMany(RShift::class);
+    }
 }

@@ -789,7 +789,7 @@
 @endsection
 
 @section('modal')
-<div id="ModalInfo" class="modal">
+<div id="ModalInfo" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
             <div class="col-md-12" style="background:#e74c3c; height: 7px;"></div>
@@ -809,7 +809,7 @@
     </div>
 </div>
 
-<div id="ModalInfoAmbulanOffline" class="modal">
+<div id="ModalInfoAmbulanOffline" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
             <div class="col-md-12" style="background:#e74c3c; height: 7px;"></div>

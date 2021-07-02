@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Resource extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'jenis',
         'nomor_polisi',
@@ -27,5 +28,10 @@ class Resource extends Model
     public function healthfacility()
     {
         return $this->belongsTo(HealthFacility::class, 'health_facility_id');
+    }
+
+    public function rshift()
+    {
+        return $this->hasMany(RShift::class);
     }
 }

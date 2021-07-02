@@ -34,7 +34,7 @@
                 <div class="tab-pane active" id="resource">
                     <div class="row">
                         <div class="col-md-4">
-                            <select id="health_facility_id" class="form-control select2lokasi">
+                            <select id="select-lokasi" class="form-control select2 select-lokasi">
                                 <option value="">PILIH LOKASI</option>
                                 <option value="0">Command Center</option>
                                 <option value="1">RSUD SIDOARJO</option>
@@ -99,7 +99,7 @@
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <select id="jenis" class="form-control select2jenis">
+                            <select id="select-jenis" class="form-control select2 select-jenis">
                                 <option value="">JENIS RESOURCE</option>
                                 <option value="0">Mobil</option>
                                 <option value="1">Motor</option>
@@ -364,7 +364,7 @@
                                     * </span>
                             </label>
                             <div class="col-md-8">
-                                <select autocomplete="off" class="form-control select2" name="health_facility_id"
+                                <select autocomplete="off" class="form-control select2 select-form" name="health_facility_id"
                                     id="health_facility_id" style="width: 100%;">
                                 </select>
                             </div>
@@ -418,8 +418,8 @@
 @section('scripts')
 <script>
     $(function() {
-        $('.select2lokasi').select2();
-        $('.select2jenis').select2();
+        $('.select-lokasi').select2();
+        $('.select-jenis').select2();
 
         var dataTable = $('.datatable').DataTable({
             processing: true,
@@ -524,7 +524,7 @@
                     },
                     success: function(result) {
                         // console.log(result);
-                        $('.select2').select2().html(result.health_facilities);
+                        $('.select-form').select2().html(result.health_facilities);
                         b.removeAttr('disabled');
                         i.removeClass().addClass(cls);
                         $('#btn-save').html('Simpan');
@@ -618,14 +618,14 @@
                     form.find('#kelas').val(result.resources.kelas);
                     form.find('#tahun_produksi').val(result.resources.tahun_produksi);
                     form.find('#merk').val(result.resources.merk);
-                    form.find('#tahun_pakai').val(result.resources.kode);
+                    form.find('#tahun_pakai').val(result.resources.tahun_pakai);
                     form.find('#pict_url').val(result.resources.pict_url);
                     form.find('#klasifikasi').val(result.resources.klasifikasi);
                     if (result.resources.health_facility_id == null) {
-                        $('.select2').select2().html("<option value=''>Pilih Lokasi</option>");
-                        $('.select2').select2().append(result.health_facilities);
+                        $('.select-form').select2().html("<option value=''>Pilih Lokasi</option>");
+                        $('.select-form').select2().append(result.health_facilities);
                     } else {
-                        $('.select2').select2().html(result.health_facilities);
+                        $('.select-form').select2().html(result.health_facilities);
                         form.find('#health_facility_id option[value="' + result.resources.health_facility_id + '"]').attr(
                             'selected',
                             'selected');

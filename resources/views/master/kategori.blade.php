@@ -153,9 +153,9 @@
                                 <th class="text-center">Sub Kategori</th>
                                 <th class="text-center" style="width: 200px;">Medis</th>
                                 <th class="text-center" style="width: 200px;">Emergency</th>
-                                <th class="text-center" style="width: 100px;"><a data-toggle="modal"
-                                        data-target="#ModalInput" class="btn btn-xs btn-success"><i
-                                            class="fa fa-plus-circle"></i> Input Data</a></th>
+                                <th class="text-center" style="width: 100px;"><a id="btn-add" data-toggle="tooltip"
+                                        class="btn btn-xs btn-success"><i class="fa fa-plus-circle"></i> Input Data</a>
+                                </th>
                             </tr>
                         </thead>
                     </table>
@@ -179,135 +179,37 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method="post" id="form_req" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kategori<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id="kategori" name="kategori" class="form-control">
-                                        <option value="">SIMULASI</option>
-                                        <option value="">Lain-lain</option>
-                                        <option value="">Keracunan/Over Dosis</option>
-                                        <option value="">Sakit Perut</option>
-                                        <option value="">Hamil/Bersalin/Keguguran</option>
-                                        <option value="">Tidak Sadar/Pingsan/Hampir Pingsan/Tidak Bernyawa</option>
-                                        <option value="">Stroke</option>
-                                        <option value="">Alergi</option>
-                                        <option value="">Sakit Dada</option>
-                                        <option value="">Masalah Jantung / A.I.C.D</option>
-                                        <option value="">Trauma Cedera</option>
-                                        <option value="">Kecelakaan Lalu Lintas (KLL)</option>
-                                        <option value="">Masalah Tidak Diketahui</option>
-                                        <option value="">Sakit Kepala</option>
-                                        <option value="">Terbakar</option>
-                                        <option value="">Masalah Pernafasan</option>
-                                        <option value="">Kejang / Sawan</option>
-                                        <option value="">Kepanasan</option>
-                                        <option value="">Kencing Manis / Diabetes</option>
-                                        <option value="">Jatuh</option>
-                                        <option value="">Serangan/Gigitan Hewan</option>
-                                        <option value="">Lemas</option>
-                                        <option value="">Orang Sakit(diagnosa spesifik)</option>
-                                        <option value="">Alergi / Bisa Binatang (sengatan/gigitan)</option>
-                                        <option value="">Sakit bagian belakang (bukan terluka)</option>
-                                        <option value="">Pendarahan/Luka</option>
-                                        <option value="">Psikiatrik/Percobaan Bunuh Dir</option>
-                                        <option value="">Nyeri Punggung / Trauma</option>
-                                        <option value="">Karbon Monoksida / Inhasi/ Cai</option>
-                                        <option value="">Dipukul/Serangan</option>
-                                        <option value="">Bantuan Pernafasan</option>
-                                        <option value="">Kesetrum</option>
-                                        <option value="">Cedera Mata</option>
-                                        <option value="">Tikaman/Tembakan/Luka Tusuk</option>
-                                        <option value="">Tercekik</option>
-                                        <option value="">Terperangkap (Bukan di Kendaraan)</option>
-                                        <option value="">Karbon Monoksida/Terhirup(Inhaled)</option>
-                                        <option value="">Patah Tulang Terbuka</option>
-                                        <option value="">sakit seluruh tubuh</option>
-                                        <option value="">lemas dan kurang respon</option>
-                                        <option value="">Home Care</option>
-                                        <option value="">keluar darah dari jalan lahir</option>
-                                        <option value="">konsultasi dokter</option>
-                                        <option value="">pasang kateter</option>
-                                        <option value="">mual muntah dan nyeri</option>
-                                        <option value="">sesak dan deman</option>
-                                        <option value="">penurunan kesadaran</option>
-                                        <option value="">Stroke</option>
-                                        <option value="">pusing berputar</option>
-                                        <option value="">tidak bisa jalan dan nyeri perut</option>
-                                        <option value="">Sesak Napas</option>
-                                        <option value="">gemetar</option>
-                                        <option value="">Visite dokter</option>
-                                        <option value="">dingin dan kaki kesemutan</option>
-                                        <option value="">perawatan luka</option>
-                                        <option value="">Sesak Napas</option>
-                                        <option value="">Penggunaan Mobil Sehat</option>
-                                        <option value="">pasien poli</option>
-                                        <option value="">pasang NGT</option>
-                                        <option value="">nyeri seluruh tubuh</option>
-                                        <option value="">Lemas dan sesak</option>
-                                        <option value="">pasang NGT dan kateter</option>
-                                        <option value="">pusing berputar dan sakit perut</option>
-                                        <option value="">frakture</option>
-                                        <option value="">tidak bisa ngapa-ngapain</option>
-                                        <option value="">kejang</option>
-                                        <option value="">rawat luka</option>
-                                        <option value="">Sesak Napas</option>
-                                        <option value="">KDM</option>
-                                        <option value="">Layanan Ambulan</option>
-                                        <option value="">Bencana Alam</option>
-                                        <option value="">mual muntah dan panas </option>
-                                        <option value="">sesak dan batuk</option>
-                                        <option value="">Demam</option>
-                                        <option value="">nyeri perut, pipis sakit</option>
-                                        <option value="">kebakaran</option>
-                                        <option value="">Lemas dan demam</option>
-                                        <option value="">tidak bisa jalan</option>
-                                        <option value="">vertigo</option>
-                                        <option value="">Dehidrasi</option>
-                                        <option value="">perut tegang dan lemas</option>
-                                        <option value="">fisioterapi</option>
-                                        <option value="">meninggal dunia</option>
-                                        <option value="">mual muntah</option>
-                                        <option value="">diduga dislokasi</option>
-                                        <option value="">Sesak Napas</option>
-                                        <option value="">tensi naik rasanya mau pingsan</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Sub Kategori<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select name="sub_kategori" id="sub_kategori" class="form-control select">
-                                        <option value="1">Trauma KLL</option>
-                                        <option value="2">Trauma Non KLL</option>
-                                        <option value="3">Non Trauma - Emergency</option>
-                                        <option value="4">Kebakaran</option>
-                                        <option value="5">Bencana Alam</option>
-                                        <option value="6">Tidak Diketahui</option>
-                                        <option value="7">Keamanan dan Ketertiban</option>
-                                        <option value="8">Non Trauma - Non Emergency</option>
-                                        <option value="9">Kesedak</option>
-                                    </select>
-                                </div>
+            <form id="form-data" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id" name="id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Kategori<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control select2 select-kategori" id="kategori" name="kategori" style="width: 100%;">
+                                </select>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Sub Kategori<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control  select2 select-sub-category-id" name="sub_category_id" id="sub_category_id" style="width: 100%;">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
-            </div>
+                <div class="modal-footer">
+                    <button id="btn-reset" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button id="btn-save" type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -316,17 +218,6 @@
 @section('scripts')
 <script>
     $(function() {
-        // $('#example1').DataTable()
-        // $('#example2').DataTable()
-        // $('#example3').DataTable({
-        //     'paging': true,
-        //     'lengthChange': true,
-        //     'searching': true,
-        //     'ordering': true,
-        //     'info': true,
-        //     'autoWidth': false
-        // })
-
         var dataTable = $('.datatable').DataTable({
             processing: true,
             serverSide: true,
@@ -374,10 +265,174 @@
                 }
             ]
         });
-    })
 
-    $('#datepicker').datepicker({
-        autoclose: true
-    })
+        $('#form-data').submit(function(e) {
+            e.preventDefault();
+        });
+
+        $('#btn-add').click(function() {
+            //reset
+            $('#form-data').find('.form-control').val('');
+            //show modal
+            $('.modal-title').html('<b>Input Data</b>');
+            $('#ModalInput').modal('show');
+                var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class');
+                $.ajax({
+                    url: "{{ route('get-form-data-category') }}",
+                    method: 'GET',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        console.log(result)
+                        $('#kategori').html(result.category);
+                        $('#sub_category_id').html(result.sub_category);
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                        $('#btn-save').html('Simpan');
+                        $('#ModalInput').modal('show');
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+        });
+
+        $('#btn-save').click(function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $('#id').val(),
+                id_kategori = $('#kategori').val(),
+                url = '',
+                method = '';
+
+            var form = $('#form-data'),
+                data = form.serializeArray();
+
+            if (id == '') {
+                url = "kategori/" + id_kategori;
+                method = 'PUT';
+            } else {
+                url = "kategori/" + id;
+                method = 'PUT';
+            }
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: url,
+                method: method,
+                data: data,
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                },
+                success: function(result) {
+                    if (result.success) {
+                        toastr['success'](result.success);
+                        $('.datatable').DataTable().ajax.reload();
+                        $('#ModalInput').modal('hide');
+                        $('#form-data').find('input.form-control').val('');
+                    } else {
+                        $.each(result.errors, function(key, value) {
+                            toastr['error'](value);
+                        });
+                    }
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        });
+
+    }).on('click', '#btn-edit', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data');
+
+            $.ajax({
+                url: "kategori/" + id + "/edit",
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+
+                },
+                success: function(result) {
+                    console.log(result);
+                    $('.modal-title').html('<b>Edittt1 Data</b>');
+                    form.find('#btn-save').html('Edit');
+                    form.find('#id').val(result.kategori.id);
+                    if (result.kategori.id == null) {
+                        $('.select-kategori').select2().html("<option value=''>Pilih Kategori</option>");
+                        $('.select-kategori').select2().append(result.category);
+                        $('.select-sub-category-id').select2().html("<option value=''>Pilih Sub Kategori</option>");
+                        $('.select-sub-category-id').select2().append(result.sub_category);
+                    } else {
+                        $('.select-kategori').select2().html(result.category);
+                        form.find('#kategori option[value="' + result.kategori.kategori + '"]').attr(
+                            'selected',
+                            'selected');
+                        $('.select-sub-category-id').select2().html(result.sub_category);
+                        form.find('#sub_category_id option[value="' + result.kategori.sub_category_id + '"]').attr(
+                            'selected',
+                            'selected');
+                    }
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                    $('#ModalInput').modal('show');
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+
+        }).on('click', '#btn-delete', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+            var del = confirm("Apakah anda yakin menghapus data ini?");
+            if (del) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "kategori/" + id,
+                    method: 'DELETE',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('.datatable').DataTable().ajax.reload();
+                        toastr['success'](result.success);
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            }
+        });
 </script>
 @endsection
