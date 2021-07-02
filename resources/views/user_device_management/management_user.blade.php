@@ -20,32 +20,35 @@
     <section class="content">
         <div class="box">
             <div class="box-body">
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-md-4">
                         <div class="btn-group">
                             <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput" class="btn btn-success">
                                 <i class="fa fa-plus-circle"></i> Insert Data</button>
                         </div>
                     </div>
-                </div><br>
+                </div><br> --}}
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-xs-12">
-                                <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                                <table class="table table-bordered table-hover datatable">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">NO</th>
-                                            <th class="text-center">USERNAME</th>
-                                            <th class="text-center">NAMA</th>
-                                            <th class="text-center">PROFESI</th>
-                                            <th class="text-center">LEVEL</th>
-                                            <th class="text-center">FASKES ASAL</th>
-                                            <th class="text-center">EMAIL</th>
-                                            <th class="text-center">TELEPON</th>
-                                            <th class="text-center">TIPE USER</th>
-                                            <th class="text-center" style="width: 110px;">AKSI</th>
-                                            <th class="text-center">AKTIF</th>
+                                            <th class="text-center">No</th>
+                                            <th class="text-center">Username</th>
+                                            <th class="text-center">Nama</th>
+                                            <th class="text-center">Profesi</th>
+                                            <th class="text-center">Level</th>
+                                            <th class="text-center">Faskes Asal</th>
+                                            <th class="text-center">Email</th>
+                                            <th class="text-center">Telepon</th>
+                                            <th class="text-center">Tipe User</th>
+                                            <th class="text-center">Aktif</th>
+                                            <th class="text-center" style="width: 120px;"><a id="btn-add"
+                                                    data-toggle="tooltip" class="btn btn-xs btn-success"><i
+                                                        class="fa fa-plus-circle"></i> Input Data</a>
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -58,16 +61,29 @@
                                             <td class="text-center">Command Center</td>
                                             <td class="text-center">ivansetiawan2006@gmail.com</td>
                                             <td class="text-center">081233019130</td>
-                                            <td class="text-center"><button class="btn btn-success btn-sm" style="border-radius: 20px;">User Mobile</button></td>
-                                            <td class=" text-center">
-                                                <div class="row">
-                                                    <a href="#" class="btn btn-success" data-placement="left" title="Kirim Data" style="margin: auto 2px;"><i class="fa fa-send"></i></a>
-                                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
-                                                </div>
-                                            </td>
+                                            <td class="text-center"><button class="btn btn-success btn-sm"
+                                                    style="border-radius: 20px;"><i
+                                                    class="glyphicon glyphicon-phone"></i> User Mobile</button></td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-success" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a id="btn-aktif" class="btn btn-sm btn-success" data-id=""
+                                                    title="Non Aktifkan">
+                                                    <i class="fa fa-check"></i>
+                                                </a>
+                                            </td>
+                                            <td class=" text-center">
+                                                <div style="margin-bottom:3px;">
+                                                    <a id="btn-send" class="btn btn-sm btn-success" data-id=""
+                                                        title="Kirim Data">
+                                                        <i class="fa fa-send"></i></a>
+                                                    <a id="btn-edit" class="btn btn-sm btn-primary" data-id=""
+                                                        title="Edit Data">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a id="btn-delete" class="btn btn-sm btn-danger" data-id=""
+                                                        title="Hapus Data">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -79,16 +95,29 @@
                                             <td class="text-center">Command Center</td>
                                             <td class="text-center">igd.rsud.sda@gmail.com</td>
                                             <td class="text-center">081234567899</td>
-                                            <td class="text-center"><button class="btn btn-primary btn-sm" style="border-radius: 20px;">User Web</button></td>
-                                            <td class=" text-center">
-                                                <div class="row">
-                                                    <a href="#" class="btn btn-success" data-placement="left" title="Kirim Data" style="margin: auto 2px;"><i class="fa fa-send"></i></a>
-                                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
-                                                </div>
-                                            </td>
+                                            <td class="text-center"><button class="btn btn-primary btn-sm"
+                                                    style="border-radius: 20px;"><i
+                                                    class="fa fa-laptop"></i> User Web</button></td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-success" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a id="btn-aktif" class="btn btn-sm btn-success" data-id=""
+                                                    title="Non Aktifkan">
+                                                    <i class="fa fa-check"></i>
+                                                </a>
+                                            </td>
+                                            <td class=" text-center">
+                                                <div style="margin-bottom:3px;">
+                                                    <a id="btn-send" class="btn btn-sm btn-success" data-id=""
+                                                        title="Kirim Data">
+                                                        <i class="fa fa-send"></i></a>
+                                                    <a id="btn-edit" class="btn btn-sm btn-primary" data-id=""
+                                                        title="Edit Data">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a id="btn-delete" class="btn btn-sm btn-danger" data-id=""
+                                                        title="Hapus Data">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -100,16 +129,29 @@
                                             <td class="text-center">Command Center</td>
                                             <td class="text-center">yankesjuk.sidoarjo@gmail.com</td>
                                             <td class="text-center">085739088836</td>
-                                            <td class="text-center"><button class="btn btn-primary btn-sm" style="border-radius: 20px;">User Web</button></td>
-                                            <td class=" text-center">
-                                                <div class="row">
-                                                    <a href="#" class="btn btn-success" data-placement="left" title="Kirim Data" style="margin: auto 2px;"><i class="fa fa-send"></i></a>
-                                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-placement="left" data-target="#ModalInput" title="Edit Data" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn btn-danger" data-placement="left" title="Hapus Data" style="margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
-                                                </div>
-                                            </td>
+                                            <td class="text-center"><button class="btn btn-primary btn-sm"
+                                                    style="border-radius: 20px;"><i
+                                                    class="fa fa-laptop"></i> User Web</button></td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-success" style="margin: auto 2px; background-color: #3B9C96; border-color: #3B9C96;"><i class="fa fa-check-square-o"></i></a>
+                                                <a id="btn-aktif" class="btn btn-sm btn-success" data-id=""
+                                                    title="Non Aktifkan">
+                                                    <i class="fa fa-check"></i>
+                                                </a>
+                                            </td>
+                                            <td class=" text-center">
+                                                <div style="margin-bottom:3px;">
+                                                    <a id="btn-send" class="btn btn-sm btn-success" data-id=""
+                                                        title="Kirim Data">
+                                                        <i class="fa fa-send"></i></a>
+                                                    <a id="btn-edit" class="btn btn-sm btn-primary" data-id=""
+                                                        title="Edit Data">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a id="btn-delete" class="btn btn-sm btn-danger" data-id=""
+                                                        title="Hapus Data">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -127,7 +169,7 @@
 @endsection
 
 @section('modal')
-<div id="ModalInput" class="modal">
+<div id="ModalInput" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
         <div class="modal-content">
             <div class="modal-header">
@@ -136,102 +178,99 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Personil<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select name='nrp' id="personil" class="form-control select" onchange="">
-                                        <option value="">Pilih Personil</option>
-                                        <option value="driverpuskesmastaman">yanuarsupriyanto46@gmail.com</option>
-                                        <option value="yatman">yatman</option>
-                                        <option value="IGDMITRAWARU">RS MITRA KELUARGA WARU</option>
-                                        <option value="adityo">adityo</option>
-                                        <option value="drhermawan">dr hermawan</option>
-                                        <option value="280394091801">VICAN PRAYUSI NARWASTU, A.Md.Kep</option>
-                                        <option value="agunk">agunk</option>
-                                        <option value="risasitihajar">risa</option>
-                                        <option value="risarssitihajar">risa</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Level<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <!-- <input type="text" readonly id="level" class="form-control"> -->
-                                    <!-- <input type="hidden" readonly name="level" id="id_level"> -->
-                                    <select name='level' id="level_id" class="form-control select">
-                                        <option value="">Pilih Level</option>
-                                        <option value="1">Staf</option>
-                                        <option value="2">Petugas Lapangan</option>
-                                        <option value="3">Supervisor</option>
-                                        <option value="4">Kepala Faskes</option>
-                                        <option value="5">Kepala PSC</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Email<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' class='form-control' name='email'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Telepon<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' class='form-control' name='telepon'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Tipe User<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select name='tipe_user' id="tipe_user" class="form-control select">
-                                        <option value="">Pilih Tipe User</option>
-                                        <option value="userweb">User Web</option>
-                                        <option value="usermobile">User Mobile</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Password<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='password' class='form-control' id='password' name='password'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Confirm Password<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='password' class='form-control' id='confirm_password' name='confirm_password'><span id='message'></span>
-                                </div>
+            <form id="form-data" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id" name="id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Personil<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control select2personil" name="person_id" id="person_id" style="width: 100%;">
+                                    <option value="">Pilih Personil</option>
+                                    <option value="driverpuskesmastaman">yanuarsupriyanto46@gmail.com</option>
+                                    <option value="yatman">yatman</option>
+                                    <option value="IGDMITRAWARU">RS MITRA KELUARGA WARU</option>
+                                    <option value="adityo">adityo</option>
+                                    <option value="drhermawan">dr hermawan</option>
+                                    <option value="280394091801">VICAN PRAYUSI NARWASTU, A.Md.Kep</option>
+                                    <option value="agunk">agunk</option>
+                                    <option value="risasitihajar">risa</option>
+                                    <option value="risarssitihajar">risa</option>
+                                </select>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Level<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control select2profesi" name="profession_id" id="profession_id"
+                                    style="width: 100%;">
+                                    <option value="">Pilih Profesi</option>
+                                    <option value="0">Staff</option>
+                                    <option value="1">Driver</option>
+                                    <option value="2">Perawat</option>
+                                    <option value="3">Kepala Faskes</option>
+                                    <option value="4">Kepala PSC</option>
+                                    <option value="5">Admin</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Email<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="email" name="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Telepon<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="phone_num" name="phone_num">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Tipe User<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" name="type_user" id="type_user">
+                                    <option value="">Pilih Tipe User</option>
+                                    <option value="userweb">User Web</option>
+                                    <option value="usermobile">User Mobile</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Password<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Confirm Password<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="password" class="form-control" id="confirm_password"
+                                    name="confirm_password" required></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="button" onclick='' class="btn btn-primary">Simpan</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-            </div>
+                <div class="modal-footer">
+                    <button id="btn-reset" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button id="btn-save" type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -240,14 +279,29 @@
 @section('scripts')
 <script>
     $(function() {
-        $('#example1').DataTable({
+        $('.select2personil').select2();
+        $('.select2profesi').select2();
+
+        $('.datatable').DataTable({
             'paging': true,
             'lengthChange': true,
             'searching': true,
-            'ordering': true,
+            'ordering': false,
             'info': true,
             'autoWidth': false
-        })
+        });
+
+        $('#form-data').submit(function(e) {
+            e.preventDefault();
+        });
+
+        $('#btn-add').click(function() {
+            //reset
+            $('#form-data').find('.form-control').val('');
+            //show modal
+            $('.modal-title').html('<b>Input Data</b>');
+            $('#ModalInput').modal('show');
+        });
     })
 </script>
 @endsection
