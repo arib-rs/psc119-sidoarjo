@@ -89,13 +89,18 @@
 <script>
     var mymap = L.map('mapid').setView([-7.447006, 112.718655], 16);
 
-    var mapaccess = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoiZGV2a29taW5mb3NkYSIsImEiOiJja21wbWN1c28wZGd6Mm5uc2VlaDdjZ2FvIn0._o72K-GnOmv1ZVbJJzRI_g'
+    // var mapaccess = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    //     maxZoom: 18,
+    //     id: 'mapbox/streets-v11',
+    //     tileSize: 512,
+    //     zoomOffset: -1,
+    //     accessToken: 'pk.eyJ1IjoiZGV2a29taW5mb3NkYSIsImEiOiJja21wbWN1c28wZGd6Mm5uc2VlaDdjZ2FvIn0._o72K-GnOmv1ZVbJJzRI_g'
+    // }).addTo(mymap);
+
+    var mapaccess = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mymap);
 
     var marker = L.marker([-7.447006, 112.718655]).addTo(mymap);

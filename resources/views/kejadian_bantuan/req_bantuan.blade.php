@@ -611,7 +611,16 @@
                     b.removeAttr('disabled');
                 }
             });
+        }).on('click', '#btn-detail', function() {
+            var id = $(this).data('id'),
+                b = $(this);
 
+            window.location.href = "{{ url('req_bantuan') }}" + "/" + id;
+        }).on('click', '#btn-edit', function() {
+            var id = $(this).data('id'),
+                b = $(this);
+
+            window.location.href = "{{ url('req_bantuan') }}" + "/" + id + "/edit";
         })
 
     </script>

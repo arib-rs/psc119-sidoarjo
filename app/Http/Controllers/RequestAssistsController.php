@@ -62,12 +62,12 @@ class RequestAssistsController extends Controller
 
     public function show($id)
     {
-        //
+        return view('kejadian_bantuan.detail_penanganan');
     }
 
     public function edit($id)
     {
-        //
+        return view('kejadian_bantuan.edit_kejadian');
     }
 
     public function update(Request $request, $id)

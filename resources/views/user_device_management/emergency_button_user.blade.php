@@ -148,7 +148,7 @@
 @endsection
 
 @section('modal')
-<div id="modal" class="modal">
+<div id="modal" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:35%">
         <div class="modal-content">
             <div class="modal-header">
