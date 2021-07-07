@@ -34,15 +34,15 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="obat">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
                                 <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInputObat" class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
                             </div>
                         </div>
-                    </div><br>
-                    <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                    </div><br> --}}
+                    {{-- <table id="example1" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 50px;">No</th>
@@ -124,18 +124,33 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table> --}}
+
+                    <table class="table table-bordered table-hover datatable-obat">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 50px;">No</th>
+                                <th class="text-center">Nama Obat</th>
+                                <th class="text-center">Kemasan</th>
+                                <th class="text-center">Kategori</th>
+                                <th class="text-center" style="width: 100px;"><a id="btn-add-obat"
+                                        class="btn btn-xs btn-success"><i class="fa fa-plus-circle"></i> Input Data</a>
+                                </th>
+                            </tr>
+                        </thead>
                     </table>
+
                 </div>
                 <div class="tab-pane" id="kemasan">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
                                 <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInputKemasan" class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
                             </div>
                         </div>
-                    </div><br>
-                    <table id="example2" class="table table-bordered dataTable no-footer table-hover">
+                    </div><br> --}}
+                    {{-- <table id="example2" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 50px;"">No</th>
@@ -185,18 +200,30 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table> --}}
+
+                    <table class="table table-bordered table-hover datatable-kemasan">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 50px;">No</th>
+                                <th class="text-center">Kemasan</th>
+                                <th class="text-center" style="width: 100px;"><a id="btn-add-kemasan" class="btn btn-xs btn-success"><i
+                                            class="fa fa-plus-circle"></i> Input Data</a></th>
+                            </tr>
+                        </thead>
                     </table>
+
                 </div>
                 <div class="tab-pane" id="kategori">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-4">
                             <div class="btn-group">
                                 <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInputKategori" class="btn btn-success">
                                     <i class="fa fa-plus-circle"></i> Insert Data</button>
                             </div>
                         </div>
-                    </div><br>
-                    <table id="example3" class="table table-bordered dataTable no-footer table-hover">
+                    </div><br> --}}
+                    {{-- <table id="example3" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 50px;"">No</th>
@@ -238,7 +265,19 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table> --}}
+
+                    <table class="table table-bordered table-hover datatable-kategori">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 50px;">No</th>
+                                <th class="text-center">Kategori</th>
+                                <th class="text-center" style="width: 100px;"><a id="btn-add-kategori" class="btn btn-xs btn-success"><i
+                                            class="fa fa-plus-circle"></i> Input Data</a></th>
+                            </tr>
+                        </thead>
                     </table>
+
                 </div>
 
             </div>
@@ -251,7 +290,7 @@
 @endsection
 
 @section('modal')
-<div id="ModalInputObat" class="modal">
+<div id="ModalInputObat" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
         <div class="modal-content">
             <div class="modal-header">
@@ -260,70 +299,61 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Nama Obat<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='obat' name='obat' class='form-control'>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kemasan<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id='kemasan' name='kemasan' class='form-control'>
-                                        <option value="">Pilih Kemasan</option>
-                                        <option value="">AMPUL</option>
-                                        <option value="">VIAL</option>
-                                        <option value="">TABLET</option>
-                                        <option value="">FLACON</option>
-                                        <option value="">UNKNOWN</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kategori<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select name='kategori' id='kategori' class="form-control select">
-                                        <option value=''>Pilih Kategori</option>
-                                        <option value=''>INJEKSI</option>
-                                        <option value=''>INFUS</option>
-                                        <option value=''>OBAT ORAL</option>
-                                        <option value=''>OBAT LUAR</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Paramedis<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <textarea id='paramedis' name='paramedis' class="form-control" rows="2"></textarea>
-                                </div>
+            <form id="form-data-obat" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id-obat" name="id-obat" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 font-green-haze">Nama Obat<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="nama" name="nama" required>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
+                        <div class="form-group">
+                            <label class="control-label col-md-4 font-green-haze">Kemasan<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" id="medicine_packaging_id"
+                                    name="medicine_packaging_id">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 font-green-haze">Kategori<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" name="medicine_category_id"
+                                    id="medicine_category_id">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 font-green-haze">Keterangan<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="keterangan" name="keterangan" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick='' class="btn btn-primary">Simpan</button>
-            </div>
+                <div class="modal-footer">
+                    <button id="btn-reset-obat" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button id="btn-save-obat" type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-<div id="ModalInputKemasan" class="modal">
+<div id="ModalInputKemasan" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
         <div class="modal-content">
             <div class="modal-header">
@@ -332,33 +362,30 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kemasan Obat<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type='text' id='kemasan' name='kemasan' class='form-control'>
-                                </div>
+            <form id="form-data-kemasan" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id-kemasan" name="id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 font-green-haze">Kemasan Obat<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="kemasan" name="kemasan" required>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
+                    </div>
                 </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick='' class="btn btn-primary">Simpan</button>
-            </div>
+                <div class="modal-footer">
+                    <button id="btn-reset-kemasan" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button id="btn-save-kemasan" type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-<div id="ModalInputKategori" class="modal">
+<div id="ModalInputKategori" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
         <div class="modal-content">
             <div class="modal-header">
@@ -367,29 +394,26 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body form">
-                <!-- BEGIN VALIDATION STATES-->
-                <div class="portlet-body form">
-                    <!-- BEGIN FORM-->
-                    <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
+            <form id="form-data-kategori" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id-kategori" name="id" value="">
                             <div class="form-group">
-                                <label class="control-label col-md-4 font-green-haze">Kategori Obat<span class="required" style="color: red;">
+                                <label class="control-label col-md-4 font-green-haze">Kategori Obat<span
+                                        class="required" style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <input type='text' id='kategori' name='kategori' class='form-control'>
+                                    <input type="text" class="form-control" id="kategori" name="kategori" required>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <!-- END FORM-->
-                </div>
-                <!-- END VALIDATION STATES-->
-            </div>
-            <div class="modal-footer">
-                <button type="submit" onclick='' class="btn btn-primary">Simpan</button>
-            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-reset-kategori" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button id="btn-save-kategori" type="button" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
         </div>
     </div>
 </div>
@@ -398,20 +422,554 @@
 @section('scripts')
 <script>
     $(function() {
-        $('#example1').DataTable()
-        $('#example2').DataTable()
-        $('#example3').DataTable({
-            'paging': true,
-            'lengthChange': true,
-            'searching': true,
-            'ordering': true,
-            'info': true,
-            'autoWidth': false
-        })
-    })
+        var dataTable_obat = $('.datatable-obat').DataTable({
+            processing: true,
+            serverSide: true,
+            lengthChange: false,
+            autoWidth: false,
+            searching: true,
+            ordering: false,
+            info: true,
+            pageLength: 10,
+            // scrollX: true,
+            "order": [
+                [0, "desc"]
+            ],
+            ajax: 'get-obat',
+            columns:
+            [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex'
+                },
+                {
+                    data: 'nama',
+                    name: 'nama'
+                },
+                {
+                    data: 'packaging.kemasan',
+                    name: 'packaging.kemasan'
+                },
+                {
+                    data: 'category.kategori',
+                    name: 'category.kategori'
+                },
+                {
+                    data: 'Aksi',
+                    name: 'Aksi',
+                    orderable: false,
+                    serachable: false,
+                    sClass: 'text-center'
+                }
+            ]
+        });
 
-    $('#datepicker').datepicker({
-        autoclose: true
-    })
+        $('#form-data-obat').submit(function(e) {
+            e.preventDefault();
+        });
+
+        $('#btn-add-obat').click(function() {
+            //reset
+            $('#form-data-obat').find('.form-control').val('');
+            //show modal
+            $('.modal-title').html('<b>Input Data</b>');
+            $('#ModalInputObat').modal('show');
+                var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class');
+                $.ajax({
+                    url: "{{ route('get-packaging-category') }}",
+                    method: 'GET',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('#medicine_packaging_id').html(result.packaging);
+                        $('#medicine_category_id').html(result.category);
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                        $('#btn-save-obat').html('Simpan');
+                        $('#ModalInputObat').modal('show');
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+        });
+
+        $('#btn-save-obat').click(function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $('#id-obat').val(),
+                url = '',
+                method = '';
+
+            var form = $('#form-data-obat'),
+                data = form.serializeArray();
+
+            if (id == '') {
+                url = "{{ route('obat.store') }}";
+                method = 'POST';
+            } else {
+                url = "obat/" + id;
+                method = 'PUT';
+            }
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: url,
+                method: method,
+                data: data,
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                },
+                success: function(result) {
+                    if (result.success) {
+                        toastr['success'](result.success);
+                        $('.datatable-obat').DataTable().ajax.reload();
+                        $('#ModalInputObat').modal('hide');
+                        $('#form-data-obat').find('input.form-control').val('');
+                    } else {
+                        $.each(result.errors, function(key, value) {
+                            toastr['error'](value);
+                        });
+                    }
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        });
+
+    }).on('click', '#btn-edit-obat', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data-obat');
+
+            $.ajax({
+                url: "obat/" + id + "/edit",
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+
+                },
+                success: function(result) {
+                    console.log(result);
+                    $('.modal-title').html('<b>Edit Data</b>');
+                    form.find('#btn-save-obat').html('Edit');
+                    form.find('#id-obat').val(result.medicine.id);
+                    form.find('#nama').val(result.medicine.nama);
+                    form.find('#keterangan').val(result.medicine.keterangan);
+                    if (result.medicine.medicine_packaging_id == null) {
+                        $('#medicine_packaging_id').html("<option value=''>Pilih Kemasan</option>");
+                        $('#medicine_packaging_id').append(result.packaging);
+                    } else {
+                        $('#medicine_packaging_id').html(result.packaging);
+                        form.find('#medicine_packaging_id option[value="' + result.medicine.medicine_packaging_id + '"]').attr(
+                            'selected',
+                            'selected');
+                    }
+                    if (result.medicine.medicine_category_id == null) {
+                        $('#medicine_category_id').html("<option value=''>Pilih Kategori</option>");
+                        $('#medicine_category_id').append(result.category);
+                    } else {
+                        $('#medicine_category_id').html(result.category);
+                        form.find('#medicine_category_id option[value="' + result.medicine.medicine_category_id + '"]').attr(
+                            'selected',
+                            'selected');
+                    }
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                    $('#ModalInputObat').modal('show');
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+
+        }).on('click', '#btn-delete-obat', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+            var del = confirm("Apakah anda yakin menghapus data ini?");
+            if (del) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "obat/" + id,
+                    method: 'DELETE',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('.datatable-obat').DataTable().ajax.reload();
+                        toastr['success'](result.success);
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            }
+        });
+</script>
+
+<script>
+    $(function() {
+        var dataTable_kemasan = $('.datatable-kemasan').DataTable({
+            processing: true,
+            serverSide: true,
+            lengthChange: false,
+            autoWidth: false,
+            searching: true,
+            ordering: false,
+            info: true,
+            pageLength: 10,
+            // scrollX: true,
+            "order": [
+                [0, "desc"]
+            ],
+            ajax: 'get-kemasan',
+            columns:
+            [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex'
+                },
+                {
+                    data: 'kemasan',
+                    name: 'kemasan'
+                },
+                {
+                    data: 'Aksi',
+                    name: 'Aksi',
+                    orderable: false,
+                    serachable: false,
+                    sClass: 'text-center'
+                }
+            ]
+        });
+
+        $('#form-data-kemasan').submit(function(e) {
+            e.preventDefault();
+        });
+
+        $('#btn-add-kemasan').click(function() {
+            //reset
+            $('#form-data-kemasan').find('.form-control').val('');
+            //show modal
+            $('.modal-title').html('<b>Input Data</b>');
+            $('#btn-save-kemasan').html('Simpan');
+            $('#ModalInputKemasan').modal('show');
+        });
+
+        $('#btn-save-kemasan').click(function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $('#id-kemasan').val(),
+                url = '',
+                method = '';
+
+            var form = $('#form-data-kemasan'),
+                data = form.serializeArray();
+
+            if (id == '') {
+                url = "{{ route('kemasan.store') }}";
+                method = 'POST';
+            } else {
+                url = "kemasan/" + id;
+                method = 'PUT';
+            }
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: url,
+                method: method,
+                data: data,
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                },
+                success: function(result) {
+                    if (result.success) {
+                        toastr['success'](result.success);
+                        $('.datatable-kemasan').DataTable().ajax.reload();
+                        $('#ModalInputKemasan').modal('hide');
+                        $('#form-data-kemasan').find('input.form-control').val('');
+                    } else {
+                        $.each(result.errors, function(key, value) {
+                            toastr['error'](value);
+                        });
+                    }
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        });
+
+    }).on('click', '#btn-edit-kemasan', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data-kemasan');
+
+            $.ajax({
+                url: "kemasan/" + id + "/edit",
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+
+                },
+                success: function(result) {
+                    // console.log(result);
+                    $('.modal-title').html('<b>Edit Data</b>');
+                    form.find('#btn-save-kemasan').html('Edit');
+                    form.find('#id-kemasan').val(result.id);
+                    form.find('#kemasan').val(result.kemasan);
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                    $('#ModalInputKemasan').modal('show');
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+
+        }).on('click', '#btn-delete-kemasan', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+            var del = confirm("Apakah anda yakin menghapus data ini?");
+            if (del) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "kemasan/" + id,
+                    method: 'DELETE',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('.datatable-kemasan').DataTable().ajax.reload();
+                        toastr['success'](result.success);
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            }
+        });
+</script>
+
+<script>
+    $(function() {
+        var dataTable_kategori = $('.datatable-kategori').DataTable({
+            processing: true,
+            serverSide: true,
+            lengthChange: false,
+            autoWidth: false,
+            searching: true,
+            ordering: false,
+            info: true,
+            pageLength: 10,
+            // scrollX: true,
+            "order": [
+                [0, "desc"]
+            ],
+            ajax: 'get-kategori-obat',
+            columns:
+            [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex'
+                },
+                {
+                    data: 'kategori',
+                    name: 'kategori'
+                },
+                {
+                    data: 'Aksi',
+                    name: 'Aksi',
+                    orderable: false,
+                    serachable: false,
+                    sClass: 'text-center'
+                }
+            ]
+        });
+
+        $('#form-data-kategori').submit(function(e) {
+            e.preventDefault();
+        });
+
+        $('#btn-add-kategori').click(function() {
+            //reset
+            $('#form-data-kategori').find('.form-control').val('');
+            //show modal
+            $('.modal-title').html('<b>Input Data</b>');
+            $('#btn-save-kategori').html('Simpan');
+            $('#ModalInputKategori').modal('show');
+        });
+
+        $('#btn-save-kategori').click(function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $('#id-kategori').val(),
+                url = '',
+                method = '';
+
+            var form = $('#form-data-kategori'),
+                data = form.serializeArray();
+
+            if (id == '') {
+                url = "{{ route('kategoriobat.store') }}";
+                method = 'POST';
+            } else {
+                url = "kategoriobat/" + id;
+                method = 'PUT';
+            }
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: url,
+                method: method,
+                data: data,
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                },
+                success: function(result) {
+                    if (result.success) {
+                        toastr['success'](result.success);
+                        $('.datatable-kategori').DataTable().ajax.reload();
+                        $('#ModalInputKategori').modal('hide');
+                        $('#form-data-kategori').find('input.form-control').val('');
+                    } else {
+                        $.each(result.errors, function(key, value) {
+                            toastr['error'](value);
+                        });
+                    }
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+        });
+
+    }).on('click', '#btn-edit-kategori', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data-kategori');
+
+            $.ajax({
+                url: "kategoriobat/" + id + "/edit",
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+
+                },
+                success: function(result) {
+                    console.log(result);
+                    $('.modal-title').html('<b>Edittt01 Data</b>');
+                    form.find('#btn-save-kategori').html('Edit');
+                    form.find('#id-kategori').val(result.id);
+                    form.find('#kategori').val(result.kategori);
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                    $('#ModalInputKategori').modal('show');
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+
+        }).on('click', '#btn-delete-kategori', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+            var del = confirm("Apakah anda yakin menghapus data ini?");
+            if (del) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "kategoriobat/" + id,
+                    method: 'DELETE',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('.datatable-kategori').DataTable().ajax.reload();
+                        toastr['success'](result.success);
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            }
+        });
 </script>
 @endsection

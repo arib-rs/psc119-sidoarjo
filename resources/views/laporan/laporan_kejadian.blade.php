@@ -47,13 +47,13 @@
                         <div class="col-md-1">
                             <button role="button" class="btn btn-primary"><i class="fa fa-search"></i> Tampilkan</button>
                         </div>
-                        <div class="col-md-6"></div>
-                        <div class="col-md-2 text-right">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4 text-right">
                             <!-- <div class="btn-group">
                                 <button role="button" class="btn btn-success">
                                     <i class="fa fa-map-marker"></i> Show in Map</button>
                             </div> -->
-                            <div class="btn-group pull-right">
+                            <div class="row" style="margin: 0px;">
                                 <button type="button" class="btn btn-success" id=""><i class="fa fa-map-marker"></i>&nbsp; Show in Map</button></span>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
@@ -206,13 +206,13 @@
                         <div class="col-md-1">
                             <button role="button" class="btn btn-primary"><i class="fa fa-search"></i> Tampilkan</button>
                         </div>
-                        <div class="col-md-6"></div>
-                        <div class="col-md-2 text-right">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4 text-right">
                             <!-- <div class="btn-group">
                                 <button role="button" class="btn btn-success">
                                     <i class="fa fa-map-marker"></i> Show in Map</button>
                             </div> -->
-                            <div class="btn-group pull-right">
+                            <div class="row" style="margin: 0px;">
                                 <button type="button" class="btn btn-success" id=""><i class="fa fa-map-marker"></i>&nbsp; Show in Map</button></span>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
@@ -247,7 +247,6 @@
                                 <td class="text-center">CCN1166-1614432787</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">NY DINA</td>
-                                <td class="text-center">HP</td>
                                 <td class="text-center">2021-02-27 20:33:11</td>
                                 <td>KREMBUNG SIDOARJO</td>
                                 <td class="text-center">0</td>
@@ -299,13 +298,13 @@
                         <div class="col-md-1">
                             <button role="button" class="btn btn-primary"><i class="fa fa-search"></i> Tampilkan</button>
                         </div>
-                        <div class="col-md-6"></div>
-                        <div class="col-md-2 text-right">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4 text-right">
                             <!-- <div class="btn-group">
                                 <button role="button" class="btn btn-success">
                                     <i class="fa fa-map-marker"></i> Show in Map</button>
                             </div> -->
-                            <div class="btn-group pull-right">
+                            <div class="row" style="margin: 0px;">
                                 <button type="button" class="btn btn-success" id=""><i class="fa fa-map-marker"></i>&nbsp; Show in Map</button></span>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">

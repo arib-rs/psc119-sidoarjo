@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="{{ asset('template') }}/dist/img/logo.ico" />
     <title>PSC-119 Kabupaten Sidoarjo - @yield('title')</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -50,7 +51,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    @toastr_css
     <!-- Google Font -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -107,7 +108,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="{{ asset('template') }}/dist/img/userprofil.png" class="user-image"
                                     alt="User Image">
-                                <span class="hidden-xs">Admin PSC-119 Sidoarjo</span>
+                                <span class="hidden-xs">{{ session()->get('user.person.fullname') }}</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -116,13 +117,17 @@
                                         alt="User Image">
 
                                     <p>
-                                        Admin PSC-119 Sidoarjo
+                                        {{ session()->get('user.person.fullname') }}
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="{{ url('/') }}" class="btn btn-default btn-flat">Sign out</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                            <button type="submit" class="btn btn-default btn-flat">Sign Out</button>
+                                        </form>
                                     </div>
                                 </li>
                             </ul>
@@ -170,7 +175,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/input_kejadian') }}">Input Kejadian Baru</a></li>
                             <li><a href="{{ url('/req_bantuan') }}">Request Bantuan</a></li>
                             <li><a href="{{ url('/edit_laporan') }}">Edit Laporan Kejadian</a></li>
@@ -183,7 +188,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/konfirmasi_penugasan') }}">Konfirmasi Penugasan</a></li>
                             <li><a href="{{ url('/rekap_shift') }}">Shift Approval</a></li>
                         </ul>
@@ -195,7 +200,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/monitoring_alarm') }}">Monitoring Alarm Kejadian</a></li>
                             <li><a href="{{ url('/penanganan_kejadian') }}">Penanganan Kejadian</a></li>
                             <li><a href="{{ url('/monitoring_resources') }}">Monitoring Resources</a></li>
@@ -208,7 +213,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/laporan_kejadian') }}">Laporan Kejadian</a></li>
                             <li><a href="{{ url('/rekap_kejadian') }}">Rekap Laporan Kejadian </a></li>
                             <li><a href="{{ url('/rekap_bantuan') }}">Rekap Bantuan</a></li>
@@ -225,7 +230,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/personil') }}">Personil</a></li>
                             <li><a href="{{ url('/management_user') }}">User Management</a></li>
                             <li><a href="{{ url('/devicelist') }}">Device Management</a></li>
@@ -239,7 +244,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
+                        <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/faskes') }}">Faskes</a></li>
                             <li><a href="{{ url('/ambulan') }}">Ambulan</a></li>
                             <li><a href="{{ url('/spesialisasi_dokter') }}">Spesialisasi Dokter </a></li>
@@ -310,7 +315,8 @@
     <script src="{{ asset('template') }}/bower_components/select2/dist/js/select2.full.min.js"></script>
 
 </body>
-
+@toastr_js
+@toastr_render
 <script>
     $(function() {
         //Initialize Select2 Elements

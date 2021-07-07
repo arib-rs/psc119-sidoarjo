@@ -49,9 +49,9 @@
                         <div class="col-md-1">
                             <button class="btn btn-primary" id="btnSearch"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Tampilkan </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                         </div>
-                        <div class="col-md-1 text-right">
+                        <div class="col-md-2 text-right">
                             <div class="btn-group">
                                 <button role="button" class="btn btn-success">
                                     <i class="fa fa-check"></i> Approve</button>

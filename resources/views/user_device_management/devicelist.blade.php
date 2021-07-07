@@ -24,7 +24,7 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-xs-12">
-                                <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                                <table class="table table-bordered table-hover datatable">
                                     <thead>
                                         <tr>
                                             <th class="text-center">DEVICE ID</th>
@@ -55,7 +55,7 @@
                                             <td class=" text-center"><label class="label label-danger"><i class="fa fa-times-circle"></i> Offline</label></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
+                                                <a href="#" class="btn btn-sm btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -74,7 +74,7 @@
                                             <td class=" text-center"><label class="label label-danger"><i class="fa fa-times-circle"></i> Offline</label></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
+                                                <a href="#" class="btn btn-sm btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -93,7 +93,10 @@
                                             <td class=" text-center"><label class="label label-success"><i class="fa fa-check-circle"></i> Online</label></a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-default" style="margin: auto 2px;"><i class="fa fa-square-o"></i></a>
+                                                <a id="btn-aktif" class="btn btn-sm btn-success" data-id=""
+                                                    title="Non Aktifkan">
+                                                    <i class="fa fa-check"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -113,7 +116,7 @@
 @section('scripts')
 <script>
     $(function() {
-        $('#example1').DataTable({
+        $('.datatable').DataTable({
             'paging': true,
             'lengthChange': true,
             'searching': true,
