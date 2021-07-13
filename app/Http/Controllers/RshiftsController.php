@@ -34,7 +34,7 @@ class RShiftsController extends Controller
 
     public function getRShift()
     {
-        $data = RShift::with('healthfacility', 'resource')->orderBy('id', 'asc')->get();
+        $data = RShift::with('healthfacility:id,nama', 'resource:id,nomor_polisi')->select('id', 'nama', 'health_facility_id', 'resource_id', 'driver_id', 'paramedic_id')->orderBy('id', 'asc')->get();
         // dd($data);
         return \DataTables::of($data)
             ->addColumn('Aksi', function ($data) {

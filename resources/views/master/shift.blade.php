@@ -325,7 +325,8 @@
                 },
                 {
                     data: 'nama',
-                    name: 'nama'
+                    name: 'nama',
+                    defaultContent: ""
                 },
                 {
                     data: 'resource.nomor_polisi',
@@ -334,7 +335,7 @@
                 },
                 {
                     data: 'healthfacility.nama',
-                    name: 'nama',
+                    name: 'nama_faskes',
                     defaultContent: ""
                 },
                 {
