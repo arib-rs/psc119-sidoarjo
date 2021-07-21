@@ -18,6 +18,7 @@ class CreateBedsTable extends Migration
             $table->string('tipe');
             $table->integer('jumlah')->default(0);
             $table->integer('tersedia')->default(0);
+            $table->bigInteger('health_facility_id');
             $table->timestamps();
         });
     }

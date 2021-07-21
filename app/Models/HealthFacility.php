@@ -22,35 +22,36 @@ class HealthFacility extends Model
         'contact_person',
         'email',
         'status',
-        'is_active'
+        'is_active',
+        'lng', 'lat'
     ];
 
-    public function bed()
+    public function beds()
     {
         return $this->hasMany(Bed::class);
     }
 
-    public function bloodBag()
+    public function bloodBags()
     {
         return $this->hasMany(BloodBag::class);
     }
 
-    public function doctor()
+    public function doctors()
     {
         return $this->hasMany(Doctor::class);
     }
 
-    public function profession()
+    public function professions()
     {
         return $this->hasMany(HFProfession::class);
     }
 
-    public function resource()
+    public function resources()
     {
         return $this->hasMany(Resource::class);
     }
 
-    public function rshift()
+    public function rshifts()
     {
         return $this->hasMany(RShift::class);
     }

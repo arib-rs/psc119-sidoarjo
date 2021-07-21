@@ -17,6 +17,8 @@ class CreateHealthFacilitiesTable extends Migration
             $table->id();
             $table->string('nama');
             $table->longText('alamat')->nullable();
+            $table->string('lng')->nullable();
+            $table->string('lat')->nullable();
             $table->string('pict_url')->nullable();
             $table->string('kategori')->nullable();
             $table->boolean('is_fullday');

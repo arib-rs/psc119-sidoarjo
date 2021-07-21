@@ -25,7 +25,8 @@ class HealthFacilitiesController extends Controller
             ->editColumn('pict_url', function ($data) {
                 $img = '-';
                 if ($data->pict_url) {
-                    $img = '<a href="' . url("/template/dist/img/" . $data->pict_url) . '"><img src="' . url("/template/dist/img/" . $data->pict_url) . '" style="max-width:100px"></a>';
+                    $img = '<a href="' . url("upload-photo/faskes/" . $data->pict_url) . '" target="_blank">
+                    <img src="' . url("upload-photo/faskes/" . $data->pict_url) . '" style="max-width:100px"></a>';
                 }
                 return $img;
             })
@@ -83,7 +84,7 @@ class HealthFacilitiesController extends Controller
                 return $return;
             })
             ->addColumn('Bed', function ($data) {
-                return '<a id="btn-bed" class="btn btn-sm btn-primary" data-id="' .
+                return '<a href="' . url('faskes/' . $data->id . '/beds') . '" id="btn-bed" class="btn btn-sm btn-primary" data-id="' .
                     $data->id .
                     '" title="Informasi Bed">
                 <i class="glyphicon glyphicon-list"></i>
@@ -138,6 +139,37 @@ class HealthFacilitiesController extends Controller
             ->addIndexColumn()
             ->make(true);
     }
+    public function getBeds($idfaskes)
+    {
+        $data = HealthFacility::with('beds')->where('id', '=', $idfaskes)->orderBy('id', 'asc')->first();
+        // dd($data->beds);
+        $data = $data->beds;
+        return \DataTables::of($data)
+            ->addColumn('Aksi', function ($data) {
+                return '
+                <div style="margin-bottom:3px;">
+                <a id="btn-edit-bed" class="btn btn-sm btn-primary" data-id="' .
+                    $data->id .
+                    '" title="Edit Data">
+                <i class="fa fa-pencil"></i>
+                </a>
+                <a id="btn-delete-bed" class="btn btn-sm btn-danger" data-id="' .
+                    $data->id .
+                    '" title="Hapus Data">
+                <i class="fa fa-trash"></i>
+                </a>
+                </div>
+                ';
+            })
+            ->rawColumns(['Aksi'])
+            ->addIndexColumn()
+            ->make(true);
+    }
+    public function showBeds($idfaskes)
+    {
+        $data['idfaskes'] = $idfaskes;
+        return view('master.detail_faskes.bed', $data);
+    }
     public function index()
     {
         return view('master.faskes');
@@ -150,20 +182,32 @@ class HealthFacilitiesController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $validator = \Validator::make($request->all(), [
             'nama' => 'required',
             // 'alamat' => 'required',
             'kategori' => 'required',
             'is_fullday' => 'required',
-            'is_has_ekg' => 'required'
+            'is_has_ekg' => 'required',
+            'pict' => 'image|mimes:jpeg,png,jpg,bmp,gif|max:2048',
+        ], [
+            'is_fullday.required' => 'Pilih status 24 jam terlebih dahulu',
+            'is_has_ekg.required' => 'Pilih status EKG terlebih dahulu'
         ]);
 
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()->all()]);
         } else {
+            $kode = date('Y-md-His');
+            $pict = null;
+            if ($request->pict) {
+                $pict = $kode . '.' . $request->pict->extension();
+                $request->pict->move(public_path('upload-photo/faskes/'), $pict);
+            }
+
             HealthFacility::create([
                 'nama' => $request->nama,
-                // 'alamat' => $request->alamat,
+                'alamat' => $request->alamat,
                 'kategori' => $request->kategori,
                 'is_fullday' => $request->is_fullday,
                 'is_has_ekg' => $request->is_has_ekg,
@@ -172,7 +216,10 @@ class HealthFacilitiesController extends Controller
                 'contact_person' => $request->contact_person,
                 'email' => $request->email,
                 'status' => $request->status,
-                'is_active' => "1"
+                'is_active' => "1",
+                'lng' => $request->lng,
+                'lat' => $request->lat,
+                'pict_url' => $pict
             ]);
 
             return response()->json(['success' => 'Data telah disimpan.']);
@@ -192,21 +239,48 @@ class HealthFacilitiesController extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $validator = \Validator::make($request->all(), [
             'nama' => 'required',
             // 'alamat' => 'required',
             'kategori' => 'required',
             'is_fullday' => 'required',
-            'is_has_ekg' => 'required'
+            'is_has_ekg' => 'required',
+            'pict' => 'image|mimes:jpeg,png,jpg,bmp,gif|max:2048',
+        ], [
+            'is_fullday.required' => 'Pilih status 24 jam terlebih dahulu',
+            'is_has_ekg.required' => 'Pilih status EKG terlebih dahulu'
         ]);
 
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()->all()]);
         }
 
+
+
+        $faskes = HealthFacility::find($id);
+        $pictpath = public_path() . "/upload-photo/faskes/" . $faskes->pict_url;
+
+        $kode = date('Y-md-His');
+        $pict = null;
+        if ($request->pict) {
+            if ($faskes->pict_url) {
+                unlink($pictpath);
+            }
+            $pict = $kode . '.' . $request->pict->extension();
+            $request->pict->move(public_path('upload-photo/faskes'), $pict);
+        } else {
+            if ($request->pict_url) {
+                $pict = $request->pict_url;
+            } else {
+                if ($faskes->pict_url) {
+                    unlink($pictpath);
+                }
+            }
+        }
         HealthFacility::find($id)->update([
             'nama' => $request->nama,
-            // 'alamat' => $request->alamat,
+            'alamat' => $request->alamat,
             'kategori' => $request->kategori,
             'is_fullday' => $request->is_fullday,
             'is_has_ekg' => $request->is_has_ekg,
@@ -215,7 +289,10 @@ class HealthFacilitiesController extends Controller
             'contact_person' => $request->contact_person,
             'email' => $request->email,
             'status' => $request->status,
-            'is_active' => "1"
+            'is_active' => "1",
+            'lng' => $request->lng,
+            'lat' => $request->lat,
+            'pict_url' => $pict
         ]);
 
         return response()->json(['success' => 'Data telah diubah.']);

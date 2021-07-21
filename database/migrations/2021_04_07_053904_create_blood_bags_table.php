@@ -18,6 +18,7 @@ class CreateBloodBagsTable extends Migration
             $table->string('golongan');
             $table->string('tipe');
             $table->integer('tersedia')->default(0);
+            $table->bigInteger('health_facility_id');
             $table->timestamps();
         });
     }
