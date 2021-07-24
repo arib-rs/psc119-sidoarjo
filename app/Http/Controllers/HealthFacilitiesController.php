@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\HealthFacility;
+use App\Models\HFProfession;
+use App\Models\Profession;
 use Illuminate\Http\Request;
 
 class HealthFacilitiesController extends Controller
@@ -92,7 +94,7 @@ class HealthFacilitiesController extends Controller
                 ';
             })
             ->addColumn('Dokter', function ($data) {
-                return '<a id="btn-dokter" class="btn btn-sm btn-primary" data-id="' .
+                return '<a href="' . url('faskes/' . $data->id . '/doctors') . '" id="btn-doctor" class="btn btn-sm btn-primary" data-id="' .
                     $data->id .
                     '" title="Informasi Dokter">
                 <i class="glyphicon glyphicon-list"></i>
@@ -100,7 +102,7 @@ class HealthFacilitiesController extends Controller
                 ';
             })
             ->addColumn('Darah', function ($data) {
-                return '<a id="btn-darah" class="btn btn-sm btn-primary" data-id="' .
+                return '<a href="' . url('faskes/' . $data->id . '/bloodbags') . '"id="btn-bloodbag" class="btn btn-sm btn-primary" data-id="' .
                     $data->id .
                     '" title="Informasi Darah">
                 <i class="glyphicon glyphicon-list"></i>
@@ -122,7 +124,7 @@ class HealthFacilitiesController extends Controller
                 </a>
                 </div>
                 <div>
-                <a id="" class="btn btn-sm btn-success" data-id="' .
+                <a id="btn-edit-profesi" class="btn btn-sm btn-success" data-id="' .
                     $data->id .
                     '" title="Edit Profesi">
                 <i class="fa fa-user"></i>
@@ -169,6 +171,95 @@ class HealthFacilitiesController extends Controller
     {
         $data['idfaskes'] = $idfaskes;
         return view('master.detail_faskes.bed', $data);
+    }
+    public function getDoctors($idfaskes)
+    {
+        $data = HealthFacility::with('doctors')->where('id', '=', $idfaskes)->orderBy('id', 'asc')->first();
+        $data = $data->doctors;
+        return \DataTables::of($data)
+            ->addColumn('Aksi', function ($data) {
+                return '
+                <div style="margin-bottom:3px;">
+                <a id="btn-edit-doctor" class="btn btn-sm btn-primary" data-id="' .
+                    $data->id .
+                    '" title="Edit Data">
+                <i class="fa fa-pencil"></i>
+                </a>
+                <a id="btn-delete-doctor" class="btn btn-sm btn-danger" data-id="' .
+                    $data->id .
+                    '" title="Hapus Data">
+                <i class="fa fa-trash"></i>
+                </a>
+                </div>
+                ';
+            })
+            ->rawColumns(['Aksi'])
+            ->addIndexColumn()
+            ->make(true);
+    }
+    public function showDoctors($idfaskes)
+    {
+        $data['idfaskes'] = $idfaskes;
+        return view('master.detail_faskes.dokter', $data);
+    }
+    public function getBloodBags($idfaskes)
+    {
+        $data = HealthFacility::with('bloodBags')->where('id', '=', $idfaskes)->orderBy('id', 'asc')->first();
+        $data = $data->bloodBags;
+        return \DataTables::of($data)
+            ->addColumn('Aksi', function ($data) {
+                return '
+                <div style="margin-bottom:3px;">
+                <a id="btn-edit-bloodbag" class="btn btn-sm btn-primary" data-id="' .
+                    $data->id .
+                    '" title="Edit Data">
+                <i class="fa fa-pencil"></i>
+                </a>
+                <a id="btn-delete-bloodbag" class="btn btn-sm btn-danger" data-id="' .
+                    $data->id .
+                    '" title="Hapus Data">
+                <i class="fa fa-trash"></i>
+                </a>
+                </div>
+                ';
+            })
+            ->rawColumns(['Aksi'])
+            ->addIndexColumn()
+            ->make(true);
+    }
+    public function showBloodBags($idfaskes)
+    {
+        $data['idfaskes'] = $idfaskes;
+        return view('master.detail_faskes.darah', $data);
+    }
+    public function getProfessions()
+    {
+        $data = Profession::orderBy('tipe_user', 'desc')->orderBy('profesi', 'asc')->get();
+        return \DataTables::of($data)
+            ->addColumn('Aksi', function ($data) {
+                return '
+                    <input type="checkbox" id="profesi' . $data->id . '" name="profesi[' . $data->id . ']" value="' . $data->id . '">
+                ';
+            })
+            ->rawColumns(['Aksi'])
+            ->addIndexColumn()
+            ->make(true);
+    }
+    public function editProfessions($id)
+    {
+        $data = HFProfession::select('profession_id')->where('health_facility_id', '=', $id)->get();
+        return response()->json($data);
+    }
+    public function updateProfessions(Request $request)
+    {
+        HFProfession::where('health_facility_id', '=', $request->id)->delete();
+        foreach ($request->profesi as $d) {
+            HFProfession::create([
+                'health_facility_id' => $request->id,
+                'profession_id' => $d
+            ]);
+        }
+        return response()->json(['success' => 'Data telah disimpan.']);
     }
     public function index()
     {

@@ -97,7 +97,7 @@
                             </tr>
                         </tbody>
                     </table> --}}
-                        <table class="table table-bordered table-hover datatable">
+                        <table id="data-faskes" class="table table-bordered table-hover datatable">
                             <thead>
                                 <tr>
                                     <th style="width: 40px;">No</th>
@@ -289,22 +289,24 @@
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Detail Profesi Yang
+                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Edit Profesi Yang
                             Aktif</b></h4>
                     <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <table id="example" class="table table-bordered dataTable no-footer table-hover">
-                        <thead>
-                            <tr>
-                                <th class="text-center">#</th>
-                                <th class="text-center">Profesi</th>
-                                <th class="text-center">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                <form id="form-data-profesi" class="form-horizontal" enctype="multipart/form-data">
+                    <input type="hidden" id="id" name="id">
+                    <div class="modal-body">
+                        <table id="data-profesi" class="table table-bordered dataTable no-footer table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th class="text-center">Profesi</th>
+                                    <th class="text-center">Keterangan</th>
+                                </tr>
+                            </thead>
+                            {{-- <tbody>
                             <tr>
                                 <td class="text-center"><input type="checkbox" name="" value=""></td>
                                 <td class="text-center">Kepala Faskes</td>
@@ -345,12 +347,13 @@
                                 <td class="text-center">Dispatcher</td>
                                 <td class="text-center">User Web</td>
                             </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
-                </div>
+                        </tbody> --}}
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="btn-save-profession" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -433,7 +436,7 @@
 
     <script>
         $(function() {
-            var dataTable = $('.datatable').DataTable({
+            var dataTable = $('#data-faskes').DataTable({
                 processing: true,
                 serverSide: true,
                 lengthChange: false,
@@ -508,7 +511,37 @@
                     }
                 ]
             });
-
+            $('#data-profesi').DataTable({
+                processing: true,
+                serverSide: true,
+                lengthChange: false,
+                autoWidth: false,
+                searching: false,
+                ordering: false,
+                info: false,
+                paging: false,
+                // scrollX: true,
+                "order": [
+                    [0, "desc"]
+                ],
+                ajax: 'get-professions',
+                columns: [{
+                        data: 'Aksi',
+                        name: 'Aksi',
+                        orderable: false,
+                        serachable: false,
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'profesi',
+                        name: 'profesi'
+                    },
+                    {
+                        data: 'tipe_user',
+                        name: 'tipe_user'
+                    },
+                ]
+            });
 
             var mymap = L.map('mapid').setView([-7.445999016651402, 112.71844103230215], 13);
             var marker = '';
@@ -558,13 +591,16 @@
             mymap.on('click', onMapClick);
             $('#ModalInput').on('shown.bs.modal', function() {
                 setTimeout(function() {
-                    mymap.invalidateSize();
                     mymap.dragging.enable();
+                    mymap.invalidateSize();
                 }, 1);
 
             });
 
             $('#form-data-faskes').submit(function(e) {
+                e.preventDefault();
+            });
+            $('#form-data-profesi').submit(function(e) {
                 e.preventDefault();
             });
 
@@ -702,6 +738,48 @@
                     }
                 });
             });
+            $('#btn-save-profession').click(function() {
+                var b = $(this),
+                    i = b.find('i'),
+                    cls = i.attr('class');
+
+
+                var form = $('#form-data-profesi'),
+                    data = form.serializeArray();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "{{ route('updateProfesi') }}",
+                    method: 'POST',
+                    data: data,
+
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        if (result.success) {
+                            toastr['success'](result.success);
+                            $('#ModalEditProfesi').modal('hide');
+                        } else {
+                            $.each(result.errors, function(key, value) {
+                                toastr['error'](value);
+                            });
+                        }
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            });
 
         }).on('click', '#btn-edit-faskes', function() {
             var b = $(this),
@@ -778,6 +856,42 @@
                     }
                 });
             }
+        }).on('click', '#btn-edit-profesi', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data-profesi');
+
+            $.ajax({
+                url: "edit-professions/" + id,
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+
+                },
+                success: function(result) {
+                    $('.modal-title').html('<b>Edit Profesi Yang Aktif</b>');
+                    form.find('#btn-save-faskes').html('Edit');
+                    form.find('#id').val(id);
+                    form.find('input:checkbox').prop('checked', false);
+                    console.log(result);
+                    $.each(result, function(key, value) {
+                        form.find('#profesi' + value.profession_id).prop('checked', true);
+                    });
+
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                    $('#ModalEditProfesi').modal('show');
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
         });
 
     </script>

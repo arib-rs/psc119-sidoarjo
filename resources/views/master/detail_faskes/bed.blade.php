@@ -54,9 +54,8 @@
                                     <th class="text-center">Keterangan</th>
                                     <th class="text-center">Jumlah</th>
                                     <th class="text-center">Tersedia</th>
-                                    <th class="text-center" style="width: 100px;"><a id="btn-add-faskes"
-                                            data-toggle="tooltip" class="btn btn-xs btn-success"><i
-                                                class="fa fa-plus-circle"></i> Input Data</a>
+                                    <th class="text-center" style="width: 100px;"><a id="btn-add-bed" data-toggle="tooltip"
+                                            class="btn btn-xs btn-success"><i class="fa fa-plus-circle"></i> Input Data</a>
                                     </th>
                                 </tr>
                             </thead>

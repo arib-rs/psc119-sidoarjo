@@ -77,7 +77,15 @@ Route::middleware(['auth'])->group(
         Route::get('faskes/{idhf}/beds', 'HealthFacilitiesController@showBeds');
 
         Route::get('get-doctors/{idhf}', 'HealthFacilitiesController@getDoctors');
-        Route::get('get-bloods/{idhf}', 'HealthFacilitiesController@getBloods');
+        Route::get('faskes/{idhf}/doctors', 'HealthFacilitiesController@showDoctors');
+
+        Route::get('get-bloodbags/{idhf}', 'HealthFacilitiesController@getBloodBags');
+        Route::get('faskes/{idhf}/bloodbags', 'HealthFacilitiesController@showBloodBags');
+
+        Route::get('get-professions', 'HealthFacilitiesController@getProfessions');
+        Route::get('edit-professions/{id}', 'HealthFacilitiesController@editProfessions');
+        Route::post('update-professions', 'HealthFacilitiesController@updateProfessions')->name('updateProfesi');
+
         Route::get('get-ambulan', 'ResourcesController@getAmbulan');
         Route::get('get-sub-kategori', 'SubCategoriesController@getSubKategori');
         Route::get('get-kategori', 'CategoriesController@getKategori');
