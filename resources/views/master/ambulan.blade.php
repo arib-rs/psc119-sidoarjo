@@ -391,7 +391,24 @@
                                     * </span>
                             </label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="pict_url" name="pict_url">
+                                <input type="hidden" class="form-control" id="pict_url" name="pict_url">
+
+                                <input style="display:none" type="file" name="pict" id="pict"
+                                    accept=".jpeg,.png,.jpg,.bmp,.gif">
+                                <label for="pict" class="btn btn-app img-upload" style="margin:0" id="pict_label">
+                                    <i class="fa fa-image"></i>
+                                    Browse
+                                </label>
+                                <div id="pict_preview"
+                                    style=" display:none; position: relative; margin:10px 0; border:1px solid #666">
+
+                                    <a id="pict_del" class="btn btn-xs btn-danger"
+                                        style="position:absolute; right:2px; top:3px">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                    <img style="max-width:200px;max-height:200px">
+
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -537,6 +554,44 @@
                 });
         });
 
+        $("#pict").change(function() {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#pict_label').css('display', 'none');
+                    $('#pict_preview img').removeAttr('src');
+                    $('#pict_preview img').attr('src', e.target.result);
+                    $('#pict_preview').css('display', 'inline-block');
+                }
+
+                reader.readAsDataURL(this.files[0]);
+            } else {
+                $('#pict_label').css('display', 'inline-block');
+                $('#pict_preview').css('display', 'none');
+            }
+        });
+        $("#pict").trigger('change');
+        $("#pict_url").change(function() {
+            if ($("#pict_url").val()) {
+                $('#pict_label').css('display', 'none');
+                $('#pict_preview img').removeAttr('src');
+                $('#pict_preview img').attr('src', "{{ url('upload-photo/faskes') }}/" + $(
+                    "#pict_url").val());
+                $('#pict_preview').css('display', 'inline-block');
+            } else {
+                $('#pict_label').css('display', 'inline-block');
+                $('#pict_preview').css('display', 'none');
+            }
+        });
+
+        $('#pict_del').click(function() {
+            $("#pict_url").val("");
+            $("#pict").val("");
+            $("#pict_url").trigger('change');
+            $("#pict").trigger('change');
+        });
+
         $('#btn-save').click(function() {
             var b = $(this),
                 i = b.find('i'),
@@ -575,6 +630,7 @@
                         $('.datatable').DataTable().ajax.reload();
                         $('#ModalInput').modal('hide');
                         $('#form-data').find('input.form-control').val('');
+                        $('#pict_del').trigger('click');
                     } else {
                         $.each(result.errors, function(key, value) {
                             toastr['error'](value);

@@ -15,7 +15,8 @@ class ResourcesController extends Controller
             ->editColumn('pict_url', function ($data) {
                 $img = '-';
                 if ($data->pict_url) {
-                    $img = '<a href="' . url("/template/dist/img/" . $data->pict_url) . '"><img src="' . url("/template/dist/img/" . $data->pict_url) . '" style="max-width:100px"></a>';
+                    $img = '<a href="' . url("upload-photo/ambulan/" . $data->pict_url) . '" target="_blank">
+                    <img src="' . url("upload-photo/ambulan/" . $data->pict_url) . '" style="max-width:100px"></a>';
                 }
                 return $img;
             })
@@ -89,12 +90,20 @@ class ResourcesController extends Controller
             'tahun_produksi' => 'required',
             'merk' => 'required',
             'tahun_pakai' => 'required',
+            'pict' => 'image|mimes:jpeg,png,jpg,bmp,gif|max:2048',
             // 'health_facility_id' => 'required',
         ]);
 
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()->all()]);
         } else {
+            $kode = date('Y-md-His');
+            $pict = null;
+            if ($request->pict) {
+                $pict = $kode . '.' . $request->pict->extension();
+                $request->pict->move(public_path('upload-photo/ambulan/'), $pict);
+            }
+
             Resource::create([
                 'jenis' => $request->jenis,
                 'nomor_polisi' => $request->nomor_polisi,
@@ -103,7 +112,7 @@ class ResourcesController extends Controller
                 'tahun_produksi' => $request->tahun_produksi,
                 'merk' => $request->merk,
                 'tahun_pakai' => $request->tahun_pakai,
-                'pict_url' => $request->pict_url,
+                'pict_url' => $pict,
                 'klasifikasi' => $request->klasifikasi,
                 'health_facility_id' => $request->health_facility_id
             ]);
@@ -138,11 +147,33 @@ class ResourcesController extends Controller
             'kelas' => 'required',
             'tahun_produksi' => 'required',
             'tahun_pakai' => 'required',
-            'health_facility_id' => 'required'
+            'health_facility_id' => 'required',
+            'pict' => 'image|mimes:jpeg,png,jpg,bmp,gif|max:2048',
         ]);
 
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()->all()]);
+        }
+
+        $ambulan = Resource::find($id);
+        $pictpath = public_path() . "/upload-photo/ambulan/" . $ambulan->pict_url;
+
+        $kode = date('Y-md-His');
+        $pict = null;
+        if ($request->pict) {
+            if ($ambulan->pict_url) {
+                unlink($pictpath);
+            }
+            $pict = $kode . '.' . $request->pict->extension();
+            $request->pict->move(public_path('upload-photo/ambulan'), $pict);
+        } else {
+            if ($request->pict_url) {
+                $pict = $request->pict_url;
+            } else {
+                if ($ambulan->pict_url) {
+                    unlink($pictpath);
+                }
+            }
         }
 
         Resource::find($id)->update([
@@ -153,7 +184,7 @@ class ResourcesController extends Controller
             'tahun_produksi' => $request->tahun_produksi,
             'merk' => $request->merk,
             'tahun_pakai' => $request->tahun_pakai,
-            'pict_url' => $request->pict_url,
+            'pict_url' => $pict,
             'klasifikasi' => $request->klasifikasi,
             'health_facility_id' => $request->health_facility_id
         ]);
