@@ -3,41 +3,40 @@
 @section('title', 'Fasilitas Kesehatan')
 
 @section('css')
-    <style>
-        .nav-tabs-custom>.nav-tabs>li.active {
-            border-top-color: #dd4b39;
-        }
-
-    </style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.5/dist/geosearch.css" />
+<style>
+    .nav-tabs-custom>.nav-tabs>li.active {
+        border-top-color: #dd4b39;
+    }
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.5/dist/geosearch.css" />
 @endsection
 
 @section('container')
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Fasilitas Kesehatan
-                <small>Data Fasilitas Kesehatan</small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-flag"></i> Master</a></li>
-                <li class="active"> Fasilitas Kesehatan</li>
-            </ol>
-        </section>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Fasilitas Kesehatan
+            <small>Data Fasilitas Kesehatan</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-flag"></i> Master</a></li>
+            <li class="active"> Fasilitas Kesehatan</li>
+        </ol>
+    </section>
 
-        <!-- Main content -->
-        <section class="content">
-            <div class="nav-tabs-custom">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#resource" data-toggle="tab">Data Fasilitas Kesehatan</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="resource">
-                        {{-- <div class="row">
+    <!-- Main content -->
+    <section class="content">
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#resource" data-toggle="tab">Data Fasilitas Kesehatan</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="resource">
+                    {{-- <div class="row">
                             <div class="col-md-4">
                                 <div class="btn-group">
                                     <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput"
@@ -46,7 +45,7 @@
                                 </div>
                             </div>
                         </div><br> --}}
-                        {{-- <table id="example1" class="table table-bordered dataTable no-footer table-hover">
+                    {{-- <table id="example1" class="table table-bordered dataTable no-footer table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 40px;">No</th>
@@ -97,216 +96,216 @@
                             </tr>
                         </tbody>
                     </table> --}}
-                        <table id="data-faskes" class="table table-bordered table-hover datatable">
-                            <thead>
-                                <tr>
-                                    <th style="width: 40px;">No</th>
-                                    <th>Nama</th>
-                                    <th>Alamat</th>
-                                    <th>Foto</th>
-                                    <th>Kategori</th>
-                                    <th>Buka 24 Jam</th>
-                                    <th>Ada EKG</th>
-                                    <th>Bed</th>
-                                    <th>Dokter</th>
-                                    <th>Darah</th>
-                                    <th style="width: 50px;">Aktif</th>
-                                    <th class="text-center" style="width: 100px;"><a id="btn-add-faskes"
-                                            data-toggle="tooltip" class="btn btn-xs btn-success"><i
-                                                class="fa fa-plus-circle"></i> Input Data</a>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-
+                    <table id="data-faskes" class="table table-bordered table-hover datatable">
+                        <thead>
+                            <tr>
+                                <th style="width: 40px;">No</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>Foto</th>
+                                <th>Kategori</th>
+                                <th>Buka 24 Jam</th>
+                                <th>Ada EKG</th>
+                                <th>Bed</th>
+                                <th>Dokter</th>
+                                <th>Darah</th>
+                                <th style="width: 50px;">Aktif</th>
+                                <th class="text-center" style="width: 100px;"><a id="btn-add-faskes"
+                                        data-toggle="tooltip" class="btn btn-xs btn-success"><i
+                                            class="fa fa-plus-circle"></i> Input Data</a>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
-                <!-- /.tab-content -->
+
             </div>
-            <!-- /.nav-tabs-custom -->
-        </section>
-        <!-- /.content -->
-    </div>
+            <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+    </section>
+    <!-- /.content -->
+</div>
 @endsection
 
 @section('modal')
-    <div id="ModalInput" class="modal fade">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form Input Data Faskes</b>
-                    </h4>
-                    <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form id="form-data-faskes" class="form-horizontal" enctype="multipart/form-data">
-                    <div class="modal-body">
-                        <div class="form-body">
-                            <input type="hidden" class="form-control" id="id" name="id" value="">
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Nama<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control" id="nama" name="nama" required>
-                                </div>
+<div id="ModalInput" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form Input Data Faskes</b>
+                </h4>
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form-data-faskes" class="form-horizontal" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-body">
+                        <input type="hidden" class="form-control" id="id" name="id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Nama<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="nama" name="nama" required>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Kategori<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select autocomplete="off" class="form-control" id="kategori" name="kategori">
-                                        <option value="">Pilih Kategori</option>
-                                        <option value="cc">Command Center</option>
-                                        <option value="rs">Rumah Sakit</option>
-                                        <option value="pks">Puskesmas</option>
-                                        <option value="klnk">Klinik</option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Kategori<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select autocomplete="off" class="form-control" id="kategori" name="kategori">
+                                    <option value="">Pilih Kategori</option>
+                                    <option value="cc">Command Center</option>
+                                    <option value="rs">Rumah Sakit</option>
+                                    <option value="pks">Puskesmas</option>
+                                    <option value="klnk">Klinik</option>
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Foto<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="hidden" class="form-control" id="pict_url" name="pict_url">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Foto<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="hidden" class="form-control" id="pict_url" name="pict_url">
 
-                                    <input style="display:none" type="file" name="pict" id="pict"
-                                        accept=".jpeg,.png,.jpg,.bmp,.gif">
-                                    <label for="pict" class="btn btn-app img-upload" style="margin:0" id="pict_label">
-                                        <i class="fa fa-image"></i>
-                                        Browse
-                                    </label>
-                                    <div id="pict_preview"
-                                        style=" display:none; position: relative; margin:10px 0; border:1px solid #666">
+                                <input style="display:none" type="file" name="pict" id="pict"
+                                    accept=".jpeg,.png,.jpg,.bmp,.gif">
+                                <label for="pict" class="btn btn-app img-upload" style="margin:0" id="pict_label">
+                                    <i class="fa fa-image"></i>
+                                    Browse
+                                </label>
+                                <div id="pict_preview"
+                                    style=" display:none; position: relative; margin:10px 0; border:1px solid #666">
 
-                                        <a id="pict_del" class="btn btn-xs btn-danger"
-                                            style="position:absolute; right:2px; top:3px">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                        <img style="max-width:200px;max-height:200px">
+                                    <a id="pict_del" class="btn btn-xs btn-danger"
+                                        style="position:absolute; right:2px; top:3px">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                    <img style="max-width:200px;max-height:200px">
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Keterangan<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <textarea class="form-control" id="keterangan" name="keterangan" rows="2"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">No. Telepon<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="text" id="phone_num" name="phone_num" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Contact Person<span class="required"
-                                        style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="text" id="contact_person" name="contact_person" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Email<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="text" id="email" name="email" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Status Ponek/Poned<span class="required"
-                                        style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id="status" name="status" class="form-control">
-                                        <option value="">Pilih Status</option>
-                                        <option value="PONEK">PONEK</option>
-                                        <option value="PONED">PONED</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Buka 24 Jam<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id="is_fullday" name="is_fullday" class="form-control">
-                                        <option value="">Pilih Status</option>
-                                        <option value="1">YA</option>
-                                        <option value="0">Tidak</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Ada EKG<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <select id="is_has_ekg" name="is_has_ekg" class="form-control">
-                                        <option value="">Pilih Status</option>
-                                        <option value="1">ADA</option>
-                                        <option value="0">TIDAK</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Alamat<span class="required" style="color: red;">
-                                        * </span>
-                                </label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control" id="alamat" name="alamat">
-                                </div>
-                                <div class="col-md-12" style="margin:10px 0">
-                                    <input type="hidden" class="form-control" name="lng" id="lng" />
-                                    <input type="hidden" class="form-control" name="lat" id="lat" />
-                                    <div id="mapid" style="height:300px"></div>
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Keterangan<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="keterangan" name="keterangan" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">No. Telepon<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="phone_num" name="phone_num" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Contact Person<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="contact_person" name="contact_person" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Email<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="email" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Status Ponek/Poned<span class="required"
+                                    style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select id="status" name="status" class="form-control">
+                                    <option value="">Pilih Status</option>
+                                    <option value="PONEK">PONEK</option>
+                                    <option value="PONED">PONED</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Buka 24 Jam<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select id="is_fullday" name="is_fullday" class="form-control">
+                                    <option value="">Pilih Status</option>
+                                    <option value="1">YA</option>
+                                    <option value="0">Tidak</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Ada EKG<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <select id="is_has_ekg" name="is_has_ekg" class="form-control">
+                                    <option value="">Pilih Status</option>
+                                    <option value="1">ADA</option>
+                                    <option value="0">TIDAK</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Alamat<span class="required" style="color: red;">
+                                    * </span>
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="alamat" name="alamat">
+                            </div>
+                            <div class="col-md-12" style="margin:10px 0">
+                                <input type="hidden" class="form-control" name="lng" id="lng" />
+                                <input type="hidden" class="form-control" name="lat" id="lat" />
+                                <div id="mapid" style="height:300px"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button id="btn-reset-faskes" type="button" class="btn btn-secondary"
-                            data-dismiss="modal">Batal</button>
-                        <button id="btn-save-faskes" type="button" class="btn btn-primary">Simpan</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-reset-faskes" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Batal</button>
+                    <button id="btn-save-faskes" type="button" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div id="ModalEditProfesi" class="modal">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Edit Profesi Yang
-                            Aktif</b></h4>
-                    <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form id="form-data-profesi" class="form-horizontal" enctype="multipart/form-data">
-                    <input type="hidden" id="id" name="id">
-                    <div class="modal-body">
-                        <table id="data-profesi" class="table table-bordered dataTable no-footer table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th class="text-center">Profesi</th>
-                                    <th class="text-center">Keterangan</th>
-                                </tr>
-                            </thead>
-                            {{-- <tbody>
+</div>
+<div id="ModalEditProfesi" class="modal">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Edit Profesi Yang
+                        Aktif</b></h4>
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form-data-profesi" class="form-horizontal" enctype="multipart/form-data">
+                <input type="hidden" id="id" name="id">
+                <div class="modal-body">
+                    <table id="data-profesi" class="table table-bordered dataTable no-footer table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th class="text-center">Profesi</th>
+                                <th class="text-center">Keterangan</th>
+                            </tr>
+                        </thead>
+                        {{-- <tbody>
                             <tr>
                                 <td class="text-center"><input type="checkbox" name="" value=""></td>
                                 <td class="text-center">Kepala Faskes</td>
@@ -348,94 +347,94 @@
                                 <td class="text-center">User Web</td>
                             </tr>
                         </tbody> --}}
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" id="btn-save-profession" class="btn btn-primary">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div id="ModalShift" class="modal">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Update Shift</b></h4>
-                    <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- BEGIN FORM-->
-                    <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label class="control-label col-md-3">Jumlah Shift</label>
-                                <div class="col-md-8">
-                                    <input type="text" id="jumlah_shift" name="jumlah_shift" class="form-control" value="3"
-                                        disabled>
-                                </div>
-                                <div class="col-md-1"></div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3">Shift 1</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="shift_awal" name="shift_awal" class="form-control"
-                                        value="07:00:00" disabled>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" id="shift_akhir" name="shift_akhir" class="form-control"
-                                        value="14:00:00" disabled>
-                                </div>
-                                <div class="col-md-1"></div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3">Shift 2</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="shift_awal" name="shift_awal" class="form-control"
-                                        value="14:00:00" disabled>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" id="shift_akhir" name="shift_akhir" class="form-control"
-                                        value="21:00:00" disabled>
-                                </div>
-                                <div class="col-md-1"></div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3">Shift 3</label>
-                                <div class="col-md-4">
-                                    <input type="text" id="shift_awal" name="shift_awal" class="form-control"
-                                        value="21:00:00" disabled>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" id="shift_akhir" name="shift_akhir" class="form-control"
-                                        value="04:00:00" disabled>
-                                </div>
-                                <div class="col-md-1"></div>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- END FORM-->
+                    </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
+                    <button type="submit" id="btn-save-profession" class="btn btn-primary">Simpan</button>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="ModalShift" class="modal">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Update Shift</b></h4>
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- BEGIN FORM-->
+                <form method="post" id="" enctype="multipart/form-data" class="form-horizontal">
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Jumlah Shift</label>
+                            <div class="col-md-8">
+                                <input type="text" id="jumlah_shift" name="jumlah_shift" class="form-control" value="3"
+                                    disabled>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Shift 1</label>
+                            <div class="col-md-4">
+                                <input type="text" id="shift_awal" name="shift_awal" class="form-control"
+                                    value="07:00:00" disabled>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="shift_akhir" name="shift_akhir" class="form-control"
+                                    value="14:00:00" disabled>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Shift 2</label>
+                            <div class="col-md-4">
+                                <input type="text" id="shift_awal" name="shift_awal" class="form-control"
+                                    value="14:00:00" disabled>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="shift_akhir" name="shift_akhir" class="form-control"
+                                    value="21:00:00" disabled>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Shift 3</label>
+                            <div class="col-md-4">
+                                <input type="text" id="shift_awal" name="shift_awal" class="form-control"
+                                    value="21:00:00" disabled>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="shift_akhir" name="shift_akhir" class="form-control"
+                                    value="04:00:00" disabled>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                </form>
+                <!-- END FORM-->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" onclick="" class="btn btn-primary">Simpan</button>
             </div>
         </div>
     </div>
+</div>
 @endsection
 
 @section('scripts')
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin="">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
 
-    </script>
-    <script src="https://unpkg.com/leaflet-geosearch@3.0.5/dist/geosearch.umd.js"></script>
+</script>
+<script src="https://unpkg.com/leaflet-geosearch@3.0.5/dist/geosearch.umd.js"></script>
 
-    <script>
-        $(function() {
+<script>
+    $(function() {
             var dataTable = $('#data-faskes').DataTable({
                 processing: true,
                 serverSide: true,
@@ -894,5 +893,5 @@
             });
         });
 
-    </script>
+</script>
 @endsection
