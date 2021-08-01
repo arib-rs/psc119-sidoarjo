@@ -3,24 +3,24 @@
 @section('title', 'User Management')
 
 @section('container')
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            User Management
-            <small>Daftar User PSC-119</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-users"></i> User & Device Management</a></li>
-            <li class="active"> User Management</li>
-        </ol>
-    </section>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                User Management
+                <small>Daftar User PSC-119</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-users"></i> User & Device Management</a></li>
+                <li class="active"> User Management</li>
+            </ol>
+        </section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="box">
-            <div class="box-body">
-                {{-- <div class="row">
+        <!-- Main content -->
+        <section class="content">
+            <div class="box">
+                <div class="box-body">
+                    {{-- <div class="row">
                     <div class="col-md-4">
                         <div class="btn-group">
                             <button href="#form_insert" role="button" data-toggle="modal" data-target="#ModalInput" class="btn btn-success">
@@ -28,280 +28,353 @@
                         </div>
                     </div>
                 </div><br> --}}
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <table class="table table-bordered table-hover datatable">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">No</th>
-                                            <th class="text-center">Username</th>
-                                            <th class="text-center">Nama</th>
-                                            <th class="text-center">Profesi</th>
-                                            <th class="text-center">Level</th>
-                                            <th class="text-center">Faskes Asal</th>
-                                            <th class="text-center">Email</th>
-                                            <th class="text-center">Telepon</th>
-                                            <th class="text-center">Tipe User</th>
-                                            <th class="text-center">Aktif</th>
-                                            <th class="text-center" style="width: 120px;"><a id="btn-add"
-                                                    data-toggle="tooltip" class="btn btn-xs btn-success"><i
-                                                        class="fa fa-plus-circle"></i> Input Data</a>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">01</td>
-                                            <td class="text-center">001</td>
-                                            <td class="text-center">dr. Ivan Setiawan, Sp.EM</td>
-                                            <td class="text-center">Kepala PSC</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">Command Center</td>
-                                            <td class="text-center">ivansetiawan2006@gmail.com</td>
-                                            <td class="text-center">081233019130</td>
-                                            <td class="text-center"><button class="btn btn-success btn-sm"
-                                                    style="border-radius: 20px;"><i
-                                                    class="glyphicon glyphicon-phone"></i> User Mobile</button></td>
-                                            <td class="text-center">
-                                                <a id="btn-aktif" class="btn btn-sm btn-success" data-id=""
-                                                    title="Non Aktifkan">
-                                                    <i class="fa fa-check"></i>
-                                                </a>
-                                            </td>
-                                            <td class=" text-center">
-                                                <div style="margin-bottom:3px;">
-                                                    <a id="btn-send" class="btn btn-sm btn-success" data-id=""
-                                                        title="Kirim Data">
-                                                        <i class="fa fa-send"></i></a>
-                                                    <a id="btn-edit" class="btn btn-sm btn-primary" data-id=""
-                                                        title="Edit Data">
-                                                        <i class="fa fa-pencil"></i>
-                                                    </a>
-                                                    <a id="btn-delete" class="btn btn-sm btn-danger" data-id=""
-                                                        title="Hapus Data">
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">02</td>
-                                            <td class="text-center">adhon</td>
-                                            <td class="text-center">ROMADHON IMAM S</td>
-                                            <td class="text-center">Admin</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">Command Center</td>
-                                            <td class="text-center">igd.rsud.sda@gmail.com</td>
-                                            <td class="text-center">081234567899</td>
-                                            <td class="text-center"><button class="btn btn-primary btn-sm"
-                                                    style="border-radius: 20px;"><i
-                                                    class="fa fa-laptop"></i> User Web</button></td>
-                                            <td class="text-center">
-                                                <a id="btn-aktif" class="btn btn-sm btn-success" data-id=""
-                                                    title="Non Aktifkan">
-                                                    <i class="fa fa-check"></i>
-                                                </a>
-                                            </td>
-                                            <td class=" text-center">
-                                                <div style="margin-bottom:3px;">
-                                                    <a id="btn-send" class="btn btn-sm btn-success" data-id=""
-                                                        title="Kirim Data">
-                                                        <i class="fa fa-send"></i></a>
-                                                    <a id="btn-edit" class="btn btn-sm btn-primary" data-id=""
-                                                        title="Edit Data">
-                                                        <i class="fa fa-pencil"></i>
-                                                    </a>
-                                                    <a id="btn-delete" class="btn btn-sm btn-danger" data-id=""
-                                                        title="Hapus Data">
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">03</td>
-                                            <td class="text-center">yankesjuksda</td>
-                                            <td class="text-center">Andi Dwi Purwanto, S.Kep. Ns</td>
-                                            <td class="text-center">Admin</td>
-                                            <td class="text-center">-</td>
-                                            <td class="text-center">Command Center</td>
-                                            <td class="text-center">yankesjuk.sidoarjo@gmail.com</td>
-                                            <td class="text-center">085739088836</td>
-                                            <td class="text-center"><button class="btn btn-primary btn-sm"
-                                                    style="border-radius: 20px;"><i
-                                                    class="fa fa-laptop"></i> User Web</button></td>
-                                            <td class="text-center">
-                                                <a id="btn-aktif" class="btn btn-sm btn-success" data-id=""
-                                                    title="Non Aktifkan">
-                                                    <i class="fa fa-check"></i>
-                                                </a>
-                                            </td>
-                                            <td class=" text-center">
-                                                <div style="margin-bottom:3px;">
-                                                    <a id="btn-send" class="btn btn-sm btn-success" data-id=""
-                                                        title="Kirim Data">
-                                                        <i class="fa fa-send"></i></a>
-                                                    <a id="btn-edit" class="btn btn-sm btn-primary" data-id=""
-                                                        title="Edit Data">
-                                                        <i class="fa fa-pencil"></i>
-                                                    </a>
-                                                    <a id="btn-delete" class="btn btn-sm btn-danger" data-id=""
-                                                        title="Hapus Data">
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <table class="table table-bordered table-hover datatable">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">No</th>
+                                                <th class="text-center">Username</th>
+                                                <th class="text-center">Nama</th>
+                                                <th class="text-center">Profesi</th>
+                                                <th class="text-center">Level</th>
+                                                <th class="text-center">Faskes Asal</th>
+                                                <th class="text-center">Email</th>
+                                                <th class="text-center">Telepon</th>
+                                                <th class="text-center">Tipe User</th>
+                                                <th class="text-center">Aktif</th>
+                                                <th class="text-center" style="width: 120px;"><a id="btn-add"
+                                                        data-toggle="tooltip" class="btn btn-xs btn-success"><i
+                                                            class="fa fa-plus-circle"></i> Input Data</a>
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                        <!-- /.col -->
                     </div>
-                    <!-- /.col -->
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- /.content -->
-</div>
+        </section>
+        <!-- /.content -->
+    </div>
 @endsection
 
 @section('modal')
-<div id="ModalInput" class="modal fade">
-    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="form-data" class="form-horizontal">
-                <div class="modal-body">
-                    <div class="form-body">
-                        <input type="hidden" class="form-control" id="id" name="id" value="">
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Personil<span class="required" style="color: red;">
-                                    * </span>
-                            </label>
-                            <div class="col-md-8">
-                                <select autocomplete="off" class="form-control select2personil" name="person_id" id="person_id" style="width: 100%;">
-                                    <option value="">Pilih Personil</option>
-                                    <option value="driverpuskesmastaman">yanuarsupriyanto46@gmail.com</option>
-                                    <option value="yatman">yatman</option>
-                                    <option value="IGDMITRAWARU">RS MITRA KELUARGA WARU</option>
-                                    <option value="adityo">adityo</option>
-                                    <option value="drhermawan">dr hermawan</option>
-                                    <option value="280394091801">VICAN PRAYUSI NARWASTU, A.Md.Kep</option>
-                                    <option value="agunk">agunk</option>
-                                    <option value="risasitihajar">risa</option>
-                                    <option value="risarssitihajar">risa</option>
-                                </select>
+    <div id="ModalInput" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="form-data" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-body">
+                            <input type="hidden" class="form-control" id="id" name="id" value="">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Personil<span class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <select autocomplete="off" class="form-control select2personil" name="person_id"
+                                        id="person_id" style="width: 100%;">
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Level<span class="required" style="color: red;">
-                                    * </span>
-                            </label>
-                            <div class="col-md-8">
-                                <select autocomplete="off" class="form-control select2profesi" name="profession_id" id="profession_id"
-                                    style="width: 100%;">
-                                    <option value="">Pilih Profesi</option>
-                                    <option value="0">Staff</option>
-                                    <option value="1">Driver</option>
-                                    <option value="2">Perawat</option>
-                                    <option value="3">Kepala Faskes</option>
-                                    <option value="4">Kepala PSC</option>
-                                    <option value="5">Admin</option>
-                                </select>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Level<span class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <select autocomplete="off" class="form-control select2profesi" name="role_id"
+                                        id="role_id" style="width: 100%;">
+                                        {!! $optRole !!}
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Email<span class="required" style="color: red;">
-                                    * </span>
-                            </label>
-                            <div class="col-md-8">
-                                <input type="text" class="form-control" id="email" name="email">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Username<span class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="username" name="username">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Telepon<span class="required" style="color: red;">
-                                    * </span>
-                            </label>
-                            <div class="col-md-8">
-                                <input type="text" class="form-control" id="phone_num" name="phone_num">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Email<span class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="email" name="email">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Tipe User<span class="required" style="color: red;">
-                                    * </span>
-                            </label>
-                            <div class="col-md-8">
-                                <select autocomplete="off" class="form-control" name="type_user" id="type_user">
-                                    <option value="">Pilih Tipe User</option>
-                                    <option value="userweb">User Web</option>
-                                    <option value="usermobile">User Mobile</option>
-                                </select>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Password<span class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Password<span class="required" style="color: red;">
-                                    * </span>
-                            </label>
-                            <div class="col-md-8">
-                                <input type="password" class="form-control" id="password" name="password" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Confirm Password<span class="required"
-                                    style="color: red;">
-                                    * </span>
-                            </label>
-                            <div class="col-md-8">
-                                <input type="password" class="form-control" id="confirm_password"
-                                    name="confirm_password" required></span>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">Confirm Password<span class="required"
+                                        style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="password" class="form-control" id="password_confirmation"
+                                        name="password_confirmation" required></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button id="btn-reset" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button id="btn-save" type="button" class="btn btn-primary">Simpan</button>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <button id="btn-reset" type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button id="btn-save" type="button" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 @endsection
 
 @section('scripts')
-<script>
-    $(function() {
-        $('.select2personil').select2();
-        $('.select2profesi').select2();
+    <script>
+        $(function() {
+            $('.select2personil').select2();
+            $('.select2profesi').select2();
 
-        $('.datatable').DataTable({
-            'paging': true,
-            'lengthChange': true,
-            'searching': true,
-            'ordering': false,
-            'info': true,
-            'autoWidth': false
-        });
+            $('.datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                lengthChange: false,
+                autoWidth: false,
+                searching: true,
+                ordering: false,
+                info: true,
+                pageLength: 10,
+                ajax: 'get-users',
+                columns: [{
+                        data: 'DT_RowIndex',
+                        name: 'DT_RowIndex'
+                    },
+                    {
+                        data: 'username',
+                        name: 'username'
+                    },
+                    {
+                        data: 'person.fullname',
+                        name: 'nama'
+                    },
+                    {
+                        data: 'person.profession.profesi',
+                        name: 'profesi',
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'role.role',
+                        name: 'level',
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'person.health_facility.nama',
+                        name: 'faskes',
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'email',
+                        name: 'email',
+                        defaultContent: "-",
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'person.phone_num',
+                        name: 'phone_num',
+                        defaultContent: "-",
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'person.profession.tipe_user',
+                        name: 'tipe_user',
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'is_active',
+                        name: 'is_active',
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'Aksi',
+                        name: 'Aksi',
+                        orderable: false,
+                        serachable: false,
+                        sClass: 'text-center'
+                    }
+                ]
+            });
 
-        $('#form-data').submit(function(e) {
-            e.preventDefault();
-        });
+            $('#form-data').submit(function(e) {
+                e.preventDefault();
+            });
+            $('#btn-add').click(function() {
+                //reset
+                $('#form-data').find('.form-control').val('');
+                $('#form-data').find('#role_id option').removeAttr('selected').trigger('change');
+                $('#form-data').find('input:password').removeAttr('disabled');
+                //show modal
+                $.ajax({
+                    url: "get-personil",
+                    method: 'GET',
+                    success: function(result) {
+                        $('#person_id').html(result)
+                    }
+                })
+                $('.modal-title').html('<b>Input Data</b>');
+                $('#btn-save').html('Simpan');
+                $('#ModalInput').modal('show');
+            });
+            $('#btn-save').click(function() {
+                var b = $(this),
+                    i = b.find('i'),
+                    cls = i.attr('class'),
+                    id = $('#id').val(),
+                    url = '',
+                    method = '';
 
-        $('#btn-add').click(function() {
-            //reset
-            $('#form-data').find('.form-control').val('');
-            //show modal
-            $('.modal-title').html('<b>Input Data</b>');
-            $('#ModalInput').modal('show');
-        });
-    })
-</script>
+                var form = $('#form-data'),
+                    // data = new FormData(form[0]);
+                    data = form.serializeArray();
+
+                if (id == '') {
+                    url = "{{ route('management_user.store') }}";
+                    method = 'POST';
+                } else {
+                    url = "management_user/" + id;
+                    method = 'PUT';
+                    // data.append('_method', 'PUT');
+                }
+                // console.log(url + ' ' + method);
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: url,
+                    method: method,
+                    data: data,
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        if (result.success) {
+                            toastr['success'](result.success);
+                            $('.datatable').DataTable().ajax.reload();
+                            $('#ModalInput').modal('hide');
+                            $('#form-data').find('input.form-control').val('');
+                        } else {
+                            $.each(result.errors, function(key, value) {
+                                toastr['error'](value);
+                            });
+                        }
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            });
+        }).on('click', '#btn-edit', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+
+            var form = $('#form-data');
+            $.ajax({
+                url: "get-personil",
+                method: 'GET',
+                success: function(result) {
+                    $('#person_id').html(result);
+                    $.ajax({
+                        url: "management_user/" + id + "/edit",
+                        method: 'GET',
+                        beforeSend: function() {
+                            b.attr('disabled', 'disabled');
+                            i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                        },
+                        success: function(result) {
+                            $('.modal-title').html('<b>Edit Data</b>');
+                            form.find('#btn-save').html('Edit');
+                            form.find('#id').val(result.id);
+                            form.find('#username').val(result.username);
+                            form.find('#email').val(result.email);
+                            form.find('input:password').attr('disabled', 'disabled');
+                            form.find('#role_id option').removeAttr('selected');
+                            form.find('#role_id').val(result.role_id).trigger('change');
+                            form.find('#person_id').append("<option value='" + result.person
+                                .id +
+                                "'>" + result.person.fullname + " - " + result.person
+                                .health_facility.nama +
+                                " </option>").trigger('change');
+                            setTimeout(function() {
+                                form.find('#person_id').val(result.person_id)
+                                    .trigger('change');
+                            }, 500);
+
+                            b.removeAttr('disabled');
+                            i.removeClass().addClass(cls);
+                            $('#ModalInput').modal('show');
+                        },
+                        error: function() {
+                            b.removeAttr('disabled');
+                            i.removeClass().addClass(cls);
+                        }
+                    })
+                }
+            });
+        }).on('click', '#btn-delete', function() {
+            var b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class'),
+                id = $(this).data('id');
+            var del = confirm("Apakah anda yakin menghapus data ini?");
+            if (del) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "management_user/" + id,
+                    method: 'DELETE',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                        i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                    },
+                    success: function(result) {
+                        $('.datatable').DataTable().ajax.reload();
+                        toastr['success'](result.success);
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                        i.removeClass().addClass(cls);
+                    }
+                });
+            }
+        })
+
+    </script>
 @endsection

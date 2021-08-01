@@ -86,6 +86,12 @@ Route::middleware(['auth'])->group(
         Route::get('edit-professions/{id}', 'HealthFacilitiesController@editProfessions');
         Route::post('update-professions', 'HealthFacilitiesController@updateProfessions')->name('updateProfesi');
 
+        Route::get('get-person-by-hf/{idhf}', 'PersonsController@getPersonByHF');
+        Route::get('get-professions-by-hf/{idhf}', 'PersonsController@getProfessionsByHF');
+
+        Route::get('get-users', 'UsersController@getUsers')->name('get-users');
+        Route::get('get-personil', 'UsersController@getPersonil');
+
         Route::get('get-ambulan', 'ResourcesController@getAmbulan');
         Route::get('get-sub-kategori', 'SubCategoriesController@getSubKategori');
         Route::get('get-kategori', 'CategoriesController@getKategori');
