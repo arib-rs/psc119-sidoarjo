@@ -602,7 +602,7 @@
                 method = '';
 
             var form = $('#form-data'),
-                data =   //khusus form yg ada input type file
+                data = new FormData(form[0]);   //khusus form yg ada input type file
                 // data = form.serializeArray(); //ini most compatible kalo misal ga pake input type file di form
 
             if (id == '') {
