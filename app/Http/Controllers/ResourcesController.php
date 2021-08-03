@@ -82,6 +82,7 @@ class ResourcesController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $validator = \Validator::make($request->all(), [
             'jenis' => 'required',
             'nomor_polisi' => 'required',
@@ -140,6 +141,7 @@ class ResourcesController extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $validator = \Validator::make($request->all(), [
             'jenis' => 'required',
             'nomor_polisi' => 'required',

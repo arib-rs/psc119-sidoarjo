@@ -364,8 +364,8 @@
                                     * </span>
                             </label>
                             <div class="col-md-8">
-                                <select autocomplete="off" class="form-control select2 select-form" name="health_facility_id"
-                                    id="health_facility_id" style="width: 100%;">
+                                <select autocomplete="off" class="form-control select2 select-form"
+                                    name="health_facility_id" id="health_facility_id" style="width: 100%;">
                                 </select>
                             </div>
                         </div>
@@ -528,6 +528,7 @@
             $('#form-data').find('.form-control').val('');
             //show modal
             $('.modal-title').html('<b>Input Data</b>');
+            $('#pict_del').trigger('click');
             $('#ModalInput').modal('show');
                 var b = $(this),
                 i = b.find('i'),
@@ -576,7 +577,7 @@
             if ($("#pict_url").val()) {
                 $('#pict_label').css('display', 'none');
                 $('#pict_preview img').removeAttr('src');
-                $('#pict_preview img').attr('src', "{{ url('upload-photo/faskes') }}/" + $(
+                $('#pict_preview img').attr('src', "{{ url('upload-photo/ambulan') }}/" + $(
                     "#pict_url").val());
                 $('#pict_preview').css('display', 'inline-block');
             } else {
@@ -601,15 +602,18 @@
                 method = '';
 
             var form = $('#form-data'),
-                data = form.serializeArray();
+                data =   //khusus form yg ada input type file
+                // data = form.serializeArray(); //ini most compatible kalo misal ga pake input type file di form
 
             if (id == '') {
                 url = "{{ route('ambulan.store') }}";
                 method = 'POST';
             } else {
                 url = "ambulan/" + id;
-                method = 'PUT';
+                method = 'POST'; //kalo pake ini di new FormData, ga mempan, return null di field upload image nya
+                data.append('_method', 'PUT'); //ini juga bawaan FormData
             }
+            console.log(url + ' ' + method);
 
             $.ajaxSetup({
                 headers: {
@@ -620,12 +624,15 @@
                 url: url,
                 method: method,
                 data: data,
+                processData: false, // bawaan yg harus ada kalo pake new FormData
+                    contentType: false, //
                 beforeSend: function() {
                     b.attr('disabled', 'disabled');
                     i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
                 },
                 success: function(result) {
                     if (result.success) {
+                         console.log(result);
                         toastr['success'](result.success);
                         $('.datatable').DataTable().ajax.reload();
                         $('#ModalInput').modal('hide');
@@ -686,6 +693,8 @@
                             'selected',
                             'selected');
                     }
+                    $("#pict").trigger('change');
+                    $("#pict_url").trigger('change');
 
                     b.removeAttr('disabled');
                     i.removeClass().addClass(cls);
