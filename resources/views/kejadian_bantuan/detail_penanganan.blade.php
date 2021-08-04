@@ -10,7 +10,7 @@
 @section('css')
 <style>
     .nav-tabs-custom>.nav-tabs>li.active {
-        border-top-color: #dd4b39;
+        border-top-color: #3867d6;
     }
 </style>
 @endsection
@@ -21,7 +21,7 @@
     <section class="content-header">
         <h1>
             Detail Penanganan
-            <small>CCN :CCN1452-1613210439</small>
+            <small>CCN :20210804-1231</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-sliders"></i> Kejadian & Bantuan</a></li>
@@ -39,7 +39,7 @@
                     <table>
                         <tr>
                             <td style="width: 12em; height: 32px;"><b>CCN</b></td>
-                            <td>CCN : CCN1452-1613210439</td>
+                            <td>20210804-1231</td>
                         </tr>
                         <tr>
                             <td style="width: 12em; height: 32px;"><b>Call Taker</b></td>
@@ -138,7 +138,7 @@
                             <td></td>
                         </tr>
                     </table>
-                    <h3 style="margin-top: 20px;">EMD</h3>
+                    {{-- <h3 style="margin-top: 20px;">EMD</h3>
                     <table>
                         <tr>
                             <td style="width: 25.7em;">
@@ -146,11 +146,11 @@
                             </td>
                             <td></td>
                         </tr>
-                    </table>
+                    </table> --}}
                 </div>
             </div>
         </div>
-        <div class="box box-danger box-solid">
+        <div class="box box-primary box-solid">
             <div class="box-header with-border">
                 <h3 class="box-title">Laporan Kejadian</h3>
 

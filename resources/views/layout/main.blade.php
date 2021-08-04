@@ -60,7 +60,7 @@
     @yield('css')
 </head>
 
-<body class="hold-transition skin-red-light sidebar-mini sidebar-collapse">
+<body class="hold-transition skin-blue-light sidebar-mini sidebar-collapse">
     <div class="wrapper">
 
         <header class="main-header">

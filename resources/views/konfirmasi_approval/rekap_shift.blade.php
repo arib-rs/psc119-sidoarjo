@@ -5,7 +5,7 @@
 @section('css')
 <style>
     .nav-tabs-custom>.nav-tabs>li.active {
-        border-top-color: #dd4b39;
+        border-top-color: #3867d6;
     }
 </style>
 @endsection
@@ -47,7 +47,8 @@
                             </select>
                         </div>
                         <div class="col-md-1">
-                            <button class="btn btn-primary" id="btnSearch"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Tampilkan </button>
+                            <button class="btn btn-primary" id="btnSearch"><i class="fa fa-search"
+                                    aria-hidden="true"></i>&nbsp;Tampilkan </button>
                         </div>
                         <div class="col-md-3">
                         </div>
@@ -90,7 +91,8 @@
                                 <td class="text-center">2019-04-10 18:33:34</td>
                                 <td class="text-center">2019-04-10 18:40:36</td>
                                 <td class="text-center">RSUD SIDOARJO</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
+                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button"
+                                        title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
                             </tr>
                             <tr>
                                 <td class="text-center"><input type="checkbox" name="" value=""></td>
@@ -105,7 +107,8 @@
                                 <td class="text-center"></td>
                                 <td class="text-center">2019-09-10 11:25:37</td>
                                 <td class="text-center">RS. ANWAR MEDIKA</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
+                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button"
+                                        title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -123,7 +126,8 @@
                             </button>
                         </div>
                         <div class="col-md-9">
-                            <button role="button" class="btn btn-primary"><i class="fa fa-search"></i> Tampilkan</button>
+                            <button role="button" class="btn btn-primary"><i class="fa fa-search"></i>
+                                Tampilkan</button>
                         </div>
                     </div><br>
                     <table id="example2" class="table table-bordered dataTable no-footer table-hover">
@@ -154,7 +158,8 @@
                                 <td class="text-center">DUWI - ARDI DUWI PUTRI, S. KEP. NS,.</td>
                                 <td class="text-center">Shift 1</td>
                                 <td class="text-center">21:24:34 04/02/2021</td>
-                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button" title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
+                                <td class="text-center"><button class="btn btn-sm btn-primary" type="button"
+                                        title="Detail Kejadian"><i class="fa fa-files-o"></i></button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -187,7 +192,8 @@
                     <form method='post' id="form_req" enctype="multipart/form-data" class="form-horizontal">
                         <div class="form-body">
                             <div class="form-group">
-                                <label class="control-label col-md-4">NAMA ZONA<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">NAMA ZONA<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
@@ -211,7 +217,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">USERNAME<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">USERNAME<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
@@ -219,7 +226,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">DEVICE ID<span class="required" style="color: red;">
+                                <label class="control-label col-md-4">DEVICE ID<span class="required"
+                                        style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
@@ -231,7 +239,8 @@
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <button class="btn btn-success btn-sm" id="aktif" value=""><i class="fa fa-check-square-o"> Aktif</i></button>
+                                    <button class="btn btn-success btn-sm" id="aktif" value=""><i
+                                            class="fa fa-check-square-o"> Aktif</i></button>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -239,7 +248,8 @@
                                         * </span>
                                 </label>
                                 <div class="col-md-8">
-                                    <button class="btn btn-success btn-sm" id="verified" value=""><i class="fa fa-check-square-o"> Verified</i></button>
+                                    <button class="btn btn-success btn-sm" id="verified" value=""><i
+                                            class="fa fa-check-square-o"> Verified</i></button>
                                 </div>
                             </div>
                         </div>
@@ -274,7 +284,8 @@
                                         <td class="text-center">Rumah</td>
                                         <td class="text-center">Kediri</td>
                                         <td class="text-center"></td>
-                                        <td class="text-center"><button class="btn btn-success btn-sm" id="ya" value=""><i class="fa fa-check-square-o"> Ya</i></button></td>
+                                        <td class="text-center"><button class="btn btn-success btn-sm" id="ya"
+                                                value=""><i class="fa fa-check-square-o"> Ya</i></button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -302,7 +313,8 @@
                                         <td class="text-center">Pribadi</td>
                                         <td class="text-center">087754595005</td>
                                         <td class="text-center"></td>
-                                        <td class="text-center"><button class="btn btn-success btn-sm" id="ya" value=""><i class="fa fa-check-square-o"> Ya</i></button></td>
+                                        <td class="text-center"><button class="btn btn-success btn-sm" id="ya"
+                                                value=""><i class="fa fa-check-square-o"> Ya</i></button></td>
                                     </tr>
                                 </tbody>
                             </table>

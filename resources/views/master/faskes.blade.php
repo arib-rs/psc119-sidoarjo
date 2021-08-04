@@ -5,7 +5,7 @@
 @section('css')
 <style>
     .nav-tabs-custom>.nav-tabs>li.active {
-        border-top-color: #dd4b39;
+        border-top-color: #3867d6;
     }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"

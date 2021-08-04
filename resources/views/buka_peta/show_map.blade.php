@@ -74,7 +74,7 @@
             </div>
         </div><br>
         <div class="col-md-12" style="padding: 0;">
-            <div class="box box-danger box-solid">
+            <div class="box box-primary box-solid">
                 <div class="box-header with-border">
                     <i class="fa fa-map-marker"></i>
                     <h3 class="box-title"> Menu Peta Sidoarjo</h3>

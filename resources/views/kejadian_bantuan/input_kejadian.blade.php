@@ -20,11 +20,11 @@
     <section class="content">
         <div class="row" style="margin: 0px;">
             <!-- <div class="col-md-2"></div> -->
-            <div id="timer-bg" class="col-md-12"
+            {{-- <div id="timer-bg" class="col-md-12"
                 style="background:#66CC00; margin: 0; margin-bottom: 1em; text-align: center; padding: 1rem;">
                 <p style="font-size: 4rem; vertical-align: middle; margin: 0; color: #F4F4F4;">Timer: <span
                         id="timer">00:00:00</span></p>
-            </div>
+            </div> --}}
             <div class="row">
                 <div class="col-md-12">
                     <div class="nav-tabs-custom">
@@ -32,9 +32,9 @@
                             <li class="active"><a href="#laporankejadian" data-toggle="tab">Form Laporan Kejadian</a>
                             </li>
                             <div style="text-align: right; margin: 0.5% 0.5% 0.5% auto">
-                                <button type="submit" class="btn btn-save"
+                                {{-- <button type="submit" class="btn btn-save"
                                     style="background-color: #3399FF; color:#fff; margin: auto 0.3%;">Simpan
-                                    Laporan</button>
+                                    Laporan</button> --}}
                                 <button type="submit" class="btn"
                                     style="background-color: #FF9933; color:#fff; margin: auto 0.3%;">Batalkan
                                     Laporan</button>
@@ -56,6 +56,19 @@
                                             </div>
                                             <div class="col-md-1"></div>
                                             <div class="col-md-2">
+                                                <p>Waktu</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control pull-right" id="waktu"
+                                                        name="waktu">
+
+                                                </div>
+                                            </div>
+                                            {{-- <div class="col-md-2">
                                                 <p>Lanjutan Laporan Dari</p>
                                             </div>
                                             <div class="col-md-4">
@@ -64,12 +77,12 @@
                                                     <option value=""> -- Pilih CCN -- </option>
                                                     @foreach ($ccn as $d)
                                                     <option value='{{ $d->kode_kasus }}'>
-                                                        {{ $d->kode_kasus . ' - ' . $d->nama_pelapor }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div><br>
-                                        <div class="row">
+                                            {{ $d->kode_kasus . ' - ' . $d->nama_pelapor }}</option>
+                                            @endforeach
+                                            </select>
+                                        </div> --}}
+                                    </div><br>
+                                    {{-- <div class="row">
                                             <div class="col-md-2">
                                                 <p>Waktu</p>
                                             </div>
@@ -97,18 +110,18 @@
                                                     style="background-color: #fff; color:#b1b1b1; border-radius: 20px; transition-duration: 0.4s;">Prank
                                                     Call</a>
                                             </div>
-                                        </div><br>
-                                        <div class="row">
-                                            <div class="col-md-2">
-                                                <p>Lokasi Kejadian</p>
-                                            </div>
-                                            <div class="col-md-10">
-                                                <div id="mapid" style="height:400px"></div>
-                                                <input type="hidden" name="longitude" id="longitude">
-                                                <input type="hidden" name="latitude" id="latitude">
-                                                <input type="hidden" name="lokasi" id="lokasi">
-                                            </div>
-                                            {{-- <div class="col-md-9">
+                                        </div><br> --}}
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <p>Lokasi Kejadian</p>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div id="mapid" style="height:400px"></div>
+                                            <input type="hidden" name="longitude" id="longitude">
+                                            <input type="hidden" name="latitude" id="latitude">
+                                            <input type="hidden" name="lokasi" id="lokasi">
+                                        </div>
+                                        {{-- <div class="col-md-9">
                                                 <div class="input-group date">
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-map-marker"></i>
@@ -121,18 +134,18 @@
                                                 <button type="submit" class="btn btn-primary"
                                                     style="width: 100%;">Search</button>
                                             </div> --}}
-                                        </div><br>
-                                        <div class="row">
-                                            <div class="col-md-2">
-                                                <p>Detail Lokasi</p>
-                                            </div>
-                                            <div class="col-md-10">
-                                                <textarea class="form-control" rows="4" id="detail_lokasi"
-                                                    name="detail_lokasi"
-                                                    placeholder="This textarea has a limit of 255 chars"></textarea>
-                                            </div>
+                                    </div><br>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <p>Detail Lokasi</p>
                                         </div>
-                                        {{-- <div class="row">
+                                        <div class="col-md-10">
+                                            <textarea class="form-control" rows="4" id="detail_lokasi"
+                                                name="detail_lokasi"
+                                                placeholder="This textarea has a limit of 255 chars"></textarea>
+                                        </div>
+                                    </div>
+                                    {{-- <div class="row">
                                             <div class="col-md-5">
                                                 <div class="row">
                                                     <div class="col-md-5">
@@ -162,177 +175,180 @@
                                                     placeholder="This textarea has a limit of 255 chars"></textarea>
                                             </div>
                                         </div> --}}
-                                        <br>
-                                        <h4 style="margin-bottom: 0;"><b>Data Pelapor</b></h4>
-                                    </div>
-                                    <!-- /.post -->
+                                    <br>
+                                    <h4 style="margin-bottom: 0;"><b>Data Pelapor</b></h4>
+                            </div>
+                            <!-- /.post -->
 
-                                    <div class="post">
+                            <div class="post">
+                                <div class="row">
+                                    <div class="col-md-5">
                                         <div class="row">
                                             <div class="col-md-5">
-                                                <div class="row">
-                                                    <div class="col-md-5">
-                                                        <p>Nama Pelapor</p>
-                                                    </div>
-                                                    <div class="col-md-7">
-                                                        <input type="text" class="form-control" name="nama_pelapor"
-                                                            id="nama_pelapor" placeholder="Nama Pelapor">
-                                                    </div>
-                                                </div><br>
-                                                <div class="row">
-                                                    <div class="col-md-5">
-                                                        <p>Telp Pelapor</p>
-                                                    </div>
-                                                    <div class="col-md-7">
-                                                        <input type="text" class="form-control" name="telp_pelapor"
-                                                            id="telp_pelapor" placeholder="0812xxxxxxxx">
-                                                    </div>
-                                                </div>
+                                                <p>Nama Pelapor</p>
                                             </div>
-                                            <div class="col-md-1"></div>
-                                            <div class="col-md-2">
-                                                <p>Alamat Pelapor</p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <textarea class="form-control" rows="4" name="alamat_pelapor"
-                                                    id="alamat_pelapor"
-                                                    placeholder="This textarea has a limit of 255 chars"></textarea>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" name="nama_pelapor"
+                                                    id="nama_pelapor" placeholder="Nama Pelapor">
                                             </div>
                                         </div><br>
-                                        <h4 style="margin-bottom: 0;"><b>Jenis Kejadian</b></h4>
-                                    </div>
-                                    <!-- /.post -->
-
-                                    <div class="post">
                                         <div class="row">
-                                            <div class="col-md-2">
-                                                <p>Jenis Kejadian</p>
+                                            <div class="col-md-5">
+                                                <p>Telp Pelapor</p>
                                             </div>
-                                            <div class="col-md-3">
-                                                <select class="form-control select2" name="category_id"
-                                                    autocomplete="off" id="category_id">
-                                                    <option value="">-- Pilih Kategori --</option>
-                                                    @foreach ($categories as $d)
-                                                    <option value={{ $d->id }}>{{ $d->kategori }}</option>
-                                                    @endforeach
-                                                </select>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" name="telp_pelapor"
+                                                    id="telp_pelapor" placeholder="0812xxxxxxxx">
                                             </div>
-                                            <div class="col-md-1"></div>
-                                            <div class="col-md-2">
-                                                <p>Jumlah Pasien</p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <input type="number" name="jumlah_pasien" id="jumlah_pasien"
-                                                    class="form-control" placeholder="">
-                                            </div>
-
                                         </div>
-
-                                        <br>
-                                        <h4 style="margin-bottom: 0;"><b>Keterangan Kejadian</b></h4>
                                     </div>
-                                    <!-- /.post -->
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2">
+                                        <p>Alamat Pelapor</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <textarea class="form-control" rows="4" name="alamat_pelapor"
+                                            id="alamat_pelapor"
+                                            placeholder="This textarea has a limit of 255 chars"></textarea>
+                                    </div>
+                                </div><br>
+                                <h4 style="margin-bottom: 0;"><b>Jenis Kejadian</b></h4>
+                            </div>
+                            <!-- /.post -->
 
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <p>Keterangan Kejadian</p>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <textarea class="form-control" rows="4" name="keterangan" id="keterangan"
-                                                placeholder="Keterangan Kejadian"></textarea>
-                                        </div>
-                                    </div><br>
+                            <div class="post">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <p>Jenis Kejadian</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select class="form-control select2" name="category_id" autocomplete="off"
+                                            id="category_id">
+                                            <option value="">-- Pilih Kategori --</option>
+                                            @foreach ($categories as $d)
+                                            <option value={{ $d->id }}>{{ $d->kategori }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2">
+                                        <p>Jumlah Pasien</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="number" name="jumlah_pasien" id="jumlah_pasien"
+                                            class="form-control" placeholder="">
+                                    </div>
 
-                                    <div class="post">
-                                        <div class="row">
-                                            <div class="col-md-4">
+                                </div>
+
+                                <br>
+                                <h4 style="margin-bottom: 0;"><b>Keterangan Kejadian</b></h4>
+                            </div>
+                            <!-- /.post -->
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Keterangan Kejadian</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" rows="4" name="keterangan" id="keterangan"
+                                        placeholder="Keterangan Kejadian"></textarea>
+                                </div>
+                            </div><br>
+
+                            <div class="post">
+                                <div class="row">
+                                    {{-- <div class="col-md-4">
                                                 <h4><b>MENU EMD</b></h4>
                                                 <hr style="border-color: #d2d6de; margin: 5px 0 15px 0;">
                                                 <button type="submit" class="btn"
                                                     style="width: 80px; background-color: #f3565d; color:#fff;">EMD</button>
+                                            </div> --}}
+                                    <div class="col-md-4">
+                                        <h4><b>DITERUSKAN KE</b></h4>
+                                        <hr style="border-color: #d2d6de; margin: 5px 0 15px 0;">
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="is_polres">
+                                                    Polresta Sidoarjo
+                                                </label>
                                             </div>
-                                            <div class="col-md-4">
-                                                <h4><b>DITERUSKAN KE</b></h4>
-                                                <hr style="border-color: #d2d6de; margin: 5px 0 15px 0;">
-                                                <div class="form-group">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="is_polres">
-                                                            Polresta Sidoarjo
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="is_pmk" value=true>
-                                                            Dinas Pemadakam Kebaran Sidoarjo
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="is_bpbd" value=true>
-                                                            BPBD Sidoarjo
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="is_komando" value=true>
-                                                            Komando Daerah Militer Sidoarjo
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="is_manies" value=true>
-                                                            SiManies
-                                                        </label>
-                                                    </div>
-                                                </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="is_pmk" value=true>
+                                                    Dinas Pemadakam Kebaran Sidoarjo
+                                                </label>
                                             </div>
-                                            <div class="col-md-4">
-                                                <h4><b>Sumber Informasi</b></h4>
-                                                <hr style="border-color: #d2d6de; margin: 5px 0 15px 0;">
-                                                <select class="form-control" name="sumber_informasi">
-                                                    <option value="">-- Pilih Informasi --</option>
-                                                    <option value="Telepon 119">Telepon 119</option>
-                                                    <option value="Rumah Sakit - PSTN">Rumah Sakit - PSTN</option>
-                                                    <option value="Si Manies">Si Manies</option>
-                                                    <option value="Radio SPGDT">Radio SPGDT</option>
-                                                    <option value="Sosial Media">Sosial Media</option>
-                                                    <option value="HP">HP</option>
-                                                    <option value="Simulasi">SIMULASI</option>
-                                                    <option value="Emergency Button">Emergency Button</option>
-                                                </select>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="is_bpbd" value=true>
+                                                    BPBD Sidoarjo
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="is_komando" value=true>
+                                                    Komando Daerah Militer Sidoarjo
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="is_manies" value=true>
+                                                    SiManies
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- /.post -->
-
-                                    <div class="post">
-                                        <div class="row">
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4" style=" text-align: right;">
-                                                <button type="submit" class="btn btn-save"
-                                                    style="background-color: #3399FF; color:#fff;">Simpan
-                                                    Laporan</button>
-                                                <button type="submit" class="btn"
-                                                    style="background-color: #f3565d; color:#fff;">Dispatch</button>
-                                                <button type="submit" class="btn"
-                                                    style="background-color: #66CC00; color:#fff;">Solved By
-                                                    Phone</button>
-                                            </div>
-                                        </div><br>
+                                    <div class="col-md-4">
+                                        <h4><b>Sumber Informasi</b></h4>
+                                        <hr style="border-color: #d2d6de; margin: 5px 0 15px 0;">
+                                        <select class="form-control" name="sumber_informasi">
+                                            <option value="">-- Pilih Informasi --</option>
+                                            <option value="Telepon 119">Telepon 119</option>
+                                            {{-- <option value="Rumah Sakit - PSTN">Rumah Sakit - PSTN</option>
+                                                    <option value="Si Manies">Si Manies</option>
+                                                    <option value="Radio SPGDT">Radio SPGDT</option> --}}
+                                            <option value="Telepon Lokal">Telepon Lokal</option>
+                                            <option value="Telepon WhatsApp">Telepon WhatsApp</option>
+                                            <option value="Chat WhatsApp">Chat WhatsApp</option>
+                                            <option value="Sosial Media">Sosial Media</option>
+                                            <option value="HP">HP</option>
+                                            <option value="Simulasi">SIMULASI</option>
+                                            {{-- <option value="Emergency Button">Emergency Button</option> --}}
+                                        </select>
                                     </div>
-                                    <!-- /.post -->
-
-                                </form>
+                                </div>
                             </div>
+                            <!-- /.post -->
+
+                            <div class="post">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4" style=" text-align: right;">
+                                        <button type="submit" class="btn btn-primary btn-save"
+                                            style="color:#fff;">Simpan
+                                            Laporan</button>
+                                        <button type="submit" class="btn btn-danger btn-dispatch"
+                                            style="color:#fff;">Dispatch</button>
+                                        {{-- <button type="submit" class="btn"
+                                                    style="background-color: #66CC00; color:#fff;">Solved By
+                                                    Phone</button> --}}
+                                    </div>
+                                </div><br>
+                            </div>
+                            <!-- /.post -->
+
+                            </form>
                         </div>
-                        <!-- /.tab-content -->
                     </div>
-                    <!-- /.nav-tabs-custom -->
+                    <!-- /.tab-content -->
                 </div>
-                <!-- /.col -->
+                <!-- /.nav-tabs-custom -->
             </div>
+            <!-- /.col -->
+        </div>
     </section>
     <!-- /.content -->
 
@@ -367,7 +383,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.5/dist/geosearch.css" />
 <style>
     .nav-tabs-custom>.nav-tabs>li.active {
-        border-top-color: #dd4b39;
+        border-top-color: #3867d6;
     }
 
     .forminputlaporan {
@@ -388,6 +404,10 @@
     .hoverprankcall:hover {
         background-color: #b1b1b1 !important;
         color: white !important;
+    }
+
+    .modal-dialog {
+        padding-top: 15%;
     }
 </style>
 @endsection
@@ -429,7 +449,7 @@
             if (sec.length < 2)
                 sec = '0' + sec;
 
-            $('#kode_kasus').val('CCN' + year + '-' + month + day + hour + min + sec);
+            $('#kode_kasus').val( year + month + day + '-' + hour + min);
             $('#waktu').val(year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec);
         }
 

@@ -43,8 +43,8 @@
                                             <td class="text-center">deltasari waru sidaorjo</td>
                                             <td class="text-center">Menanyakan informasi tentang vaksin covid19 untuk lansia</td>
                                             <td class="text-center">
-                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a id="btn-pembatalan-tugas" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-sm btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="btn-pembatalan-tugas" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -54,8 +54,8 @@
                                             <td class="text-center">krembung sidoarjo</td>
                                             <td class="text-center">menyakan untuk mengetahui hasil pcr</td>
                                             <td class="text-center">
-                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a id="btn-pembatalan-tugas" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-sm btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="btn-pembatalan-tugas" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -65,8 +65,8 @@
                                             <td class="text-center">jakarta</td>
                                             <td class="text-center"></td>
                                             <td class="text-center">
-                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a id="btn-pembatalan-tugas" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
+                                                <a href="{{url('/edit_kejadian')}}" class="btn btn-sm btn-warning" data-toggle="tooltip" data-placement="left" title="Edit Kejadian" style="margin: auto 2px;"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="btn-pembatalan-tugas" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus Kejadian" style="margin: auto 2px;"><i class="fa  fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                     </tbody>

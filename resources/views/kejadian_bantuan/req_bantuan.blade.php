@@ -14,7 +14,7 @@
 @section('css')
     <style>
         .nav-tabs-custom>.nav-tabs>li.active {
-            border-top-color: #dd4b39;
+            border-top-color: #3867d6;
         }
 
         .leaflet-top,

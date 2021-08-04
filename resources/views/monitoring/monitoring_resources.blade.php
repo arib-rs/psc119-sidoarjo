@@ -5,7 +5,7 @@
 @section('css')
 <style>
     .nav-tabs-custom>.nav-tabs>li.active {
-        border-top-color: #dd4b39;
+        border-top-color: #3867d6;
     }
 
     .modal-dialog {
@@ -32,7 +32,7 @@
     <section class="content">
         <div class="row" style="margin: 0px;">
             <div class="col-md-12" style="padding: 0px;">
-                <div class="box box-danger box-solid">
+                <div class="box box-primary box-solid">
                     <div class="box-header with-border">
                         <div class="col-md-3" style="width: 300px; padding: 0px;">
                             <h3 class="box-title" style="padding-top: 0.35em;"> Total Resources PSC-119 Sidoarjo : 63
@@ -47,7 +47,7 @@
                     <div class="box-body">
                         <div class="row" style="margin-left: 2px;">
                             <div class="col-md-3">
-                                <div class="box box-danger box-solid">
+                                <div class="box box-primary box-solid">
                                     <div class="box-header with-border">
                                         <div class="col-md-2"
                                             style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px; background: #ffffff;">
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="box box-danger box-solid">
+                                <div class="box box-primary box-solid">
                                     <div class="box-header with-border">
                                         <div class="col-md-2"
                                             style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px; background: #ffffff;">
@@ -116,7 +116,7 @@
                                         </div>
                                         <div class="col-md-4" style="margin-bottom: 0.6em;">
                                             <div class="col-md-2"
-                                                style="width: 25px; height: 25px; border: 1px solid #DD4B39; padding: 3px 5px 5px;">
+                                                style="width: 25px; height: 25px; border: 1px solid #3867d6; padding: 3px 5px 5px;">
                                                 <input type="checkbox" style="margin-top: 0px;"></div>
                                             <div class="col-md-10 btn btn-danger"
                                                 style="border-radius: 0px; height: 25px; padding-top: 2px; text-align: left;">
@@ -143,7 +143,7 @@
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="box box-danger box-solid">
+                                <div class="box box-primary box-solid">
                                     <div class="box-header with-border">
                                         <div class="col-md-2"
                                             style="width: 25px; height: 25px; border: 1px solid #d2d6de; padding: 3px 5px 5px; background: #ffffff;">
@@ -473,7 +473,7 @@
         </div>
         <div class="row" style="margin: 0px;">
             <div class="col-md-12" style="padding: 0px;">
-                <div class="box box-danger box-solid">
+                <div class="box box-primary box-solid">
                     <div class="box-header with-border">
                         <h3 class="box-title"> Faskes, Total Online : 16 </h3>
                     </div>
