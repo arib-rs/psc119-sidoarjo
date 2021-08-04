@@ -51,7 +51,8 @@
                     <div class="icon">
                         <i class="ion ion-document-text"></i>
                     </div>
-                    <a href="{{url('/laporan_kejadian')}}" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{url('/laporan_kejadian')}}" class="small-box-footer">Detail info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -67,7 +68,8 @@
                     <div class="icon">
                         <i class="ion ion-document-text"></i>
                     </div>
-                    <a href="{{url('/laporan_kejadian')}}" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{url('/laporan_kejadian')}}" class="small-box-footer">Detail info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -83,7 +85,8 @@
                     <div class="icon">
                         <i class="ion ion-document-text"></i>
                     </div>
-                    <a href="{{url('/laporan_kejadian')}}" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{url('/laporan_kejadian')}}" class="small-box-footer">Detail info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -99,7 +102,8 @@
                     <div class="icon">
                         <i class="ion ion-document-text"></i>
                     </div>
-                    <a href="{{url('/rekap_bantuan')}}" class="small-box-footer">Detail info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{url('/rekap_bantuan')}}" class="small-box-footer">Detail info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -109,7 +113,8 @@
         <!-- Main row -->
         <div class="row" style="margin: 0;">
             <div style="background-color: #3867d6; width: 100%; height: 4em;">
-                <div class="col-md-2 col-sm-2 col-xs-2" style="height: 4em; padding: 1em 0px; width: 233px; padding-left: 1em;">
+                <div class="col-md-2 col-sm-2 col-xs-2"
+                    style="height: 4em; padding: 1em 0px; width: 233px; padding-left: 1em;">
                     <i class="fa fa-bar-chart" style="color: #fff;"></i>
                     <span style="color: #fff; font-size: large;">Laporan Kejadian Bulan</span>
                 </div>
@@ -127,7 +132,8 @@
                     <span style="color: #fff; font-size: large;">Total Laporan : 36</span>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2"></div>
-                <div class="col-md-2 col-sm-2 col-xs-2" style="height: 4em; padding: 1em 0px; width: 370px; padding-right: 1em;">
+                <div class="col-md-2 col-sm-2 col-xs-2"
+                    style="height: 4em; padding: 1em 0px; width: 370px; padding-right: 1em;">
                     <span class="pull-right" style="color: #fff; font-size: large;">Tahun</span>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2" style="height: 4em; padding: 10px 0px;">
@@ -139,7 +145,9 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <button type="button" class="btn btn-primary" data-toggle="dropdown" style="width: 110px; background: #4b7bec; border-color: #4b7bec"><i class="fa fa-print"> &nbsp; Cetak</i> &nbsp;<span class="caret"></span> </button>
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown"
+                            style="width: 110px; background: #4b7bec; border-color: #4b7bec"><i class="fa fa-print">
+                                &nbsp; Cetak</i> &nbsp;<span class="caret"></span> </button>
                         <ul class="dropdown-menu" role="menu" style="margin-left: 1em;">
                             <!-- <li><a id="pdf_chart_lap_harian">PDF</a></li> -->
                             <li><a href="#excel_chart_laporan_bulan">Excel</a></li>
@@ -147,7 +155,9 @@
                     </div>
                 </div>
             </div>
-            <div id="durationchartdiv" style="border: 1px solid #3867d6; background: #fff; width: 100%; height: 35em; padding: 2em 1em 1em 1em;"></div>
+            <div id="durationchartdiv"
+                style="border: 1px solid #3867d6; background: #fff; width: 100%; height: 35em; padding: 2em 1em 1em 1em;">
+            </div>
         </div>
 
         <div class="row" style="margin: 2em 0 0;">
@@ -155,17 +165,21 @@
                 <div style="background-color: #3867d6; width: 100%; height: 4em;">
                     <div class="col-md-6 col-sm-6 col-xs-6" style="height: 4em; padding: 1em 0px; padding-left: 1em;">
                         <i class="fa fa-bar-chart" style="color: #fff;"></i>
-                        <span style="color: #fff; font-size: large;">Laporan Kejadian Berdasarkan Kategori EMD</span>
+                        <span style="color: #fff; font-size: large;">Laporan Kejadian Berdasarkan Jenis Kejadian</span>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" style="height: 4em; padding: 0.8em 1em 0.8em 0;">
-                        <button type="button" class="btn btn-primary pull-right" data-toggle="dropdown" style="width: 110px; background: #4b7bec; border-color: #4b7bec"><i class="fa fa-print"> &nbsp; Cetak</i> &nbsp;<span class="caret"></span> </button>
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="dropdown"
+                            style="width: 110px; background: #4b7bec; border-color: #4b7bec"><i class="fa fa-print">
+                                &nbsp; Cetak</i> &nbsp;<span class="caret"></span> </button>
                         <ul class="dropdown-menu pull-right" role="menu" style="margin-left: 1em;">
                             <li><a a href="">PDF</a></li>
                             <li><a href="">Excel</a></li>
                         </ul>
                     </div>
                 </div>
-                <div id="piechartdiv" style="border: 1px solid #3867d6; background: #fff; width: 100%; height: 35em; padding: 2em 1em 1em 1em;"></div>
+                <div id="piechartdiv"
+                    style="border: 1px solid #3867d6; background: #fff; width: 100%; height: 35em; padding: 2em 1em 1em 1em;">
+                </div>
             </div>
 
             <div class="col-md-6" style="padding: 0 0 0 1em;">
@@ -175,14 +189,18 @@
                         <span style="color: #fff; font-size: large;">Laporan Response Time Kejadian</span>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" style="height: 4em; padding: 0.8em 1em 0.8em 0;">
-                        <button type="button" class="btn btn-primary pull-right" data-toggle="dropdown" style="width: 110px; background: #4b7bec; border-color: #4b7bec"><i class="fa fa-print"> &nbsp; Cetak</i> &nbsp;<span class="caret"></span> </button>
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="dropdown"
+                            style="width: 110px; background: #4b7bec; border-color: #4b7bec"><i class="fa fa-print">
+                                &nbsp; Cetak</i> &nbsp;<span class="caret"></span> </button>
                         <ul class="dropdown-menu pull-right" role="menu" style="margin-left: 1em;">
                             <li><a a href="">PDF</a></li>
                             <li><a href="">Excel</a></li>
                         </ul>
                     </div>
                 </div>
-                <div id="stackchartdiv" style="border: 1px solid #3867d6; background: #fff; width: 100%; height: 35em; padding: 2em 1em 1em 1em;"></div>
+                <div id="stackchartdiv"
+                    style="border: 1px solid #3867d6; background: #fff; width: 100%; height: 35em; padding: 2em 1em 1em 1em;">
+                </div>
             </div>
         </div>
     </section>
