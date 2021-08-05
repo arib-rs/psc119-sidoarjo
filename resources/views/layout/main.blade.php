@@ -57,6 +57,16 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     @yield('head')
 
+    <style>
+        .skin-blue-light .main-header .logo:hover {
+            background-color: #3867D6;
+        }
+
+        .skin-blue-light .main-header .navbar .sidebar-toggle:hover {
+            background-color: #325CC0;
+        }
+    </style>
+
     @yield('css')
 </head>
 
