@@ -91,6 +91,16 @@ class LoginController extends Controller
         // } else {
         // }
         // // $request->session()->put('user', $user->toArray());
+        Session::where([
+            'user_id' => $request->session()->get('user.id'),
+            'device_id' => substr(exec('getmac'), 0, 17),
+            'hostname' => $request->ip() . '-' . gethostname(),
+            'logout_at' => null
+        ])->update([
+            'logout_at' => now(),
+            'status' => 'PC Login Ended'
+        ]);
+
         Session::create([
             'hostname' => $request->ip() . '-' . gethostname(),
             'device_id' => substr(exec('getmac'), 0, 17),
