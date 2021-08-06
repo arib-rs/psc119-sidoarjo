@@ -57,6 +57,20 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     @yield('head')
 
+    <style>
+        .butuh-bantuan {
+            animation: blinker 2s linear infinite;
+        }
+
+
+        @keyframes blinker {
+            50% {
+                /* background: #FFFACD; */
+                background: #f6e58d;
+            }
+        }
+
+    </style>
     @yield('css')
 </head>
 
@@ -89,10 +103,10 @@
                     <ul class="nav navbar-nav">
                         <!-- Notifications: style can be found in dropdown.less -->
                         <li class="dropdown notifications-menu">
-                            <a href="{{ url('/req_bantuan') }}">
+                            <a id="req-bantuan-notif" href="{{ url('/req_bantuan') }}">
                                 <span style="color:white">Butuh Bantuan</span>
                                 <i class="fa fa-bell-o"></i>
-                                <span class="label label-warning">0</span>
+                                <span class="label label-warning" id="req-bantuan-count">0</span>
                             </a>
                         </li>
                         <!-- Notifications: style can be found in dropdown.less -->
@@ -178,7 +192,7 @@
                         <ul class="treeview-menu" style="z-index: 1000;">
                             <li><a href="{{ url('/input_kejadian') }}">Input Kejadian Baru</a></li>
                             <li><a href="{{ url('/req_bantuan') }}">Request Bantuan</a></li>
-                            <li><a href="{{ url('/edit_laporan') }}">Edit Laporan Kejadian</a></li>
+                            {{-- <li><a href="{{ url('/edit_laporan') }}">Edit Laporan Kejadian</a></li> --}}
                         </ul>
                     </li>
                     <li class="treeview">
@@ -318,11 +332,6 @@
 @toastr_js
 @toastr_render
 <script>
-    $(function() {
-        //Initialize Select2 Elements
-        $('.select2').select2()
-    })
-
     function showTime() {
         arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober",
             "November", "Desember"
@@ -348,6 +357,34 @@
         setTimeout(showTime, 1000);
     }
     showTime();
+
+    function getReqBantuanNotif() {
+        $.ajax({
+            url: "{{ route('get-req-bantuan-notif') }}",
+            method: "GET",
+            success: function(result) {
+                if (result > 0) {
+                    $('#req-bantuan-notif').removeClass().addClass('butuh-bantuan');
+
+                } else {
+                    $('#req-bantuan-notif').removeClass();
+                }
+                $('#req-bantuan-count').html(result);
+            },
+            complete: function() {
+                setTimeout(getReqBantuanNotif, 1000);
+            }
+        });
+    }
+    getReqBantuanNotif();
+
+
+    $(function() {
+        //Initialize Select2 Elements
+        $('.select2').select2();
+
+
+    });
 
 </script>
 

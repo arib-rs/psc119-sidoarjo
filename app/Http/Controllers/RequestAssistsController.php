@@ -9,13 +9,38 @@ class RequestAssistsController extends Controller
 {
     public function getIncidents()
     {
-        $data = Incident::with('category')->orderBy('created_at', 'desc')->get();
+        $data = Incident::with('category')->where('status', '<', 9)->orderBy('created_at', 'desc')->get();
         return \DataTables::of($data)
+            ->setRowClass(
+                function ($data) {
+                    $cls = '';
+                    if ($data->status == 0) {
+                        $cls = 'butuh-bantuan';
+                    }
+
+                    return $cls;
+                }
+            )
             ->addColumn('Aksi', function ($data) {
-                return '<a id="btn-lihat" class="btn btn-sm btn-info" data-id="' .
+                $btnAmbulan = '';
+                if ($data->status == 0) {
+                    $btnAmbulan = '<a id="btn-req-online" class="btn btn-sm btn-warning" data-id="' .
+                        $data->id .
+                        '" title="Request Bantuan Ambulan Online" style="margin: 4px 3px;">
+                                <i class="fa fa-ambulance "></i>
+                            </a>
+                            <a id="btn-req-offline" class="btn btn-sm btn-danger" data-id="' .
+                        $data->id .
+                        '" title="Request Bantuan Ambulan Offline" style="margin: 4px 3px;">
+                                <i class="fa fa-ambulance "></i>
+                            </a>
+                            <br>';
+                }
+                return $btnAmbulan .
+                    '<a id="btn-lihat" class="btn btn-sm btn-info" data-id="' .
                     $data->id .
                     '" title="Lihat Detail" style="margin: 4px 3px; background-color: #8e44ad; border-color: #8e44ad;">
-                    <i class="glyphicon glyphicon-pushpin"></i>
+                    <i class="fa fa-eye"></i>
                 </a>
                 <a id="btn-detail" class="btn btn-sm btn-primary" data-id="' .
                     $data->id .
@@ -42,7 +67,11 @@ class RequestAssistsController extends Controller
     public function getIncident($id)
     {
         $data = Incident::with('category')->find($id);
-        // dd($data);
+        return response()->json($data);
+    }
+    public function getNotif()
+    {
+        $data = Incident::where('status', '=', 0)->count();
         return response()->json($data);
     }
     public function index()

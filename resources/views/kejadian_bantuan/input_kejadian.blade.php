@@ -339,12 +339,9 @@
                                                 <div class="col-md-4"></div>
                                                 <div class="col-md-4"></div>
                                                 <div class="col-md-4" style=" text-align: right;">
-                                                    <button class="btn"
-                                                        style="background-color: #FF9933; color:#fff; margin: auto 0.3%;">Batal</button>
-                                                    <button class="btn btn-primary btn-save"
-                                                        style="color:#fff;">Simpan</button>
-                                                    <button class="btn btn-danger btn-dispatch"
-                                                        style="color:#fff;">Dispatch</button>
+                                                    <button class="btn btn-warning btn-batal">Batal</button>
+                                                    <button class="btn btn-primary btn-save">Simpan</button>
+                                                    <button class="btn btn-danger btn-dispatch">Dispatch</button>
                                                     {{-- <button class="btn"
                                                     style="background-color: #66CC00; color:#fff;">Solved By
                                                     Phone</button> --}}
@@ -595,9 +592,9 @@
             //     startTimer();
 
             // })
-            // $('#btn-batal').click(function() {
-            //     history.go(-1);
-            // })
+            $('.btn-batal').click(function() {
+                history.go(-1);
+            })
             $('#lokasi').autocomplete({
                 source(request, response) {
                     const providerform = new GeoSearch.OpenStreetMapProvider({
@@ -647,6 +644,42 @@
                 });
                 $.ajax({
                     url: "{{ route('input_kejadian.store') }}",
+                    method: "POST",
+                    data: data,
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                    },
+                    success: function(result) {
+                        if (result.success) {
+                            toastr['success'](result.success);
+                            location.href = "laporan_kejadian"
+                        } else {
+                            $.each(result.errors, function(key, value) {
+                                toastr['error'](value);
+                            });
+                        }
+                        b.removeAttr('disabled');
+
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                    }
+                });
+
+            })
+            $('.btn-dispatch').click(function() {
+                var b = $(this);
+
+                var form = $('#form-data'),
+                    data = form.serializeArray();
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: "save-n-dispatch",
                     method: "POST",
                     data: data,
                     beforeSend: function() {

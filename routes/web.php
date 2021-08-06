@@ -65,8 +65,11 @@ Route::middleware(['auth'])->group(
         Route::put('kategoriobat/{id}', 'MedicinesController@updateKategori')->name('kategoriobat.update');
         Route::delete('kategoriobat/{id}', 'MedicinesController@destroyKategori')->name('kategoriobat.destroy');
 
+        Route::get('get-req-bantuan-notif', 'RequestAssistsController@getNotif')->name('get-req-bantuan-notif');
         Route::get('get-incidents', 'RequestAssistsController@getIncidents')->name('get-incidents');
         Route::get('get-incident-by-kode/{kode}', 'InputIncidentsController@getDataKejadian');
+        Route::post('save-n-dispatch', 'InputIncidentsController@saveDispatch');
+
         Route::get('get-incident-by-id/{id}', 'RequestAssistsController@getIncident');
         Route::get('get-health-facilities', 'ResourcesController@getHealthFacilities')->name('get-health-facilities');
 

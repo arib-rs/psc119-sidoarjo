@@ -13,6 +13,32 @@ class InputIncidentsController extends Controller
         $kejadian = Incident::where('kode_kasus', $kode_kasus)->first();
         return response()->json($kejadian);
     }
+    public function saveDispatch(Request $request)
+    {
+        $validator = \Validator::make($request->all(), [
+            'lokasi' => 'required',
+            'nama_pelapor' => 'required',
+            'telp_pelapor' => 'required',
+            'category_id' => 'required|numeric',
+            'keterangan' => 'required'
+        ], [
+            'lokasi.required' => "Tentukan lokasi kejadian melalui peta yang tersedia",
+            'nama_pelapor.required' => "Nama Pelapor harus diisi",
+            'telp_pelapor.required' => "Telp Pelapor harus diisi",
+            'category_id.required' => "Pilih kategori kejadian",
+            'keterangan.required' => "Keterangan kejadian harus diisi"
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->all()]);
+        } else {
+            Incident::create($request->all() + [
+                'status' => 0, //butuh bantuan *kedip
+                'calltaker_id' => session()->get('user.id')
+            ]);
+
+            return response()->json(['success' => 'Data telah disimpan.']);
+        }
+    }
     public function index()
     {
         $data['ccn'] = Incident::orderBy('created_at', 'desc')->get();
@@ -44,9 +70,8 @@ class InputIncidentsController extends Controller
             return response()->json(['errors' => $validator->errors()->all()]);
         } else {
             Incident::create($request->all() + [
-                'status' => 0,
-                // 'calltaker_id' => session()->get('id')
-                'calltaker_id' => 1
+                'status' => 9, //solve by phone
+                'calltaker_id' => session()->get('user.id')
             ]);
 
             return response()->json(['success' => 'Data telah disimpan.']);
