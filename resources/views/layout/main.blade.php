@@ -70,7 +70,16 @@
             }
         }
 
+        .skin-blue-light .main-header .logo:hover {
+            background-color: #3867D6;
+        }
+
+        .skin-blue-light .main-header .navbar .sidebar-toggle:hover {
+            background-color: #325CC0;
+        }
+
     </style>
+
     @yield('css')
 </head>
 
