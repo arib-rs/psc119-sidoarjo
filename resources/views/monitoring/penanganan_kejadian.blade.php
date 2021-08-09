@@ -37,7 +37,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CCN</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Pelapor</th>
                                 <th class="text-center">Waktu</th>
                                 <th class="text-center">Lokasi</th>
@@ -46,23 +46,115 @@
                                 <th class="text-center">Status Penugasan</th>
                                 <th class="text-center">Faskes Tujuan</th>
                                 <th class="text-center">Status</th>
-                                <th class="text-center">Aksi</th>
+                                <th class="text-center" style="width: 110px;">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- <tr>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                            </tr> -->
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td class="text-center">PSC-20210728-102648</td>
+                                <td class="text-center">mr.x</td>
+                                <td class="text-center">2021-07-28 10:26:48</td>
+                                <td class="text-center">Jl. Jenggolo No.34, Pucang, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61219, Indonesia</td>
+                                <td class="text-center">RSUD SIDOARJO</td>
+                                <td class="text-center">W 7435 NP</td>
+                                <td class="text-center">OFFLINE - simulasi</td>
+                                <td class="text-center">RSUD SIDOARJO</td>
+                                <td class="text-center">
+                                    <a id="btn-status" class="btn btn-sm btn-danger"
+                                        style="width: 141px; margin: 4px 3px;">Menuju Lokasi Kejadian</a>
+                                </td>
+                                <td class="text-center">
+                                    <a id="btn-edit-faskes" class="btn btn-sm btn-primary"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Edit Faskes Tujuan"
+                                        style="width: 34px; margin: 4px 3px; background-color: #793A93; border-color: #793A93;"><i
+                                            class="fa fa-pencil-square-o"></i></a>
+                                    <a id="btn-lihat-peta" class="btn btn-sm btn-success"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Lihat di Peta" style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-map-marker"></i></a><br>
+                                    <a id="btn-detail-kejadian" class="btn btn-sm btn-primary"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Detail Kejadian"
+                                        style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-files-o"></i></a>
+                                    <a id="btn-checkin-tkp" class="btn btn-sm btn-warning"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Checkin TKP" style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-compass"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td class="text-center">PSC-20210615-204402</td>
+                                <td class="text-center">Wisnu</td>
+                                <td class="text-center">2021-06-15 20:44:02</td>
+                                <td class="text-center">Jl. Raya Buduran No.13, Banjarkemantren, Buduran, Kec. Buduran, Kabupaten Sidoarjo, Jawa Timur 61252, Indonesia</td>
+                                <td class="text-center">RS Jasem</td>
+                                <td class="text-center">W 1964 QR</td>
+                                <td class="text-center">OFFLINE - hp unsuport app</td>
+                                <td class="text-center">	RSI Siti Hajar</td>
+                                <td class="text-center">
+                                    <a id="btn-status" class="btn btn-sm btn-warning"
+                                        style="width: 141px; margin: 4px 3px;">Sedang di TKP</a>
+                                </td>
+                                <td class="text-center">
+                                    <a id="btn-edit-faskes" class="btn btn-sm btn-primary"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Edit Faskes Tujuan"
+                                        style="width: 34px; margin: 4px 3px; background-color: #793A93; border-color: #793A93;"><i
+                                            class="fa fa-pencil-square-o"></i></a>
+                                    <a id="btn-lihat-peta" class="btn btn-sm btn-success"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Lihat di Peta" style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-map-marker"></i></a><br>
+                                    <a id="btn-detail-kejadian" class="btn btn-sm btn-primary"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Detail Kejadian"
+                                        style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-files-o"></i></a>
+                                    <a id="btn-checkin-tkp" class="btn btn-sm btn-warning"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Checkin TKP" style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-compass"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td class="text-center">PSC-20210406-191635</td>
+                                <td class="text-center">Bu Nurul</td>
+                                <td class="text-center">2021-04-06 19:16:35</td>
+                                <td class="text-center">Tanggul rt 2 rw 2 wonoayu sidoarjo</td>
+                                <td class="text-center">PKM WONOAYU</td>
+                                <td class="text-center">W 8512 PP</td>
+                                <td class="text-center">OFFLINE - HP Dibawa driver lain</td>
+                                <td class="text-center">RSU AL-Islam HM Mawardi</td>
+                                <td class="text-center">
+                                    <a id="btn-status" class="btn btn-sm btn-primary"
+                                        style="width: 141px; margin: 4px 3px;">Menuju RS</a>
+                                </td>
+                                <td class="text-center">
+                                    <a id="btn-edit-faskes" class="btn btn-sm btn-primary"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Edit Faskes Tujuan"
+                                        style="width: 34px; margin: 4px 3px; background-color: #793A93; border-color: #793A93;"><i
+                                            class="fa fa-pencil-square-o"></i></a>
+                                    <a id="btn-lihat-peta" class="btn btn-sm btn-success"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Lihat di Peta" style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-map-marker"></i></a><br>
+                                    <a id="btn-detail-kejadian" class="btn btn-sm btn-primary"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Detail Kejadian"
+                                        style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-files-o"></i></a>
+                                    <a id="btn-checkin-tkp" class="btn btn-sm btn-warning"
+                                        data-toggle="tooltip" data-placement="left"
+                                        title="Checkin TKP" style="width: 34px; margin: 4px 3px;"><i
+                                            class="fa fa-compass"></i></a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

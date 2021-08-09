@@ -63,7 +63,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CallCard Number</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Waktu Kejadian</th>
                                 <th class="text-center">Informasi</th>
                                 <th class="text-center">Pelapor</th>
@@ -81,7 +81,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1166-1575761461</td>
+                                <td class="text-center">PSC-20210702-761461</td>
                                 <td class="text-center">2019-12-08 06:31:04</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">TN WAMO</td>
@@ -97,7 +97,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">2</td>
-                                <td class="text-center">CCN1166-1575958190</td>
+                                <td class="text-center">PSC-20210702-958190</td>
                                 <td class="text-center">2019-12-10 13:09:53</td>
                                 <td class="text-center">SIMULASI</td>
                                 <td class="text-center">DR.NYOMAN</td>
@@ -113,7 +113,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">3</td>
-                                <td class="text-center">CCN1001-1576065548</td>
+                                <td class="text-center">PSC-20210708-065548</td>
                                 <td class="text-center">2019-12-11 18:59:38</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">PANDU</td>

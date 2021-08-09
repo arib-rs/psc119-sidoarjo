@@ -64,7 +64,7 @@
                             <tr>
                                 <th class="text-center">#</th>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CallCard Number</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Tanggal</th>
                                 <th class="text-center">Waktu</th>
                                 <th class="text-center">Ambulan</th>
@@ -81,7 +81,7 @@
                             <tr>
                                 <td class="text-center"><input type="checkbox" name="" value=""></td>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1001-1554895244</td>
+                                <td class="text-center">PSC-20210801-112338</td>
                                 <td class="text-center">10/04/2019</td>
                                 <td class="text-center">18:20:45</td>
                                 <td class="text-center">W 8382 PP</td>
@@ -97,7 +97,7 @@
                             <tr>
                                 <td class="text-center"><input type="checkbox" name="" value=""></td>
                                 <td class="text-center">2</td>
-                                <td class="text-center">CCN1001-1568080592</td>
+                                <td class="text-center">PSC-20210802-223752</td>
                                 <td class="text-center">10/09/2019</td>
                                 <td class="text-center">09:00:11</td>
                                 <td class="text-center">W 7403 NB</td>
@@ -134,7 +134,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CallCard Number</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Tanggal</th>
                                 <th class="text-center">Waktu</th>
                                 <th class="text-center">Ambulan</th>
@@ -149,7 +149,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1451-1612446975</td>
+                                <td class="text-center">PSC-20210801-082226</td>
                                 <td class="text-center">04/02/2021</td>
                                 <td class="text-center">20:56:17</td>
                                 <td class="text-center">B 1974 WQ</td>

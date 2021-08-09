@@ -70,7 +70,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CCN</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Informasi</th>
                                 <th class="text-center">Pelapor</th>
                                 <th class="text-center">Waktu</th>
@@ -89,7 +89,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1166-1614432787</td>
+                                <td class="text-center">PSC-20210702-132787</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">TN ZAINURI</td>
                                 <td class="text-center">2021-02-27 18:44:56</td>
@@ -106,7 +106,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">2</td>
-                                <td class="text-center">CCN1466-1613537688</td>
+                                <td class="text-center">PSC-20210703-537688</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">T. HERU</td>
                                 <td class="text-center">2021-02-19 07:10:41</td>
@@ -123,7 +123,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">3</td>
-                                <td class="text-center">CCN1452-1614423265</td>
+                                <td class="text-center">PSC-20210702-423265</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">NY RAHMA</td>
                                 <td class="text-center">2021-02-27 17:54:29</td>
@@ -140,7 +140,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">4</td>
-                                <td class="text-center">CCN1447-1612311324</td>
+                                <td class="text-center">PSC-20210707-311324</td>
                                 <td class="text-center">EMERGENCY BUTTON</td>
                                 <td class="text-center">NANDA</td>
                                 <td class="text-center">2021-02-03 07:15:26</td>
@@ -157,7 +157,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">5</td>
-                                <td class="text-center">CCN1166-1614432787</td>
+                                <td class="text-center">PSC-20210708-432787</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">NY DINA</td>
                                 <td class="text-center">2021-02-27 20:33:11</td>
@@ -174,7 +174,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">6</td>
-                                <td class="text-center">CCN1455-1613874201</td>
+                                <td class="text-center">PSC-20210712-874201</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">DIDIN</td>
                                 <td class="text-center">2021-02-21 09:23:28</td>
@@ -229,7 +229,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CCN</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Informasi</th>
                                 <th class="text-center">Pelapor</th>
                                 <th class="text-center">Waktu</th>
@@ -244,7 +244,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1166-1614432787</td>
+                                <td class="text-center">PSC-20210702-432787</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">NY DINA</td>
                                 <td class="text-center">2021-02-27 20:33:11</td>
@@ -257,7 +257,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">2</td>
-                                <td class="text-center">CCN1466-1613537688</td>
+                                <td class="text-center">PSC-20210702-537688</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">T. HERU</td>
                                 <td class="text-center">2021-02-19 07:10:41</td>
@@ -270,7 +270,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">3</td>
-                                <td class="text-center">CCN1447-1612311324</td>
+                                <td class="text-center">PSC-20210708-311324</td>
                                 <td class="text-center">EMERGENCY BUTTON</td>
                                 <td class="text-center">NANDA</td>
                                 <td class="text-center">2021-02-03 07:15:26</td>
@@ -321,7 +321,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CCN</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Informasi</th>
                                 <th class="text-center">Pelapor</th>
                                 <th class="text-center">Waktu</th>
@@ -336,7 +336,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1166-1614432787</td>
+                                <td class="text-center">PSC-20210702-432787</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">TN ZAINURI</td>
                                 <td class="text-center">2021-02-27 18:44:56</td>
@@ -349,7 +349,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">2</td>
-                                <td class="text-center">CCN1452-1614423265</td>
+                                <td class="text-center">PSC-20210702-423265</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">NY RAHMA</td>
                                 <td class="text-center">2021-02-27 17:54:29</td>
@@ -362,7 +362,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">3</td>
-                                <td class="text-center">CCN1455-1613874201</td>
+                                <td class="text-center">PSC-20210709-874201</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">DIDIN</td>
                                 <td class="text-center">2021-02-21 09:23:28</td>
