@@ -40,6 +40,7 @@
                                                 <th class="text-center">Nama</th>
                                                 <th class="text-center">Profesi</th>
                                                 <th class="text-center">Level</th>
+                                                <th class="text-center">Resource</th>
                                                 <th class="text-center">Faskes Asal</th>
                                                 <th class="text-center">Email</th>
                                                 <th class="text-center">Telepon</th>
@@ -67,7 +68,7 @@
 
 @section('modal')
     <div id="ModalInput" class="modal fade">
-        <div class="modal-dialog modal-dialog-centered modal-lg" style="width:30%">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Form</b></h4>
@@ -80,56 +81,67 @@
                         <div class="form-body">
                             <input type="hidden" class="form-control" id="id" name="id" value="">
                             <div class="form-group">
-                                <label class="control-label col-md-4">Personil<span class="required" style="color: red;">
+                                <label class="control-label col-md-3">Personil<span class="required" style="color: red;">
                                         * </span>
                                 </label>
-                                <div class="col-md-8">
+                                <div class="col-md-9">
                                     <select autocomplete="off" class="form-control select2personil" name="person_id"
                                         id="person_id" style="width: 100%;">
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Level<span class="required" style="color: red;">
+                                <label class="control-label col-md-3">Level<span class="required" style="color: red;">
                                         * </span>
                                 </label>
-                                <div class="col-md-8">
+                                <div class="col-md-9">
                                     <select autocomplete="off" class="form-control select2profesi" name="role_id"
                                         id="role_id" style="width: 100%;">
                                         {!! $optRole !!}
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">Username<span class="required" style="color: red;">
+                            <div class="form-group" id="resource-field" style="display: none;">
+                                <label class="control-label col-md-3">Resource<span class="required" style="color: red;">
                                         * </span>
                                 </label>
-                                <div class="col-md-8">
+                                <div class="col-md-9">
+                                    <select autocomplete="off" class="form-control select2resource" name="resource_id"
+                                        id="resource_id" style="width: 100%;">
+                                        {{-- {!! $optResource !!} --}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Username<span class="required" style="color: red;">
+                                        * </span>
+                                </label>
+                                <div class="col-md-9">
                                     <input type="text" class="form-control" id="username" name="username">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Email<span class="required" style="color: red;">
+                                <label class="control-label col-md-3">Email<span class="required" style="color: red;">
                                         * </span>
                                 </label>
-                                <div class="col-md-8">
+                                <div class="col-md-9">
                                     <input type="text" class="form-control" id="email" name="email">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Password<span class="required" style="color: red;">
+                                <label class="control-label col-md-3">Password<span class="required" style="color: red;">
                                         * </span>
                                 </label>
-                                <div class="col-md-8">
+                                <div class="col-md-9">
                                     <input type="password" class="form-control" id="password" name="password" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-4">Confirm Password<span class="required"
+                                <label class="control-label col-md-3">Confirm Password<span class="required"
                                         style="color: red;">
                                         * </span>
                                 </label>
-                                <div class="col-md-8">
+                                <div class="col-md-9">
                                     <input type="password" class="form-control" id="password_confirmation"
                                         name="password_confirmation" required></span>
                                 </div>
@@ -151,6 +163,7 @@
         $(function() {
             $('.select2personil').select2();
             $('.select2profesi').select2();
+            $('.select2resource').select2();
 
             $('.datatable').DataTable({
                 processing: true,
@@ -172,21 +185,27 @@
                     },
                     {
                         data: 'person.fullname',
-                        name: 'nama'
+                        name: 'person.fullname'
                     },
                     {
                         data: 'person.profession.profesi',
-                        name: 'profesi',
+                        name: 'person.profession.profesi',
                         sClass: 'text-center'
                     },
                     {
                         data: 'role.role',
-                        name: 'level',
+                        name: 'role.role',
+                        sClass: 'text-center'
+                    },
+                    {
+                        data: 'resource.nomor_polisi',
+                        name: 'resource.nomor_polisi',
+                        defaultContent: "-",
                         sClass: 'text-center'
                     },
                     {
                         data: 'person.health_facility.nama',
-                        name: 'faskes',
+                        name: 'person.health_facility.nama',
                         sClass: 'text-center'
                     },
                     {
@@ -197,13 +216,13 @@
                     },
                     {
                         data: 'person.phone_num',
-                        name: 'phone_num',
+                        name: 'person.phone_num',
                         defaultContent: "-",
                         sClass: 'text-center'
                     },
                     {
                         data: 'person.profession.tipe_user',
-                        name: 'tipe_user',
+                        name: 'person.profession.tipe_user',
                         sClass: 'text-center'
                     },
                     {
@@ -223,6 +242,26 @@
 
             $('#form-data').submit(function(e) {
                 e.preventDefault();
+            });
+            $('#person_id').change(function() {
+                $('#role_id').trigger('change');
+            });
+            $('#role_id').change(function() {
+                if ($(this).val() == 6) {
+                    var idhf = $('#person_id').find(':selected').data('hf');
+                    console.log(idhf);
+                    $('#resource-field').css('display', 'block');
+                    $.ajax({
+                        url: "get-resources-by-hf/" + idhf,
+                        method: 'GET',
+                        success: function(result) {
+                            $('#resource_id').html(result)
+                        }
+                    });
+                } else {
+                    $('#resource-field').css('display', 'none');
+                }
+                $('#resource_id').val('').trigger('change');
             });
             $('#btn-add').click(function() {
                 //reset
@@ -324,16 +363,32 @@
                             form.find('input:password').attr('disabled', 'disabled');
                             form.find('#role_id option').removeAttr('selected');
                             form.find('#role_id').val(result.role_id).trigger('change');
-                            form.find('#person_id').append("<option value='" + result.person
+                            form.find('#person_id').append("<option data-hf='" + result
+                                .person.health_facility_id + "' value='" + result.person
                                 .id +
-                                "'>" + result.person.fullname + " - " + result.person
+                                "'>" + result.person.fullname + " - " + result
+                                .person.profession.profesi + " - " + result.person
                                 .health_facility.nama +
                                 " </option>").trigger('change');
+
                             setTimeout(function() {
                                 form.find('#person_id').val(result.person_id)
                                     .trigger('change');
-                            }, 500);
 
+                            }, 400);
+                            setTimeout(function() {
+                                form.find('#resource_id').append("<option value='" +
+                                    result
+                                    .resource_id +
+                                    "'>" + result.resource.nomor_polisi +
+                                    " - " + result
+                                    .resource.kode +
+                                    " </option>").trigger('change');
+                            }, 800);
+                            setTimeout(function() {
+                                form.find('#resource_id').val(result.resource_id)
+                                    .trigger('change');
+                            }, 900);
                             b.removeAttr('disabled');
                             i.removeClass().addClass(cls);
                             $('#ModalInput').modal('show');

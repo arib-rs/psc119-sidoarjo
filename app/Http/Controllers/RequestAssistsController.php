@@ -24,14 +24,9 @@ class RequestAssistsController extends Controller
             ->addColumn('Aksi', function ($data) {
                 $btnAmbulan = '';
                 if ($data->status == 0) {
-                    $btnAmbulan = '<a id="btn-req-online" class="btn btn-sm btn-warning" data-id="' .
+                    $btnAmbulan = '<a id="btn-req" class="btn btn-sm btn-success" data-id="' .
                         $data->id .
-                        '" title="Request Bantuan Ambulan Online" style="margin: 4px 3px;">
-                                <i class="fa fa-ambulance "></i>
-                            </a>
-                            <a id="btn-req-offline" class="btn btn-sm btn-danger" data-id="' .
-                        $data->id .
-                        '" title="Request Bantuan Ambulan Offline" style="margin: 4px 3px;">
+                        '" title="Request Bantuan" style="margin: 4px 3px; width:76px">
                                 <i class="fa fa-ambulance "></i>
                             </a>
                             <br>';

@@ -21,6 +21,7 @@ class User extends Authenticatable
         'email',
         'password',
         'person_id',
+        'resource_id',
         'status',
         'type_user',
         'is_active',
@@ -48,6 +49,10 @@ class User extends Authenticatable
     public function person()
     {
         return $this->belongsTo(Person::class, 'person_id');
+    }
+    public function resource()
+    {
+        return $this->belongsTo(Resource::class, 'resource_id');
     }
     public function role()
     {

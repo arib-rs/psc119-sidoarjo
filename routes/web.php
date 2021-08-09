@@ -94,6 +94,10 @@ Route::middleware(['auth'])->group(
 
         Route::get('get-users', 'UsersController@getUsers')->name('get-users');
         Route::get('get-personil', 'UsersController@getPersonil');
+        Route::get('get-resources-by-hf/{idhf}', 'UsersController@getResourcesByFaskes');
+
+        Route::get('get-resources-real-time', 'MonitoringResourcesController@getResourcesRealTime');
+        Route::get('get-faskes-real-time', 'MonitoringResourcesController@getHFRealTime');
 
         Route::get('get-ambulan', 'ResourcesController@getAmbulan');
         Route::get('get-sub-kategori', 'SubCategoriesController@getSubKategori');

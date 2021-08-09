@@ -115,7 +115,7 @@
                             <a id="req-bantuan-notif" href="{{ url('/req_bantuan') }}">
                                 <span style="color:white">Butuh Bantuan</span>
                                 <i class="fa fa-bell-o"></i>
-                                <span class="label label-warning" id="req-bantuan-count">0</span>
+                                <span class="label label-danger" id="req-bantuan-count">0</span>
                             </a>
                         </li>
                         <!-- Notifications: style can be found in dropdown.less -->
@@ -374,14 +374,14 @@
             success: function(result) {
                 if (result > 0) {
                     $('#req-bantuan-notif').removeClass().addClass('butuh-bantuan');
-
+                    $('#req-bantuan-count').html(result);
                 } else {
                     $('#req-bantuan-notif').removeClass();
+                    $('#req-bantuan-count').html('');
                 }
-                $('#req-bantuan-count').html(result);
             },
             complete: function() {
-                setTimeout(getReqBantuanNotif, 1000);
+                setTimeout(getReqBantuanNotif, 3000);
             }
         });
     }
