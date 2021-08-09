@@ -48,7 +48,7 @@
                                         <div class="post">
                                             <div class="row">
                                                 <div class="col-md-2">
-                                                    <p>Call Card Number</p>
+                                                    <p>No. Laporan</p>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <input type="text" class="form-control" value="" name="kode_kasus"
@@ -304,12 +304,12 @@
                                                                 Komando Daerah Militer Sidoarjo
                                                             </label>
                                                         </div>
-                                                        <div class="checkbox">
+                                                        {{-- <div class="checkbox">
                                                             <label>
                                                                 <input type="checkbox" name="is_manies" value=true>
                                                                 SiManies
                                                             </label>
-                                                        </div>
+                                                        </div> --}}
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
@@ -317,17 +317,16 @@
                                                     <hr style="border-color: #d2d6de; margin: 5px 0 15px 0;">
                                                     <select class="form-control" name="sumber_informasi" autocomplete="off">
                                                         <option value="">-- Pilih Informasi --</option>
-                                                        <option value="Telepon 119">Telepon 119</option>
+                                                        <option value="Telepon HP">Telepon HP</option>
                                                         {{-- <option value="Rumah Sakit - PSTN">Rumah Sakit - PSTN</option>
-                                                    <option value="Si Manies">Si Manies</option>
-                                                    <option value="Radio SPGDT">Radio SPGDT</option> --}}
-                                                        <option value="Telepon Lokal">Telepon Lokal</option>
-                                                        <option value="Telepon WhatsApp">Telepon WhatsApp</option>
-                                                        <option value="Chat WhatsApp">Chat WhatsApp</option>
+                                                                <option value="Si Manies">Si Manies</option>
+                                                                <option value="Radio SPGDT">Radio SPGDT</option> --}}
+                                                        <option value="Telepon WA">Telepon WA</option>
+                                                        <option value="Chat WA">Chat WA</option>
                                                         <option value="Sosial Media">Sosial Media</option>
-                                                        <option value="HP">HP</option>
-                                                        <option value="Simulasi">SIMULASI</option>
-                                                        {{-- <option value="Emergency Button">Emergency Button</option> --}}
+                                                        <option value="Radio SPGDT">Radio SPGDT</option>
+                                                        <option value="Simulasi">Simulasi</option>
+                                                        <option value="Emergency Button">Emergency Button</option>
                                                     </select>
                                                 </div>
                                             </div>

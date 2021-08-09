@@ -3,7 +3,8 @@
 @section('title', 'Detail Penanganan')
 
 @section('head')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
 <link rel="stylesheet" href="{{ asset('template') }}/css/magnific-popup.css">
 @endsection
 
@@ -21,7 +22,7 @@
     <section class="content-header">
         <h1>
             Detail Penanganan
-            <small>CCN :20210804-1231</small>
+            <small>PSC-20210806-201501</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-sliders"></i> Kejadian & Bantuan</a></li>
@@ -38,8 +39,8 @@
                     <h3 style="margin-top: 10px;">Call Info</h3>
                     <table>
                         <tr>
-                            <td style="width: 12em; height: 32px;"><b>CCN</b></td>
-                            <td>20210804-1231</td>
+                            <td style="width: 12em; height: 32px;"><b>No. Laporan</b></td>
+                            <td>PSC-20210806-201501</td>
                         </tr>
                         <tr>
                             <td style="width: 12em; height: 32px;"><b>Call Taker</b></td>
@@ -73,7 +74,8 @@
                             </tr>
                             <tr>
                                 <td style="width: 60em;">
-                                    Jalan Diponegroro No. 139, Lemah Putro, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61231
+                                    Jalan Diponegroro No. 139, Lemah Putro, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa
+                                    Timur 61231
                                 </td>
                             </tr>
                             <tr>
@@ -96,6 +98,16 @@
                                     -7.432243074443844, 112.59669414550783
                                 </td>
                             </tr>
+                            <tr>
+                                <td style="width: 12em; height: 32px;">
+                                    <b>Maps Penanganan</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 60em;">
+                                    
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -103,7 +115,8 @@
                     <h3 style="margin-top: 10px;">Bantuan</h3>
                     <table>
                         <tr>
-                            <td style="width: 20em; height: 32px; font-size:large;"><b>AMB_HMM - W 1576 QB OFFLINE</b></td>
+                            <td style="width: 20em; height: 32px; font-size:large;"><b>AMB_HMM - W 1576 QB OFFLINE</b>
+                            </td>
                             <td></td>
                         </tr>
                         <tr>
@@ -168,7 +181,8 @@
                                 <td style="width: 4.4em;">
                                     <h4>Pasien</h4>
                                 </td>
-                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDataPasien">Entry Baru</button></td>
+                                <td><button class="btn btn-primary" data-toggle="modal"
+                                        data-target="#ModalDataPasien">Entry Baru</button></td>
                             </tr>
                         </table>
                     </div>
@@ -191,15 +205,29 @@
                                     <td class="text-center">65</td>
                                     <td class="text-center">W 1576 QB</td>
                                     <td class="text-center">
-                                        <a href="#" class="btn btn-xs btn-warning" data-toggle="modal" data-placement="left" data-target="#ModalVitalSign" title="Vital Sign" style="width: 24px; margin: auto 2px;"><i class="fa fa-stethoscope"></i></a>
-                                        <a href="#" class="btn btn-xs btn-danger" data-toggle="modal" data-placement="left" title="Triase" data-target="#ModalStatusTriase" style="width: 24px; margin: auto 2px;"><i class="fa fa-warning"></i></a>
-                                        <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" title="Upload Foto" data-target="#ModalUploadFoto" style="width: 24px; margin: auto 2px;"><i class="fa fa-image"></i></a>
-                                        <a href="#" class="btn btn-xs btn-success" data-toggle="modal" data-placement="left" title="Tindakan" data-target="#ModalTindakan" style="width: 24px; margin: auto 2px;"><i class="fa fa-briefcase"></i></a>
+                                        <a href="#" class="btn btn-xs btn-warning" data-toggle="modal"
+                                            data-placement="left" data-target="#ModalVitalSign" title="Vital Sign"
+                                            style="width: 24px; margin: auto 2px;"><i class="fa fa-stethoscope"></i></a>
+                                        <a href="#" class="btn btn-xs btn-danger" data-toggle="modal"
+                                            data-placement="left" title="Triase" data-target="#ModalStatusTriase"
+                                            style="width: 24px; margin: auto 2px;"><i class="fa fa-warning"></i></a>
+                                        <a href="#" class="btn btn-xs btn-primary" data-toggle="modal"
+                                            data-placement="left" title="Upload Foto" data-target="#ModalUploadFoto"
+                                            style="width: 24px; margin: auto 2px;"><i class="fa fa-image"></i></a>
+                                        <a href="#" class="btn btn-xs btn-success" data-toggle="modal"
+                                            data-placement="left" title="Tindakan" data-target="#ModalTindakan"
+                                            style="width: 24px; margin: auto 2px;"><i class="fa fa-briefcase"></i></a>
                                     </td>
                                     <td class="text-center">
-                                        <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-placement="left" title="Detail Pasien" data-target="#ModalDetailPasien" style="width: 24px; margin: auto 2px;"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="btn btn-xs btn-warning" data-toggle="modal" data-placement="left" title="Edit Pasien" data-target="#ModalDataPasien" style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil"></i></a>
-                                        <a href="#" class="btn btn-xs btn-danger" data-placement="left" title="Delete Pasien" style="width: 24px; margin: auto 2px;"><i class="fa fa-trash-o"></i></a>
+                                        <a href="#" class="btn btn-xs btn-primary" data-toggle="modal"
+                                            data-placement="left" title="Detail Pasien" data-target="#ModalDetailPasien"
+                                            style="width: 24px; margin: auto 2px;"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="btn btn-xs btn-warning" data-toggle="modal"
+                                            data-placement="left" title="Edit Pasien" data-target="#ModalDataPasien"
+                                            style="width: 24px; margin: auto 2px;"><i class="fa fa-pencil"></i></a>
+                                        <a href="#" class="btn btn-xs btn-danger" data-placement="left"
+                                            title="Delete Pasien" style="width: 24px; margin: auto 2px;"><i
+                                                class="fa fa-trash-o"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -236,14 +264,20 @@
                             <div class="col-md-2 text-center">
                                 <div style="height:160px; margin-bottom:10px;">
                                     <div style="border:1px solid #ccc; padding:5px">
-                                        <center><img class="show_image_incident" src="https://cdn.iconscout.com/icon/free/png-512/laptop-user-1-1179329.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
+                                        <center><img class="show_image_incident"
+                                                src="https://cdn.iconscout.com/icon/free/png-512/laptop-user-1-1179329.png"
+                                                class="foto-penanganan img-responsive"
+                                                style="max-height:150px; cursor:pointer"></center>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-2 text-center">
                                 <div style="height:160px; margin-bottom:10px;">
                                     <div style="border:1px solid #ccc; padding:5px">
-                                        <center><img class="show_image_incident" src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
+                                        <center><img class="show_image_incident"
+                                                src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png"
+                                                class="foto-penanganan img-responsive"
+                                                style="max-height:150px; cursor:pointer"></center>
                                     </div>
                                 </div>
                             </div>
@@ -277,12 +311,14 @@
                                 </tr>
                                 <tr>
                                     <td>5/04/2021 11:10:40</td>
-                                    <td>Dispatcher mengirim request ke resource (OFFLINE) Ambulan <b>[184303-04]</b></td>
+                                    <td>Dispatcher mengirim request ke resource (OFFLINE) Ambulan <b>[184303-04]</b>
+                                    </td>
                                     <td class="text-center">00:01:46</td>
                                 </tr>
                                 <tr>
                                     <td>15/04/2021 11:10:40</td>
-                                    <td><b>[184303-04] [ALEY]</b> Resource menerima penugasan (Manual) - 15/04/2021 11:11:31</td>
+                                    <td><b>[184303-04] [ALEY]</b> Resource menerima penugasan (Manual) - 15/04/2021
+                                        11:11:31</td>
                                     <td class="text-center">00:00:00</td>
                                 </tr>
                                 <tr>
@@ -297,7 +333,8 @@
                                 </tr>
                                 <tr>
                                     <td>15/04/2021 11:11:00</td>
-                                    <td><b>[184303-04] [mario]</b>Telah sampai di lokasi kejadian (Manual) - 15/04/2021 12:19:22</td>
+                                    <td><b>[184303-04] [mario]</b>Telah sampai di lokasi kejadian (Manual) - 15/04/2021
+                                        12:19:22</td>
                                     <td class="text-center">00:00:20</td>
                                 </tr>
                                 <tr>
@@ -390,7 +427,8 @@
                                 </label>
                                 <div class="col-md-8">
                                     <select class="form-control select">
-                                        <option value="">W 1576 QB (15/04/2021 11:11:31 s/d 15/04/2021 12:19:22)</option>
+                                        <option value="">W 1576 QB (15/04/2021 11:11:31 s/d 15/04/2021 12:19:22)
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -460,7 +498,8 @@
                                 <label class="control-label col-md-4">Frekuensi Pernafasan
                                 </label>
                                 <div class="col-md-8">
-                                    <input type="text" id="frekuensi_pernafasan" name="frekuensi_pernafasan" class="form-control">
+                                    <input type="text" id="frekuensi_pernafasan" name="frekuensi_pernafasan"
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -480,7 +519,8 @@
                                         </div>
                                         <input type="text" class="form-control pull-right" id="datetimepicker1">
                                     </div>
-                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021 12:19:22</span>
+                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021
+                                        12:19:22</span>
                                 </div>
                             </div>
                         </div>
@@ -515,10 +555,17 @@
                                 <label class="control-label col-md-4">Status Triase
                                 </label>
                                 <div class="col-md-8">
-                                    <div class="col-md-12" style="background:green; height: 2em; margin-bottom: 1px; padding-top: 3px;"><input type="checkbox"></div>
-                                    <div class="col-md-12" style="background:yellow; height: 2em; margin-bottom: 1px; padding-top: 3px;"><input type="checkbox"></div>
-                                    <div class="col-md-12" style="background:red; height: 2em; margin-bottom: 1px; padding-top: 3px;"><input type="checkbox"></div>
-                                    <div class="col-md-12" style="background:black; height: 2em; padding-top: 3px;"><input type="checkbox"></div>
+                                    <div class="col-md-12"
+                                        style="background:green; height: 2em; margin-bottom: 1px; padding-top: 3px;">
+                                        <input type="checkbox"></div>
+                                    <div class="col-md-12"
+                                        style="background:yellow; height: 2em; margin-bottom: 1px; padding-top: 3px;">
+                                        <input type="checkbox"></div>
+                                    <div class="col-md-12"
+                                        style="background:red; height: 2em; margin-bottom: 1px; padding-top: 3px;">
+                                        <input type="checkbox"></div>
+                                    <div class="col-md-12" style="background:black; height: 2em; padding-top: 3px;">
+                                        <input type="checkbox"></div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -538,7 +585,8 @@
                                         </div>
                                         <input type="text" class="form-control pull-right" id="datetimepicker2">
                                     </div>
-                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021 12:19:22</span>
+                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021
+                                        12:19:22</span>
                                 </div>
                             </div>
                         </div>
@@ -593,7 +641,8 @@
                                         </div>
                                         <input type="text" class="form-control pull-right" id="datetimepicker3">
                                     </div>
-                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021 12:19:22</span>
+                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021
+                                        12:19:22</span>
                                 </div>
                             </div>
                         </div>
@@ -647,7 +696,8 @@
                                         </div>
                                         <input type="text" class="form-control pull-right" id="datetimepicker4">
                                     </div>
-                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021 12:19:22</span>
+                                    <span style="color: red;">*Range waktu : 15-04-2021 11:11:31 s/d 15-04-2021
+                                        12:19:22</span>
                                 </div>
                             </div>
                         </div>
@@ -667,7 +717,8 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Detail Penanganan Pasien</b></h4>
+                <h4 style="display:inline-block" class="modal-title" id="ModalInputTitle"><b>Detail Penanganan
+                        Pasien</b></h4>
                 <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -692,7 +743,8 @@
                         </tr>
                         <tr>
                             <th style="border-top: #fff;">Alamat</th>
-                            <td style="border-top: #fff;">Jalan Diponegroro No. 139, Lemah Putro, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61231</td>
+                            <td style="border-top: #fff;">Jalan Diponegroro No. 139, Lemah Putro, Kec. Sidoarjo,
+                                Kabupaten Sidoarjo, Jawa Timur 61231</td>
                         </tr>
                         <tr>
                             <th style="border-top: #fff; width: 200px;">Ditangani Oleh</th>
@@ -791,14 +843,19 @@
                     <div class="col-md-4 text-center">
                         <div style="height:160px; margin-bottom:10px;">
                             <div style="border:1px solid #ccc; padding:5px">
-                                <center><img src="https://cdn.iconscout.com/icon/free/png-512/laptop-user-1-1179329.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
+                                <center><img src="https://cdn.iconscout.com/icon/free/png-512/laptop-user-1-1179329.png"
+                                        class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer">
+                                </center>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
                         <div style="height:160px; margin-bottom:10px;">
                             <div style="border:1px solid #ccc; padding:5px">
-                                <center><img src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png" class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer"></center>
+                                <center><img
+                                        src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png"
+                                        class="foto-penanganan img-responsive" style="max-height:150px; cursor:pointer">
+                                </center>
                             </div>
                         </div>
                     </div>
@@ -820,7 +877,8 @@
                         </tr>
                         <tr>
                             <td>15/04/2021 11:10:40</td>
-                            <td><b>[184303-04] [ALEY]</b> Resource menerima penugasan (Manual) - 15/04/2021 11:11:31</td>
+                            <td><b>[184303-04] [ALEY]</b> Resource menerima penugasan (Manual) - 15/04/2021 11:11:31
+                            </td>
                             <td class="text-center">00:00:00</td>
                         </tr>
                         <tr>
@@ -835,7 +893,8 @@
                         </tr>
                         <tr>
                             <td>15/04/2021 11:11:00</td>
-                            <td><b>[184303-04] [mario]</b>Telah sampai di lokasi kejadian (Manual) - 15/04/2021 12:19:22</td>
+                            <td><b>[184303-04] [mario]</b>Telah sampai di lokasi kejadian (Manual) - 15/04/2021 12:19:22
+                            </td>
                             <td class="text-center">00:00:20</td>
                         </tr>
                         <tr>
@@ -855,7 +914,9 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js">
+</script>
 <script src="{{ asset('template') }}/js/jquery.magnific-popup.js"></script>
 
 <script>

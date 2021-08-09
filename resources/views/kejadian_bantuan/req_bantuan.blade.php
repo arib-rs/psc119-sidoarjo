@@ -56,7 +56,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">NO</th>
-                                                    <th class="text-center">CCN</th>
+                                                    <th class="text-center">NO. LAPORAN</th>
                                                     <th class="text-center">PELAPOR</th>
                                                     <th class="text-center">WAKTU</th>
                                                     <th class="text-center">LOKASI</th>
@@ -78,7 +78,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">NO</th>
-                                                    <th class="text-center">CCN</th>
+                                                    <th class="text-center">NO. LAPORAN</th>
                                                     <th class="text-center">PELAPOR</th>
                                                     <th class="text-center">WAKTU KEJADIAN</th>
                                                     <th class="text-center">WAKTU REQUEST</th>
@@ -218,28 +218,28 @@
                     <!-- END VALIDATION STATES-->
                 </div>
                 <!-- <form id="form-data">
-                                                                                                                                                                                                                                                                            <div class="modal-body">
-                                                                                                                                                                                                                                                                                <table id="example-table" class="table table-bordered dataTable no-footer">
-                                                                                                                                                                                                                                                                                    <thead>
-                                                                                                                                                                                                                                                                                        <tr>
-                                                                                                                                                                                                                                                                                            <th class="text-center">Resource</th>
-                                                                                                                                                                                                                                                                                            <th class="text-center">Tujuan</th>
-                                                                                                                                                                                                                                                                                            <th class="text-center">Waktu Request</th>
-                                                                                                                                                                                                                                                                                            <th class="text-center">Status</th>
-                                                                                                                                                                                                                                                                                            <th class="text-center">Aksi</th>
-                                                                                                                                                                                                                                                                                        </tr>
-                                                                                                                                                                                                                                                                                    </thead>
-                                                                                                                                                                                                                                                                                    <tbody>
-                                                                                                                                                                                                                                                                                        <tr>
-                                                                                                                                                                                                                                                                                            <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
-                                                                                                                                                                                                                                                                                            <td class="text-center">RSI Siti Hajar</td>
-                                                                                                                                                                                                                                                                                            <td class="text-center">2021-03-09 12:27:08</td>
-                                                                                                                                                                                                                                                                                            <td class="text-center">DITERIMA</td>
-                                                                                                                                                                                                                                                                                            <td class="text-center">(SELESAI)</td>
-                                                                                                                                                                                                                                                                                        </tr>
-                                                                                                                                                                                                                                                                                    </tbody>
-                                                                                                                                                                                                                                                                                </table>
-                                                                                                                                                                                                                                                                        </form> -->
+                                                                                                                                                                                                                                                                                        <div class="modal-body">
+                                                                                                                                                                                                                                                                                            <table id="example-table" class="table table-bordered dataTable no-footer">
+                                                                                                                                                                                                                                                                                                <thead>
+                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                        <th class="text-center">Resource</th>
+                                                                                                                                                                                                                                                                                                        <th class="text-center">Tujuan</th>
+                                                                                                                                                                                                                                                                                                        <th class="text-center">Waktu Request</th>
+                                                                                                                                                                                                                                                                                                        <th class="text-center">Status</th>
+                                                                                                                                                                                                                                                                                                        <th class="text-center">Aksi</th>
+                                                                                                                                                                                                                                                                                                    </tr>
+                                                                                                                                                                                                                                                                                                </thead>
+                                                                                                                                                                                                                                                                                                <tbody>
+                                                                                                                                                                                                                                                                                                    <tr>
+                                                                                                                                                                                                                                                                                                        <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
+                                                                                                                                                                                                                                                                                                        <td class="text-center">RSI Siti Hajar</td>
+                                                                                                                                                                                                                                                                                                        <td class="text-center">2021-03-09 12:27:08</td>
+                                                                                                                                                                                                                                                                                                        <td class="text-center">DITERIMA</td>
+                                                                                                                                                                                                                                                                                                        <td class="text-center">(SELESAI)</td>
+                                                                                                                                                                                                                                                                                                    </tr>
+                                                                                                                                                                                                                                                                                                </tbody>
+                                                                                                                                                                                                                                                                                            </table>
+                                                                                                                                                                                                                                                                                    </form> -->
             </div>
         </div>
     </div>
@@ -494,28 +494,28 @@
                     <!-- END VALIDATION STATES-->
                 </div>
                 <!-- <form id="form-data">
-                                                                                        <div class="modal-body">
-                                                                                            <table id="example-table" class="table table-bordered dataTable no-footer">
-                                                                                                <thead>
-                                                                                                    <tr>
-                                                                                                        <th class="text-center">Resource</th>
-                                                                                                        <th class="text-center">Tujuan</th>
-                                                                                                        <th class="text-center">Waktu Request</th>
-                                                                                                        <th class="text-center">Status</th>
-                                                                                                        <th class="text-center">Aksi</th>
-                                                                                                    </tr>
-                                                                                                </thead>
-                                                                                                <tbody>
-                                                                                                    <tr>
-                                                                                                        <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
-                                                                                                        <td class="text-center">RSI Siti Hajar</td>
-                                                                                                        <td class="text-center">2021-03-09 12:27:08</td>
-                                                                                                        <td class="text-center">DITERIMA</td>
-                                                                                                        <td class="text-center">(SELESAI)</td>
-                                                                                                    </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                    </form> -->
+                                                                                                    <div class="modal-body">
+                                                                                                        <table id="example-table" class="table table-bordered dataTable no-footer">
+                                                                                                            <thead>
+                                                                                                                <tr>
+                                                                                                                    <th class="text-center">Resource</th>
+                                                                                                                    <th class="text-center">Tujuan</th>
+                                                                                                                    <th class="text-center">Waktu Request</th>
+                                                                                                                    <th class="text-center">Status</th>
+                                                                                                                    <th class="text-center">Aksi</th>
+                                                                                                                </tr>
+                                                                                                            </thead>
+                                                                                                            <tbody>
+                                                                                                                <tr>
+                                                                                                                    <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
+                                                                                                                    <td class="text-center">RSI Siti Hajar</td>
+                                                                                                                    <td class="text-center">2021-03-09 12:27:08</td>
+                                                                                                                    <td class="text-center">DITERIMA</td>
+                                                                                                                    <td class="text-center">(SELESAI)</td>
+                                                                                                                </tr>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                </form> -->
             </div>
         </div>
     </div>

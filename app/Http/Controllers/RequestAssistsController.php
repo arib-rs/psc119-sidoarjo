@@ -26,29 +26,30 @@ class RequestAssistsController extends Controller
                 if ($data->status == 0) {
                     $btnAmbulan = '<a id="btn-req" class="btn btn-sm btn-success" data-id="' .
                         $data->id .
-                        '" title="Request Bantuan" style="margin: 4px 3px; width:76px">
+                        '" title="Request Bantuan" style="margin: 4px 3px;">
                                 <i class="fa fa-ambulance "></i>
-                            </a>
-                            <br>';
+                            </a>';
+                } else {
+                    $btnAmbulan = '<a id="btn-lihat" class="btn btn-sm btn-info" data-id="' .
+                        $data->id .
+                        '" title="Lihat Detail" style="margin: 4px 3px; background-color: #8e44ad; border-color: #8e44ad;">
+                                <i class="fa fa-eye"></i>
+                         </a>';
                 }
                 return $btnAmbulan .
-                    '<a id="btn-lihat" class="btn btn-sm btn-info" data-id="' .
-                    $data->id .
-                    '" title="Lihat Detail" style="margin: 4px 3px; background-color: #8e44ad; border-color: #8e44ad;">
-                    <i class="fa fa-eye"></i>
-                </a>
-                <a id="btn-detail" class="btn btn-sm btn-primary" data-id="' .
+                    '
+                     <a id="btn-detail" class="btn btn-sm btn-primary" data-id="' .
                     $data->id .
                     '" title="Detail Penanganan" style="margin: 4px 3px; background-color: #428bca; border-color: #428bca;">
-                <i class="fa fa-files-o"></i>
-                </a>
-                <br>
-                <a id="btn-edit" class="btn btn-sm btn-warning" data-id="' .
+                            <i class="fa fa-files-o"></i>
+                        </a>
+                        <br>
+                        <a id="btn-edit" class="btn btn-sm btn-warning" data-id="' .
                     $data->id .
                     '" title="Edit Kejadian" style="margin: 4px 3px; background-color: #45b6e0; border-color: #45b6e0;">
-                <i class="fa fa-pencil-square-o"></i>
-                </a>
-                <a id="btn-monitor" class="btn btn-sm btn-danger" data-id="' .
+                        <i class="fa fa-pencil-square-o"></i>
+                        </a>
+                    <a id="btn-monitor" class="btn btn-sm btn-danger" data-id="' .
                     $data->id .
                     '" title="Monitoring Penanganan" style="margin: 4px 3px; background-color: #89c4f4; border-color: #89c4f4;">
                 <i class="fa fa-desktop"></i>

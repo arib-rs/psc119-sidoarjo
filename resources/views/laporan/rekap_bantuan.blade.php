@@ -63,7 +63,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CallCard Number</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Waktu Kejadian</th>
                                 <th class="text-center">Informasi</th>
                                 <th class="text-center">Pelapor</th>
@@ -83,7 +83,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1459-1615467473</td>
+                                <td class="text-center">PSC-20210702-467473</td>
                                 <td class="text-center">2021-03-11 19:57:57</td>
                                 <td class="text-center">SOSIAL MEDIA</td>
                                 <td class="text-center">BU TUTUS</td>
@@ -104,7 +104,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">2</td>
-                                <td class="text-center">CCN1459-1615457321</td>
+                                <td class="text-center">PSC-20210702-457321</td>
                                 <td class="text-center">2021-03-11 17:08:45</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">LUTFI</td>
@@ -125,7 +125,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">3</td>
-                                <td class="text-center">CCN1459-1615164809</td>
+                                <td class="text-center">PSC-20210708-164809</td>
                                 <td class="text-center">2021-03-08 07:53:31</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">NY KIKI</td>

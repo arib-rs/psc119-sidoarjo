@@ -75,7 +75,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th class="text-center">CallCard Number</th>
+                                <th class="text-center">No. Laporan</th>
                                 <th class="text-center">Informasi</th>
                                 <th class="text-center">Pelapor</th>
                                 <th class="text-center">Waktu</th>
@@ -89,7 +89,7 @@
                         <tbody>
                             <tr>
                                 <td class="text-center">1</td>
-                                <td class="text-center">CCN1166-1612846425</td>
+                                <td class="text-center">PSC-20210702-846425</td>
                                 <td class="text-center">SIMULASI</td>
                                 <td class="text-center">SEBONE</td>
                                 <td class="text-center">2021-02-09 11:53:48</td>
@@ -101,7 +101,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">2</td>
-                                <td class="text-center">CCN1455-1612218755</td>
+                                <td class="text-center">PSC-20210702-218755</td>
                                 <td class="text-center">TELEPON 119</td>
                                 <td class="text-center">NANDA</td>
                                 <td class="text-center">2021-02-02 05:32:38</td>
@@ -113,7 +113,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center">3</td>
-                                <td class="text-center">CCN1454-1613405064</td>
+                                <td class="text-center">PSC-20210708-405064</td>
                                 <td class="text-center">HP</td>
                                 <td class="text-center">IGD RS. SITI KHODIJAH SEPANJANG</td>
                                 <td class="text-center">2021-02-15 23:04:26</td>
