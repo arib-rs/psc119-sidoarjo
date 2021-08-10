@@ -40,7 +40,7 @@
                                                 <th class="text-center">Nama</th>
                                                 <th class="text-center">Profesi</th>
                                                 <th class="text-center">Level</th>
-                                                <th class="text-center">Resource</th>
+                                                {{-- <th class="text-center">Resource</th> --}}
                                                 <th class="text-center">Faskes Asal</th>
                                                 <th class="text-center">Email</th>
                                                 <th class="text-center">Telepon</th>
@@ -101,17 +101,17 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group" id="resource-field" style="display: none;">
+                            {{-- <div class="form-group" id="resource-field" style="display: none;">
                                 <label class="control-label col-md-3">Resource<span class="required" style="color: red;">
                                         * </span>
                                 </label>
                                 <div class="col-md-9">
                                     <select autocomplete="off" class="form-control select2resource" name="resource_id"
                                         id="resource_id" style="width: 100%;">
-                                        {{-- {!! $optResource !!} --}}
+
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label class="control-label col-md-3">Username<span class="required" style="color: red;">
                                         * </span>
@@ -197,12 +197,12 @@
                         name: 'role.role',
                         sClass: 'text-center'
                     },
-                    {
-                        data: 'resource.nomor_polisi',
-                        name: 'resource.nomor_polisi',
-                        defaultContent: "-",
-                        sClass: 'text-center'
-                    },
+                    // {
+                    //     data: 'resource.nomor_polisi',
+                    //     name: 'resource.nomor_polisi',
+                    //     defaultContent: "-",
+                    //     sClass: 'text-center'
+                    // },
                     {
                         data: 'person.health_facility.nama',
                         name: 'person.health_facility.nama',

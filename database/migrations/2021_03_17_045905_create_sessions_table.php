@@ -20,6 +20,7 @@ class CreateSessionsTable extends Migration
             $table->string('device_id')->nullable();
             $table->string('status');
             $table->bigInteger('user_id');
+            $table->bigInteger('resource_id')->nullable();
             $table->string('lng')->nullable();
             $table->string('lat')->nullable();
             $table->timestamp('login_at');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Incident;
+use App\Models\Resource;
 use App\Models\Session;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,13 +28,18 @@ class ApiController extends Controller
             if ($password) {
                 $data['msg'] = 'Login Berhasil';
                 $data['user'] = $user;
-                Session::create([
+                $data['resources'] = '';
+                if ($user->role_id == 6) {
+                    $data['resources'] = Resource::where('health_facility_id', '=', $user->person->health_facility_id)->get();
+                }
+                $idSession = Session::create([
                     'hostname' => $request->ip() . '-' . gethostname(),
                     'device_id' => substr(exec('getmac'), 0, 17),
-                    'status' => 'Mobile Login',
+                    'status' => 'Ready',
                     'user_id' => $user->id,
                     'login_at' => now()
-                ]);
+                ])->id;
+                $data['session_id'] = $idSession;
             } else {
                 $data['msg'] = 'Password Salah';
             }
@@ -54,6 +60,31 @@ class ApiController extends Controller
 
         $data['msg'] = 'Anda telah logout';
         return response()->json($data);
+    }
+    public function pilihResource(Request $request)
+    {
+        Session::where([
+            'id' => $request->session_id,
+        ])->update([
+            'resource_id' => $request->resource_id
+        ]);
+    }
+    public function storeLocation(Request $request)
+    {
+        Session::where([
+            'id' => $request->session_id,
+        ])->update([
+            'lng' => $request->lng,
+            'lat' => $request->lat
+        ]);
+    }
+    public function changeStatus(Request $request)
+    {
+        Session::where([
+            'id' => $request->session_id,
+        ])->update([
+            'status' => $request->status
+        ]);
     }
     public function getPenugasan()
     {

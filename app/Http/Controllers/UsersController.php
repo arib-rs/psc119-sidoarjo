@@ -119,14 +119,14 @@ class UsersController extends Controller
         $validator = \Validator::make($request->all(), [
             'person_id' => 'required',
             'role_id' => 'required',
-            'resource_id' => 'required_if:role_id,==,6',
+            // 'resource_id' => 'required_if:role_id,==,6',
             'username' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password'  => 'required|string|min:6|confirmed'
         ], [
             'person_id.required' => 'Pilih personil terlebih dahulu',
             'role_id.required' => 'Pilih level terlebih dahulu',
-            'resource_id.required_if' => 'Pilih resource terlebih dahulu',
+            // 'resource_id.required_if' => 'Pilih resource terlebih dahulu',
             'username.unique' => 'Username telah terdaftar',
             'email.unique' => 'Email telah terdaftar',
         ]);
@@ -141,7 +141,7 @@ class UsersController extends Controller
                     'password' => Hash::make($request->password),
                     'role_id' => $request->role_id,
                     'person_id' => $request->person_id,
-                    'resource_id' => $request->resource_id
+                    // 'resource_id' => $request->resource_id
                 ]
             );
             return response()->json(['success' => 'Data telah disimpan.']);
@@ -164,14 +164,14 @@ class UsersController extends Controller
         $validator = \Validator::make($request->all(), [
             'person_id' => 'required',
             'role_id' => 'required',
-            'resource_id' => 'required_if:role_id,==,6',
+            // 'resource_id' => 'required_if:role_id,==,6',
             'username' => 'required|unique:users,username,' . $id,
             'email' => 'required|email|unique:users,email,' . $id,
             // 'password'  => 'required|string|min:6|confirmed'
         ], [
             'person_id.required' => 'Pilih personil terlebih dahulu',
             'role_id.required' => 'Pilih level terlebih dahulu',
-            'resource_id.required_if' => 'Pilih resource terlebih dahulu',
+            // 'resource_id.required_if' => 'Pilih resource terlebih dahulu',
             'username.unique' => 'Username telah terdaftar',
             'email.unique' => 'Email telah terdaftar',
         ]);
@@ -185,7 +185,7 @@ class UsersController extends Controller
                     'email' => $request->email,
                     'role_id' => $request->role_id,
                     'person_id' => $request->person_id,
-                    'resource_id' => $request->resource_id
+                    // 'resource_id' => $request->resource_id
                 ]
             );
             return response()->json(['success' => 'Data telah disimpan.']);

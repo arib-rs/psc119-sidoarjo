@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/login', 'ApiController@Login')->name('login');
 Route::post('/logout', 'ApiController@Logout')->name('logout');
+Route::post('/pilihresource', 'ApiController@pilihResource');
+Route::post('/storelocation', 'ApiController@storeLocation');
+Route::post('/changestatus', 'ApiController@changeStatus');
