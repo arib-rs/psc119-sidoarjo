@@ -15,12 +15,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Konfirmasi Penugasan
+            Konfirmasi & Approval
             <small>Daftar Penugasan</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-send"></i> Konfirmasi & Approval</a></li>
-            <li class="active"> Konfirmasi Penugasan</li>
+            <li class="active"><a href="#"><i class="fa fa-send"></i> Konfirmasi & Approval</a></li>
+            {{-- <li class="active"> Daftar Penugasan</li> --}}
         </ol>
     </section>
 
@@ -29,16 +29,34 @@
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#konfirmasi" data-toggle="tab">Konfirmasi</a></li>
-                <li><a href="#sudah_konfirmasi" data-toggle="tab">Sudah Konfirmasi</a></li>
+                <li><a href="#sudah_konfirmasi" data-toggle="tab">Disetujui</a></li>
             </ul>
             <div class="tab-content">
                 <!-- Font Awesome Icons -->
                 <div class="tab-pane active" id="konfirmasi">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-12 text-right">
                             <div class="btn-group">
                                 <button role="button" class="btn btn-success">
                                     <i class="fa fa-check"></i> Konfirmasi</button>
+                            </div>
+                        </div>
+                    </div><br> --}}
+                    <div class="row">
+                        <div class="col-md-2">
+                            <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" id="btnSearch"><i class="fa fa-search"
+                                aria-hidden="true"></i>&nbsp;Tampilkan </button>
+                            </div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <div class="btn-group">
+                                <button role="button" class="btn btn-success">
+                                    <i class="fa fa-check"></i> Konfirmasi & Approve</button>
                             </div>
                         </div>
                     </div><br>
@@ -350,6 +368,10 @@
 @section('scripts')
 <script>
     $(function() {
+        $('#datepicker').datepicker({
+        autoclose: true
+        })
+        
         $('#example1').DataTable()
         $('#example2').DataTable({
             'paging': true,
