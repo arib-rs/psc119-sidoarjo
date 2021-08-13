@@ -32,23 +32,23 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
                             <span style=" border: 1px solid #d2d6de; padding: 2px 1px 1px 4px; background: #ffffff;">
                                 <input type="checkbox">
                             </span>
-                            <h3 class="box-title" style="padding-top: 4px; padding-left: 8px;">Jenis
+                            <h3 class="box-title" style=" padding-left: 8px; font-size:16px">Jenis
                                 Resources</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div><input type="checkbox">
                                     {{-- <i class="fa fa-ambulance"></i> --}}
                                     Mobil</div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><i
                                         class="fa fa-motorcycle"></i><span> Motor</span></div> --}}
@@ -56,7 +56,7 @@
                                     {{-- <i class="fa fa-motorcycle"></i> --}}
                                     Motor</div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><i
                                         class="fa fa-tasks"></i><span> Task</span></div> --}}
@@ -69,19 +69,19 @@
                         <!-- /.box-body -->
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
                             <span style=" border: 1px solid #d2d6de; padding: 2px 1px 1px 4px; background: #ffffff;">
                                 <input type="checkbox">
                             </span>
-                            <h3 class="box-title" style="padding-top: 4px; padding-left: 8px;">Status
+                            <h3 class="box-title" style="padding-left: 8px; font-size:16px">Status
                                 Resources</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <div class="col-md-2">
-                                <span class="col-md-2" style="padding: 1px 1px 1px 4px; border:1px solid #00A65A;">
+                            <div class="col-md-4" style="margin-bottom:5px">
+                                <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #00A65A;">
                                     <input type="checkbox" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-success"
@@ -89,8 +89,8 @@
                                     <span style="font-size:14px">Tersedia : 8</span>
                                 </span>
                             </div>
-                            <div class="col-md-2">
-                                <span class="col-md-2" style="padding: 1px 1px 1px 4px; border:1px solid #d73925;">
+                            <div class="col-md-4" style="margin-bottom:5px">
+                                <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #d73925;">
                                     <input type="checkbox" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-danger"
@@ -98,8 +98,8 @@
                                     <span style="font-size:14px">Sibuk : 1</span>
                                 </span>
                             </div>
-                            <div class="col-md-2">
-                                <span class="col-md-2" style="padding: 1px 1px 1px 4px; border:1px solid #ddd;">
+                            <div class="col-md-4" style="margin-bottom:5px">
+                                <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #ddd;">
                                     <input type="checkbox" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-default"
@@ -107,8 +107,8 @@
                                     <span style="font-size:14px">Belum Siap : 54</span>
                                 </span>
                             </div>
-                            <div class="col-md-2">
-                                <span class="col-md-2" style="padding: 1px 1px 1px 4px; border:1px solid #3867d6;">
+                            <div class="col-md-4">
+                                <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #3867d6;">
                                     <input type="checkbox" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-primary"
@@ -116,8 +116,8 @@
                                     <span style="font-size:14px">Menuju TKP : 0</span>
                                 </span>
                             </div>
-                            <div class="col-md-2">
-                                <span class="col-md-2" style="padding: 1px 1px 1px 4px; border:1px solid #F39C12;">
+                            <div class="col-md-4">
+                                <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #F39C12;">
                                     <input type="checkbox" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-warning"
@@ -125,8 +125,8 @@
                                     <span style="font-size:14px">Di TKP : 0</span>
                                 </span>
                             </div>
-                            <div class="col-md-2">
-                                <span class="col-md-2" style="padding: 1px 1px 1px 4px; border:1px solid #00c0ef;">
+                            <div class="col-md-4">
+                                <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #00c0ef;">
                                     <input type="checkbox" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-info"
@@ -189,36 +189,36 @@
                         <!-- /.box-body -->
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
                             <span style=" border: 1px solid #d2d6de; padding: 2px 1px 1px 4px; background: #ffffff;">
                                 <input type="checkbox">
                             </span>
-                            <h3 class="box-title" style="padding-top: 4px; padding-left: 8px;">Kelas
-                                Resource</h3>
+                            <h3 class="box-title" style="padding-left: 8px; font-size:16px">Kelas
+                                Resources</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas A</span></div> --}}
                                 <div><input type="checkbox"> A</div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas B</span></div> --}}
                                 <div><input type="checkbox"> B</div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas C</span></div> --}}
                                 <div><input type="checkbox"> C</div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas D</span></div> --}}
@@ -233,15 +233,14 @@
                 <div class="col-md-12" style="padding: 0px;">
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
-                            <div class="col-md-3" style="width: 300px; padding: 0px;">
-                                <h3 class="box-title" style="padding-top: 0.35em;">Resources - Total Online :
+                           
+                                <h3 class="box-title" style="font-size:16px">Resources - Total Online :
                                     <span id="total-resources">0</span>
+                                    <button type="submit" class="btn btn-danger btn-xs"
+                                    style="margin-left:5px">Lihat di Peta</button>
                                 </h3>
-                            </div>
-                            <div class="col-md-8" style="padding-left: 0px;">
-                                <button type="submit" class="btn btn-default btn-sm"
-                                    style="background-color: #E7E7E7; color:#333333;">Lihat di Peta</button>
-                            </div>
+                         
+                           
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -541,7 +540,7 @@
                 <div class="col-md-12" style="padding: 0px;">
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
-                            <h3 class="box-title"> Faskes - Total Online :
+                            <h3 class="box-title" style="font-size:16px"> Faskes - Total Online :
                                 <span id="total-faskes-online">0</span>
                             </h3>
                         </div>

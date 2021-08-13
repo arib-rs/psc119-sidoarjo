@@ -15,8 +15,8 @@ class MonitoringResourcesController extends Controller
         $resource['data'] = '';
         foreach ($data as $d) {
             $resource['data'] .= '
-                    <div class="col-md-2" style="padding: 0px 7px;">
-                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;" data-id="' .
+                    <div class="col-md-2" style="padding: 0px 7px; ">
+                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px; overflow:hidden;" data-id="' .
                 $d->id . '">
                             <span style="font-size: 16px;">' . $d->nomor_polisi . '</span> <br> <span
                                 style="font-size: 11px;">' . $d->healthfacility->nama . '</span>
@@ -37,8 +37,8 @@ class MonitoringResourcesController extends Controller
         $faskes['data'] = '';
         foreach ($data as $d) {
             $faskes['data'] .= '
-                    <div class="col-md-2" style="padding: 0px 7px;">
-                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px;" data-id="' .
+                    <div class="col-md-2" style="padding: 0px 7px; ">
+                        <div class="btn btn-default" style="width: 100%; overflow:hidden; margin: 5px 0px;" data-id="' .
                 $d->id . '">
                             <span style="font-size: 16px;">' . $d->nama . '</span>
                         </div>
