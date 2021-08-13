@@ -39,7 +39,7 @@
                                                 <th class="text-center">Username</th>
                                                 <th class="text-center">Nama</th>
                                                 <th class="text-center">Profesi</th>
-                                                <th class="text-center">Level</th>
+                                                {{-- <th class="text-center">Level</th> --}}
                                                 {{-- <th class="text-center">Resource</th> --}}
                                                 <th class="text-center">Faskes Asal</th>
                                                 <th class="text-center">Email</th>
@@ -90,7 +90,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label class="control-label col-md-3">Level<span class="required" style="color: red;">
                                         * </span>
                                 </label>
@@ -100,7 +100,7 @@
                                         {!! $optRole !!}
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
                             {{-- <div class="form-group" id="resource-field" style="display: none;">
                                 <label class="control-label col-md-3">Resource<span class="required" style="color: red;">
                                         * </span>
@@ -192,11 +192,11 @@
                         name: 'person.profession.profesi',
                         sClass: 'text-center'
                     },
-                    {
-                        data: 'role.role',
-                        name: 'role.role',
-                        sClass: 'text-center'
-                    },
+                    // {
+                    //     data: 'role.role',
+                    //     name: 'role.role',
+                    //     sClass: 'text-center'
+                    // },
                     // {
                     //     data: 'resource.nomor_polisi',
                     //     name: 'resource.nomor_polisi',

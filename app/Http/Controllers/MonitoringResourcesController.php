@@ -29,7 +29,9 @@ class MonitoringResourcesController extends Controller
     }
     public function getHFRealTime()
     {
+
         $data = HealthFacility::orderBy('status', 'desc')->orderBy('nama', 'asc')->get();
+        // dd($data);
         $faskes['total'] = 0;
         $faskes['online'] = 0;
         $faskes['data'] = '';
@@ -38,8 +40,7 @@ class MonitoringResourcesController extends Controller
                     <div class="col-md-2" style="padding: 0px 7px;">
                         <div class="btn btn-default" style="width: 100%; margin: 5px 0px;" data-id="' .
                 $d->id . '">
-                            <span style="font-size: 16px;">' . $d->nama . '</span> <br> <span
-                                style="font-size: 11px;">' .  '-' . '</span>
+                            <span style="font-size: 16px;">' . $d->nama . '</span>
                         </div>
                     </div>
             ';
