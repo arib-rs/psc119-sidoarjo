@@ -36,15 +36,15 @@
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
                             <span style=" border: 1px solid #d2d6de; padding: 2px 1px 1px 4px; background: #ffffff;">
-                                <input type="checkbox">
+                                <input type="checkbox" name="cb-jenis-all" id="cb-jenis-all">
                             </span>
                             <h3 class="box-title" style=" padding-left: 8px; font-size:16px">Jenis
                                 Resources</h3>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body">
+                        <div class="box-body cb-filter cb-jenis">
                             <div class="col-md-6">
-                                <div><input type="checkbox">
+                                <div><input type="checkbox" name="cb-jenis-mobil" id="cb-jenis-mobil" value="mobil">
                                     {{-- <i class="fa fa-ambulance"></i> --}}
                                     Mobil</div>
                             </div>
@@ -52,7 +52,7 @@
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><i
                                         class="fa fa-motorcycle"></i><span> Motor</span></div> --}}
-                                <div><input type="checkbox">
+                                <div><input type="checkbox" name="cb-jenis-motor" id="cb-jenis-motor" value="motor">
                                     {{-- <i class="fa fa-motorcycle"></i> --}}
                                     Motor</div>
                             </div>
@@ -60,7 +60,7 @@
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><i
                                         class="fa fa-tasks"></i><span> Task</span></div> --}}
-                                <div><input type="checkbox">
+                                <div><input type="checkbox" name="cb-jenis-task" id="cb-jenis-task" value="task">
                                     {{-- <i class="fa fa-tasks"></i> --}}
                                     Task</div>
                             </div>
@@ -73,65 +73,69 @@
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
                             <span style=" border: 1px solid #d2d6de; padding: 2px 1px 1px 4px; background: #ffffff;">
-                                <input type="checkbox">
+                                <input type="checkbox" name="cb-status-all" id="cb-status-all">
                             </span>
                             <h3 class="box-title" style="padding-left: 8px; font-size:16px">Status
                                 Resources</h3>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body">
+                        <div class="box-body cb-filter cb-status">
                             <div class="col-md-4" style="margin-bottom:5px">
                                 <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #00A65A;">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" name="cb-status-tersedia" id="cb-status-tersedia"
+                                        value="tersedia" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-success"
                                     style="border-radius: 0px 3px 3px 0px; text-align: left;">
-                                    <span style="font-size:14px">Tersedia : 8</span>
+                                    <span style="font-size:14px">Tersedia : <span id="tersedia">0</span></span>
                                 </span>
                             </div>
                             <div class="col-md-4" style="margin-bottom:5px">
                                 <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #d73925;">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" name="cb-status-sibuk" id="cb-status-sibuk" value="sibuk" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-danger"
                                     style="border-radius: 0px 3px 3px 0px; text-align: left;">
-                                    <span style="font-size:14px">Sibuk : 1</span>
+                                    <span style="font-size:14px">Sibuk : <span id="sibuk">0</span></span>
                                 </span>
                             </div>
                             <div class="col-md-4" style="margin-bottom:5px">
                                 <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #ddd;">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" name="cb-status-belumsiap" id="cb-status-belumsiap"
+                                        value="belumsiap" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-default"
                                     style="border-radius: 0px 3px 3px 0px; text-align: left;">
-                                    <span style="font-size:14px">Belum Siap : 54</span>
+                                    <span style="font-size:14px">Belum Siap : <span id="belumsiap">0</span></span>
                                 </span>
                             </div>
                             <div class="col-md-4">
                                 <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #3867d6;">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" name="cb-status-menujutkp" id="cb-status-menujutkp"
+                                        value="menujutkp" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-primary"
                                     style="border-radius: 0px 3px 3px 0px; text-align: left;">
-                                    <span style="font-size:14px">Menuju TKP : 0</span>
+                                    <span style="font-size:14px">Menuju TKP : <span id="menujutkp">0</span></span>
                                 </span>
                             </div>
                             <div class="col-md-4">
                                 <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #F39C12;">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" name="cb-status-ditkp" id="cb-status-ditkp" value="ditkp" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-warning"
                                     style="border-radius: 0px 3px 3px 0px; text-align: left;">
-                                    <span style="font-size:14px">Di TKP : 0</span>
+                                    <span style="font-size:14px">Di TKP : <span id="ditkp">0</span></span>
                                 </span>
                             </div>
                             <div class="col-md-4">
                                 <span class="col-md-2" style="padding: 1px 1px 1px 3px; border:1px solid #00c0ef;">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" name="cb-status-menujurs" id="cb-status-menujurs"
+                                        value="menujurs" />
                                 </span>
                                 <span class="col-md-10 btn btn-xs btn-info"
                                     style="border-radius: 0px 3px 3px 0px; text-align: left;">
-                                    <span style="font-size:14px">Menuju RS : 0</span>
+                                    <span style="font-size:14px">Menuju RS : <span id="menujurs">0</span></span>
                                 </span>
                             </div>
 
@@ -193,36 +197,36 @@
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
                             <span style=" border: 1px solid #d2d6de; padding: 2px 1px 1px 4px; background: #ffffff;">
-                                <input type="checkbox">
+                                <input type="checkbox" name="cb-kelas-all" id="cb-kelas-all">
                             </span>
                             <h3 class="box-title" style="padding-left: 8px; font-size:16px">Kelas
                                 Resources</h3>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body">
+                        <div class="box-body cb-filter cb-kelas">
                             <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas A</span></div> --}}
-                                <div><input type="checkbox"> A</div>
+                                <div><input type="checkbox" name="cb-kelas-a" id="cb-kelas-a" value="kelas-a"> A</div>
                             </div>
                             <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas B</span></div> --}}
-                                <div><input type="checkbox"> B</div>
+                                <div><input type="checkbox" name="cb-kelas-b" id="cb-kelas-b" value="kelas-b"> B</div>
                             </div>
                             <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas C</span></div> --}}
-                                <div><input type="checkbox"> C</div>
+                                <div><input type="checkbox" name="cb-kelas-c" id="cb-kelas-c" value="kelas-c"> C</div>
                             </div>
                             <div class="col-md-6">
                                 {{-- <div><span style="border: 1px solid #d2d6de; padding: 3px 5px; margin-right: 3px;"><input
                                             type="checkbox" style="padding: 0px; margin: 0px;"></span><span>
                                         Kelas D</span></div> --}}
-                                <div><input type="checkbox"> D</div>
+                                <div><input type="checkbox" name="cb-kelas-d" id="cb-kelas-d" value="kelas-d"> D</div>
                             </div>
                         </div>
                         <!-- /.box-body -->
@@ -233,14 +237,14 @@
                 <div class="col-md-12" style="padding: 0px;">
                     <div class="box box-primary box-solid">
                         <div class="box-header with-border">
-                           
-                                <h3 class="box-title" style="font-size:16px">Resources - Total Online :
-                                    <span id="total-resources">0</span>
-                                    <button type="submit" class="btn btn-danger btn-xs"
-                                    style="margin-left:5px">Lihat di Peta</button>
-                                </h3>
-                         
-                           
+
+                            <h3 class="box-title" style="font-size:16px">Resources - Total Online :
+                                <span id="total-resources">0</span>
+                                <button type="submit" class="btn btn-danger btn-xs" style="margin-left:5px">Lihat di
+                                    Peta</button>
+                            </h3>
+
+
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -904,7 +908,15 @@
                 method: "GET",
                 success: function(result) {
                     $('#resources-section').html(result.data);
+                    $('.cb-filter').find('input:checkbox').trigger('change');
                     $('#total-resources').html(result.total);
+                    $('#tersedia').html(result.tersedia);
+                    $('#sibuk').html(result.sibuk);
+                    $('#menujutkp').html(result.menujutkp);
+                    $('#ditkp').html(result.ditkp);
+                    $('#menujurs').html(result.menujurs);
+                    $('#belumsiap').html(result.belumsiap);
+
                 },
                 complete: function() {
                     setTimeout(getResourcesRealTime, 5000);
@@ -927,6 +939,68 @@
             });
         }
         getFaskesRealTime();
+        $(function() {
+            $('#cb-jenis-all').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.cb-jenis').find('input:checkbox').prop('checked', 'checked').trigger('change');
+                } else {
+                    $('.cb-jenis').find('input:checkbox').prop('checked', false).trigger('change');
+                }
+            });
+            $('#cb-status-all').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.cb-status').find('input:checkbox').prop('checked', 'checked').trigger('change');
+                } else {
+                    $('.cb-status').find('input:checkbox').prop('checked', false).trigger('change');
+                }
+            });
+            $('#cb-kelas-all').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.cb-kelas').find('input:checkbox').prop('checked', 'checked').trigger('change');
+                } else {
+                    $('.cb-kelas').find('input:checkbox').prop('checked', false).trigger('change');
+                }
+            });
+            $('.cb-jenis').find('input:checkbox').change(function() {
+                var temp = $('.cb-jenis').find('input[type="checkbox"]:checked').length,
+                    cblength = $('.cb-jenis').find('input[type="checkbox"]').length;
+                if (cblength == temp) {
+                    $('#cb-jenis-all').prop('checked', 'checked');
+                } else {
+                    $('#cb-jenis-all').prop('checked', false);
+                }
+            })
+            $('.cb-status').find('input:checkbox').change(function() {
+                var temp = $('.cb-status').find('input[type="checkbox"]:checked').length,
+                    cblength = $('.cb-status').find('input[type="checkbox"]').length;
+                if (cblength == temp) {
+                    $('#cb-status-all').prop('checked', 'checked');
+                } else {
+                    $('#cb-status-all').prop('checked', false);
+                }
+            })
+            $('.cb-kelas').find('input:checkbox').change(function() {
+                var temp = $('.cb-kelas').find('input[type="checkbox"]:checked').length,
+                    cblength = $('.cb-kelas').find('input[type="checkbox"]').length;
+                if (cblength == temp) {
+                    $('#cb-kelas-all').prop('checked', 'checked');
+                } else {
+                    $('#cb-kelas-all').prop('checked', false);
+                }
+            })
+            $('.cb-filter').find('input:checkbox').change(function() {
+                $('.cb-filter').find('input[type="checkbox"]:checked').each(function() {
+                    $('.' + $(this).val()).css('display', 'block');
+                })
+                $('.cb-filter').find('input[type="checkbox"]:not(:checked)').each(function() {
+                    $('.' + $(this).val()).css('display', 'none');
+                })
+            })
+            $('#cb-jenis-all').prop('checked', 'checked').trigger('change');
+            $('#cb-status-all').prop('checked', 'checked').trigger('change');
+            $('#cb-kelas-all').prop('checked', 'checked').trigger('change');
+
+        });
 
     </script>
 @endsection
