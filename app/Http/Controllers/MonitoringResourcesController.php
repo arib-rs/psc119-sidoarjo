@@ -10,13 +10,28 @@ class MonitoringResourcesController extends Controller
 {
     public function getResourcesRealTime()
     {
-        $data = Resource::with('healthfacility')->orderBy('status', 'desc')->get();
+        $data = Resource::with(['healthfacility', 'sessions' => function ($q) {
+            $q->orderBy('updated_at', 'desc');
+        }])
+            ->orderBy('status', 'desc')->get();
+        // dd(now()->diffInSeconds($data[0]->sessions[0]->updated_at));
         $resource['total'] = 0;
         $resource['data'] = '';
         foreach ($data as $d) {
+
+            $cls = '';
+            if (count($d->sessions) > 0) {
+                if (now()->diffInSeconds($d->sessions[0]->updated_at) <= 5) {
+                    $cls = 'success';
+                } else {
+                    $cls = 'default';
+                }
+            } else {
+                $cls = 'default';
+            }
             $resource['data'] .= '
                     <div class="col-md-2" style="padding: 0px 7px; ">
-                        <div class="btn btn-default" style="width: 100%; margin: 5px 0px; overflow:hidden;" data-id="' .
+                        <div class="btn btn-' . $cls . '" style="width: 100%; margin: 5px 0px; overflow:hidden;" data-id="' .
                 $d->id . '">
                             <span style="font-size: 16px;">' . $d->nomor_polisi . '</span> <br> <span
                                 style="font-size: 11px;">' . $d->healthfacility->nama . '</span>

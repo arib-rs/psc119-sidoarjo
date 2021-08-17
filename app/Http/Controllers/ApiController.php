@@ -33,8 +33,8 @@ class ApiController extends Controller
                     $data['resources'] = Resource::where('health_facility_id', '=', $user->person->health_facility_id)->get();
                 }
                 $idSession = Session::create([
-                    'hostname' => $request->ip() . '-' . gethostname(),
-                    'device_id' => substr(exec('getmac'), 0, 17),
+                    'hostname' => $request->hostname,
+                    'device_id' => $request->device_id,
                     'status' => 'Ready',
                     'user_id' => $user->id,
                     'login_at' => now()
@@ -50,8 +50,8 @@ class ApiController extends Controller
     {
         Session::where([
             'user_id' => $request->user->id,
-            'device_id' => substr(exec('getmac'), 0, 17),
-            'hostname' => $request->ip() . '-' . gethostname(),
+            'device_id' => $request->device_id,
+            'hostname' =>  $request->hostname,
             'logout_at' => null
         ])->update([
             'logout_at' => now(),
@@ -66,17 +66,29 @@ class ApiController extends Controller
         Session::where([
             'id' => $request->session_id,
         ])->update([
-            'resource_id' => $request->resource_id
+            'resource_id' => $request->resource_id,
+            'lng' => $request->lng,
+            'lat' => $request->lat,
+            'status' => $request->status
         ]);
     }
     public function storeLocation(Request $request)
     {
-        Session::where([
-            'id' => $request->session_id,
-        ])->update([
-            'lng' => $request->lng,
-            'lat' => $request->lat
-        ]);
+        if ($request->lng && $request->lat) {
+            Session::where([
+                'id' => $request->session_id,
+            ])->update([
+                'lng' => $request->lng,
+                'lat' => $request->lat,
+                'status' => $request->status
+            ]);
+        } else {
+            Session::where([
+                'id' => $request->session_id,
+            ])->update([
+                'status' => $request->status
+            ]);
+        }
     }
     public function changeStatus(Request $request)
     {

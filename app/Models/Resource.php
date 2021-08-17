@@ -29,6 +29,10 @@ class Resource extends Model
     {
         return $this->belongsTo(HealthFacility::class, 'health_facility_id');
     }
+    public function sessions()
+    {
+        return $this->hasMany(Session::class, 'resource_id');
+    }
 
     public function rshift()
     {
