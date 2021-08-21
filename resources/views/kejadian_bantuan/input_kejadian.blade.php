@@ -609,6 +609,15 @@
                 },
                 select: function(e, ui) {
                     mymap.setView([ui.item.y, ui.item.x], 15);
+                    if (marker != '') {
+                        mymap.removeLayer(marker);
+                    }
+                    marker = L.marker([ui.item.y, ui.item.x], {
+                        draggable: false
+                    }).addTo(mymap);
+
+                    $('#longitude').val(ui.item.x);
+                    $('#latitude').val(ui.item.y);
                     mymap.scrollWheelZoom.enable();
                     mymap.dragging.enable();
                 },

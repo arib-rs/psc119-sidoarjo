@@ -70,6 +70,17 @@
             }
         }
 
+        .ready-reso {
+            animation: updown 1.5s ease-in infinite;
+        }
+
+
+        @keyframes updown {
+            50% {
+                margin-top: -55px;
+            }
+        }
+
         .skin-blue-light .main-header .logo:hover {
             background-color: #3867D6;
         }
@@ -77,6 +88,7 @@
         .skin-blue-light .main-header .navbar .sidebar-toggle:hover {
             background-color: #325CC0;
         }
+
     </style>
 
     @yield('css')
@@ -202,24 +214,24 @@
                             <li><a href="{{ url('/req_bantuan') }}">Request Bantuan</a></li>
                             {{-- <li><a href="{{ url('/edit_laporan') }}">Edit Laporan Kejadian</a>
                     </li> --}}
-                </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-television"></i> <span>Monitoring</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu" style="z-index: 1000;">
-                        <li><a href="{{ url('/monitoring_alarm') }}">Monitoring Alarm Kejadian</a></li>
-                        <li><a href="{{ url('/penanganan_kejadian') }}">Penanganan Kejadian</a></li>
-                        <li><a href="{{ url('/monitoring_resources') }}">Monitoring Resources</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{ url('/konfirmasi_penugasan') }}"><i class="fa fa-send"></i>
-                    <span>Konfirmasi & Approval</span></a></li>
-                {{-- <li class="treeview">
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-television"></i> <span>Monitoring</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu" style="z-index: 1000;">
+                            <li><a href="{{ url('/monitoring_alarm') }}">Monitoring Alarm Kejadian</a></li>
+                            <li><a href="{{ url('/penanganan_kejadian') }}">Penanganan Kejadian</a></li>
+                            <li><a href="{{ url('/monitoring_resources') }}">Monitoring Resources</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ url('/konfirmasi_penugasan') }}"><i class="fa fa-send"></i>
+                            <span>Konfirmasi & Approval</span></a></li>
+                    {{-- <li class="treeview">
                     <a href="#">
                         <i class="fa fa-send"></i> <span>Konfirmasi & Approval</span>
                         <span class="pull-right-container">
@@ -231,61 +243,62 @@
                 <li><a href="{{ url('/rekap_shift') }}">Shift Approval</a></li>
                 </ul>
                 </li> --}}
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-files-o"></i> <span>Laporan - Laporan</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu" style="z-index: 1000;">
-                        <li><a href="{{ url('/laporan_kejadian') }}">Laporan Kejadian</a></li>
-                        <li><a href="{{ url('/rekap_kejadian') }}">Rekap Laporan Kejadian </a></li>
-                        <li><a href="{{ url('/rekap_bantuan') }}">Rekap Bantuan</a></li>
-                        <li><a href="{{ url('/rekap_penolakan_pembatalan') }}">Rekap Penolakan & <br>Pembatalan
-                                Penugasan</a></li>
-                        <li><a href="{{ url('/rekap_perawat') }}">Rekap Perawat</a></li>
-                        <li><a href="{{ url('/rekap_ambulan_offline') }}">Ambulan Tidak Aktif</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-users"></i> <span>User Management</span>
-                        {{-- <i class="fa fa-users"></i> <span>User & Device Management</span> --}}
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu" style="z-index: 1000;">
-                        <li><a href="{{ url('/personil') }}">Personil</a></li>
-                        <li><a href="{{ url('/management_user') }}">User Management</a></li>
-                        {{-- <li><a href="{{ url('/devicelist') }}">Device Management</a>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i> <span>Laporan - Laporan</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu" style="z-index: 1000;">
+                            <li><a href="{{ url('/laporan_kejadian') }}">Laporan Kejadian</a></li>
+                            <li><a href="{{ url('/rekap_kejadian') }}">Rekap Laporan Kejadian </a></li>
+                            <li><a href="{{ url('/rekap_bantuan') }}">Rekap Bantuan</a></li>
+                            <li><a href="{{ url('/rekap_penolakan_pembatalan') }}">Rekap Penolakan & <br>Pembatalan
+                                    Penugasan</a></li>
+                            <li><a href="{{ url('/rekap_perawat') }}">Rekap Perawat</a></li>
+                            <li><a href="{{ url('/rekap_ambulan_offline') }}">Ambulan Tidak Aktif</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-users"></i> <span>User Management</span>
+                            {{-- <i class="fa fa-users"></i> <span>User & Device Management</span> --}}
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu" style="z-index: 1000;">
+                            <li><a href="{{ url('/personil') }}">Personil</a></li>
+                            <li><a href="{{ url('/management_user') }}">User Management</a></li>
+                            {{-- <li><a href="{{ url('/devicelist') }}">Device Management</a>
                 </li> --}}
-                <li><a href="{{ url('/emergency_button_user') }}">User Emergency Button</a></li>
-                </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-flag"></i> <span>Master</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu" style="z-index: 1000;">
-                        <li><a href="{{ url('/faskes') }}">Faskes</a></li>
-                        <li><a href="{{ url('/ambulan') }}">Ambulan</a></li>
-                        <li><a href="{{ url('/spesialisasi_dokter') }}">Spesialisasi Dokter </a></li>
-                        <li><a href="{{ url('/kategori') }}">Kategori</a></li>
-                        <!-- <li><a href="{{ url('/mobil_sehat') }}">Kategori Mobil Sehat</a></li> -->
-                        <li><a href="{{ url('/sub_kategori') }}">Sub Kategori</a></li>
-                        <li><a href="{{ url('/obat') }}">Obat</a></li>
-                        <li><a href="{{ url('/shift') }}">Shift</a></li>
-                        <li><a href="{{ url('/pasien') }}">Data Pasien</a></li>
-                        <li><a href="{{ url('/task') }}">Master Task</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{ url('/peta') }}" target="popup" onclick="myFunction()"><i class="fa fa-map-marker"></i>
-                        <span>Buka Peta</span></a></li>
+                            <li><a href="{{ url('/emergency_button_user') }}">User Emergency Button</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-flag"></i> <span>Master</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu" style="z-index: 1000;">
+                            <li><a href="{{ url('/faskes') }}">Faskes</a></li>
+                            <li><a href="{{ url('/ambulan') }}">Ambulan</a></li>
+                            <li><a href="{{ url('/spesialisasi_dokter') }}">Spesialisasi Dokter </a></li>
+                            <li><a href="{{ url('/kategori') }}">Kategori</a></li>
+                            <!-- <li><a href="{{ url('/mobil_sehat') }}">Kategori Mobil Sehat</a></li> -->
+                            <li><a href="{{ url('/sub_kategori') }}">Sub Kategori</a></li>
+                            <li><a href="{{ url('/obat') }}">Obat</a></li>
+                            <li><a href="{{ url('/shift') }}">Shift</a></li>
+                            <li><a href="{{ url('/pasien') }}">Data Pasien</a></li>
+                            <li><a href="{{ url('/task') }}">Master Task</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ url('/peta') }}" target="popup" onclick="myFunction()"><i
+                                class="fa fa-map-marker"></i>
+                            <span>Buka Peta</span></a></li>
                 </ul>
             </section>
             <!-- /.sidebar -->
@@ -385,12 +398,49 @@
                 }
             },
             complete: function() {
-                setTimeout(getReqBantuanNotif, 3000);
+                setTimeout(getReqBantuanNotif, 5000);
             }
         });
     }
     getReqBantuanNotif();
 
+    function getResourcesRealTime() {
+        $.ajax({
+            url: "get-resources-real-time",
+            method: "GET",
+            success: function(result) {
+                $('#resources-section').html(result.data);
+                $('.cb-filter').find('input:checkbox').trigger('change');
+                $('#total-resources').html(result.total);
+                $('#tersedia').html(result.tersedia);
+                $('#sibuk').html(result.sibuk);
+                $('#menujutkp').html(result.menujutkp);
+                $('#ditkp').html(result.ditkp);
+                $('#menujurs').html(result.menujurs);
+                $('#belumsiap').html(result.belumsiap);
+
+            },
+            complete: function() {
+                setTimeout(getResourcesRealTime, 10000);
+            }
+        });
+    }
+    getResourcesRealTime();
+
+    function getFaskesRealTime() {
+        $.ajax({
+            url: "get-faskes-real-time",
+            method: "GET",
+            success: function(result) {
+                $('#faskes-section').html(result.data);
+                $('#total-faskes-online').html(result.total);
+            },
+            complete: function() {
+                setTimeout(getFaskesRealTime, 10000);
+            }
+        });
+    }
+    getFaskesRealTime();
 
     $(function() {
         //Initialize Select2 Elements

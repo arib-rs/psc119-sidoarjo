@@ -23,7 +23,9 @@ class MonitoringResourcesController extends Controller
             if ($d->status == 0 || $d->status == 5) {
                 if (count($d->sessions) > 0) {
                     // if (now()->diffInSeconds($d->sessions[0]->updated_at) <= 5) {
-                    Resource::find($d->id)->update(['status' => 0]);
+                    if ($d->status != 0) {
+                        Resource::find($d->id)->update(['status' => 0]);
+                    }
                     $cls = 'success';
                     $clsfilter = 'tersedia';
                     $resource['tersedia']++;
@@ -31,7 +33,9 @@ class MonitoringResourcesController extends Controller
                     //     $cls = 'default';
                     // }
                 } else {
-                    Resource::find($d->id)->update(['status' => 5]);
+                    if ($d->status != 5) {
+                        Resource::find($d->id)->update(['status' => 5]);
+                    }
                     $cls = 'default';
                     $clsfilter = 'belumsiap';
                     $resource['belumsiap']++;

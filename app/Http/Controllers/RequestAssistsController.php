@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HealthFacility;
 use App\Models\Incident;
+use App\Models\Resource;
 use Illuminate\Http\Request;
 
 class RequestAssistsController extends Controller
@@ -92,7 +94,14 @@ class RequestAssistsController extends Controller
 
     public function edit($id)
     {
-        return view('kejadian_bantuan.edit_kejadian');
+        $data = Incident::find($id);
+        $data['faskes'] = HealthFacility::orderBy('nama', 'asc')->get();
+        $data['resources'] = Resource::with(['healthfacility' => function ($q) {
+            $q->orderBy('nama', 'asc');
+        }, 'sessions' => function ($q) {
+            $q->orderBy('updated_at', 'desc');
+        }])->where('status', '=', 0)->orderBy('kode', 'asc')->get();
+        return response()->json($data);
     }
 
     public function update(Request $request, $id)

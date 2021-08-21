@@ -217,29 +217,30 @@
                     </div>
                     <!-- END VALIDATION STATES-->
                 </div>
-                <!-- <form id="form-data">
-                                                                                                                                                                                                                                                                                        <div class="modal-body">
-                                                                                                                                                                                                                                                                                            <table id="example-table" class="table table-bordered dataTable no-footer">
-                                                                                                                                                                                                                                                                                                <thead>
-                                                                                                                                                                                                                                                                                                    <tr>
-                                                                                                                                                                                                                                                                                                        <th class="text-center">Resource</th>
-                                                                                                                                                                                                                                                                                                        <th class="text-center">Tujuan</th>
-                                                                                                                                                                                                                                                                                                        <th class="text-center">Waktu Request</th>
-                                                                                                                                                                                                                                                                                                        <th class="text-center">Status</th>
-                                                                                                                                                                                                                                                                                                        <th class="text-center">Aksi</th>
-                                                                                                                                                                                                                                                                                                    </tr>
-                                                                                                                                                                                                                                                                                                </thead>
-                                                                                                                                                                                                                                                                                                <tbody>
-                                                                                                                                                                                                                                                                                                    <tr>
-                                                                                                                                                                                                                                                                                                        <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
-                                                                                                                                                                                                                                                                                                        <td class="text-center">RSI Siti Hajar</td>
-                                                                                                                                                                                                                                                                                                        <td class="text-center">2021-03-09 12:27:08</td>
-                                                                                                                                                                                                                                                                                                        <td class="text-center">DITERIMA</td>
-                                                                                                                                                                                                                                                                                                        <td class="text-center">(SELESAI)</td>
-                                                                                                                                                                                                                                                                                                    </tr>
-                                                                                                                                                                                                                                                                                                </tbody>
-                                                                                                                                                                                                                                                                                            </table>
-                                                                                                                                                                                                                                                                                    </form> -->
+                {{-- <form id="form-data">
+                    <div class="modal-body">
+                        <table id="example-table" class="table table-bordered dataTable no-footer">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Resource</th>
+                                    <th class="text-center">Tujuan</th>
+                                    <th class="text-center">Waktu Request</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car"
+                                            style="color: #89c4f4;"> Mobil</i></td>
+                                    <td class="text-center">RSI Siti Hajar</td>
+                                    <td class="text-center">2021-03-09 12:27:08</td>
+                                    <td class="text-center">DITERIMA</td>
+                                    <td class="text-center">(SELESAI)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </form> --}}
             </div>
         </div>
     </div>
@@ -264,17 +265,20 @@
                 </div>
                 <div class="modal-body" style="padding-bottom: 0;">
                     <div class="form">
-                        <form id="form_req" autocomplete="off">
-                            <div class="form-body">
-                                <div id="content-detail">
-                                    <div class="nav-tabs-custom">
-                                        <ul class="nav nav-tabs">
-                                            <li class="active"><a href="#dispatch-form" data-toggle="tab">Dispatch</a></li>
-                                            <li><a href="#info_resource" data-toggle="tab">Info-Resource<span
-                                                        class="badge bg-red" style="margin-left: 5px;">3</span></a></li>
-                                        </ul><br>
-                                        <div class="tab-content" style="padding-top: 0px;">
-                                            <div class="active tab-pane" id="dispatch-form">
+                        <div class="form-body">
+                            <div id="content-detail">
+                                <div class="nav-tabs-custom">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#dispatch-form" data-toggle="tab">Dispatch</a></li>
+                                        {{-- <li><a href="#info_resource" data-toggle="tab">Info-Resource<span
+                                                    class="badge bg-red" style="margin-left: 5px;">3</span></a></li> --}}
+                                    </ul><br>
+                                    <div class="tab-content" style="padding-top: 0px;">
+                                        <div class="active tab-pane" id="dispatch-form">
+                                            <form id="form-req" autocomplete="off">
+                                                <input type="hidden" name="id" id="id">
+                                                <input type="hidden" name="lng" id="lng">
+                                                <input type="hidden" name="lat" id="lat">
                                                 <div class="row">
                                                     <div class="col-xs-12">
                                                         {{-- <h5 style="margin-top: 0;"><b>LAPORAN KEJADIAN</b></h5> --}}
@@ -282,7 +286,7 @@
                                                             <h5><b>Radius</b></h5>
                                                         </div>
                                                         <div class="col-md-9" style="padding-right: 0px;">
-                                                            <select class="form-control select">
+                                                            <select id="map-radius" class="form-control select">
                                                                 {{-- <option value="">Pilih Radius</option> --}}
                                                                 <option value="5000">5 km</option>
                                                                 <option value="10000" selected>10 km</option>
@@ -301,7 +305,7 @@
                                                 </div><br>
                                                 <div class="row">
                                                     <div class="col-xs-12">
-                                                        <div id="mapid" class="box-body" style="height: 300px;"></div>
+                                                        <div id="mapid" class="box-body" style="height: 500px;"></div>
                                                     </div>
                                                 </div><br>
                                                 <div class="row">
@@ -310,7 +314,8 @@
                                                             <h5><b>Resource </b><span style="color: red;">*</span></h5>
                                                         </div>
                                                         <div class="col-md-8">
-                                                            <select id="ambulan" class="form-control select">
+                                                            <select id="resource_id" name="resource_id"
+                                                                class="form-control select">
                                                                 <option value=""> </option>
                                                                 <option value="1">Ambulan A</option>
                                                                 <option value="2">Ambulan B</option>
@@ -331,7 +336,8 @@
                                                             </select>
                                                         </div> --}}
                                                         <div class="col-md-1" style="padding-right: 0px;">
-                                                            <button class="btn btn-default pull-right">Refresh</button>
+                                                            <button class="btn btn-default pull-right"
+                                                                id="btn-refresh-resource">Refresh</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -342,7 +348,8 @@
                                                             <h5><b>Faskes </b><span style="color: red;">*</span></h5>
                                                         </div>
                                                         <div class="col-md-9" style="padding-right: 0px;">
-                                                            <select id="ambulan" class="form-control select">
+                                                            <select id="health_facility_id" name="health_facility_id"
+                                                                class="form-control select">
                                                                 <option value=""> </option>
                                                                 <option value="0">Command Center</option>
                                                                 <option value="1">RSUD SIDOARJO</option>
@@ -427,101 +434,145 @@
                                                             style="color: #fff;">Request</button>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="tab-pane" id="info_resource">
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <table id="example3"
-                                                            class="table table-bordered dataTable no-footer table-hover">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="text-center">1</td>
-                                                                    <td class="text-center">W 8504 PP</td>
-                                                                    <td class="text-center">Mobil</td>
-                                                                    <td class="text-center">A</td>
-                                                                    <td class="text-center">PKM SIDOARJO</td>
-                                                                    <td class="text-center">
-                                                                        <a class="btn btn-danger" data-toggle="modal"
-                                                                            data-placement="left" data-target=""
-                                                                            title="Goto Location"
-                                                                            style="margin: 4px 3px;">Goto
-                                                                            Location</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="text-center">2</td>
-                                                                    <td class="text-center">W 8483 NP</td>
-                                                                    <td class="text-center">Mobil</td>
-                                                                    <td class="text-center">A</td>
-                                                                    <td class="text-center">PKM SUKODONO</td>
-                                                                    <td class="text-center">
-                                                                        <a class="btn btn-danger" data-toggle="modal"
-                                                                            data-placement="left" data-target=""
-                                                                            title="Goto Location"
-                                                                            style="margin: 4px 3px;">Goto
-                                                                            Location</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="text-center">3</td>
-                                                                    <td class="text-center">W 8379 PP</td>
-                                                                    <td class="text-center">Mobil</td>
-                                                                    <td class="text-center">A</td>
-                                                                    <td class="text-center">PKM TAMAN</td>
-                                                                    <td class="text-center">
-                                                                        <a class="btn btn-danger" data-toggle="modal"
-                                                                            data-placement="left" data-target=""
-                                                                            title="Goto Location"
-                                                                            style="margin: 4px 3px;">Goto
-                                                                            Location</a>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </form>
                                         </div>
 
+                                        {{-- <div class="tab-pane" id="info_resource">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <table id="example3"
+                                                        class="table table-bordered dataTable no-footer table-hover">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-center">1</td>
+                                                                <td class="text-center">W 8504 PP</td>
+                                                                <td class="text-center">Mobil</td>
+                                                                <td class="text-center">A</td>
+                                                                <td class="text-center">PKM SIDOARJO</td>
+                                                                <td class="text-center">
+                                                                    <a class="btn btn-danger" data-toggle="modal"
+                                                                        data-placement="left" data-target=""
+                                                                        title="Goto Location" style="margin: 4px 3px;">Goto
+                                                                        Location</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">2</td>
+                                                                <td class="text-center">W 8483 NP</td>
+                                                                <td class="text-center">Mobil</td>
+                                                                <td class="text-center">A</td>
+                                                                <td class="text-center">PKM SUKODONO</td>
+                                                                <td class="text-center">
+                                                                    <a class="btn btn-danger" data-toggle="modal"
+                                                                        data-placement="left" data-target=""
+                                                                        title="Goto Location" style="margin: 4px 3px;">Goto
+                                                                        Location</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">3</td>
+                                                                <td class="text-center">W 8379 PP</td>
+                                                                <td class="text-center">Mobil</td>
+                                                                <td class="text-center">A</td>
+                                                                <td class="text-center">PKM TAMAN</td>
+                                                                <td class="text-center">
+                                                                    <a class="btn btn-danger" data-toggle="modal"
+                                                                        data-placement="left" data-target=""
+                                                                        title="Goto Location" style="margin: 4px 3px;">Goto
+                                                                        Location</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div> --}}
                                     </div>
-                                    <!-- /.nav-tabs-custom -->
+
                                 </div>
+                                <!-- /.nav-tabs-custom -->
                             </div>
-                        </form>
+                        </div>
                         <!-- END FORM-->
                     </div>
                     <!-- END VALIDATION STATES-->
                 </div>
-                <!-- <form id="form-data">
-                                                                                                    <div class="modal-body">
-                                                                                                        <table id="example-table" class="table table-bordered dataTable no-footer">
-                                                                                                            <thead>
-                                                                                                                <tr>
-                                                                                                                    <th class="text-center">Resource</th>
-                                                                                                                    <th class="text-center">Tujuan</th>
-                                                                                                                    <th class="text-center">Waktu Request</th>
-                                                                                                                    <th class="text-center">Status</th>
-                                                                                                                    <th class="text-center">Aksi</th>
-                                                                                                                </tr>
-                                                                                                            </thead>
-                                                                                                            <tbody>
-                                                                                                                <tr>
-                                                                                                                    <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car" style="color: #89c4f4;"> Mobil</i></td>
-                                                                                                                    <td class="text-center">RSI Siti Hajar</td>
-                                                                                                                    <td class="text-center">2021-03-09 12:27:08</td>
-                                                                                                                    <td class="text-center">DITERIMA</td>
-                                                                                                                    <td class="text-center">(SELESAI)</td>
-                                                                                                                </tr>
-                                                                                                            </tbody>
-                                                                                                        </table>
-                                                                                                </form> -->
+                {{-- <form id="form-data">
+                    <div class="modal-body">
+                        <table id="example-table" class="table table-bordered dataTable no-footer">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Resource</th>
+                                    <th class="text-center">Tujuan</th>
+                                    <th class="text-center">Waktu Request</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">AMB_1974 - B 1974 WQ<br><i class="fa fa-car"
+                                            style="color: #89c4f4;"> Mobil</i></td>
+                                    <td class="text-center">RSI Siti Hajar</td>
+                                    <td class="text-center">2021-03-09 12:27:08</td>
+                                    <td class="text-center">DITERIMA</td>
+                                    <td class="text-center">(SELESAI)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </form> --}}
             </div>
         </div>
     </div>
 @endsection
 
 @section('scripts')
+    <script>
+        var mymap = L.map('mapid').setView([-7.445999016651402, 112.71844103230215], 12);
+        var ambulance = L.icon({
+            iconUrl: "{{ url('marker/ambulance-marker.png') }}",
+            iconSize: [40, 45],
+            iconAnchor: [19.7, 45],
+            popupAnchor: [1, -35],
+            className: 'ready-reso'
+        });
+        var clinic = L.icon({
+            iconUrl: "{{ url('marker/clinic.png') }}",
+            iconSize: [30, 35],
+            iconAnchor: [14.6, 34.2],
+            popupAnchor: [1, -20]
+        });
+        var clinic24 = L.icon({
+            iconUrl: "{{ url('marker/clinic-24.png') }}",
+            iconSize: [30, 35],
+            iconAnchor: [14.6, 34.2],
+            popupAnchor: [1, -20]
+        });
+        var hospital = L.icon({
+            iconUrl: "{{ url('marker/hospital.png') }}",
+            iconSize: [40, 45],
+            iconAnchor: [19.7, 43],
+            popupAnchor: [1, -30]
+        });
+        var hospital24 = L.icon({
+            iconUrl: "{{ url('marker/hospital-24.png') }}",
+            iconSize: [40, 45],
+            iconAnchor: [19.7, 43],
+            popupAnchor: [1, -30]
+        });
+        var faskes = reso = [];
+        var grupfaskes = grupreso = filtercontrol = '';
+
+        L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        }).addTo(mymap);
+        var drawcircle = L.circle([-7.447006, 112.718655], {
+            radius: $('#map-radius').val()
+        }).addTo(mymap);
+        var marker = L.marker([-7.447006, 112.718655]).addTo(mymap);
+
+    </script>
     <script>
         $(function() {
             $('.select2').select2()
@@ -596,6 +647,71 @@
             //     'info': true,
             //     'autoWidth': false
             // })
+            $('#form-req').submit(function(e) {
+                e.preventDefault();
+            });
+            $('#btn-refresh-resource').click(function() {
+                var form = $('#form-req'),
+                    id = form.find('id').val(),
+                    b = $(this);
+                var rad = $('#map-radius').val();
+
+                $.ajax({
+                    url: "req_bantuan/" + id + "/edit",
+                    method: 'GET',
+                    beforeSend: function() {
+                        b.attr('disabled', 'disabled');
+                    },
+                    success: function(result) {
+                        reso = [];
+                        if (grupreso != '') {
+                            mymap.removeLayer(grupreso);
+                        }
+                        grupreso = L.layerGroup().addTo(mymap);
+                        var optReso = "<option value=''>-- Pilih Resource --</option>";
+                        $.each(result.resources, function(index, value) {
+                            if (value.sessions[0].lat != '' && value.sessions[0].lat !=
+                                null) {
+                                reso[index] = L.marker([value.sessions[0].lat, value
+                                    .sessions[
+                                        0].lng
+                                ], {
+                                    icon: ambulance
+                                }).bindPopup('<b>' + value.kode + ' - ' + value
+                                    .nomor_polisi +
+                                    '</b><br>Kelas ' + value.kelas + '<br>' + value
+                                    .healthfacility
+                                    .nama);
+                                if (marker.getLatLng().distanceTo(reso[index]
+                                        .getLatLng()) <
+                                    rad) {
+                                    grupreso.addLayer(reso[index]);
+                                    optReso += "<option value='" + value.id + "'>" +
+                                        value.kode +
+                                        " - " + value
+                                        .nomor_polisi + " --- " + value
+                                        .healthfacility
+                                        .nama + "</option>";
+                                }
+                            }
+                        });
+                        $('#resource_id').html(optReso);
+                        var overlay = {
+                            'Faskes': grupfaskes,
+                            'Resources': grupreso,
+                        };
+                        if (filtercontrol != '') {
+                            mymap.removeControl(filtercontrol)
+                        }
+                        filtercontrol = L.control.layers(null, overlay, {}).addTo(mymap);
+
+                        b.removeAttr('disabled');
+                    },
+                    error: function() {
+                        b.removeAttr('disabled');
+                    }
+                });
+            });
             $('#ModalRequest').on('shown.bs.modal', function() {
                 setTimeout(function() {
                     mymap.dragging.enable();
@@ -603,6 +719,29 @@
                 }, 1);
 
             });
+            $('#map-radius').change(function() {
+                var thisradius = $(this).val();
+                drawcircle.setRadius(thisradius);
+                grupfaskes.clearLayers();
+                $.each(faskes, function(index, value) {
+                    if (value) {
+                        if (marker.getLatLng().distanceTo(value.getLatLng()) < thisradius) {
+                            grupfaskes.addLayer(value);
+
+                        }
+                    }
+                });
+                grupreso.clearLayers();
+                $.each(reso, function(index, value) {
+                    if (value) {
+                        if (marker.getLatLng().distanceTo(value.getLatLng()) < thisradius) {
+                            grupreso.addLayer(value);
+
+                        }
+                    }
+                });
+            });
+
         }).on('click', '#btn-lihat', function() {
             var id = $(this).data('id'),
                 b = $(this);
@@ -617,7 +756,6 @@
                     $('#pelapor').html(result.nama_pelapor);
                     $('#lokasi').html(result.lokasi + '<br>(' + result.detail_lokasi + ')');
                     $('#keterangan').html(result.keterangan);
-                    console.log(result);
                     b.removeAttr('disabled');
                     $('#ModalInput').modal('show');
                 },
@@ -636,70 +774,134 @@
 
             window.location.href = "{{ url('req_bantuan') }}" + "/" + id + "/edit";
         }).on('click', '#btn-req', function() {
-            // var form = $('#form_req'),
-            //     id = $(this).data('id');
+            var form = $('#form-req'),
+                id = $(this).data('id'),
+                b = $(this),
+                i = b.find('i'),
+                cls = i.attr('class');
+            var rad = $('#map-radius').val();
 
-            // $.ajax({
-            //     url: "faskes/" + id + "/edit",
-            //     method: 'GET',
-            //     beforeSend: function() {
-            //         b.attr('disabled', 'disabled');
-            //         i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+            $.ajax({
+                url: "req_bantuan/" + id + "/edit",
+                method: 'GET',
+                beforeSend: function() {
+                    b.attr('disabled', 'disabled');
+                    i.removeClass().addClass('fa fa-spin fa-circle-o-notch');
+                },
+                success: function(result) {
+                    form.find('#id').val(result.id);
+                    form.find('#lng').val(result.longitude);
+                    form.find('#lat').val(result.latitude);
 
-            //     },
-            //     success: function(result) {
-            //         $('.modal-title').html('<b>Edit Data</b>');
-            //         form.find('#btn-save-faskes').html('Edit');
-            //         form.find('#id').val(result.id);
-            //         form.find('#nama').val(result.nama);
-            //         form.find('#kategori').val(result.kategori);
-            //         form.find('#pict_url').val(result.pict_url);
-            //         form.find('#is_fullday').val(result.is_fullday);
-            //         form.find('#is_has_ekg').val(result.is_has_ekg);
-            //         form.find('#keterangan').val(result.keterangan);
-            //         form.find('#phone_num').val(result.phone_num);
-            //         form.find('#contact_person').val(result.contact_person);
-            //         form.find('#email').val(result.email);
-            //         form.find('#status').val(result.status);
-            //         form.find('#alamat').val(result.alamat);
-            //         form.find('#lng').val(result.lng);
-            //         form.find('#lat').val(result.lat);
-            //         $("#pict").trigger('change');
-            //         $("#pict_url").trigger('change');
-            //         $("#lng").trigger('change');
+                    $('#ModalRequest').modal('show');
+                    if (marker != '') {
+                        mymap.removeLayer(marker);
+                    }
+                    if (drawcircle != '') {
+                        mymap.removeLayer(drawcircle);
+                    }
+                    mymap.setView([result.latitude, result.longitude], 12);
+                    marker = L.marker([result.latitude, result.longitude], {
+                        draggable: false,
+                    }).bindPopup('<b>Titik Lokasi Kejadian</b>').addTo(mymap);
 
-            //         b.removeAttr('disabled');
-            //         i.removeClass().addClass(cls);
-            //         $('#ModalInput').modal('show');
-            //     },
-            //     error: function() {
-            //         b.removeAttr('disabled');
-            //         i.removeClass().addClass(cls);
-            //     }
-            // });
-            $('#ModalRequest').modal('show');
+                    drawcircle = L.circle([result.latitude, result.longitude], {
+                        radius: rad
+                    }).addTo(mymap);
+                    faskes = [];
+                    if (grupfaskes != '') {
+                        mymap.removeLayer(grupfaskes);
+                    }
+                    grupfaskes = L.layerGroup().addTo(mymap);
+                    var optFaskes = "<option value=''>-- Pilih Faskes --</option>";
+                    $.each(result.faskes, function(index, value) {
+
+                        if (value.lat != '' && value.lat != null) {
+                            var markericon = '';
+                            if (value.kategori == 'rs') {
+                                if (value.is_fullday == 1) {
+                                    markericon = hospital24;
+                                } else {
+                                    markericon = hospital;
+                                }
+                            } else {
+                                if (value.is_fullday == 1) {
+                                    markericon = clinic24;
+                                } else {
+                                    markericon = clinic;
+                                }
+                            }
+                            faskes[index] = L.marker([value.lat, value.lng], {
+                                icon: markericon
+                            }).bindPopup('<b>' + value.nama + '</b><br>' + value
+                                .alamat);
+                            if (marker.getLatLng().distanceTo(faskes[index].getLatLng()) <
+                                rad) {
+                                grupfaskes.addLayer(faskes[index]);
+                                var statusfaskes = '';
+                                if (value.is_fullday == 1) {
+                                    statusfaskes += 'Buka 24 Jam';
+                                } else {
+                                    statusfaskes += 'NON 24 Jam';
+                                }
+                                if (value.is_has_ekg == 1) {
+                                    statusfaskes += ' - EKG';
+                                } else {
+                                    statusfaskes += ' - NON EKG';
+                                }
+
+                                optFaskes += "<option value='" + value.id + "'>" + value.nama +
+                                    " --- " + statusfaskes + "</option>";
+                            }
+                        }
+                    });
+                    reso = [];
+                    if (grupreso != '') {
+                        mymap.removeLayer(grupreso);
+                    }
+                    grupreso = L.layerGroup().addTo(mymap);
+                    var optReso = "<option value=''>-- Pilih Resource --</option>";
+                    $.each(result.resources, function(index, value) {
+                        if (value.sessions[0].lat != '' && value.sessions[0].lat != null) {
+                            reso[index] = L.marker([value.sessions[0].lat, value.sessions[
+                                0].lng], {
+                                icon: ambulance
+                            }).bindPopup('<b>' + value.kode + ' - ' + value.nomor_polisi +
+                                '</b><br>Kelas ' + value.kelas + '<br>' + value
+                                .healthfacility
+                                .nama);
+                            if (marker.getLatLng().distanceTo(reso[index].getLatLng()) <
+                                rad) {
+                                grupreso.addLayer(reso[index]);
+                                optReso += "<option value='" + value.id + "'>" + value.kode +
+                                    " - " + value
+                                    .nomor_polisi + " --- " + value
+                                    .healthfacility
+                                    .nama + "</option>";
+                            }
+                        }
+                    });
+                    $('#resource_id').html(optReso);
+                    $('#health_facility_id').html(optFaskes);
+                    var overlay = {
+                        'Faskes': grupfaskes,
+                        'Resources': grupreso,
+                    };
+                    if (filtercontrol != '') {
+                        mymap.removeControl(filtercontrol)
+                    }
+                    filtercontrol = L.control.layers(null, overlay, {}).addTo(mymap);
+
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                },
+                error: function() {
+                    b.removeAttr('disabled');
+                    i.removeClass().addClass(cls);
+                }
+            });
+
         })
-
-    </script>
-
-    <script>
-        var mymap = L.map('mapid').setView([-7.445999016651402, 112.71844103230215], 15);
-
-        // var mapaccess = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        //     maxZoom: 18,
-        //     id: 'mapbox/streets-v11',
-        //     tileSize: 512,
-        //     zoomOffset: -1,
-        //     accessToken: 'pk.eyJ1IjoiZGV2a29taW5mb3NkYSIsImEiOiJja21wbWN1c28wZGd6Mm5uc2VlaDdjZ2FvIn0._o72K-GnOmv1ZVbJJzRI_g'
-        // }).addTo(mymap);
-
-        L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        }).addTo(mymap);
-
-        var marker = L.marker([-7.447006, 112.718655]).addTo(mymap);
 
     </script>
 @endsection

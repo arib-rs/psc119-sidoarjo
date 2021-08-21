@@ -902,43 +902,6 @@
 
 @section('scripts')
     <script>
-        function getResourcesRealTime() {
-            $.ajax({
-                url: "get-resources-real-time",
-                method: "GET",
-                success: function(result) {
-                    $('#resources-section').html(result.data);
-                    $('.cb-filter').find('input:checkbox').trigger('change');
-                    $('#total-resources').html(result.total);
-                    $('#tersedia').html(result.tersedia);
-                    $('#sibuk').html(result.sibuk);
-                    $('#menujutkp').html(result.menujutkp);
-                    $('#ditkp').html(result.ditkp);
-                    $('#menujurs').html(result.menujurs);
-                    $('#belumsiap').html(result.belumsiap);
-
-                },
-                complete: function() {
-                    setTimeout(getResourcesRealTime, 5000);
-                }
-            });
-        }
-        getResourcesRealTime();
-
-        function getFaskesRealTime() {
-            $.ajax({
-                url: "get-faskes-real-time",
-                method: "GET",
-                success: function(result) {
-                    $('#faskes-section').html(result.data);
-                    $('#total-faskes-online').html(result.total);
-                },
-                complete: function() {
-                    setTimeout(getFaskesRealTime, 5000);
-                }
-            });
-        }
-        getFaskesRealTime();
         $(function() {
             $('#cb-jenis-all').change(function() {
                 if ($(this).is(':checked')) {
